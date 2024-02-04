@@ -28,7 +28,7 @@ class MenuServiceProvider extends ServiceProvider
                 ->route('home', 'Dashboard')
                 ->route('query', 'Query')
                 ->route('role', 'Role')
-                ->route('user', 'User')
+                ->route('user.index', 'User')
                 ->each(function (Link $item) {
                     $item->addClass('nav-link')->addClass(request()->is($item->url()) ? 'active' : '');
                 })

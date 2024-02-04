@@ -1,4 +1,20 @@
+/**
+ * We'll load lodash, jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+import { createPopper } from '@popperjs/core';
+import jQuery from 'jquery';
 import 'bootstrap';
+import _ from 'lodash';
+
+try {
+  window._ = _;
+  window.Popper = createPopper;
+  window.$ = window.jQuery = jQuery;
+} catch (e) {
+  console.error(e);
+}
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
