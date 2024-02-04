@@ -48,7 +48,19 @@
                     {!! Menu::main() !!}
                     @endguest
 
-                    <!-- Conditional Rendering based on Authentication -->
+<!-- Language Dropdown -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <a class="dropdown-item" href="{{ route('set.locale', ['locale' => 'en']) }}">English</a>
+                        <a class="dropdown-item" href="{{ route('set.locale', ['locale' => 'fr']) }}">French</a>
+                        <!-- Add more language options as needed -->
+                    </div>
+                </li>
+            </ul>                    <!-- Conditional Rendering based on Authentication -->
                     <div class="d-flex flex-column flex-md-row align-items-center">
                         <!-- If Unauthorized -->
                         @guest
