@@ -66,8 +66,30 @@
                         </div>
                     </form>
                 </div>
+                <div class="card-footer">
+                    <div class="row mb-0">
+                        <div class="col-md-8 offset-md-4">
+                            <button type="button" onclick="fillForm('admin@bunk3r.net', 'secret')" class="btn btn-primary">
+                                Fill Admin
+                            </button>
+
+                            <button type="button" onclick="fillForm('user@bunk3r.net', 'secret')" class="btn btn-primary">
+                                Fill User
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+@push('scripts')
+    <script>
+        function fillForm(email, password) {
+            // Set values for email and password fields
+            document.getElementById('email').value = email;
+            document.getElementById('password').value = password;
+        }
+    </script>
+@endpush

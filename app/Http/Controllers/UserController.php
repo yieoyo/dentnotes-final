@@ -16,6 +16,7 @@ class UserController extends Controller
 
     public function create()
     {
+
         return view('user.create');
     }
 
@@ -28,37 +29,51 @@ class UserController extends Controller
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
 
             // Store the file in the private disk with the new filename
-            $imagePath = $image->storeAs('private/avatar', $image_name, 'local');
+            $imagePath = $image->move(public_path('/assets/images/avatar/'), $image_name);
         }
+//        dd($imagePath);
         User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
-            'role' => $request->input('role'),
+            'role_id' => $request->input('role'),
             'status' => $request->input('status'),
-            'avatar' => $imagePath ?? 'private/avatar/avatar.jpg',
+            'avatar' => $imagePath ?? '/assets/images/avatar/avatar.jpg',
         ]);
 
         return redirect()->route('user.index');
     }
 
-    public function show($id)
+    public function profile($id)
     {
-        // Your code for displaying a specific resource
+        $user = User::findOrFail($id);
+        return view('user.profile', compact('user'));
     }
 
     public function edit($id)
     {
-        // Your code for displaying the edit resource form
+        $user = User::findOrFail($id);
+        return view('user.edit', compact('user'));
     }
 
     public function update(Request $request, $id)
     {
-        // Your code for updating a specific resource
+        // Validate and update the user
+        $this->validate($request, [
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email,' . $id,
+            // Add other fields as needed
+        ]);
+
+        $user = User::findOrFail($id);
+        $user->update($request->all());
+
+        return redirect()->route('users.index')->with('success', 'User updated successfully');
     }
 
     public function destroy($id)
     {
-        // Your code for deleting a specific resource
+        User::findOrFail($id)->delete();
+        return redirect()->route('user.index')->with('success', 'User deleted successfully');
     }
 }

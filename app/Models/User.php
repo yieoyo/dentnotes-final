@@ -29,7 +29,7 @@ class User extends Authenticatable
         'name',
         'email',
         'avatar',
-        'role',
+        'role_id',
         'status',
         'password',
     ];
@@ -61,4 +61,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function role(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
 }

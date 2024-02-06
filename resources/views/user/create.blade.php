@@ -53,10 +53,10 @@
                 <div class="col-6">
                     <label for="statusSelect" class="form-label">Status:</label>
                     <select class="form-select @error('status') is-invalid @enderror" id="statusSelect" name="status">
-                        <option value="1">Pending</option>
-                        <option value="2">Active</option>
-                        <option value="3">Inactive</option>
-                        <option value="4">Banned</option>
+                        <option value="pending">Pending</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="banned">Banned</option>
                     </select>
                     @error('status')
                     <div class="invalid-feedback">{{ $message }}</div>

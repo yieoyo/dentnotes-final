@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,22 +20,24 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/image/{path}', [App\Http\Controllers\ImageController::class, 'show'])->where('path', '.*')->name('image');
+
+Route::get('/locale/{locale}', function ($locale) {
+
+})->name('locale');
 // Auth middleware for authenticated users
 Route::middleware(['auth'])->group(function () {
     Route::get('/roles', [App\Http\Controllers\RoleController::class, 'index'])->name('role');
     Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('profile');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/queries', [App\Http\Controllers\QueryController::class, 'index'])->name('query');
-    Route::resource('user', App\Http\Controllers\UserController::class, [
-        'names' => [
-            'index'   => 'user.index',
-            'create'  => 'user.create',
-            'store'   => 'user.store',
-            'show'    => 'user.show',
-            'edit'    => 'user.edit',
-            'update'  => 'user.update',
-            'destroy' => 'user.destroy',
-        ],
-    ]);
+
+
+    Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+    Route::get('users/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
+    Route::put('users/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
+    Route::get('users/{id}/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('user.profile');
+    Route::delete('users/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy');
+
 });
 
