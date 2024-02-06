@@ -85,9 +85,9 @@
                             <div class="dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" id="userDropdown"
                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="{{ asset(Auth::user()->avatar) }}" alt="Avatar" class="rounded-circle"
+                                    <img src="{{ asset(auth()->user()->avatar) }}" alt="Avatar" class="rounded-circle"
                                          height="30">
-                                    {{ Auth::user()->name }}
+                                    {{ auth()->user()->name }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="userDropdown">
                                     <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>

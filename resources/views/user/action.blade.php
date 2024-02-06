@@ -1,5 +1,5 @@
 <div class="btn-group">
-    <a href="{{ route('user.profile', $id) }}" class="btn btn-sm btn-info" title="View">
+    <a href="{{ route('user.view', $id) }}" class="btn btn-sm btn-info" title="View">
         <span class="bi bi-eye"></span> <!-- Bootstrap eye icon -->
     </a>
     <a href="{{ route('user.edit', $id) }}" class="btn btn-sm btn-primary" title="Edit">

@@ -18,9 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verify' => true);
-
-Route::get('/image/{path}', [App\Http\Controllers\ImageController::class, 'show'])->where('path', '.*')->name('image');
+Auth::routes(['verify' => true]);
 
 Route::get('/locale/{locale}', function ($locale) {
 
@@ -36,7 +34,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
     Route::get('users/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
     Route::put('users/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
-    Route::get('users/{id}/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('user.profile');
+    Route::get('users/{id}/view', [App\Http\Controllers\UserController::class, 'view'])->name('user.view');
     Route::delete('users/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy');
 
 });

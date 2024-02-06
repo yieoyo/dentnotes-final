@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Events\QueuedEmailVerificationEvent;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\VerifiesEmails;
+use Illuminate\Http\Request;
 
 class VerificationController extends Controller
 {
@@ -38,4 +40,23 @@ class VerificationController extends Controller
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
     }
+
+    public function verify(Request $request)
+    {
+        // Your existing verification logic...
+
+        $user = $request->user();
+
+        if ($user->hasVerifiedEmail()) {
+            // Email is already verified
+            return redirect($this->redirectPath());
+        }
+
+        if ($user->markEmailAsVerified()) {
+            event(new QueuedEmailVerificationEvent($user)); // Dispatch your custom queuable event
+        }
+
+        return redirect($this->redirectPath())->with('verified', true);
+    }
+
 }

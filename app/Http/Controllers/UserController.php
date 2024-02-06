@@ -44,10 +44,15 @@ class UserController extends Controller
         return redirect()->route('user.index');
     }
 
-    public function profile($id)
+    public function view($id)
     {
         $user = User::findOrFail($id);
-        return view('user.profile', compact('user'));
+        return view('user.view', compact('user'));
+    }
+
+    public function profile()
+    {
+        return view('user.profile');
     }
 
     public function edit($id)
