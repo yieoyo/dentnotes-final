@@ -27,7 +27,14 @@ class UsersDataTable extends DataTable
     public function query(User $model): QueryBuilder
     {
         // Use Eloquent's newQuery method to get a new query builder instance
-        return $model->newQuery()->with('role');
+        $query = $model->newQuery()->with('role');
+
+        // Check if deleted items should be included
+        if (request()->input('deleted')) {
+            return $query->onlyTrashed();
+        } else {
+            return $query->withoutTrashed();
+        }
     }
 
     // Function to define the HTML structure of the DataTable
@@ -46,12 +53,17 @@ class UsersDataTable extends DataTable
     // Function to define the columns of the DataTable
     public function getColumns(): array
     {
+        $showDeletedButton = Button::make('showDeleted')
+            ->text('Show Deleted')
+            ->addClass('btn btn-primary')
+            ->action('function () { window.LaravelDataTables["users-table"].draw(); }');
         return [Column::make('id'), // Column for 'id'
             Column::make('name'), // Column for 'name'
             Column::make('email'), // Column for 'email'
             Column::make('role_id'), Column::make('status'), // Column for 'status'
             Column::make('created_at'), // Column for 'created_at'
             Column::make('updated_at'), // Column for 'updated_at'
+            Column::make('deleted_at'), // Column for 'updated_at'
             Column::computed('action')->exportable(false)->printable(false)->width(60)->addClass('text-center'),];
     }
 

@@ -111,13 +111,33 @@
 
     <!-- Content section -->
     <div class="container py-4">
+        @if (Session::has('success'))
+            <div id="successMessage" class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+        @endif
+
+        @if (Session::has('error'))
+            <div id="errorMessage" class="alert alert-danger">
+                {{ Session::get('error') }}
+            </div>
+        @endif
+
         @yield('content')
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+<!-- Include SweetAlert2 -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 @vite(['resources/js/app.js'])
+<script>
+    // Hide success message after 5 seconds
+    setTimeout(function() {
+        $('#successMessage').fadeOut('fast');
+    }, 5000);
+</script>
 @stack('scripts')
+
 </body>
 
 </html>

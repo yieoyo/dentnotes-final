@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UserUpdateRequest;
 use Illuminate\Http\Request;
+use App\Models\Role;
 use App\Models\User;
 use App\DataTables\UsersDataTable;
 use App\Http\Requests\UserRequest;
@@ -16,32 +18,32 @@ class UserController extends Controller
 
     public function create()
     {
-
-        return view('user.create');
+        $roles = Role::withoutTrashed()->get();
+        return view('user.create', compact('roles'));
     }
 
     public function store(UserRequest $request)
     {
+        $image_name = null;
         if ($request->hasFile('avatar')) {
             $image = $request->file('avatar');
 
             // Generate a unique filename using the original file extension
-            $image_name = rand() . '.' . $image->getClientOriginalExtension();
+            $image_name = uniqid() . '.' . $image->getClientOriginalExtension();
 
-            // Store the file in the private disk with the new filename
-            $imagePath = $image->move(public_path('/assets/images/avatar/'), $image_name);
+            // Move the file to the desired location
+            $image->move(public_path(config('panel.avatar_path')), $image_name);
         }
-//        dd($imagePath);
         User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
             'role_id' => $request->input('role'),
             'status' => $request->input('status'),
-            'avatar' => $imagePath ?? '/assets/images/avatar/avatar.jpg',
+            'avatar' => $image_name != null ? config('panel.avatar_path') . $image_name : config('panel.avatar'),
         ]);
 
-        return redirect()->route('user.index');
+        return redirect()->route('user.index')->with('success', 'User created successfully');
     }
 
     public function view($id)
@@ -55,25 +57,37 @@ class UserController extends Controller
         return view('user.profile');
     }
 
-    public function edit($id)
+    public function edit(Request $request, int $id)
     {
         $user = User::findOrFail($id);
-        return view('user.edit', compact('user'));
+        $roles = Role::withoutTrashed()->get();
+        return view('user.edit', compact('user', 'roles'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UserUpdateRequest $request, $id)
     {
-        // Validate and update the user
-        $this->validate($request, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . $id,
-            // Add other fields as needed
+        $user = User::findOrFail($id);
+        $image_name = null;
+        if ($request->hasFile('avatar')) {
+            $image = $request->file('avatar');
+            if($user->avatar != config('panel.avatar')){
+                dd(file_exists($user->avatar));
+                unlink($user->avatar);
+            }
+            // Generate a unique filename using the original file extension
+            $image_name = uniqid() . '.' . $image->getClientOriginalExtension();
+
+            // Move the file to the desired location
+            $image->move(public_path(config('panel.avatar_path')), $image_name);
+        }
+        $user->update([
+            'name' => $request->input('name'),
+            'role_id' => $request->input('role'),
+            'status' => $request->input('status'),
+            'avatar' => $image_name != null ? config('panel.avatar_path') . $image_name : $user->avatar,
         ]);
 
-        $user = User::findOrFail($id);
-        $user->update($request->all());
-
-        return redirect()->route('users.index')->with('success', 'User updated successfully');
+        return redirect()->route('user.index')->with('success', 'User updated successfully');
     }
 
     public function destroy($id)

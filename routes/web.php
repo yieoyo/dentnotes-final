@@ -32,6 +32,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+    Route::get('users/create', [App\Http\Controllers\UserController::class, 'create'])->name('user.create');
+    Route::post('users/store', [App\Http\Controllers\UserController::class, 'store'])->name('user.store');
     Route::get('users/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
     Route::put('users/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
     Route::get('users/{id}/view', [App\Http\Controllers\UserController::class, 'view'])->name('user.view');

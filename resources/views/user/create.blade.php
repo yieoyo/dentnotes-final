@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+    <button onclick="window.history.back();" class="btn btn-primary">Go Back</button>
 <div class="card">
     <div class="card-header">
         <h5 class="card-title">Basic Information</h5>
@@ -42,8 +43,10 @@
                 <div class="col-6">
                     <label for="roleSelect" class="form-label">Role:</label>
                     <select class="form-select @error('role') is-invalid @enderror" id="roleSelect" name="role">
-                        <option value="2">User</option>
-                        <option value="1">Admin</option>
+                        @foreach($roles as $value)
+
+                        <option value="{{ $value->id }}">{{ $value->name }}</option>
+                        @endforeach
                     </select>
                     @error('role')
                     <div class="invalid-feedback">{{ $message }}</div>
