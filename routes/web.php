@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true);
 
 Route::get('/image/{path}', [App\Http\Controllers\ImageController::class, 'show'])->where('path', '.*')->name('image');
 
@@ -26,7 +26,7 @@ Route::get('/locale/{locale}', function ($locale) {
 
 })->name('locale');
 // Auth middleware for authenticated users
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/roles', [App\Http\Controllers\RoleController::class, 'index'])->name('role');
     Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('profile');
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
