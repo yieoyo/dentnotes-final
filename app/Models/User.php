@@ -85,6 +85,12 @@ implements MustVerifyEmail {
         return $this->id == config('panel.super_admin');
     }
 
+    public function isNotSuperAdmin()
+    {
+        // Check if the authenticated user has the specified role
+        return $this->id != config('panel.super_admin');
+    }
+
     public function isAdmin()
     {
         // Check if the authenticated user has the specified role

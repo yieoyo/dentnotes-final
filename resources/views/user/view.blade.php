@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="mb-2">
-        <button onclick="window.history.back();" class="btn btn-warning">Go Back</button>
+        <a href="{{ route('user.index') }}" class="btn btn-warning"><span class="bi bi-arrow-return-left"></span> Go Back</a>
     </div>
     <div class="row">
         <!-- Column 1 -->

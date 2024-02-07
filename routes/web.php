@@ -38,8 +38,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::put('users/{id}/change-password', [App\Http\Controllers\UserController::class, 'changeUserPassword'])->name('user.change-pass');
     Route::get('users/{id}/view', [App\Http\Controllers\UserController::class, 'view'])->name('user.view');
     Route::post('users/{id}/destroy', [App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy')->middleware(['role:admin']);
-    Route::post('users/pd/{id}', [App\Http\Controllers\UserController::class, 'forceDelete'])->name('user.forceDelete')->middleware(['role:admin']);
-    Route::get('users/rt/{id}', [App\Http\Controllers\UserController::class, 'retrieveDleted'])->name('user.retrieveDleted')->middleware(['role:admin']);
+    Route::post('users/{id}/delete', [App\Http\Controllers\UserController::class, 'forceDelete'])->name('user.forceDelete')->middleware(['role:admin']);
+    Route::get('users/{id}/retrieve', [App\Http\Controllers\UserController::class, 'retrieveDeleted'])->name('user.retrieveDeleted')->middleware(['role:admin']);
 
 });
 

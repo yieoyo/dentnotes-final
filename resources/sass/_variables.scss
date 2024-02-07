@@ -5,3 +5,54 @@ $body-bg: #f8fafc;
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+$background-color: #f0f0f0; /* Cool background color */
+$primary-color: #333333; /* Dark gray primary color */
+$secondary-color: #ffc107; /* Yellow secondary color */
+
+:root {
+    --bs-primary: #{$primary-color};
+    --bs-secondary: #{$secondary-color};
+}
+
+body {
+    background-color: $background-color;
+}
+
+/* Override Bootstrap primary and secondary colors */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: $primary-color;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+
+/* Override Bootstrap primary and secondary button color */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+    color: $secondary-color;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+/* Override Bootstrap pagination color */
+.pagination .page-link {
+    color: $primary-color;
+    background-color: $background-color;
+    border-color: $primary-color;
+}
+
+.pagination .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+}

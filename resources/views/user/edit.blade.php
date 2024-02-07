@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="mb-2">
-        <button onclick="window.history.back();" class="btn btn-warning">Go Back</button>
+        <button onclick="window.history.back();" class="btn btn-warning"><span class="bi bi-arrow-return-left"></span> Go Back</button>
     </div>
     <div class="row">
         <div class="col-lg-6 col-md-12 col-12">
@@ -102,12 +102,6 @@
                     <form method="POST" action="{{ route('user.change-pass', $user->id) }}">
                         @method('PUT')
                         @csrf
-
-{{--                        <div class="mb-3">--}}
-{{--                            <label for="old_password" class="form-label">Old Password <span class="text-danger">*</span></label>--}}
-{{--                            <input type="password" class="form-control" id="old_password" name="old_password" required>--}}
-{{--                        </div>--}}
-
                         <div class="mb-3">
                             <label for="password" class="form-label">New Password</label>
                             <input type="password" class="form-control" id="password" name="password" required>
