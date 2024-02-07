@@ -33,11 +33,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name('user.index')->middleware(['role:admin']);
     Route::get('users/create', [App\Http\Controllers\UserController::class, 'create'])->name('user.create')->middleware(['role:admin']);
     Route::post('users/store', [App\Http\Controllers\UserController::class, 'store'])->name('user.store')->middleware(['role:admin']);
-    Route::get('users/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit')->middleware(['role:admin']);
-    Route::put('users/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('user.update')->middleware(['role:admin']);
-    Route::put('users/{id}/change-password', [App\Http\Controllers\UserController::class, 'changeUserPassword'])->name('user.change-pass')->middleware(['role:admin']);
+    Route::get('users/{id}/edit', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');
+    Route::put('users/{id}/update', [App\Http\Controllers\UserController::class, 'update'])->name('user.update');
+    Route::put('users/{id}/change-password', [App\Http\Controllers\UserController::class, 'changeUserPassword'])->name('user.change-pass');
     Route::get('users/{id}/view', [App\Http\Controllers\UserController::class, 'view'])->name('user.view');
-    Route::delete('users/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy')->middleware(['role:admin']);
+    Route::post('users/{id}/destroy', [App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy')->middleware(['role:admin']);
+    Route::post('users/pd/{id}', [App\Http\Controllers\UserController::class, 'forceDelete'])->name('user.forceDelete')->middleware(['role:admin']);
+    Route::get('users/rt/{id}', [App\Http\Controllers\UserController::class, 'retrieveDleted'])->name('user.retrieveDleted')->middleware(['role:admin']);
 
 });
 

@@ -78,4 +78,17 @@ implements MustVerifyEmail {
     {
         return $this->belongsTo(Role::class, 'role_id');
     }
+
+    public function isSuperAdmin()
+    {
+        // Check if the authenticated user has the specified role
+        return $this->id == config('panel.super_admin');
+    }
+
+    public function isAdmin()
+    {
+        // Check if the authenticated user has the specified role
+        return $this->role()->where('id', config('panel.admin_role_id'))->exists();
+    }
+
 }

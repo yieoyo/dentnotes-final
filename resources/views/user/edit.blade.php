@@ -50,6 +50,7 @@
                                     </div>
                                 </div>
                             </div>
+                            @can('admin')
                             <div class="col-6">
                                 <label for="roleSelect" class="form-label">Role <span
                                         class="text-danger">*</span></label>
@@ -82,7 +83,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                            @endcan
                             <div class="col-12 mt-2">
                                 <button type="submit" class="btn btn-success">Update user</button>
                             </div>

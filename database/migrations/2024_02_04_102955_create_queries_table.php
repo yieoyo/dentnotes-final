@@ -14,12 +14,8 @@ return new class extends Migration
         Schema::create('queries', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
-            $table->string('subject');
-            $table->string('attachment')->nullable('pending');
             $table->text('query');
-            $table->enum('status', ['pending','active', 'completed'])->default('pending');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

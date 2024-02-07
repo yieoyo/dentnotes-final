@@ -30,7 +30,7 @@ class UsersDataTable extends DataTable
         $query = $model->newQuery()->with('role'); // Eager load the 'role' relationship
 
         // Check if deleted items should be included
-        if (request()->input('deleted')) {
+        if (request()->input('show_deleted')) {
             $query = $query->onlyTrashed(); // Include only soft deleted items
         } else {
             $query = $query->withoutTrashed(); // Exclude soft deleted items
@@ -56,7 +56,7 @@ class UsersDataTable extends DataTable
             Button::make('add'),
             Button::make('excel'),
             Button::make('csv'),
-            Button::make('pdf'),
+//            Button::make('pdf'),
             Button::make('print'),
             Button::make('reset'),
             Button::make('reload'),
@@ -66,12 +66,6 @@ class UsersDataTable extends DataTable
     // Function to define the columns of the DataTable
     public function getColumns(): array
     {
-        // Create a button for showing deleted items
-        $showDeletedButton = Button::make('showDeleted')
-            ->text('Show Deleted')
-            ->addClass('btn btn-primary')
-            ->action('function () { window.LaravelDataTables["users-table"].draw(); }');
-
         return [
             Column::make('id'), // Column for 'id'
             Column::make('name'), // Column for 'name'

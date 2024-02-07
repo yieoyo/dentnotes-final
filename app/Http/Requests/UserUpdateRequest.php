@@ -24,8 +24,8 @@ class UserUpdateRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'role' => 'required|integer|between:1,3',
-            'status' => ['required', new UserStatusRule],
+            'role' => 'integer|between:1,3',
+            'status' => [new UserStatusRule],
             'avatar'=> 'image|mimes:jpeg,png,jpg|max:1048'
         ];
     }
