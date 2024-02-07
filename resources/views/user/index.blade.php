@@ -4,7 +4,7 @@
     @can('admin')
         <!-- User DataTable -->
         <div class="card">
-            <div class="card-header bg-dark text-white d-flex justify-content-between">
+            <div class="card-header d-flex justify-content-between">
                 <span>Manage Users</span>
                 <!-- Conditional link based on whether show_deleted parameter is present in the request -->
                 @if(request()->has('show_deleted'))

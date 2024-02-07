@@ -15,7 +15,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
-{{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">--}}
+    {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">--}}
     <!-- DataTables CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
 
@@ -26,7 +26,7 @@
 <div id="app">
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <!-- Brand Logo and Name -->
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -46,13 +46,26 @@
                     <ul class="navbar-nav me-auto">
                     </ul>
                 @else
-                    {!! Menu::main() !!}
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">Queries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('role') }}">Roles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('user.index') }}">Users</a>
+                        </li>
+                    </ul>
                 @endguest
 
                 <!-- Language Dropdown -->
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown" role="button"
                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Language
                         </a>
