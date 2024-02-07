@@ -2,24 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserUpdateRequest;
-use Illuminate\Http\Request;
-use App\Models\Role;
-use App\Models\User;
 use App\DataTables\UsersDataTable;
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserUpdateRequest;
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     public function index(UsersDataTable $dataTable)
     {
         return $dataTable->render('user.index');
-    }
-
-    public function create()
-    {
-        $roles = Role::withoutTrashed()->get();
-        return view('user.create', compact('roles'));
     }
 
     public function store(UserRequest $request)
@@ -46,32 +40,56 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'User created successfully');
     }
 
-    public function view($id)
+    public function create()
     {
-        $user = User::findOrFail($id);
+        $roles = Role::withoutTrashed()->get();
+        return view('user.create', compact('roles'));
+    }
+
+    public function view($userId)
+    {
+        $user = User::findOrFail($userId);
         return view('user.view', compact('user'));
     }
 
-    public function profile()
+    public function edit(Request $request, int $userId)
     {
-        return view('user.profile');
-    }
-
-    public function edit(Request $request, int $id)
-    {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail($userId);
         $roles = Role::withoutTrashed()->get();
         return view('user.edit', compact('user', 'roles'));
     }
 
-    public function update(UserUpdateRequest $request, $id)
+    public function destroy($userId)
     {
-        $user = User::findOrFail($id);
+        User::findOrFail($userId)->delete();
+        return redirect()->route('user.index')->with('success', 'User deleted successfully');
+    }
+
+    public function changeUserPassword(Request $request, $userId): \Illuminate\Http\RedirectResponse
+    {
+        // Validate the request
+        $request->validate([
+            'password' => 'required|min:6|confirmed',
+        ]);
+
+        // Find the user
+        $user = User::findOrFail($userId);
+
+        // Update user's password
+        $user->update(['password' => bcrypt($request->password)]);
+
+
+        // Redirect back or show a success message
+        return redirect()->route('user.view', $userId)->with('success', 'Password changed successfully.');
+    }
+
+    public function update(UserUpdateRequest $request, $userId): \Illuminate\Http\RedirectResponse
+    {
+        $user = User::findOrFail($userId);
         $image_name = null;
         if ($request->hasFile('avatar')) {
             $image = $request->file('avatar');
-            if($user->avatar != config('panel.avatar')){
-                dd(file_exists($user->avatar));
+            if ($user->avatar != config('panel.avatar')) {
                 unlink($user->avatar);
             }
             // Generate a unique filename using the original file extension
@@ -88,11 +106,5 @@ class UserController extends Controller
         ]);
 
         return redirect()->route('user.index')->with('success', 'User updated successfully');
-    }
-
-    public function destroy($id)
-    {
-        User::findOrFail($id)->delete();
-        return redirect()->route('user.index')->with('success', 'User deleted successfully');
     }
 }

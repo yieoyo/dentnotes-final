@@ -25,7 +25,7 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users|max:255',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'required|min:6|confirmed',
             'role' => 'required|integer|between:1,3',
             'status' => ['required', new UserStatusRule],
             'avatar'=> 'image|mimes:jpeg,png,jpg|max:1048'

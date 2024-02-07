@@ -17,24 +17,30 @@ class UsersDataTable extends DataTable
     {
         // Create a new EloquentDataTable instance, set row ID to 'id'
         return (new EloquentDataTable($query))->setRowId('id')->editColumn('status', function ($user) {
-            return ucfirst($user->status); // Use ucfirst to capitalize the first letter
+            return ucfirst($user->status); // Use ucfirst to capitalize the first letter of 'status'
         })->editColumn('role_id', function ($user) {
-            return $user->role->name; // Assuming 'role' is the relationship method in User model
-        })->addColumn('action', 'user.action');
+            return $user->role->name; // Get the name of the role associated with the user
+        })->addColumn('action', 'user.action'); // Add a column for actions using the 'user.action' view
     }
 
     // Function to set the initial query for the DataTable
     public function query(User $model): QueryBuilder
     {
         // Use Eloquent's newQuery method to get a new query builder instance
-        $query = $model->newQuery()->with('role');
+        $query = $model->newQuery()->with('role'); // Eager load the 'role' relationship
 
         // Check if deleted items should be included
         if (request()->input('deleted')) {
-            return $query->onlyTrashed();
+            $query = $query->onlyTrashed(); // Include only soft deleted items
         } else {
-            return $query->withoutTrashed();
+            $query = $query->withoutTrashed(); // Exclude soft deleted items
         }
+
+        // Exclude the first user based on ID
+        $firstUserId = User::orderBy('id')->value('id'); // Get the ID of the first user
+        $query->where('id', '!=', $firstUserId); // Exclude the user with the first ID
+
+        return $query;
     }
 
     // Function to define the HTML structure of the DataTable
@@ -47,24 +53,40 @@ class UsersDataTable extends DataTable
         ->selectStyleSingle() // Enable single row selection style
         ->responsive(true) // Enable responsive extension
         ->buttons([ // Add various DataTable buttons
-            Button::make('add'), Button::make('excel'), Button::make('csv'), Button::make('pdf'), Button::make('print'), Button::make('reset'), Button::make('reload'),]);
+            Button::make('add'),
+            Button::make('excel'),
+            Button::make('csv'),
+            Button::make('pdf'),
+            Button::make('print'),
+            Button::make('reset'),
+            Button::make('reload'),
+        ]);
     }
 
     // Function to define the columns of the DataTable
     public function getColumns(): array
     {
+        // Create a button for showing deleted items
         $showDeletedButton = Button::make('showDeleted')
             ->text('Show Deleted')
             ->addClass('btn btn-primary')
             ->action('function () { window.LaravelDataTables["users-table"].draw(); }');
-        return [Column::make('id'), // Column for 'id'
+
+        return [
+            Column::make('id'), // Column for 'id'
             Column::make('name'), // Column for 'name'
             Column::make('email'), // Column for 'email'
-            Column::make('role_id'), Column::make('status'), // Column for 'status'
+            Column::make('role_id'), // Column for 'role_id'
+            Column::make('status'), // Column for 'status'
             Column::make('created_at'), // Column for 'created_at'
             Column::make('updated_at'), // Column for 'updated_at'
-            Column::make('deleted_at'), // Column for 'updated_at'
-            Column::computed('action')->exportable(false)->printable(false)->width(60)->addClass('text-center'),];
+            Column::make('deleted_at'), // Column for 'deleted_at'
+            Column::computed('action') // Column for actions
+            ->exportable(false)
+                ->printable(false)
+                ->width(60)
+                ->addClass('text-center'),
+        ];
     }
 
     // Function to set the filename for export operations

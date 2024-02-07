@@ -90,7 +90,8 @@
                                     {{ auth()->user()->name }}
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                                    <a class="dropdown-item"
+                                       href="{{ route('user.view', auth()->user()->id) }}">Profile</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -132,7 +133,7 @@
 @vite(['resources/js/app.js'])
 <script>
     // Hide success message after 5 seconds
-    setTimeout(function() {
+    setTimeout(function () {
         $('#successMessage').fadeOut('fast');
     }, 5000);
 </script>

@@ -62,6 +62,18 @@ implements MustVerifyEmail {
         'password' => 'hashed',
     ];
 
+    /**
+     * Check if the user has the specified role.
+     *
+     * @param string $role
+     * @return bool
+     */
+    public function hasRole(string $role): bool
+    {
+        // Check if the authenticated user has the specified role
+        return $this->role()->where('name', $role)->exists();
+    }
+
     public function role(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Role::class, 'role_id');
