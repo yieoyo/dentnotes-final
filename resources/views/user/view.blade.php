@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="mb-2">
-        <a href="{{ route('user.index') }}" class="btn btn-warning"><span class="bi bi-arrow-return-left"></span> Go Back</a>
+        <a href="{{ route('home') }}" class="btn btn-warning"><span class="bi bi-arrow-return-left"></span> Go Back</a>
     </div>
     <div class="row">
         <!-- Column 1 -->
@@ -18,7 +18,7 @@
                 <div class="col-md-6">
                     <h3>{{ $user->name }}</h3>
                     <p>Email: {{ $user->email }}</p>
-                    <p>User Role: {{ $user->role->name }}</p>
+                    <p>User Role: {{ $user->isSuperAdmin() ? $user->role->name. ' (Super)' : $user->role->name }}</p>
                 </div>
                 <div class="col-md-6">
                     @include('user.action')

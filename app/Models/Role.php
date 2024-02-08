@@ -37,5 +37,9 @@ class Role extends Model
      * @var array<int, string>
      */
 
+    public function nonRemovableRole(): bool
+    {
+        return $this->id == config('panel.admin_role_id') || $this->id == config('panel.user_role_id');
+    }
 
 }

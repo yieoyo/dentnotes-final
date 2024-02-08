@@ -88,7 +88,7 @@ class UserController extends Controller
         $user = User::findOrFail($userId);
 
         // Check if authenticated user is authorized to update the user
-        if ((auth()->user()->id == $user->id || auth()->user()->isSuperAdmin() || auth()->user()->isAdmin()) && auth()->user()->isNotSuperAdmin()) {
+        if (auth()->user()->id == $user->id || auth()->user()->isSuperAdmin() || (auth()->user()->isAdmin() &&  $user->isNotSuperAdmin())) {
             // Check if avatar file exists in request
             if ($request->hasFile('avatar')) {
                 $image = $request->file('avatar');
@@ -134,7 +134,7 @@ class UserController extends Controller
         $request->validate(['password' => 'required|min:6|confirmed',]);
         $user = User::findOrFail($userId);
         // Check if authenticated user is authorized to change password for the user
-        if ((auth()->user()->id == $user->id || auth()->user()->isSuperAdmin() || auth()->user()->isAdmin()) && auth()->user()->isNotSuperAdmin()) {
+        if (auth()->user()->id == $user->id || auth()->user()->isSuperAdmin() || (auth()->user()->isAdmin() &&  $user->isNotSuperAdmin())) {
 
             // Update user's password
             $user->update(['password' => bcrypt($request->input('password'))]);
@@ -148,9 +148,10 @@ class UserController extends Controller
     // Remove the specified resource from storage.
     public function destroy($userId)
     {
-        if (auth()->user()->isAdmin()) {
+        $user = User::findOrFail($userId);
+        if (auth()->user()->isAdmin() && $user->isNotSuperAdmin() && auth()->user()->id != $user->id) {
             // Delete user
-            if (User::findOrFail($userId)->delete()) {
+            if ($user->delete()) {
                 return redirect()->route('user.index')->with('success', 'User deleted successfully');
             }
             return redirect()->back()->with('error', 'Failed to delete.');
@@ -174,9 +175,10 @@ class UserController extends Controller
     // Permanently remove the specified resource from storage.
     public function forceDelete($userId)
     {
-        if (auth()->user()->isAdmin()) {
-            // Find soft deleted user
-            $user = User::onlyTrashed()->findOrFail($userId);
+
+        // Find soft deleted user
+        $user = User::onlyTrashed()->findOrFail($userId);
+        if (auth()->user()->isAdmin() && $user->isNotSuperAdmin()  && auth()->user()->id != $user->id) {
             $avatar = $user->avatar;
             // Permanently delete user
             if ($user->forceDelete()) {

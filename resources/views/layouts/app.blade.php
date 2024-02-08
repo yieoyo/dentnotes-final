@@ -48,17 +48,19 @@
                 @else
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">Queries</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('role') }}">Roles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('user.index') }}">Users</a>
-                        </li>
+                        @can('admin')
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Queries</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('role.index') }}">Roles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('user.index') }}">Users</a>
+                            </li>
+                        @endcan
                     </ul>
                 @endguest
 
@@ -140,6 +142,10 @@
         @yield('content')
     </div>
 </div>
+<footer>
+    <p>This website uses <a href="https://getbootstrap.com/">Bootstrap</a> under the <a
+            href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+</footer>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- Include SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>

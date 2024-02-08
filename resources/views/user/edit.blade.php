@@ -59,6 +59,8 @@
                             </div>
                         </div>
                         @can('admin') <!-- Checking if user is admin -->
+
+                        @if(auth()->user()->id != $user->id && $user->isNotSuperAdmin())
                         <div class="col-6">
                             <!-- Dropdown for selecting user's role -->
                             <label for="roleSelect" class="form-label">Role <span
@@ -93,6 +95,7 @@
                             <div class="invalid-feedback">{{ $message }}</div> <!-- Error message for status select -->
                             @enderror
                         </div>
+                        @endif
                         @endcan
                         <div class="col-12 mt-2">
                             <!-- Button to submit user update -->

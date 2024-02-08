@@ -68,10 +68,10 @@ implements MustVerifyEmail {
      * @param string $role
      * @return bool
      */
-    public function hasRole(string $role): bool
+    public function hasRole(int $role): bool
     {
         // Check if the authenticated user has the specified role
-        return $this->role()->where('name', $role)->exists();
+        return $this->role()->where('id', $role)->exists();
     }
 
     public function role(): \Illuminate\Database\Eloquent\Relations\BelongsTo

@@ -25,9 +25,17 @@ Route::get('/locale/{locale}', function ($locale) {
 })->name('locale');
 // Auth middleware for authenticated users
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('/roles', [App\Http\Controllers\RoleController::class, 'index'])->name('role')->middleware(['role:admin']);
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/queries', [App\Http\Controllers\QueryController::class, 'index'])->name('query');
+    Route::get('roles', [App\Http\Controllers\RoleController::class, 'index'])->name('role.index')->middleware(['role:admin']);
+    Route::get('roles/create', [App\Http\Controllers\RoleController::class, 'create'])->name('role.create')->middleware(['role:admin']);
+    Route::post('roles/store', [App\Http\Controllers\RoleController::class, 'store'])->name('role.store')->middleware(['role:admin']);
+    Route::get('roles/{id}/edit', [App\Http\Controllers\RoleController::class, 'edit'])->name('role.edit')->middleware(['role:admin']);
+    Route::put('roles/{id}/update', [App\Http\Controllers\RoleController::class, 'update'])->name('role.update')->middleware(['role:admin']);
+    Route::post('roles/{id}/destroy', [App\Http\Controllers\RoleController::class, 'destroy'])->name('role.destroy')->middleware(['role:admin']);
+    Route::post('roles/{id}/delete', [App\Http\Controllers\RoleController::class, 'forceDelete'])->name('role.forceDelete')->middleware(['role:admin']);
+    Route::get('roles/{id}/retrieve', [App\Http\Controllers\RoleController::class, 'retrieveDeleted'])->name('role.retrieveDeleted')->middleware(['role:admin']);
+
+    Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('queries', [App\Http\Controllers\QueryController::class, 'index'])->name('query');
 
 
     Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name('user.index')->middleware(['role:admin']);
