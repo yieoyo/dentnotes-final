@@ -2,16 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
-implements MustVerifyEmail {
-    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
+{
+    use HasApiTokens, HasFactory, SoftDeletes;
 
     /**
      * The attribute for table related to this model.
@@ -25,14 +24,7 @@ implements MustVerifyEmail {
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'avatar',
-        'role_id',
-        'status',
-        'password',
-    ];
+    protected $fillable = ['name', 'email', 'avatar', 'role_id', 'status', 'password',];
 
     /**
      * The attributes that will be set by SoftDeletes action
@@ -47,20 +39,14 @@ implements MustVerifyEmail {
      * @var array<int, string>
      */
 
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    protected $hidden = ['password', 'remember_token',];
 
     /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+    protected $casts = ['email_verified_at' => 'datetime', 'password' => 'hashed',];
 
     /**
      * Check if the user has the specified role.
@@ -74,7 +60,7 @@ implements MustVerifyEmail {
         return $this->role()->where('id', $role)->exists();
     }
 
-    public function role(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function role(): BelongsTo
     {
         return $this->belongsTo(Role::class, 'role_id');
     }

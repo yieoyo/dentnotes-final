@@ -18,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 // Auth middleware for authenticated users
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
 //    Route::get('roles', [App\Http\Controllers\RoleController::class, 'index'])->name('role.index')->middleware(['role:admin']);
 //    Route::get('roles/create', [App\Http\Controllers\RoleController::class, 'create'])->name('role.create')->middleware(['role:admin']);
 //    Route::post('roles/store', [App\Http\Controllers\RoleController::class, 'store'])->name('role.store')->middleware(['role:admin']);
