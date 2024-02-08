@@ -40,8 +40,6 @@ class UserController extends Controller
                 'name' => $request->input('name'),
                 'email' => $request->input('email'),
                 'password' => bcrypt($request->input('password')),
-                'role_id' => $request->input('role'),
-                'status' => $request->input('status'),
             ]);
 
             // If user created successfully
@@ -104,8 +102,6 @@ class UserController extends Controller
             // Update user data
             $user->update([
                 'name' => $request->input('name'),
-                'role_id' => auth()->user()->isAdmin() ? $request->input('role') : auth()->user()->role->id,
-                'status' => auth()->user()->isAdmin() ? $request->input('status') : auth()->user()->status,
                 'avatar' => isset($image_name) ? config('panel.avatar_path') . $image_name : $user->avatar,
             ]);
 

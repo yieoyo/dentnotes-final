@@ -14,11 +14,6 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    {{--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">--}}
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-
     @vite(['resources/sass/app.scss'])
 </head>
 
@@ -52,32 +47,13 @@
                         </li>
                         @can('admin')
                             <li class="nav-item">
-                                <a class="nav-link" href="/">Queries</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('role.index') }}">Roles</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">Users</a>
                             </li>
                         @endcan
                     </ul>
                 @endguest
 
-                <!-- Language Dropdown -->
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="languageDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Language
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
-                            <a class="dropdown-item" href="{{ route('locale', 'en') }}">English</a>
-                            <a class="dropdown-item" href="{{ route('locale', 'fr') }}">French</a>
-                            <!-- Add more language options as needed -->
-                        </div>
-                    </li>
-                </ul>                    <!-- Conditional Rendering based on Authentication -->
+                <!-- Conditional Rendering based on Authentication -->
                 <div class="d-flex flex-column flex-md-row align-items-center">
                     <!-- If Unauthorized -->
                     @guest
