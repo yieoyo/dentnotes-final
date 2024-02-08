@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('content')
-    <button onclick="window.history.back();" class="btn btn-primary">Go Back</button>
+    <div class="mb-2">
+        <!-- Button to go back to the previous page -->
+        <button onclick="window.history.back();" class="btn btn-warning"><span class="bi bi-arrow-return-left"></span>
+            Go Back
+        </button>
+    </div>
     <div class="card">
         <div class="card-header">
             <h5 class="card-title">Basic Information</h5>
