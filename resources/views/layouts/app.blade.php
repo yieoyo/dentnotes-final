@@ -103,7 +103,7 @@
     </nav>
 
     <!-- Content section -->
-    <div class="container-fluid py-4 mb-5">
+    <div class="container-fluid py-4">
         @if (Session::has('success'))
             <div id="successMessage" class="alert alert-success">
                 {{ Session::get('success') }}
@@ -117,12 +117,15 @@
         @endif
 
         @yield('content')
-    </div>
 
+    </div>
     <footer class="bg-dark">
         PlEASE NOTE: This website is to be used as a guide only. Always follow your supervisors instructions.
-        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by <a href="https://bunk3r.net">Bunker</a></p>
+        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by <a
+                href="https://bunk3r.net">Bunker</a>
+        </p>
     </footer>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
