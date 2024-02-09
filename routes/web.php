@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Auth::routes();
 
 // Auth middleware for authenticated users
@@ -31,7 +28,7 @@ Route::middleware(['auth'])->group(function () {
 //    Route::post('roles/{id}/delete', [App\Http\Controllers\RoleController::class, 'forceDelete'])->name('role.forceDelete')->middleware(['role:admin']);
 //    Route::get('roles/{id}/retrieve', [App\Http\Controllers\RoleController::class, 'retrieveDeleted'])->name('role.retrieveDeleted')->middleware(['role:admin']);
 
-    Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 
     Route::get('users', [App\Http\Controllers\UserController::class, 'index'])->name('user.index')->middleware(['role:admin']);

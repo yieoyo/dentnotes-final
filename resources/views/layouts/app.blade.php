@@ -8,11 +8,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Dentnotes') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    @stack('styles')
 
     @vite(['resources/sass/app.scss'])
 </head>
@@ -21,12 +22,12 @@
 <div id="app">
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <!-- Brand Logo and Name -->
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="" alt="Logo" height="30" class="d-inline-block align-top">
-                {{ config('app.name', 'Laravel') }}
+                {{ config('app.name', 'Dentnotes') }}
             </a>
 
             <!-- Responsive Toggle Button -->
@@ -102,7 +103,7 @@
     </nav>
 
     <!-- Content section -->
-    <div class="container py-4">
+    <div class="container-fluid py-4 mb-5">
         @if (Session::has('success'))
             <div id="successMessage" class="alert alert-success">
                 {{ Session::get('success') }}
@@ -117,14 +118,17 @@
 
         @yield('content')
     </div>
+
+    <footer class="bg-dark">
+        PlEASE NOTE: This website is to be used as a guide only. Always follow your supervisors instructions.
+        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by <a href="https://bunk3r.net">Bunker</a></p>
+    </footer>
 </div>
-<footer>
-    <p>This website uses <a href="https://getbootstrap.com/">Bootstrap</a> under the <a
-            href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
-</footer>
+
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- Include SweetAlert2 -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="{{ asset('assets/lib/SpryDOMUtils.js') }}"></script>
 @vite(['resources/js/app.js'])
 <script>
     // Hide success message after 5 seconds

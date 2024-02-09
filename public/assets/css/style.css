@@ -1,0 +1,271 @@
+@charset "utf-8";
+/* CSS Document */
+#generatedText1 {
+    width: 90%;
+    height: 45%;
+    resize: vertical;
+
+    position: relative; /* Change to fixed */
+
+    align-self: auto;
+
+}
+
+#generatedText1 {
+    width: 90%;
+    height: 45%;
+    resize: vertical;
+
+    position: relative; /* Change to fixed */
+
+    align-self: auto;
+
+}
+
+#generatedText2 {
+    width: 90%;
+    height: 45%;
+    resize: vertical;
+
+    position: relative; /* Change to fixed */
+
+    align-self: auto;
+
+}
+
+body {
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: color: #333;
+    position: relative; /* Add this line */
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+
+}
+
+
+hr {
+    border: 2px solid #3498db;
+    margin: 20px 0;
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkboxes,
+#output {
+    width: 50%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+
+
+}
+
+.section {
+    display: none;
+    margin-top: 10px;
+    background-color:
+}
+
+.toggle-button {
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    background-color: #FFA500;
+    border-color: 1px black;
+    border-left-color: black;
+    color: black;
+    border: none;
+    padding: 2px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+
+    cursor: pointer;
+    background-color: #F30000
+    cursor: pointer;
+    width: 95%;
+
+}
+
+.toggle-button2 {
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    background-color: #FFA500;
+    border-color: 1px black;
+    border-left-color: black;
+    color: black;
+    border: none;
+    padding: 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #E64A4D
+    cursor: pointer;
+    margin-bottom: 5px;
+    width: 95%;
+}
+
+.toggle-button:hover {
+    background-color: #E64A4D;
+}
+
+.toggle-button5 {
+    background-color: #3498db; /* Updated color: A nice shade of blue */
+
+    font-weight: 400;
+    color: white;
+
+    font-size: 0.938rem;
+    line-height: 2.0;
+    list-style: lower-latin
+    box-sizing: border-box;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: 5px; /* Improved section breakage */
+    border-bottom: 5px solid #f9f9f9;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+textarea {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    overflow: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+select,
+input[type="text"] {
+    margin-top: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+}
+
+input[type="text1"] {
+
+    width: 35px;
+}
+
+button {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#generatedText {
+    width: calc(28% - 5px); /* Adjust the width as needed */
+    height: 75%;
+    resize: vertical;
+    overflow: ;
+    position: fixed; /* Change to fixed */
+    top: 140px;
+    right: 1;
+    margin-top: 2.5%;
+    /* Change from right: 1 to right: 0 */
+    bottom: 20%; /* Add this line */
+    align-self: auto;
+
+}
+
+.copybut {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    position: fixed;
+
+
+}
+
+.finalize {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    position: absolute;
+    left: 110px;
+
+
+}
+
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+th, td, col {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    position: absolute; /* Change from relative to fixed */
+
+
+    left: 0; /* Add this line */
+    right: 0; /* Add this line */
+
+}
+
+
+#J54TextInput {
+
+}
