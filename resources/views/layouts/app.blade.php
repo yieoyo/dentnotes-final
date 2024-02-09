@@ -121,8 +121,7 @@
     </div>
     <footer class="bg-dark">
         PlEASE NOTE: This website is to be used as a guide only. Always follow your supervisors instructions.
-        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by <a
-                href="https://bunk3r.net">Bunker</a>
+        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by Ahmed
         </p>
     </footer>
 

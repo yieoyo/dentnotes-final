@@ -13,504 +13,4293 @@
 
                 <div class="card-body">
                     <div id="container">
-                        <div id="checkboxes">
-                            <hr>
-                            <button class="toggle-button5" id="button1">DIAGNOSTIC SERVICES (0xx)</button>
-                            <div id="dxSection1" class="section">
-                                <button class="toggle-button" id="button2">011 Comprehensive oral examination</button>
-                                <input type="Checkbox" id="B100Checkbox" class="TEST">
-                                <div id="011Section1" class="section">
-                                    <input type="Checkbox" id="ptCheckbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="yearDropdown" class="TEST">
-                                        <option value=""></option>
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="clinicDropdown" class="TEST" class="TEST">
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                    </select>
-                                    <select id="codeDropdown" class="TEST">
-                                        <option value=""></option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="typeDropdown" class="TEST">
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="A1TextInput" class="TEST" placeholder="Enter details...">
+                        <div class="leftHolder">
+                            <div id="contentcat">
+                            </div>
+                            <div id="checkboxes">
+                                <hr>
+                                <button class="toggle-button5" id="button1">DIAGNOSTIC SERVICES (0xx)</button>
+                                <div id="dxSection1" class="section">
+                                    <button class="toggle-button" id="button2">011 Comprehensive oral examination</button>
+                                    <input type="Checkbox" id="B100Checkbox" class="TEST">
+                                    <div id="011Section1" class="section">
+                                        <input type="Checkbox" id="ptCheckbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="yearDropdown" class="TEST">
+                                            <option value=""></option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="clinicDropdown" class="TEST" class="TEST">
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                        </select>
+                                        <select id="codeDropdown" class="TEST">
+                                            <option value=""></option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="typeDropdown" class="TEST">
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified- no changes">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <pr></pr>
+                                        <input type="Checkbox" id="B1Checkbox" class="TEST" checked hidden="">
+                                        RFV:
+                                        <input type="text" id="B1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B2Checkbox" class="TEST" checked hidden="">
+                                        CC:
+                                        <input type="text" id="B2TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <strong>Hx of Present Complaint</strong>
+                                        <input type="Checkbox" id="B105Checkbox" class="TEST" hidden="">
+                                        <br>
+                                        <input type="Checkbox" id="B30Checkbox" class="TEST" checked hidden="">
+                                        Site:
+                                        <input type="text" id="B30TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B31Checkbox" class="TEST" checked hidden="">
+                                        Onset
+                                        <input type="text" id="B31TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B32Checkbox" class="TEST" checked hidden="">
+                                        Character
+                                        <input type="text" id="B32TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B33Checkbox" class="TEST" checked hidden="">
+                                        Radiation
+                                        <input type="text" id="B33TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B34Checkbox" class="TEST" checked hidden="">
+                                        Alleviating factor
+                                        <input type="text" id="B34TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B35Checkbox" class="TEST" checked hidden="">
+                                        Exacerbating factors
+                                        <input type="text" id="B35TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B36Checkbox" class="TEST" checked hidden="">
+                                        Severity
+                                        <input type="text" id="B36TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="B11Checkbox" class="TEST">
+                                        <strong>Select ALL</strong>
+                                        <input type="Checkbox" id="B3Checkbox" class="TEST">
+                                        E/O examination:
+                                        <input type="Checkbox" id="B4Checkbox" class="TEST">
+                                        Temporalis m
+                                        <input type="Checkbox" id="B5Checkbox" class="TEST">
+                                        masseter m.
+                                        <input type="Checkbox" id="B6Checkbox" class="TEST">
+                                        TMJ
+                                        <input type="Checkbox" id="B7Checkbox" class="TEST">
+                                        salivary glands
+                                        <input type="Checkbox" id="B8Checkbox" class="TEST">
+                                        lymph nodes
+                                        <input type="Checkbox" id="B9Checkbox" class="TEST">
+                                        muscles of facial expression
+                                        <input type="Checkbox" id="B10Checkbox" class="TEST">
+                                        – NAD.  <br>
+                                        <br>
+                                        <input type="Checkbox" id="B12Checkbox" class="TEST">
+                                        <strong>Select ALL</strong>
+                                        <input type="Checkbox" id="B13Checkbox" class="TEST">
+                                        I/OE:
+                                        <input type="Checkbox" id="B14Checkbox" class="TEST">
+                                        FOM
+                                        <input type="Checkbox" id="B15Checkbox" class="TEST">
+                                        tongue
+                                        <input type="Checkbox" id="B16Checkbox" class="TEST">
+                                        buccal mucosa 
+                                        <input type="Checkbox" id="B17Checkbox" class="TEST">
+                                        palatal mucosa
+                                        <input type="Checkbox" id="B117Checkbox" class="TEST">
+                                        – NAD <br>
+                                        <input type="Checkbox" id="htpsrCheckbox" class="TEST">
+                                        Hard tissue & PSR – as charted in ISOH. <br>
+                                        <br>
+                                        <input type="Checkbox" id="radioCheckbox" class="TEST">
+                                        <select id="radioDropdown" class="TEST">
+                                            <option value="OPG & 2x BWs taken">OPG & 2x BWs taken</option>
+                                            <option value="2x BWs taken. No OPG Indicated">2x BWs taken</option>
+                                            <option value="No x-rays taken">No x-rays taken</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="B18CCheckbox" class="TEST" checked hidden="">
+                                        Main Findings:
+                                        <input type="text" id="B18CTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="BWCheckbox" class="TEST" hidden="">
+                                        <strong>BW taken</strong> <br>
+                                        <input type="Checkbox" id="BW1Checkbox" class="TEST" checked hidden="">
+                                        Interproximal caries:
+                                        <input type="text" id="BW1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="BW2Checkbox" class="TEST" checked hidden="">
+                                        Occlusal caries:
+                                        <input type="text" id="BW2TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="BW3Checkbox" class="TEST" checked hidden="">
+                                        Secondary caries:
+                                        <input type="text" id="BW3TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="BW4Checkbox" class="TEST" checked hidden="">
+                                        Bone level:
+                                        <input type="text" id="BW4TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="BW5Checkbox" class="TEST" checked hidden="">
+                                        Calculus:
+                                        <input type="text" id="BW5TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="BW6Checkbox" class="TEST" checked hidden="">
+                                        Restoration:
+                                        <input type="text" id="BW6TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="opgCheckbox" class="TEST" hidden="">
+                                        <strong>OPG taken</strong> <br>
+                                        <input type="Checkbox" id="opg1Checkbox" class="TEST" checked hidden="">
+                                        Missing teeth:
+                                        <input type="text" id="opg1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="opg2Checkbox" class="TEST" checked hidden="">
+                                        8’s:
+                                        <input type="text" id="opg2TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="opg3Checkbox" class="TEST" checked hidden="">
+                                        Caries:
+                                        <input type="text" id="opg3TextInput" class="TEST" placeholder="Enter details...">
+                                        : <br>
+                                        <input type="Checkbox" id="opg4Checkbox" class="TEST" checked hidden="">
+                                        Restoration/dental work:
+                                        <input type="text" id="opg4TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="opg5Checkbox" class="TEST" checked hidden="">
+                                        Bone level:
+                                        <input type="text" id="opg5TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="opg6Checkbox" class="TEST" checked hidden="">
+                                        Mx sinus:
+                                        <input type="text" id="opg6TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="opg7Checkbox" class="TEST" checked hidden="">
+                                        Condyles
+                                        <input type="text" id="opg7TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="opg8Checkbox" class="TEST" checked hidden="">
+                                        Ghost images:
+                                        <input type="text" id="opg8TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="B18Checkbox" class="TEST" checked hidden="">
+                                        Provisional Tx:
+                                        <input type="text" id="B18TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <strong>Tx options discussed and presented to pt: </strong>
+                                        <input type="Checkbox" id="B25Checkbox" class="TEST" hidden="">
+                                        <br>
+                                        <input type="Checkbox" id="B19Checkbox" class="TEST" checked hidden="">
+                                        -Systemic phase:
+                                        <input type="text" id="B19TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B20Checkbox" class="TEST" checked hidden="">
+                                        -Acute phase
+                                        <input type="text" id="B20TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B21Checkbox" class="TEST" checked hidden="">
+                                        -Disease control:
+                                        <input type="text" id="B21TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B22Checkbox" class="TEST" checked hidden="">
+                                        -Definitive phase:
+                                        <input type="text" id="B22TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B23Checkbox" class="TEST" checked hidden="">
+                                        Maintenance phase:
+                                        <input type="text" id="B23TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="B24Checkbox" class="TEST" checked hidden="">
+                                        Extra comment:
+                                        <input type="text" id="B24TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="supervisorCheckbox" class="TEST">
+                                        Supervisor: Dr
+                                        <input type="text" id="supervisornameTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="nvCheckbox" class="TEST">
+                                        N/V:
+                                        <input type="text" id="nvTextInput" class="TEST" placeholder="Enter details...">
+                                        OR <br>
+                                        <input type="Checkbox" id="waitlistCheckbox" class="TEST">
+                                        Patient placed on general waitlist and seperated
+                                        OR
+                                        <input type="text" id="waitlistTextInput" class="TEST" class="TEST"
+                                            placeholder="Enter details...">
+                                        <hr>
+                                    </div>
+
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button6">PREVENTIVE, PROPHYLACTIC & BLEACHING SERVICES
+                                    (1xx)
+                                </button>
+                                <br>
+                                <div id="ppSection" class="section">
+                                    <button class="toggle-button" id="button7">114 Removal of calculus – first appointment
+                                    </button>
+                                    <input type="Checkbox" id="selectSpecificSCCheckbox" class="TEST">
                                     <br>
-                                    <input type="Checkbox" id="c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="c3sTextInput" class="TEST" placeholder="Enter details...">
+                                    <div id="scaleAndCleansSection" class="section">
+                                        <h3>Scale and Cleans</h3>
+
+
+                                        <input type="Checkbox" id="ptsc1Checkbox" class="TEST"> Pt. presented to
+                                        <select id="sc1yearDropdown" class="TEST">
+
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="sc1clinicDropdown" class="TEST">
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+
+                                        </select>
+                                        <select id="sc1codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="sc1typeDropdown" class="TEST">
+                                            <option value="S/C">S/C</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="sc1A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="sc1c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="sc1c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="sc1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen
+                                        Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="sc1medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="sc1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+
+                                        <input type="Checkbox" id="consentsCheckbox" class="TEST">
+                                        Pt consents to S/C – informed of risks bleeding, post op sensitivity, natural gaps
+                                        between teeth <br>
+                                        <input type="Checkbox" id="debridementCheckbox" class="TEST">
+                                        Debridement of all quadrants using ultrasonic scaler <br>
+                                        <input type="Checkbox" id="refinementCheckbox" class="TEST">
+                                        Refinement using hand scalers <br>
+                                        <input type="Checkbox" id="prophyCheckbox" class="TEST">
+                                        Prophy and fluoride applied <br>
+                                        <input type="Checkbox" id="ohiCheckbox" class="TEST">
+                                        OHI provided <br><br>
+
+                                        <input type="Checkbox" id="sc1G22Checkbox" class="TEST"> Pt well on discharge <br>
+                                        <input type="Checkbox" id="sc1supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="sc1supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="sc1nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="sc1nvTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                    </div>
+                                    <button class="toggle-button" id="button8">Enamel micro-abrasion – per tooth (tooth
+                                        lightening)
+                                    </button>
+                                    <input type="Checkbox" id="116Checkbox" class="TEST">
                                     <br>
-                                    <input type="Checkbox" id="colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified- no changes">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
+                                    <div id="116Section1" class="section"> COMING SOON</div>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button9">PERIODONTICS (2xx)</button>
+                                <div id="perioSection1" class="section">
+                                    <button class="toggle-button" id="button10">221 Clinical periodontal analysis and
+                                        recording
+                                    </button>
+                                    <input type="Checkbox" id="E221Checkbox" class="TEST">
+
+                                    <div id="221Section" class="section">
+
+                                        <input type="Checkbox" id="ptperio1Checkbox" class="TEST"> Pt. presented to
+                                        <select id="perio1yearDropdown" class="TEST">
+
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="perio1clinicDropdown" class="TEST">
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="perio1codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="perio1typeDropdown" class="TEST">
+                                            <option value="Perio charting">Perio charting</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="perio1A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="perio1c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="perio1c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="perio1colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="perio1medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="perio1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+
+                                        <input type="Checkbox" id="P1ACheckbox" class="TEST">
+                                        <strong>DENTAL Hx:</strong> <br>
+
+                                        <input type="Checkbox" id="P1Checkbox" class="TEST" checked hidden="">
+                                        Brushing freq, TB & TP
+                                        <input type="text" id="P1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P2Checkbox" class="TEST" checked hidden="">
+                                        Interdental cleaning/mouthwash:
+                                        <input type="text" id="P2TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P3Checkbox" class="TEST" checked hidden="">
+                                        Pain Hx:
+                                        <input type="text" id="P3TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P4Checkbox" class="TEST" checked hidden="">
+                                        Bleeding gums:
+                                        <input type="text" id="P4TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P5Checkbox" class="TEST" checked hidden="">
+                                        Missing teeth & reason:
+                                        <input type="text" id="P5TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P6Checkbox" class="TEST" checked hidden="">
+                                        Tooth mobility or movement:
+                                        <input type="text" id="P6TextInput" class="TEST" placeholder="Enter details...">
+                                        <br><br>
+                                        <input type="Checkbox" id="P1BCheckbox" class="TEST">
+                                        <strong>SOCIAL & FAMILY HX</strong> <br>
+
+                                        <input type="Checkbox" id="P7Checkbox" class="TEST" checked hidden="">
+                                        Snacks/sugary drinks
+                                        <input type="text" id="P7TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P8Checkbox" class="TEST" checked hidden="">
+                                        Smoking Hx:
+                                        <input type="text" id="P8aTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="P9Checkbox" class="TEST" checked hidden="">
+                                        Family Hx of diabetes/gum disease/tooth loss:
+                                        <input type="text" id="P9TextInput" class="TEST" placeholder="Enter details...">
+                                        <br><br>
+
+                                        <strong> LA</strong>
+                                        <br>
+                                        <input type="Checkbox" id="LAperio16Checkbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="LAperio16Dropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="LAperio17Checkbox" class="TEST">
+                                        <select id="LAperio17Dropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="LAperio17InfilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br>
+
+                                        <input type="Checkbox" id="P10Checkbox" class="TEST">
+                                        <strong>Full perio charted. Significant findings: </strong><br>
+
+
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th>Stage</th>
+                                                <th>Stage I</th>
+                                                <th>Stage II</th>
+                                                <th>Stage III</th>
+                                                <th>Stage IV</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <td> Interdental CAL at site of greatest loss</td>
+                                                <td><input type="Checkbox" id="P101Checkbox" class="TEST"> 1 – 2 mm</td>
+                                                <td><input type="Checkbox" id="P102Checkbox" class="TEST"> 3 – 4 mm</td>
+                                                <td><input type="Checkbox" id="P103Checkbox" class="TEST"> ≥ 5mm</td>
+                                                <td><input type="Checkbox" id="P104Checkbox" class="TEST"> ≥ 5mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Radiographic Bone loss</td>
+
+                                                <td><input type="Checkbox" id="P105Checkbox" class="TEST"> Coronal Third (<
+                                                    15%)
+                                                </td>
+                                                <td><input type="Checkbox" id="P106Checkbox" class="TEST"> Coronal Third (15
+                                                    – 33 %)
+                                                </td>
+                                                <td><input type="Checkbox" id="P107Checkbox" class="TEST"> Extending to the
+                                                    mid third of the root and
+                                                    beyond.
+                                                </td>
+                                                <td><input type="Checkbox" id="P108Checkbox" class="TEST"> Extending to the
+                                                    mid third of the root and
+                                                    beyond.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Periodontitis-associated tooth loss</td>
+                                                <td colspan="2"><input type="Checkbox" id="P109Checkbox" class="TEST"> No
+                                                    tooth loss due to
+                                                    Periodontitis.
+                                                </td>
+                                                <td><input type="Checkbox" id="P110Checkbox" class="TEST">Tooth loss due to
+                                                    Periodontitis of ≤ 4
+                                                    teeth.
+                                                </td>
+                                                <td><input type="Checkbox" id="P111Checkbox" class="TEST"> Tooth loss due to
+                                                    Periodontitis of ≥ 5
+                                                    teeth.
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Complexity <br>
+                                                    SEE CHECKBOXES BELOW
+
+
+                                                </td>
+                                                <td> Maximum probing depth ≤ 4mm. Mostly horizontal bone loss.</td>
+                                                <td> Maximum probing depth ≤ 5mm. Mostly horizontal bone loss.</td>
+                                                <td> In addition to stage II complexity; probing depth ≥ 6mm, vertical bone
+                                                    loss ≥ 3mm, furcation
+                                                    involvement (class II or III), moderate ridge defects.
+                                                </td>
+                                                <td> In addition to Stage III complexity; Need for comprehensive
+                                                    rehabilitation due to secondary
+                                                    occlusal trauma (mobility ≥ 2), bite collapse, drifting, flaring, less
+                                                    than 10 opposing pairs of
+                                                    teeth, masticatory dysfunction, severe ridge defects.
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td colspan="5"><input type="Checkbox" id="P14Checkbox" class="TEST">
+                                                    Max PPD:
+                                                    <select id="P14Dropdown" class="TEST">
+                                                        <option value="≤4">≤4</option>
+                                                        <option value="≤5">≤5</option>
+                                                        <option value="≥6mm beyond (Stage III/IV)">≥6mm beyond (Stage
+                                                            III/IV)
+                                                        </option>
+                                                    </select>
+                                                    <br>
+
+
+                                                    <input type="Checkbox" id="P15Checkbox" class="TEST">
+                                                    RBL pattern:
+                                                    <select id="P15Dropdown" class="TEST">
+                                                        <option value="Mostly horizontal RBL (Stage I/II)">Mostly horizontal
+                                                            RBL (Stage I/II)
+                                                        </option>
+                                                        <option value="Vertical bone loss ≥3mm (Stage III/IV)">Vertical bone
+                                                            loss ≥3mm (Stage III/IV)
+                                                        </option>
+                                                    </select>
+                                                    <br>
+
+
+                                                    <input type="Checkbox" id="P16Checkbox" class="TEST">
+                                                    Furcation involvement:
+                                                    <select id="P16Dropdown" class="TEST">
+                                                        <option value="None">None</option>
+                                                        <option value="Class II">Class II</option>
+                                                        <option value="Class III (Stage III/IV) w moderate ridge defects">
+                                                            Class III (Stage III/IV) w
+                                                            moderate ridge defects
+                                                        </option>
+                                                    </select>
+                                                    <br>
+
+                                                    <!-- P17 -->
+                                                    <input type="Checkbox" id="P17Checkbox" class="TEST">
+                                                    Ridge defects:
+                                                    <select id="P17Dropdown" class="TEST">
+                                                        <option value="None">None</option>
+                                                        <option value="Moderate (Stage III)">Moderate (Stage III)</option>
+                                                        <option value="Severe (Stage IV)">Severe (Stage IV)</option>
+                                                    </select>
+                                                    <br>
+
+                                                    <!-- P18 -->
+                                                    <input type="Checkbox" id="P18Checkbox" class="TEST" checked hidden="">
+                                                    Addition (Stage IV):
+                                                    <input type="text" id="P18TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br><br>
+
+
+                                                </td>
+
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>Extent & Distribution</td>
+                                                <td>Add to stage as descriptor</td>
+                                                <td colspan="3">For each stage, describe extent as localised (< 30% of teeth
+                                                    involved) or generalised,
+                                                    or molar/incisor pattern. <input type="Checkbox" id="P19Checkbox"
+                                                                                    class="TEST">
+                                                    <select id="P19Dropdown" class="TEST">
+                                                        <option value="Localized">Localized</option>
+                                                        <option value="Generalized">Generalized</option>
+                                                        <option value="Molar/incisor pattern">Molar/incisor pattern</option>
+                                                    </select></td>
+
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <!-- P15 -->
+
+
+                                        <!-- P16 -->
+
+                                        <strong>EXTENT & DISTRIBUTION</strong>
+                                        <br>
+                                        <br> <br>
+
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th colspan="2"></th>
+
+
+                                                <th>Grade A</th>
+                                                <th>Grade B</th>
+                                                <th>Grade C</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            <tr>
+                                                <th colspan="5">
+                                                    <center> Primary Criteria</center>
+                                                </th>
+
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <th>Direct Evidence of Progression</th>
+                                                <th>Longitudinal Data (radiographic bone loss or CAL)</th>
+                                                <td><input type="Checkbox" id="P116Checkbox" class="TEST"> Evidence of no
+                                                    loss over 5 years.
+                                                </td>
+                                                <td><input type="Checkbox" id="P117Checkbox" class="TEST"> &lt;2mm over 5
+                                                    years.
+                                                </td>
+                                                <td><input type="Checkbox" id="P118Checkbox" class="TEST"> &ge; 2mm over 5
+                                                    years.
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <th rowspan="2">Indirect Evidence of Progression</th>
+                                                <th>Percent (%) of Progression (bone loss/age)</th>
+                                                <td><input type="Checkbox" id="P119Checkbox" class="TEST"> &lt;0.25</td>
+                                                <td><input type="Checkbox" id="P120Checkbox" class="TEST"> 0.25 – 1.0</td>
+                                                <td><input type="Checkbox" id="P121Checkbox" class="TEST"> &gt;1.0</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Case Phenotype</th>
+                                                <td><input type="Checkbox" id="P122Checkbox" class="TEST"> Heavy biofilm
+                                                    deposits with low levels of
+                                                    destruction.
+                                                </td>
+                                                <td><input type="Checkbox" id="P123Checkbox" class="TEST"> Destruction
+                                                    commensurate with biofilm
+                                                    deposits.
+                                                </td>
+                                                <td><input type="Checkbox" id="P124Checkbox" class="TEST"> Destruction
+                                                    disproportionate to biofilm
+                                                    deposits; evidence of periods of rapid progression and/or early-onset
+                                                    disease (molar/incisor
+                                                    pattern); expected poor response to standard bacterial control.
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th colspan="5">
+                                                    <center>Grade Modifier</center>
+                                                </th>
+
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <th rowspan="2">Risk Factors</th>
+                                                <th>Smoking</th>
+                                                <td><input type="Checkbox" id="P125Checkbox" class="TEST"> Non-smoker</td>
+                                                <td><input type="Checkbox" id="P126Checkbox" class="TEST"> Smoker &lt; 10
+                                                    cigarettes/day
+                                                </td>
+                                                <td><input type="Checkbox" id="P127Checkbox" class="TEST"> Smoker &ge;10
+                                                    cigarettes/day
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Diabetes</th>
+                                                <td><input type="Checkbox" id="P128Checkbox" class="TEST"> Normoglycemic /
+                                                    no diagnosis of Diabetes
+                                                </td>
+                                                <td><input type="Checkbox" id="P129Checkbox" class="TEST"> HbA1c &lt; 7.0%
+                                                    in a Diabetes Patient
+                                                </td>
+                                                <td><input type="Checkbox" id="P130Checkbox" class="TEST"> HbA1c &ge; 7.0 %
+                                                    in a Diabetes Patient
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <strong>DX</strong>
+                                        <br>
+                                        <!-- P25 -->
+                                        <input type="Checkbox" id="P25Checkbox" class="TEST">
+
+
+                                        Stage
+                                        <select id="P25ADropdown" class="TEST">
+                                            <option value="Stage I">Stage I</option>
+                                            <option value="Stage II">Stage II</option>
+                                            <option value="Stage III">Stage III</option>
+                                            <option value="Stage Iv">Stage IV</option>
+                                        </select> </td>
+
+                                        <select id="P19BDropdown" class="TEST">
+                                            <option value="Localized">Localized</option>
+                                            <option value="Generalized">Generalized</option>
+                                            <option value="Molar/incisor pattern">Molar/incisor pattern</option>
+                                        </select>, Grade <select id="P25BDropdown" class="TEST">
+                                            <option value="A">A</option>
+                                            <option value="B">B</option>
+                                            <option value="C">C</option>
+                                        </select> </td> periodontitis
+
+                                        <br>
+
+                                        <input type="Checkbox" id="perio1G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="perio1supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="perio1supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="perio1nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="perio1nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+
+                                    </div>
+                                    <button class="toggle-button" id="button11">250 Active non-surgical periodontal therapy
+                                        - per
+                                        quadrant
+                                    </button>
+                                    <input type="Checkbox" id="E250Checkbox" class="TEST">
+
+                                    <div id="250Section" class="section">
+
+
+                                        <input type="Checkbox" id="ptperio2Checkbox" class="TEST"> Pt. presented to
+                                        <select id="perio2yearDropdown" class="TEST">
+
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="perio2clinicDropdown" class="TEST">
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="perio2codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="perio2typeDropdown" class="TEST">
+                                            <option value="Perio scaling ">Perio Scaling</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="perio2A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="perio2c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="perio2c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="perio2colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="perio2medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="perio2hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+                                        <strong> LA</strong>
+                                        <br>
+                                        <input type="Checkbox" id="LAperio26Checkbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="LAperio26Dropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="LAperio27Checkbox" class="TEST">
+                                        <select id="LAperio27Dropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="LAperio27InfilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br>
+
+
+                                        <input type="Checkbox" id="p40Checkbox5" class="TEST">
+                                        U/S & hand scaling (Gracey curettes) used to debride all sub- & supra-gingival
+                                        surfaces. All calculus &
+                                        plaque removed.
+                                        <br><br>
+
+                                        <!-- Checkbox 6 -->
+                                        <input type="Checkbox" id="p40Checkbox6" class="TEST">
+                                        Prophy paste used to clean & polish all supragingival surfaces. Floss confirmed
+                                        removal of calculus on
+                                        interproximal surfaces.
+                                        <br><br>
+
+                                        <!-- Checkbox 7 -->
+                                        <input type="Checkbox" id="p40Checkbox7" class="TEST">
+                                        OHI reinforced to patient.
+                                        <br><br>
+
+                                        <strong>REMAINING Tx PLAN</strong>
+                                        <br><br>
+                                        <!-- Checkbox 8 -->
+                                        <input type="Checkbox" id="p40Checkbox8" class="TEST">
+                                        250 x2 Active non-surgical perio tx Q2 & Q3 w LA.
+                                        <br><br>
+
+                                        <!-- Checkbox 9 -->
+                                        <input type="Checkbox" id="p40Checkbox9" class="TEST">
+                                        251 Supportive periodontal therapy/review.
+                                        <br><br>
+
+                                        <strong>POST OP</strong>
+                                        <br><br>
+                                        <!-- Checkbox 10 -->
+                                        <input type="Checkbox" id="p40Checkbox10" class="TEST">
+                                        POIG regarding bleeding, sensitivity & gap formation (if any).
+                                        <br><br>
+
+
+                                        <input type="Checkbox" id="perio2G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="perio2supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="perio2supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="perio2nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="perio2nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                    </div>
+
+
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button12">ORAL SURGERY (3xx))</button>
+                                <div id="surgSection1" class="section">
+                                    <button class="toggle-button" id="button13">Oral Surg</button>
+                                    <input type="Checkbox" id="F1Checkbox" class="TEST">
+
+                                    <div id="oralsurgSection" class="section">
+
+                                        <input type="Checkbox" id="ptsurg1Checkbox" class="TEST"> Pt. presented to
+                                        <select id="surg1yearDropdown" class="TEST">
+
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="surg1clinicDropdown" class="TEST">
+                                            <option value="Oral surgery Clinic">Oral surgery Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="surg1codeDropdown" class="TEST">
+                                            <option value="6.2">6.2</option>
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+
+                                            <option value="6.3">6.3</option>
+                                        </select> Exos
+                                        for
+                                        <select id="surg1typeDropdown" class="TEST">
+                                            <option value="Exos"> Exos</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="surg1A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="surg1c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="surg1c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="surg1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen
+                                        Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="surg1medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="surg1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+
+                                        <input type="Checkbox" id="o1Checkbox3" class="TEST" checked hidden="">
+                                        Tooth of interest:
+
+                                        <input type="text" id="o1TextInput3" class="TEST"
+                                            placeholder="Enter details..."><br><br>
+
+
+                                        <input type="Checkbox" id="o1Checkbox3A" class="TEST" checked hidden="">
+                                        RADIOGRAPHIC FINDINGS
+                                        <input type="text" id="o1TextInput3A" class="TEST"
+                                            placeholder="Enter details..."><br>
+
+
+                                        <input type="Checkbox" id="o1Checkbox4" class="TEST" checked hidden="">
+                                        CLINICAL EXAMINATION
+
+                                        <input type="text" id="o1TextInput4" class="TEST"
+                                            placeholder="Enter details..."><br><br>
+
+
+                                        <input type="Checkbox" id="o1Checkbox5" class="TEST">
+                                        Pt informed of the risks & complications of the procedure including damage to soft
+                                        tissue, adjacent teeth,
+                                        infection, bleeding, swelling, dry socket, numbness & pain. Tooth replacement
+                                        options discussed & pt
+                                        understood.
+                                        <br><br>
+
+                                        <strong>Tx DELIVERED</strong>
+                                        <br>
+
+
+                                        <input type="Checkbox" id="OA11Checkbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="OA11Dropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="OA12Checkbox" class="TEST">
+                                        <select id="OA12Dropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="OA12InfilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br><br>
+
+                                        <!-- Checkbox 6 -->
+                                        <input type="Checkbox" id="o1Checkbox6" class="TEST">
+                                        Luxators, elevators, forceps used to decuff & deliver the tooth.
+                                        <br>
+
+                                        <!-- Checkbox 7 -->
+                                        <input type="Checkbox" id="o1Checkbox7" class="TEST">
+                                        Tooth & socket inspected for fragments. Nil root fragments. Socket compressed
+                                        immediately.
+                                        <br>
+
+                                        <!-- Checkbox 8 -->
+                                        <input type="Checkbox" id="o1Checkbox8" class="TEST">
+                                        Haemostasis achieved (HA) w/ gauze OR simple interrupted suture w/ 3-0 VR with
+                                        Gelfoam.
+                                        <br><br>
+                                        <input type="Checkbox" id="o1Checkbox8A" class="TEST">
+                                        <strong>REMAINING TX PLAN</strong>
+                                        <br><br><br>
+                                        <!-- Checkbox 9 -->
+
+                                        <!-- Checkbox 10 -->
+                                        <input type="Checkbox" id="o1Checkbox10" class="TEST">
+                                        POIG (regarding numbness, pain, swelling, bleeding, infection) & gauze packs w/
+                                        instruction on usage
+                                        provided.
+                                        <br><br>
+
+
+                                        <input type="Checkbox" id="surg1G22Checkbox" class="TEST"> Pt well on discharge <br>
+                                        <input type="Checkbox" id="surg1supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="surg1supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+
+                                        <input type="Checkbox" id="surg1nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="surg1nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+
+                                    </div>
+
+                                    <button class="toggle-button2" id="button166">ORAL SURGERY POST-OPERATIVE INSTRUCTIONS
+                                    </button>
+
+
+                                    <div id="oralsurg2Section" class="section">
+
+                                        <h2>ORAL SURGERY POST-OPERATIVE INSTRUCTIONS</h2>
+
+                                        <table>
+                                            <tr>
+                                                <th>Time Frame</th>
+                                                <th>Instructions</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Immediately</td>
+                                                <td>
+                                                    <ol>
+                                                        <li><strong>Numbness:</strong> Avoid eating for the next few hours
+                                                            until the numbness has worn off
+                                                            to avoid biting & burning yourself.
+                                                        </li>
+                                                        <li><strong>Pain:</strong> You can expect some pain because the
+                                                            tissue has been disturbed during the
+                                                            treatment. Control pain by taking paracetamol (if no allergy)
+                                                            and/or ibuprofen. Call the clinic if
+                                                            pain persists.
+                                                        </li>
+                                                        <li><strong>Bleeding:</strong> There may be some bleeding enough to
+                                                            discolor your saliva for a few
+                                                            hours. Apply a clean gauze (do not use tissue) & keep it in
+                                                            place by applying pressure firmly by
+                                                            closing your jaws on it for at least 10 mins.
+                                                        </li>
+                                                        <li><strong>Swelling:</strong> Some swelling or difficulty in
+                                                            opening the mouth is common & should
+                                                            subside after 1-2 days. Use an ice pack on the outside of the
+                                                            face wrapped in a cloth to reduce
+                                                            facial swelling.
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>First 24h</td>
+                                                <td>
+                                                    <ol>
+                                                        <li>Avoid excessive activity or heavy lifting for about 24 hours
+                                                            (may increase the risk of
+                                                            bleeding).
+                                                        </li>
+                                                        <li>Try to keep your head elevated when lying down (decreases the
+                                                            risk of bleeding).
+                                                        </li>
+                                                        <li>Start with soft food (i.e. scrambled eggs, finely chopped meat
+                                                            or cheese, milk, soup or fruit
+                                                            juice) & chew on the opposite side of the mouth to the wound.
+                                                        </li>
+                                                        <li>Important to maintain good oral hygiene as usual (to prevent
+                                                            infection) but avoid disturbing the
+                                                            blood clot or rinsing the mouth for the first 24 hrs after
+                                                            surgery (prevent washing blood clot
+                                                            away).
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>After 24h & throughout healing (up to a week)</td>
+                                                <td>
+                                                    <ol>
+                                                        <li>You can start rinsing your mouth gently, especially after meals,
+                                                            with ½ teaspoon of table salt
+                                                            in a glass of lukewarm water.
+                                                        </li>
+                                                        <li>Avoid disturbing the blood clot by creating too much pressure
+                                                            (using a straw or smoking) or with
+                                                            objects.
+                                                        </li>
+                                                        <li>If swelling persists, use a warm pack on the outside of the face
+                                                            wrapped in a cloth to promote
+                                                            healing.
+                                                        </li>
+                                                        <li>Avoid smoking or drinking as it delays healing.</li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                    </div>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button14">ENDODONTICS (4xx)</button>
+                                <div id="endoSection1" class="section">
+                                    <button class="toggle-button2" id="button15">014 Consultation (endodontics)</button>
+                                    <input type="Checkbox" id="endo1allCheckbox" class="TEST">
+
+                                    <div id="endo1Section" class="section">
+                                        <h3>014 Consultation (endodontics)</h3>
+                                        <input type="Checkbox" id="ptendo1Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="endo1yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="endo1clinicDropdown" class="TEST">
+                                            <option value="Endo Clinic">Endo Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="endo1codeDropdown" class="TEST">
+                                            <option value="3.1">3.1</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="endo1typeDropdown" class="TEST">
+                                            <option value="Endo Consult (014)"> Endo Consult (014)</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="endo1A1TextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo1c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="endo1c3sTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo1colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="endo1medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="endo1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+
+                                        <input type="Checkbox" id="E1Checkbox" class="TEST">
+                                        <strong> CLINICAL FINDINGS </strong><br>
+                                        <input type="Checkbox" id="E1ACheckbox" class="TEST">
+                                        Discoloration:
+                                        <select id="E1ADropdown" class="TEST">
+                                            <option value="unchanged">unchanged</option>
+                                            <option value="yellowish">yellowish</option>
+                                            <option value="grey">grey</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E1BCheckbox" class="TEST">
+                                        Swelling:
+                                        <select id="E1BDropdown" class="TEST">
+                                            <option value="none">none</option>
+                                            <option value="intraoral">intraoral</option>
+                                            <option value="extraoral">extraoral</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E1CCheckbox" class="TEST">
+                                        Sinus tract:
+                                        <select id="E1CDropdown" class="TEST">
+                                            <option value="present">present</option>
+                                            <option value="absent">absent</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <strong> HX OF TOOTH </strong><br>
+                                        <input type="Checkbox" id="E2Checkbox" class="TEST">
+                                        PA radiograph taken. RADIOGRAPHIC EXAMINATION <br>
+                                        <input type="Checkbox" id="E3Checkbox" class="TEST" checked hidden="">
+                                        Carious w/wo exposure
+                                        <input type="text" id="E3TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="E4Checkbox" class="TEST" checked hidden="">
+                                        Restored
+                                        <input type="text" id="E4TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="E5Checkbox" class="TEST" checked hidden="">
+                                        Pulp capping
+                                        <input type="text" id="E5TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="E7Checkbox" class="TEST" checked hidden="">
+                                        Hx of trauma
+                                        <input type="text" id="E7TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="E8Checkbox" class="TEST" checked hidden="">
+                                        Previous pulpotomy
+                                        <input type="text" id="E8TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="E9Checkbox" class="TEST" checked hidden="">
+                                        Previously root treated
+                                        <input type="text" id="E9TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E10Checkbox" class="TEST">
+                                        PULP SENSIBILITY TESTS performed. <br>
+
+                                        <table>
+                                            <tr>
+                                                <th>Tests</th>
+                                                <th><input type="text1" id="E11TextInput" class="TEST"
+                                                        placeholder="Tooth #"></th>
+                                                <th><input type="text1" id="E11BTextInput" class="TEST"
+                                                        placeholder="Tooth #"></th>
+                                                <th><input type="text1" id="E11CTextInput" class="TEST"
+                                                        placeholder="Tooth #"></th>
+                                            </tr>
+
+
+                                            <tr>
+                                                <th><input type="Checkbox" id="E11Checkbox" class="TEST">Cold</th>
+                                                <td><select id="E11Dropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td><select id="E11BDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td><select id="E11CDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+
+                                            </tr>
+
+
+                                            <tr>
+                                                <th><input type="Checkbox" id="E12Checkbox" class="TEST">EPT</th>
+                                                <td>
+
+
+                                                    <select id="E12Dropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+
+
+                                                    <select id="E12BDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+
+
+                                                    <select id="E12CDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <th><input type="Checkbox" id="E13Checkbox" class="TEST">Palpation</th>
+                                                <td>
+
+
+                                                    <select id="E13Dropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+
+
+                                                    <select id="E13BDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+
+
+                                                    <select id="E13CDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <th><input type="Checkbox" id="E15Checkbox" class="TEST">Percussion</th>
+                                                <td>
+
+
+                                                    <select id="E15Dropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+
+
+                                                    <select id="E15BDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+
+
+                                                    <select id="E15CDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <th><input type="Checkbox" id="E16Checkbox" class="TEST">Mobility</th>
+                                                <td>
+
+
+                                                    <select id="E16Dropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                                <td>
+
+
+                                                    <select id="E16BDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+
+
+                                                    <select id="E16CDropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="(+)">(+)</option>
+                                                        <option value="(++)">(++)</option>
+                                                        <option value="(+++)">(+++)</option>
+                                                        <option value="(-)">(-)</option>
+                                                    </select>
+                                                </td>
+
+                                            </tr>
+
+                                        </table>
+
+
+                                        <br>
+
+
+                                        <br>
+
+                                        <br>
+                                        <input type="Checkbox" id="E17Checkbox" class="TEST" checked hidden="">Abnormal
+                                        Probing:
+                                        <input type="text" id="E17TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E18Checkbox" class="TEST">
+                                        PULPAL DX
+
+                                        <select id="E18Dropdown" class="TEST">
+                                            <option value="Normal pulp">Normal pulp</option>
+                                            <option value="Reversible pulpitis">Reversible pulpitis</option>
+                                            <option value="Symptomatic irreversible pulpitis">Symptomatic irreversible
+                                                pulpitis
+                                            </option>
+                                            <option value="Asymptomatic irreversible pulpitis">Asymptomatic irreversible
+                                                pulpitis
+                                            </option>
+                                            <option value="Pulp necrosis">present</option>
+                                            <option value="Previous RCT initiated">Previous RCT initiated</option>
+                                            <option value="Previous RCT completed">Previous RCT completed</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E19Checkbox" class="TEST">
+                                        PERIAPICAL DX
+                                        <select id="E19Dropdown" class="TEST">
+                                            <option value=""></option>
+                                            <option value="Normal">Normal</option>
+                                            <option value="Symptomatic apical periodontitis">Symptomatic apical
+                                                periodontitis
+                                            </option>
+                                            <option value="Asymptomatic apical periodontitis">Asymptomatic apical
+                                                periodontitis
+                                            </option>
+                                            <option value="Acute apical abscess">Acute apical abscess</option>
+                                            <option value="Chronic apical abscess">Chronic apical abscess</option>
+                                            <option value="Condensing osteitis">Condensing osteitis</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E20Checkbox" class="TEST">
+                                        Results from tests & diagnosis were discussed with pt. <br>
+                                        <input type="Checkbox" id="E21Checkbox" class="TEST">
+                                        TX OPTIONS
+                                        <select id="E21Dropdown" class="TEST">
+                                            <option value="RCT w direct/indirect restoration">RCT w direct restoration
+                                            </option>
+                                            <option value="RCT w direct/indirect restoration">RCT w indirect restoration
+                                            </option>
+                                            <option value="> Extraction w removable/fixed prothesis">> Extraction w fixed
+                                                prothesis
+                                            </option>
+                                            <option value="> Extraction w removable/fixed prothesis">> Extraction w
+                                                removable prothesis
+                                            </option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E22Checkbox" class="TEST">
+                                        Advantages & disadvantages of each Tx option were discussed with patient, written
+                                        information sheets
+                                        provided. <br>
+                                        <input type="Checkbox" id="E23Checkbox" class="TEST">
+                                        The patient understood the advantages, risks, as well as the cost involved in RCT,
+                                        including the need for
+                                        multiple visits, and consented for RCT. <br>
+                                        <br>
+                                        <input type="Checkbox" id="E24Checkbox" class="TEST">
+                                        Post-endodontic restorative options discussed: <br>
+                                        <input type="Checkbox" id="E25Checkbox" class="TEST">
+                                        1) Bonded composite
+                                        <select id="E25Dropdown" class="TEST">
+                                            <option value="(short-term resto for posterior teeth)">(short-term resto for
+                                                posterior teeth)
+                                            </option>
+                                            <option value="(anterior tooth w sufficient remaining tooth structure)">
+                                                (anterior tooth w sufficient
+                                                remaining tooth structure)
+                                            </option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E26Checkbox" class="TEST">
+                                        2) Crown
+                                        <select id="E26Dropdown" class="TEST">
+                                            <option value="(anterior w extensive proximal caries/resto)">(anterior w
+                                                extensive proximal caries/resto)
+                                            </option>
+                                            <option value="(posterior for cuspal coverage against occlusal forces)">
+                                                (posterior for cuspal coverage
+                                                against occlusal forces)
+                                            </option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E27Checkbox" class="TEST">
+                                        Pt understood that the type of final restoration recommended after RCT will be
+                                        determined by the amount of
+                                        tooth structure remaining after removal of existing restoration & caries & that a
+                                        post may be indicated to
+                                        retain the core. <br>
+                                        <br>
+
+                                        <br>
+                                        <input type="Checkbox" id="endo1G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="endo1supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="endo1supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo1nvCheckbox" class="TEST">
+                                        N/V:
+                                        <input type="text" id="endo1nvTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                    </div>
                                     <br>
+                                    <button class="toggle-button2" id="button16">414 Pulpotomy</button>
+                                    <input type="Checkbox" id="endo2allCheckbox" class="TEST">
+
+                                    <div id="endo2Section" class="section">
+                                        <h3> 414 Pulpotomy</h3>
+                                        <input type="Checkbox" id="ptendo2Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="endo2yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="endo2clinicDropdown" class="TEST">
+                                            <option value="Endo Clinic">Endo Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="endo2codeDropdown" class="TEST">
+                                            <option value="3.1">3.1</option>
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="endo2typeDropdown" class="TEST">
+                                            <option value="Pulpotomy">Pulpotomy</option>
+                                            <option value="Emergency">Emergency</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="endo2A1TextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo2c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="endo2c3sTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo2colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="endo2medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="endo2hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+
+                                        <br><br>
+                                        <input type="Checkbox" id="E40Checkbox" class="TEST">
+                                        Pt informed of the risks & complications of the procedure & an informed consent for
+                                        tx was obtained.
+                                        <br>
+                                        <input type="Checkbox" id="E41Checkbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="E41Dropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E42Checkbox" class="TEST">
+                                        <select id="E42Dropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="E42InfilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E43Checkbox" class="TEST">
+                                        Isolation
+                                        <select id="E43Dropdown" class="TEST">
+                                            <option value="Moisture control achieved through dental dam">Dental Dam</option>
+                                            <option value="Cotton rolls isolation used">Cotton Rolls</option>
+                                            <option value="Dry tips isolation used">Dry Tips</option>
+                                        </select>
+                                        <br><br>
+                                        <input type="Checkbox" id="E44Checkbox" class="TEST">
+                                        Cavity prepared using HS and SS, previous restoration removed/caries free. Exposed
+                                        pulp reveals
+                                        <select id="E44Dropdown" class="TEST">
+                                            <option value="hemorrhagic inflamed pulp"> hemorrhagic inflamed pulp</option>
+                                            <option value="necrotic pulp">necrotic pulp</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E45Checkbox" class="TEST">Pulp amputation was performed
+                                        using S/S #8 large round
+                                        bur. Canal orifice(s) were visually inspected to ensure complete removal of the pulp
+                                        tissue.
+                                        <br>
+                                        <br> <input type="Checkbox" id="E46Checkbox" class="TEST">Disinfection & hemostatis
+                                        was achieved by
+                                        compression of sterile cotton pellets soaked in 2% sodium hypochlorite over the pulp
+                                        stump(s) using gentle
+                                        pressure for 2-5mins.
+                                        <br>
+                                        <input type="Checkbox" id="E47Checkbox" class="TEST"> Access cavity is temporized
+                                        with
+                                        <select id="E47ADropdown" class="TEST">
+                                            <option value="Odontopaste,">Odontopaste</option>
+                                            <option value="calcium hydroxide paste,">calcium hydroxide paste</option>
+
+                                        </select>
+
+                                        <select id="E47BDropdown" class="TEST">
+                                            <option value="">No cotton pellet</option>
+                                            <option value=" Sterile cotton pellet,">Sterile cotton pellet</option>
+
+                                        </select> &
+                                        <select id="E47CDropdown" class="TEST">
+                                            <option value=" Fuji 7 GIC (pink)">Fuji 7 GIC (pink)</option>
+                                            <option value=" Cavit">Cavit</option>
+
+                                        </select>
+
+
+                                        <br> <input type="Checkbox" id="E48Checkbox" class="TEST">Cusps lightly reduced to
+                                        take tooth out of
+                                        occlusion for symptomatic relief & decrease risk of cuspal fracture (discussed with
+                                        pt prior to tx)
+                                        <br>
+                                        <br>
+
+                                        <input type="Checkbox" id="endo2G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="endo2supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="endo2supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo2nvCheckbox" class="TEST">
+                                        N/V:
+                                        <input type="text" id="endo2nvTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                    </div>
+                                    <button class="toggle-button2" id="button17">415 Complete chemo-mechanical preparation
+                                        of root canal – one
+                                        canal
+                                    </button>
+                                    <input type="Checkbox" id="endo3allCheckbox" class="TEST">
+
+                                    <div id="endo3Section" class="section">
+                                        <h3></h3>
+                                        <input type="Checkbox" id="ptendo3Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="endo3yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="endo3clinicDropdown" class="TEST">
+                                            <option value="Endo Clinic">Endo Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="endo3codeDropdown" class="TEST">
+                                            <option value="3.1">3.1</option>
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="endo3typeDropdown" class="TEST">
+                                            <option value="chemo-mechanical preparation of root canal">chemo-mechanical
+                                                preparation of root canal
+                                            </option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="endo3A1TextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo3c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="endo3c3sTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo3colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="endo3medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="endo3hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select><br><br>
+
+                                        <input type="Checkbox" id="E50Checkbox" class="TEST">
+                                        Advantages & disadvantages of each Tx option were discussed with patient, written
+                                        information sheets
+                                        provided.
+                                        <br>
+                                        <input type="Checkbox" id="E51Checkbox" class="TEST">
+                                        The patient understood the advantages, risks, as well as the cost involved in RCT,
+                                        including the need for
+                                        multiple visits, and consented for RCT.
+                                        <br>
+                                        <br>
+
+                                        Post-endodontic restorative options discussed:
+                                        <br>
+                                        <input type="Checkbox" id="E53Checkbox" class="TEST">
+                                        1) Bonded composite
+
+                                        <br>
+                                        <input type="Checkbox" id="E54Checkbox" class="TEST">
+                                        2) Crown
+
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E55Checkbox" class="TEST">
+                                        Pt understood that the type of final restoration recommended after RCT will be
+                                        determined by the amount of
+                                        tooth structure remaining after removal of existing restoration & caries & that a
+                                        post may be indicated to
+                                        retain the core.
+                                        <br>
+                                        <br>
+
+                                        <strong> LA</strong>
+                                        <br>
+                                        <input type="Checkbox" id="E56Checkbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="E56Dropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E57Checkbox" class="TEST">
+                                        <select id="E57Dropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="E57InfilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br>
+
+                                        <input type="Checkbox" id="E58Checkbox" class="TEST">
+                                        Isolation
+                                        <select id="E58Dropdown" class="TEST">
+                                            <option value="Moisture control achieved through dental dam">Dental Dam</option>
+                                            <option value="Cotton rolls isolation used">Cotton Rolls</option>
+                                            <option value="Dry tips isolation used">Dry Tips</option>
+                                        </select>
+                                        <br><br>
+
+                                        <strong> Cavity Prep</strong>
+                                        <br>
+
+                                        <input type="Checkbox" id="E59Checkbox" class="TEST">
+                                        Cavity prepared using HS and SS, previous restoration removed/caries free.
+                                        <br>
+                                        <input type="Checkbox" id="E60Checkbox" class="TEST">NIL pulp exposure/ Pulp
+                                        exposed.
+                                        <select id="E60Dropdown" class="TEST">
+                                            <option value="NIL pulp exposure">NIL pulp exposure</option>
+                                            <option
+                                                value="Exposed pulp is covered with Teflon tape & cavit for pre-endodontic provisional restoration.">
+                                                Exposed pulp is covered with Teflon tape & cavit for pre-endodontic
+                                                provisional restoration.
+                                            </option>
+                                        </select>
+                                        <br><br>
+
+                                        <strong>Pre-Endo Resto</strong> <br>
+                                        <input type="Checkbox" id="E61Checkbox" class="TEST">
+                                        Etched with 37% phosphoric acid, clearfil primer and bond. Gradia
+                                        <select id="E61GradiaDropdown" class="TEST">
+                                            <option value="A1">A1</option>
+                                            <option value="A2">A2</option>
+                                            <option value="A3">A3</option>
+                                            <option value="A3.5">A3.5</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="E62Checkbox" class="TEST">Pre-endodontic provisional
+                                        restoration completed using
+                                        GIC/ composite/ bulk fill flowable composite.
+                                        <br>
+                                        <input type="Checkbox" id="E63Checkbox" class="TEST">Access cavity prepared using
+                                        H/S & U/S.
+                                        <br><br>
+                                        <br>
+                                        <input type="Checkbox" id="E64Checkbox" class="TEST">
+                                        <select id="E64Dropdown" class="TEST">
+                                            <option value="1 Canal">1 Canal</option>
+                                            <option value="2 Canals">2 Canals</option>
+                                            <option value="3 Canals">3 Canals</option>
+                                            <option value="4 Canals">4 Canals</option>
+                                        </select> identified. XA Protaper was used to prepare the coronal 3rd of all
+                                        canal(s)
+                                        <br>
+                                        <input type="Checkbox" id="E65Checkbox" class="TEST"> EWL estimated using
+                                        pre-operative radiograph & apex
+                                        locator. WL radiograph taken & CWL obtained.
+                                        <br>
+                                        <input type="Checkbox" id="E66Checkbox" class="TEST"> Proglider was used to prepare
+                                        glide path in all
+                                        canal(s). Canal(s) prepared up to Protaper
+                                        <select id="E66ProtaperDropdown" class="TEST">
+                                            <option value="X2">X2</option>
+                                            <option value="X1">X1</option>
+                                            <option value="X3">X3</option>
+                                            <option value="X4">X4</option>
+                                        </select>, irrigated with 4% sodium hypochlorite & recapitulated with size 10 hand
+                                        files after each
+                                        instrumentation.
+                                        <br><br>
+                                        <input type="Checkbox" id="E67Checkbox" class="TEST"> Access cavity is temporized
+                                        with
+                                        <select id="E67ADropdown" class="TEST">
+                                            <option value="Odontopaste,">Odontopaste</option>
+                                            <option value="calcium hydroxide paste,">calcium hydroxide paste</option>
+
+                                        </select>
+
+                                        <select id="E67BDropdown" class="TEST">
+                                            <option value="">No cotton pellet</option>
+                                            <option value=" Sterile cotton pellet,">Sterile cotton pellet</option>
+
+                                        </select> &
+                                        <select id="E67CDropdown" class="TEST">
+                                            <option value=" Fuji 7 GIC (pink)">Fuji 7 GIC (pink)</option>
+                                            <option value=" Cavit">Cavit</option>
+
+                                        </select>
+
+
+                                        <br>
+                                        <input type="Checkbox" id="E68Checkbox" class="TEST"> Cusps lightly reduced to take
+                                        tooth out of occlusion
+                                        for symptomatic relief & decrease risk of cuspal fracture (discussed with pt prior
+                                        to tx)
+                                        <br><br><br>
+                                        <strong>TX RECORD</strong><br>
+
+
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    Canal
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E69ATextInput" placeholder="MB, D ....">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E69BTextInput" placeholder="MB, D ....">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E69CTextInput" placeholder="MB, D ....">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E69DTextInput" placeholder="MB, D ....">
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>Ref point
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E70ATextInput" placeholder="Enter details...">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E70BTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E70CTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E70DTextInput" placeholder="Enter details...">
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    EWL
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E71ATextInput" placeholder="Enter details...">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E71BTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E71CTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E71DTextInput" placeholder="Enter details...">
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    WLF size
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E72ATextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E72BTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E72CTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E72DTextInput" placeholder="Enter details...">
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    CWL
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E73ATextInput" placeholder="Enter details...">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E73BTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E73CTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E73DTextInput" placeholder="Enter details...">
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Last rotary file used
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E74ATextInput" placeholder="Enter details...">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E74BTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E74CTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E74DTextInput" placeholder="Enter details...">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    (MC)
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E75ATextInput" placeholder="Enter details...">
+                                                </td>
+
+                                                <td>
+                                                    <input type="text1" id="E75BTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E75CTextInput" placeholder="Enter details...">
+                                                </td>
+                                                <td>
+                                                    <input type="text1" id="E75DTextInput" placeholder="Enter details...">
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="endo3G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="endo3supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="endo3supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo3nvCheckbox" class="TEST">
+                                        N/V:
+                                        <input type="text" id="endo3nvTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                    </div>
+                                    <button class="toggle-button2" id="button18">417 Root canal obturation – one canal
+                                    </button>
+                                    <input type="Checkbox" id="endo4allCheckbox" class="TEST">
+
+                                    <div id="endo4Section" class="section">
+                                        <h3></h3>
+                                        <input type="Checkbox" id="ptendo4Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="endo4yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="endo4clinicDropdown" class="TEST">
+                                            <option value="Endo Clinic">Endo Clinic</option>
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="endo4codeDropdown" class="TEST">
+                                            <option value="3.1">3.1</option>
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="endo4typeDropdown" class="TEST">
+                                            <option value="RCT obturation">RCT obturation</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="endo4A1TextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo4c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="endo4c3sTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo4colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="endo4medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="endo4hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="E80Checkbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="E81Dropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+
+                                        <input type="Checkbox" id="E82Checkbox" class="TEST">
+                                        <select id="E82Dropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="E82InfilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br>
+
+                                        <input type="Checkbox" id="E83Checkbox" class="TEST">
+                                        Isolation
+                                        <select id="E84Dropdown" class="TEST">
+                                            <option value="Moisture control achieved through dental dam">Dental Dam</option>
+                                            <option value="Cotton rolls isolation used">Cotton Rolls</option>
+                                            <option value="Dry tips isolation used">Dry Tips</option>
+                                        </select>
+                                        <br><br>
+
+                                        <input type="Checkbox" id="E85Checkbox" class="TEST">
+                                        Temporary restorations removed using H/S & U/S.
+                                        <br>
+
+                                        <input type="Checkbox" id="E86Checkbox" class="TEST">Canal(s) were irrigated with 4%
+                                        sodium hypochlorite &
+                                        recapitulated to prepared lengths to ensure patency.
+                                        <br>
+                                        <br> <input type="Checkbox" id="E87Checkbox" class="TEST">Master cone tried &
+                                        tug-back achieved. Master cone
+                                        radiograph taken.
+                                        <br> <input type="Checkbox" id="E88Checkbox" class="TEST">All canal(s) were dried
+                                        with length-controlled
+                                        paper points.
+                                        <br> <input type="Checkbox" id="E89Checkbox" class="TEST">All canal(s) were
+                                        obturated with master cones &
+                                        medium fine accessory GP points using AH Plus sealer & lateral condensation
+                                        technique.
+                                        <br><br> <input type="Checkbox" id="E90Checkbox" class="TEST">
+                                        Excess GP were removed using Super endo up to 4mm below each canal orifice (to
+                                        reduce risk of staining &
+                                        allow sufficient space for Cavit placement) & the remaining GP were packed with a
+                                        plugger.
+                                        <br> <input type="Checkbox" id="E91Checkbox" class="TEST">
+                                        Excess GP & sealer on the coronal portion of each orifice were removed with Gates
+                                        Glidden at 10,000 RPM & 5s
+                                        etch, respectively.
+                                        <br><br> <input type="Checkbox" id="E92Checkbox" class="TEST">Final PA radiograph
+                                        taken
+                                        <br> <input type="Checkbox" id="E93Checkbox" class="TEST">Final restoration was
+                                        placed using composite /
+                                        Access cavity is temporized with Cavit, & Fuji 9 GIC.
+
+                                        <br>
+
+                                        <br> <input type="Checkbox" id="E94Checkbox" class="TEST">POIG. Tooth may be
+                                        sensitive for the next few days
+                                        post-op (recommend ibuprofen 600mg &/or paracetamol if necessary); Cautioned against
+                                        consuming hot
+                                        food/drinks until the LA wears off due to numb lip & cheek/lip biting
+                                        <br> <input type="Checkbox" id="E95Checkbox" class="TEST">Informed pt about future
+                                        treatment appointments,
+                                        such as the restoration & recall appointments.
+
+
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="endo4G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="endo4supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="endo4supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="endo4nvCheckbox" class="TEST">
+                                        N/V:
+                                        <input type="text" id="endo4nvTextInput" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button19">RESTORATIVE SERVICES (5xx)</button>
+                                <div id="restoSection1" class="section">
+                                    <button class="toggle-button" id="button20">Restoration</button>
+                                    <input type="Checkbox" id="selectAllRestoCheckbox" class="TEST">
+                                    Composite
+                                    <input type="Checkbox" id="selectAllResto2Checkbox" class="TEST">
+                                    GIC
+                                    <div id="restorationSection" class="section">
+                                        <h2>Restoration</h2>
+
+                                        <input type="Checkbox" id="ptresto1Checkbox" class="TEST"> Pt. presented to
+                                        <select id="resto1yearDropdown" class="TEST">
+
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="resto1clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="resto1codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="resto1typeDropdown" class="TEST">
+                                            <option value="restoration">restoration</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="resto1A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="resto1c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="resto1c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="resto1colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="resto1medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="resto1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+
+                                        <input type="Checkbox" id="restoCheckbox" class="TEST">
+                                        Tooth - required restoration due to
+                                        <select id="restoDropdown" class="TEST">
+                                            <option value="decay">decay</option>
+                                            <option value="NCTL">NCTL</option>
+                                            <option value="defective margin">defective margin</option>
+                                        </select>
+                                        AND
+                                        <select id="resto2Dropdown" class="TEST">
+                                            <option value=""></option>
+                                            <option value="NCTL">NCTL</option>
+                                            <option value="defective margin">defective margin</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="bwCheckbox" class="TEST">
+                                        BW’s reviewed <br>
+                                        <input type="Checkbox" id="xylocaineCheckbox" class="TEST">
+                                        LA/Topical Used
+                                        <select id="laDropdown" class="TEST">
+                                            <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
+                                                below)
+                                            </option>
+                                            <option value="No LA/Topical used">No LA/Topical used</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="latypeCheckbox" class="TEST">
+                                        <select id="anestheticDropdown" class="TEST">
+                                            <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
+                                                Lignospan
+                                            </option>
+                                            <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
+                                                Septanest
+                                            </option>
+                                            <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
+                                        </select>
+                                        VIA
+                                        <select id="infilDropdown" class="TEST">
+                                            <option value="palatal infil">Palatal Infiltration</option>
+                                            <option value="buccal infil">Buccal Infiltration</option>
+                                            <option value="IDB">Inferior Dental Block</option>
+                                            <option value="long buccal">Long Buccal</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="isolationCheckbox" class="TEST">
+                                        Isolation
+                                        <select id="isolationDropdown" class="TEST">
+                                            <option value="Moisture control achieved through Dental dam">Dental Dam</option>
+                                            <option value="Cotton rolls isolation used">Cotton Rolls</option>
+                                            <option value="Dry tips isolation used">Dry Tips</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox"
+                                            value="Cavity prepared using HS and SS, previous restoration removed/caries free"
+                                            id="cavityCheckbox" class="TEST">
+                                        Cavity prepared using HS and SS, previous restoration removed/caries free <br>
+                                        <input type="Checkbox" id="C12Checkbox" class="TEST">
+                                        Matrix
+                                        <select id="C12Dropdown" class="TEST">
+                                            <option value="Tofflemire Matrix placed">Tofflemire Matrix</option>
+                                            <option value="Sectional matrix placed">Sectional matrix</option>
+                                            <option value="Automatrix placed">Automatrix</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="cordCheckbox" class="TEST">
+                                        Retraction cord size
+                                        <select id="cordDropdown" class="TEST">
+                                            <option value="0">0</option>
+                                            <option value="00">00</option>
+                                            <option value="000">000</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        placed w hemostat <br>
+                                        <br>
+                                        <strong>Composite</strong> <br>
+                                        <input type="Checkbox" id="etchedCheckbox" class="TEST">
+                                        Etched with 37% phosphoric acid, clearfil primer and bond. Gradia
+                                        <select id="gradiaDropdown" class="TEST">
+                                            <option value="A1">A1</option>
+                                            <option value="A2">A2</option>
+                                            <option value="A3">A3</option>
+                                            <option value="A3.5">A3.5</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <strong>GIC</strong> <br>
+                                        <input type="Checkbox" id="C110Checkbox" class="TEST">
+                                        Dentine conditioned w 10% polyacrylic acid <br>
+                                        <input type="Checkbox" id="C111Checkbox" class="TEST">
+                                        Restored with
+                                        <select id="GICDropdown" class="TEST">
+                                            <option value=" GC Fuji II LC ">GC Fuji II LC</option>
+                                            <option value="GC Fuji IX ">GC Fuji IX</option>
+                                            <option value="GC Fuji VII ">GC Fuji VII</option>
+                                            <option value="GC Fuji Bulk ">GC Fuji Bulk</option>
+                                        </select>
+                                        <select id="GICshadeDropdown" class="TEST">
+                                            <option value="">Shade</option>
+                                            <option value="A1">A1</option>
+                                            <option value="A2">A2</option>
+                                            <option value="A3">A3</option>
+                                            <option value="A3.5">A3.5</option>
+                                        </select>
+                                        and cured <br><br>
+                                        <input type="Checkbox" id="C11Checkbox" class="TEST">
+                                        Restoration polished, occlusion checked <br><br>
+
+                                        <input type="Checkbox" id="resto1G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="resto1supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="resto1supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="resto1nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="resto1nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+
+                                    </div>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button21">PROSTHODONTICS – FIXED (6xx)</button>
+                                <div id="prosSection1" class="section">
+
+
+                                    <button class="toggle-button2" id="button41"> Consultation (crown)
+                                    </button>
+                                    <input type="Checkbox" id="crown1allCheckbox" class="TEST">
+
+
+                                    <div id="crown1Section" class="section">
+                                        <h3>Consultation (crown)</h3>
+
+
+                                        <input type="Checkbox" id="ptcrown1Checkbox" class="TEST"> Pt. presented to
+                                        <select id="crown1yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="crown1clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="crown1codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="crown1typeDropdown" class="TEST">
+                                            <option value="Crown consult">Crown Consult</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="crown1A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="crown1c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="crown1c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown1colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="crown1medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="crown1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+                                        <strong> DENTAL & SOCIAL HX </strong><br>
+
+                                        <table>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="Checkbox" id="J1Checkbox" class="TEST" checked hidden="">
+                                                    Brushing freq, TB & TP:
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="J1TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="Checkbox" id="J2Checkbox" class="TEST" checked hidden="">
+                                                    Interdental cleaning/mouthwash:
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="J2TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="Checkbox" id="J3Checkbox" class="TEST" checked hidden="">
+                                                    Tobacco or alcohol consumption:
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="J3TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="Checkbox" id="J4Checkbox" class="TEST" checked hidden="">
+                                                    Snacks/sugary drinks (freq. & timing):
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="J4TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <input type="Checkbox" id="J5Checkbox" class="TEST" checked hidden="">
+                                                    Risk factors related to occupation/interests:
+                                                </td>
+                                                <td>
+                                                    <input type="text" id="J5TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br><br>
+                                                </td>
+                                            </tr>
+
+                                        </table>
+
+
+                                        <input type="Checkbox" id="J6Checkbox" class="TEST">
+                                        <strong>PATIENT EXPECTATION:</strong>
+                                        <select id="J6Dropdown" class="TEST">
+                                            <option value="low">low</option>
+                                            <option value="moderate">moderate</option>
+                                            <option value="high">high</option>
+
+                                        </select>
+                                        <input type="text" id="J6TextInput" class="TEST" placeholder="Enter details...">
+                                        <br><br>
+
+                                        <strong>AESTHETIC EVALUATION</strong>
+                                        <br>
+                                        <!-- J7 -->
+                                        <input type="Checkbox" id="J7Checkbox" class="TEST">
+                                        Smile line exposing cervical area of teeth:
+                                        <select id="J7Dropdown" class="TEST">
+                                            <option value="present">present</option>
+                                            <option value="absent">absent</option>
+                                        </select>
+                                        <br>
+
+                                        <!-- J8 -->
+                                        <input type="Checkbox" id="J8Checkbox" class="TEST">
+                                        Incisal plane canting (slant):
+                                        <select id="J8Dropdown" class="TEST">
+                                            <option value="present">present</option>
+                                            <option value="absent">absent</option>
+                                        </select>
+                                        <br><br>
+
+                                        <strong>I/O EXAMINATION</strong>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <td>
+
+
+                                            <tr>
+                                                <td>
+                                                    <!-- J10 -->
+                                                    <label for="J10Checkbox">Furcation involvement:</label>
+                                                </td>
+                                                <td>
+                                                    <input type="Checkbox" id="J10Checkbox" class="TEST">
+                                                    <select id="J10Dropdown" class="TEST">
+                                                        <option value="absent">Absent</option>
+                                                        <option value="I">I</option>
+                                                        <option value="II">II</option>
+                                                        <option value="III">III</option>
+                                                    </select>
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="J11Checkbox">Working side contacts:</label>
+                                                </td>
+                                                <td>
+                                                    <input type="Checkbox" id="J11Checkbox" class="TEST">
+                                                    <select id="J11Dropdown" class="TEST">
+                                                        <option value="canine guidance">Canine guidance</option>
+                                                        <option value="group function">Group function</option>
+                                                        <option value="open bite bilateral">Open bite bilateral</option>
+                                                    </select>
+                                                    <input type="text" id="J11TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="J12Checkbox">Anterior guidance:</label>
+                                                </td>
+                                                <td>
+                                                    <input type="Checkbox" id="J12Checkbox" class="TEST">
+                                                    <select id="J12Dropdown" class="TEST">
+                                                        <option value="present">Present</option>
+                                                        <option value="absent">Absent</option>
+                                                    </select>
+                                                    <input type="text" id="J12TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="J13Checkbox">Parafuction:</label>
+                                                </td>
+                                                <td>
+                                                    <input type="Checkbox" id="J13Checkbox" class="TEST">
+                                                    <select id="J13Dropdown" class="TEST">
+                                                        <option value="yes">Yes (type)</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                    <input type="text" id="J13TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="J14Checkbox">Opposing teeth:</label>
+                                                </td>
+                                                <td>
+                                                    <input type="Checkbox" id="J14Checkbox" class="TEST">
+                                                    <select id="J14Dropdown" class="TEST">
+                                                        <option value="natural">Natural</option>
+                                                        <option value="artificial">Artificial</option>
+                                                        <option value="no antagonist">No antagonist</option>
+                                                    </select>
+                                                    <input type="text" id="J14TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="J15Checkbox">OVD:</label>
+                                                </td>
+                                                <td>
+                                                    <input type="Checkbox" id="J15Checkbox" class="TEST">
+                                                    <select id="J15Dropdown" class="TEST">
+                                                        <option value=""></option>
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="increased">Increased</option>
+                                                        <option value="reduced">Reduced</option>
+                                                    </select>
+                                                    <input type="text" id="J15TextInput" class="TEST"
+                                                        placeholder="Enter details...">
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                        <strong>TOOTH ASSESSMENT</strong><br>
+
+
+                                        <input type="Checkbox" id="J21Checkbox" class="TEST">
+                                        Ferrule height:
+                                        <input type="text" id="J21TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <!-- J22 -->
+
+                                        <!-- J23 -->
+                                        <input type="Checkbox" id="J23Checkbox" class="TEST">
+                                        Radiographic findings:
+                                        <input type="text" id="J23TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <!-- J24 -->
+                                        <input type="Checkbox" id="J24Checkbox" class="TEST">
+                                        Pulp vitality (cold/ EPT):
+                                        <input type="text" id="J24TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+
+                                        <!-- J25 -->
+                                        <input type="Checkbox" id="J25Checkbox" class="TEST">
+                                        Dx:
+                                        <input type="text" id="J25TextInput" class="TEST" placeholder="Enter details...">
+                                        <br><br>
+
+
+                                        <input type="Checkbox" id="J34BCheckbox" class="TEST">
+                                        Patient informed that tooth has compromised tooth structure & requires protective
+                                        measure from
+                                        occluding forces. Warned risk of further fracturing, bacterial leakage requiring RCT
+                                        & risk of complete
+                                        fracture warranting extraction. Advised that direct restoration may be inadequate to
+                                        withstand cusps & that
+                                        cuspal coverage (in the form of crown, onlay or overlay depending on the extent of
+                                        defect) may be ideal.
+                                        Explained the multiple visits involved & what happens at each stage. Pt understood &
+                                        happy to move
+                                        forward with tx. Informed consent obtained.
+                                        <br><br>
+
+
+                                        <strong>RESTORATION TYPE</strong><br>
+
+                                        <!-- J38 -->
+                                        <input type="Checkbox" id="J38Checkbox" class="TEST">
+                                        Coverage:
+                                        <select id="J38Dropdown" class="TEST">
+                                            <option value="full">full</option>
+                                            <option value="partial">partial</option>
+                                        </select>
+                                        <br>
+
+                                        <!-- J39 -->
+                                        <input type="Checkbox" id="J39Checkbox" class="TEST">
+                                        Material:
+                                        <select id="J39Dropdown" class="TEST">
+                                            <option value="metal">metal</option>
+                                            <option value="PFM">PFM</option>
+                                            <option value="all ceramic">all ceramic</option>
+                                        </select>
+                                        <br>
+
+                                        <!-- J40 -->
+                                        <input type="Checkbox" id="J40Checkbox" class="TEST">
+                                        FDP:
+                                        <select id="J40Dropdown" class="TEST">
+                                            <option value="single unit">single unit</option>
+                                            <option value="bridge">bridge</option>
+                                        </select>
+                                        <br>
+
+                                        <!-- J41 -->
+                                        <input type="Checkbox" id="J41Checkbox" class="TEST">
+                                        Pontic design:
+                                        <select id="J41Dropdown" class="TEST">
+                                            <option value="sanitary">sanitary</option>
+                                            <option value="bullet">bullet</option>
+                                            <option value="modified ridge lap">modified ridge lap</option>
+                                            <option value="ovate">ovate</option>
+                                        </select>
+                                        <br>
+
+
+                                        <input type="Checkbox" id="J43Checkbox" class="TEST">
+                                        Occlusal surface material:
+                                        <select id="J43Dropdown" class="TEST">
+                                            <option value="metal">metal</option>
+                                            <option value="ceramic">ceramic</option>
+                                        </select>
+                                        <br>
+
+                                        <strong>TX DELIVERED</strong>
+                                        <br>
+                                        <!-- J44 -->
+                                        <input type="Checkbox" id="J44Checkbox" class="TEST">
+                                        Max & mand alginate primary impression taken. Impression checked for quality,
+                                        sterilized & bagged. Lab card
+                                        with instructions for construction of diagnostic models & custom tray for PVS
+                                        impression of tooth ___
+                                        written, scanned & sent to the lab.
+                                        <br>
+                                        <br>
+
+
+                                        <input type="Checkbox" id="crown1G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="crown1supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="crown1supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown1nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="crown1nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <br><br>
+
+                                        <strong>LAB INSTRUCTIONS</strong>
+                                        <br>
+                                        <!-- J47 -->
+                                        <input type="Checkbox" id="J47Checkbox" class="TEST">
+                                        Please construct diagnostic models from alginate impression & return on ___ for
+                                        diagnostic wax up.
+                                        <br>
+
+                                        <!-- J48 -->
+                                        <input type="Checkbox" id="J48Checkbox" class="TEST">
+                                        Please construct custom try for PVS impression for tooth ___.
+                                        <br>
+
+
+                                    </div>
+
+
+                                    <button class="toggle-button2" id="button42"> Crown Preparation
+                                    </button>
+                                    <input type="Checkbox" id="crown2allCheckbox" class="TEST">
+
+
+                                    <div id="crown2Section" class="section">
+                                        <h3> crown preparation </h3>
+
+                                        <input type="Checkbox" id="ptcrown2Checkbox" class="TEST"> Pt. presented to
+                                        <select id="crown2yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="crown2clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="crown2codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="crown2typeDropdown" class="TEST">
+                                            <option value="Crown prep">Crown prep</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="crown2A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="crown2c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="crown2c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown2colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="crown2medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="crown2hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+                                        <input type="Checkbox" id="J50Checkbox" class="TEST">
+                                        LAB WORK
+                                        <br>
+
+                                        <!-- J51 -->
+                                        <input type="Checkbox" id="J51Checkbox" class="TEST">
+                                        Study model poured up & special tray fabricated.
+                                        <br>
+
+                                        <!-- J52 -->
+                                        <input type="Checkbox" id="J52Checkbox" class="TEST">
+                                        Diagnostic wax up done & putty keys made.
+                                        <br>
+
+                                        <!-- J53 -->
+                                        <input type="Checkbox" id="J53Checkbox" class="TEST">
+                                        Crown material chosen:
+                                        <select id="J53Dropdown" class="TEST">
+                                            <option value="PFM">PFM</option>
+                                            <option value="Emax">Emax</option>
+                                            <option value="Zirconia">Zirconia</option>
+                                            <option value="Sinfony">Sinfony</option>
+                                        </select>
+                                        <br>
+
+                                        <!-- J54 -->
+                                        <input type="Checkbox" id="J54Checkbox" class="TEST">
+                                        Shade selected: <input type="text" id="J54ATextInput" class="TEST"
+                                                            placeholder="Enter details..."> VITA 3D
+                                        Master (for PFM) / <input type="text" id="J54BTextInput" class="TEST"
+                                                                placeholder="Enter details..."> VITA
+                                        Classic
+
+                                        <br>
+
+                                        <strong>TX DELIVERED</strong>
+                                        <br><br>
+                                        <!-- J55 -->
+
+                                        <!-- J60 -->
+                                        <input type="Checkbox" id="J60Checkbox" class="TEST">
+                                        All existing restorative materials removed. NIL pulp exposure. Foundation
+                                        restoration required/ not required
+                                        to establish resistance form / block out undercuts.
+                                        <br><br>
+
+                                        <!-- J61 -->
+                                        <input type="Checkbox" id="J61Checkbox" class="TEST">
+                                        Crown preparation completed using H/S & refined-polished using S/S coarse soflex
+                                        disc.
+                                        <br><br>
+
+                                        <!-- J62 -->
+                                        <input type="Checkbox" id="J62Checkbox" class="TEST">
+                                        Gingival retraction is achieved using retraction cord.
+                                        <br>
+
+                                        <!-- J63 -->
+                                        <input type="Checkbox" id="J63Checkbox" class="TEST">
+                                        Vaseline was used to lubricate the completed crown preparation & adjacent
+                                        structures.
+                                        <br><br>
+
+                                        <!-- J64 -->
+                                        <input type="Checkbox" id="J64Checkbox" class="TEST">
+                                        Provisional restoration is constructed using Structure 2 (flowable composite used to
+                                        refine deficient
+                                        margins) & finished & polish using H/S & S/S.
+                                        <br>
+
+                                        <!-- J65 -->
+                                        <input type="Checkbox" id="J65Checkbox" class="TEST">
+                                        Interproximal contact checked w/ floss. Occlusion checked w/ articulating paper &
+                                        adjusted accordingly.
+                                        <br>
+
+                                        <!-- J66 -->
+                                        <input type="Checkbox" id="J66Checkbox" class="TEST">
+                                        Crown preparation surface is cleaned thoroughly using Endodry & provisional
+                                        restoration is cemented using
+                                        Temp-Bond NE. Excess cement is removed using probe & floss.
+                                        <br><br>
+
+                                        <strong>REMAINING TX PLAN</strong>
+                                        <br>
+                                        <!-- J67 -->
+                                        <input type="Checkbox" id="J67Checkbox" class="TEST">
+                                        Secondary impression
+                                        <br>
+
+                                        <!-- J68 -->
+                                        <input type="Checkbox" id="J68Checkbox" class="TEST">
+                                        Crown insertion
+                                        <br><br>
+
+                                        <strong>POST OP</strong>
+                                        <br>
+                                        <!-- J69 -->
+                                        <input type="Checkbox" id="J69Checkbox" class="TEST">
+                                        POIG. Tooth may be sensitive for the next few days after tx (recommend
+                                        Panadol/Nurofen if necessary);
+                                        Cautioned against consuming hot food/drinks until the LA wears off due to numb lip &
+                                        cheek/lip biting.
+                                        <br><br>
+
+
+                                        <input type="Checkbox" id="crown2G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="crown2supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="crown2supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown2nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="crown2nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <br>
+
+
+                                    </div>
+
+
+                                    <button class="toggle-button2" id="button43"> Crown Impression
+
+                                    </button>
+                                    <input type="Checkbox" id="crown3allCheckbox" class="TEST">
+
+
+                                    <div id="crown3Section" class="section">
+                                        <h3> Crown Impression
+
+                                        </h3><input type="Checkbox" id="ptcrown3Checkbox" class="TEST"> Pt. presented to
+                                        <select id="crown3yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="crown3clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="crown3codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="crown3typeDropdown" class="TEST">
+                                            <option value="Crown impression">Crown impression</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="crown3A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="crown3c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="crown3c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown3colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="crown3medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="crown3hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+
+                                        <strong>TX DELIVERED</strong>
+                                        <br><br>
+                                        <!-- J75 -->
+
+                                        <!-- J80 -->
+                                        <input type="Checkbox" id="J80Checkbox" class="TEST">
+                                        Existing temporary crown restoration removed using flat plastic &/or spoon
+                                        excavator. Existing cement
+                                        materials removed using U/S at low frequency.
+                                        <br>
+
+                                        <!-- J81 --><br>
+                                        <input type="Checkbox" id="J81Checkbox" class="TEST">
+                                        Gingival retraction achieved using two-cord technique with Ultrapak #0 cord followed
+                                        by Ultrapk #1 cord
+                                        (infil with articaine w/ adrenaline to reduce bleeding if retraction cord w/
+                                        hemodent is insufficient)
+                                        <br><br>
+
+                                        <!-- J82 -->
+                                        <input type="Checkbox" id="J82Checkbox" class="TEST">
+                                        Crown preparation margins refined using H/S.
+                                        <br>
+
+                                        <!-- J83 -->
+                                        <input type="Checkbox" id="J83Checkbox" class="TEST">
+                                        Crown prep surface was ensured moisture-free with Endodry using cotton pellets
+                                        <br><br>
+
+                                        <!-- J84 -->
+                                        <input type="Checkbox" id="J84Checkbox" class="TEST">
+                                        Crown impression taken with one-step impression technique using light body & heavy
+                                        body PVS.
+                                        <br><br>
+
+                                        <!-- J85 -->
+                                        <input type="Checkbox" id="J85Checkbox" class="TEST">
+                                        Secondary impression checked for quality, sterilized & bagged. Lab card with
+                                        instructions for construction
+                                        of model & fixed prosthesis in selected shade written, scanned & sent to the lab.
+                                        <br><br>
+
+                                        <!-- J86 -->
+                                        <input type="Checkbox" id="J86Checkbox" class="TEST">
+                                        Temporary crown recemented. Margins assessed.
+                                        <br><br>
+
+                                        <strong>REMAINING TX PLAN</strong>
+                                        <br>
+                                        <!-- J87 -->
+                                        <input type="Checkbox" id="J87Checkbox" class="TEST">
+                                        Crown insertion
+                                        <br><br>
+
+                                        <strong>POST OP</strong>
+                                        <br>
+                                        <!-- J88 -->
+                                        <input type="Checkbox" id="J88Checkbox" class="TEST">
+                                        POIG. Tooth may be sensitive for the next few days after tx (recommend
+                                        Panadol/Nurofen if necessary);
+                                        Cautioned against consuming hot food/drinks until the LA wears off due to numb lip &
+                                        cheek/lip biting.
+                                        <br><br>
+
+                                        <!-- J89 -->
+                                        <input type="Checkbox" id="crown3G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="crown3supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="crown3supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown3nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="crown3nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+
+                                        <strong>LAB INSTRUCTIONS</strong>
+                                        <br>
+                                        <!-- J91 -->
+                                        <input type="Checkbox" id="J91Checkbox" class="TEST">
+                                        Please pour up PVS impression in die stone & mount max & mand model.
+                                        <br>
+
+                                        <!-- J92 -->
+                                        <input type="Checkbox" id="J92Checkbox" class="TEST">
+                                        Please construct PFM crown in fine gold cervical collar in SHADE ___ VITA 3D Master
+                                        for TOOTH ___ OR Please
+                                        construct Emax/Zirconia/Sinfony crown in SHADE ___ VITA Classic for TOOTH ___ with
+                                        STUMP SHADE ___.
+                                        <br><br>
+
+                                    </div>
+
+
+                                    <button class="toggle-button2" id="button44"> Full crown – indirect
+
+
+                                    </button>
+                                    <input type="Checkbox" id="crown4allCheckbox" class="TEST">
+
+
+                                    <div id="crown4Section" class="section">
+                                        <h3> Full crown – indirect
+                                        </h3>
+
+                                        <input type="Checkbox" id="ptcrown4Checkbox" class="TEST"> Pt. presented to
+                                        <select id="crown4yearDropdown" class="TEST">
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="crown4clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="crown4codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="crown4typeDropdown" class="TEST">
+                                            <option value="Crown insertion">Crown insertion</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="crown4A1TextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+                                        <input type="Checkbox" id="crown4c3sCheckbox" class="TEST"> 3C’s confirmed
+                                        <input type="text" id="crown4c3sTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown4colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen Peroxide Mouth rinse
+                                        given. <br>
+
+                                        <input type="Checkbox" id="crown4medicalHxCheckbox" class="TEST"> Medical Hx
+                                        <select id="crown4hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select> <br><br>
+
+
+                                        <input type="Checkbox" id="J93Checkbox" class="TEST">
+                                        <strong>TX DELIVERED</strong>
+                                        <br>
+
+                                        <!-- J94 -->
+
+                                        <input type="Checkbox" id="J99Checkbox" class="TEST">
+                                        Existing temporary crown restoration removed using spoon excavator. Existing cement
+                                        materials removed using
+                                        U/S at low frequency & use of pumice on S/S.
+                                        <br>
+
+                                        <!-- J100 -->
+                                        <input type="Checkbox" id="J100Checkbox" class="TEST">
+                                        Gingival retraction achieved using retraction cord.
+                                        <br><br>
+
+                                        <!-- J101 -->
+                                        <input type="Checkbox" id="J101Checkbox" class="TEST">
+                                        Fixed prosthesis trial seated & assessed for marginal adaptation using sickle probe,
+                                        interproximal contacts
+                                        using floss, MIP using Shimstock, lateral/protrusive slide patterns, shade & shape.
+                                        <br><br>
+
+                                        <!-- J102 -->
+                                        <input type="Checkbox" id="J102Checkbox" class="TEST">
+                                        Tooth preparation was cleaned using prophy with a mixture of flour pumice & water.
+                                        <br><br>
+
+                                        <!-- J103 -->
+                                        <input type="Checkbox" id="J103Checkbox" class="TEST">
+                                        Fixed prosthesis is cemented using resin-modified GIC (capsulated GC Fuji Plus) &
+                                        held in place while excess
+                                        cement is removed at the rubbery stage.
+                                        <br>
+
+                                        <!-- J104 -->
+                                        <input type="Checkbox" id="J104Checkbox" class="TEST">
+                                        Isolation is maintained for at least 5mins to allow complete set before rinse.
+                                        <br><br>
+
+                                        <!-- J105 -->
+                                        <input type="Checkbox" id="J105Checkbox" class="TEST">
+                                        Occlusion post-insertion is reassessed with the patient in the upright position.
+                                        <br><br>
+
+                                        <strong>REMAINING TX PLAN</strong>
+                                        <br>
+                                        <!-- J106 -->
+                                        <input type="Checkbox" id="J106Checkbox" class="TEST">
+                                        Fixed prosthesis review in 4/52.
+                                        <br><br>
+
+                                        <strong>POST OP</strong>
+                                        <br>
+                                        <!-- J107 -->
+                                        <input type="Checkbox" id="J107Checkbox" class="TEST">
+                                        POIG. Tooth may be sensitive for the next few days & while already adjusted for,
+                                        minor discrepancy may still
+                                        be felt but should resolve over the next few days. Gums may be a bit tender but
+                                        cont. to brush gently using
+                                        a soft TB; Rinsing w/ warm saltwater may help to reduce pain. Recommended
+                                        Panadol/Nurofen if necessary.
+                                        Reinforced care for fixed prosthesis i.e. OHI & encourage 6-monthly maintenance.
+                                        Cautioned against consuming
+                                        hot food/drinks until the LA wears off due to numb lip & lip biting.
+                                        <br><br>
+
+                                        <!-- J108 -->
+                                        <input type="Checkbox" id="crown4G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
+                                        <input type="Checkbox" id="crown4supervisorCheckbox"> Supervisor: Dr
+                                        <input type="text" id="crown4supervisornameTextInput"
+                                            placeholder="Enter details..."> <br>
+
+                                        <input type="Checkbox" id="crown4nvCheckbox" class="TEST"> N/V:
+                                        <input type="text" id="crown4nvTextInput" class="TEST"
+                                            placeholder="Enter details..."> <br>
+
+                                        <br><br>
+                                    </div>
+
+
+                                </div>
+                                <button class="toggle-button5" id="button22">PROSTHODONTICS – REMOVABLE (7xx)</button>
+                                <div id="dentureSection" class="section">
+                                    <h3> 71x Complete maxillary & mandibular dentures </h3>
+                                    <button class="toggle-button2" id="button23">F/F Primary Impression</button>
+                                    <input type="Checkbox" class="TEST" id="ff1allCheckbox" class="TEST">
+
+                                    <div id="denture1Section" class="section">
+                                        <h3>700 Interim denture service – Consult, exam & primary impression for removable
+                                            complete denture (1/6)
+                                        </h3>
+                                        <input type="Checkbox" id="ptff1Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="ff1yearDropdown" class="TEST">
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="ff1clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                        </select>
+                                        <select id="ff1codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="ff1typeDropdown" class="TEST">
+                                            <option value="F/F Primary Impression">F/F Primary Impression</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="ff1A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff1c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="ff1c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff1colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="ff1medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="ff1hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        DENTAL/DENTURE Hx: <br>
+                                        <input type="Checkbox" id="G1Checkbox" class="TEST" class="TEST" checked hidden="">
+                                        Reason for tooth loss (years of edentulous):
+                                        <input type="text" id="G1TextInput" class="TEST" class="TEST"
+                                            placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G2Checkbox" class="TEST" class="TEST" checked hidden>
+                                        Patient’s responsibility in home care:
+                                        <input type="text" id="G2TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G3Checkbox" class="TEST" checked hidden>
+                                        Hx & preference of existing & previous denture:
+                                        <input type="text" id="G3TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G4Checkbox" class="TEST" checked hidden>
+                                        Evaluation of existing denture:
+                                        <input type="text" id="G4TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G5Checkbox" class="TEST" checked hidden>
+                                        Smoking Hx:
+                                        <input type="text" id="G5aTextInput" class="TEST" placeholder="Enter details...">
+                                        a day, since
+                                        <input type="text" id="G5bTextInput" class="TEST" placeholder="Enter details...">
+                                        ago,
+                                        <input type="text" id="G5cTextInput" class="TEST" placeholder="Enter details...">
+                                        intention of quitting. <br>
+                                        <input type="Checkbox" id="G6Checkbox" class="TEST">
+                                        Personality assessment:
+                                        <select id="G6Dropdown" class="TEST">
+                                            <option value="">Type</option>
+                                            <option value="Philosophical (normal)">Philosophical (normal)</option>
+                                            <option value="Exacting (demanding)">Exacting (demanding)</option>
+                                            <option value="Indifferent">Indifferent</option>
+                                            <option value="Hysterical">Hysterical</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G7Checkbox" class="TEST">
+                                        E/O EXAMINATION > NAD <br>
+                                        <input type="Checkbox" id="G8Checkbox" class="TEST">
+                                        I/O EXAMINATION > NAD <br>
+                                        <input type="Checkbox" id="G9Checkbox" class="TEST" checked hidden>
+                                        RADIOGRAPHIC ASSESSMENT:
+                                        <input type="text" id="G9TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G10Checkbox" class="TEST" checked hidden="">
+                                        TX OPTIONS
+                                        <input type="text" id="G10TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G10ACheckbox" class="TEST">
+                                        Pt notified that completion of complete denture will take a min of 3mo (i.e. 6 appt
+                                        with 2weeks interval
+                                        <br>
+                                        <input type="Checkbox" id="G11Checkbox" class="TEST">
+                                        TX DELIVERED
+                                        > Max & mand alginate primary impression taken. Impression checked for quality,
+                                        sterilized & bagged. Lab
+                                        card with instructions for pour up of impression & construction of special trays for
+                                        ZOE impression written,
+                                        scanned & sent to the lab. <br>
+                                        <input type="Checkbox" id="G12Checkbox" class="TEST">
+                                        Denture hygiene instructions given for existing denture (i.e. to clean with a soft
+                                        brush & gentle soap, to
+                                        remove denture at night & to soak in diluted white vinegar or Milton antibacterial
+                                        tablets) <br>
+                                        <br>
+                                        <input type="Checkbox" id="G13Checkbox" class="TEST">
+                                        Pt well on discharge
+                                        <input type="text" id="G13TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G13aCheckbox1">
+                                        Supervisor: Dr
+                                        <input type="text" id="G13aTextInput1" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G14Checkbox" class="TEST">
+                                        N/V: F/F secondary impression OR
+                                        <input type="text" id="G14TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <strong>Lab Instructions</strong> <br>
+                                        <input type="Checkbox" class="TEST" id="G15Checkbox" class="TEST">
+                                        1. Please construct diagnostic models from alginate impressions. <br>
+                                        <input type="Checkbox" class="TEST" id="G16Checkbox" class="TEST">
+                                        2. Please construct custom trays:
+                                        <select class="TEST" id="G16Dropdown" class="TEST">
+                                            <option value="">Tray type</option>
+                                            <option
+                                                value="for ZOE impression – custom trays 2mm shy of depth of sulcus, no spacer; ">
+                                                ZOE impression
+                                            </option>
+                                            <option value="for PVS – custom trays with 2 sheets of baseplate wax as spacer">
+                                                PVS Impression
+                                            </option>
+                                        </select>
+                                        <br>
+                                        <hr>
+                                    </div>
+                                    <button class="toggle-button2" id="button24">F/F Secondary Impression</button>
+                                    <input type="Checkbox" id="ff2allCheckbox" class="TEST">
+
+                                    <div id="denture2Section" class="section">
+                                        <h3>700 Interim denture service – Secondary impression for removable complete
+                                            denture (2/6)</h3>
+                                        <input type="Checkbox" id="ptff2Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="ff2yearDropdown" class="TEST">
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="ff2clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="ff2codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="ff2typeDropdown" class="TEST">
+                                            <option value="F/F 2ndary Impression"> 2ndary Impression</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="ff2A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff2c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="ff2c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff2colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="ff2medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="ff2hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G18Checkbox" class="TEST">
+                                        Custom tray adjusted with acrylic burs to 1mm short of sulcus, not interfering with
+                                        frenum <br>
+                                        <input type="Checkbox" id="G19Checkbox" class="TEST">
+                                        Border moulding was performed with the addition of compound stick to the periphery
+                                        of trays <br>
+                                        <input type="Checkbox" id="G20Checkbox" class="TEST">
+                                        Max & mand secondary impression taken with
+                                        <select id="G20Dropdown" class="TEST">
+                                            <option value="Green Alginate">Green Alginate</option>
+                                            <option value="PVS">PVS</option>
+                                        </select>
+                                        . Post dam was marked with an indelible marker & transferred to the impression.
+                                        Impression checked for
+                                        quality, sterilized & bagged. <br>
+                                        <input type="Checkbox" id="G21Checkbox" class="TEST">
+                                        Lab card with instructions for construction of master cast & provision of occlusal
+                                        wax rims in std
+                                        dimensions written, scanned & sent to the lab. <br>
+                                        <br>
+                                        <input type="Checkbox" id="G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="ff2supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="ff2supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="G23Checkbox" class="TEST">
+                                        N/V: F/F Jaw registration <br>
+                                        <br>
+                                        <strong>Lab Instructions</strong> <br>
+                                        <input type="Checkbox" id="G24Checkbox" class="TEST">
+                                        > Please construct master cast in stone with 3mm land area, scribe post-dam as
+                                        indicated on Max impression,
+                                        depth of post dam
+                                        <input type="text" id="G24TextInput" class="TEST" placeholder="Enter details...">
+                                        mm. <br>
+                                        <input type="Checkbox" id="G25Checkbox" class="TEST">
+                                        Please provide occlusal wax rims to standard dimensions. <br>
+                                        <hr>
+                                    </div>
+                                    <button class="toggle-button2" id="button25">F/F Jaw Reg Impression</button>
+                                    <input type="Checkbox" id="ff3allCheckbox" class="TEST">
+
+                                    <div id="denture3Section" class="section">
+                                        <input type="Checkbox" id="ptff3Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="ff3yearDropdown" class="TEST">
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="ff3clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="ff3codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="ff3typeDropdown" class="TEST">
+                                            <option value="F/F Jaw reg"> F/F Jaw Reg</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="ff3A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff3c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="ff3c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff3colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="ff3medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="ff3hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G28Checkbox" class="TEST" checked hidden="">
+                                        VDR:
+                                        <input type="text" id="G28TextInput" class="TEST" placeholder="Enter details...">
+                                        mm est. from nose tip to chin. 3mm freeway space selected OR <br>
+                                        <input type="Checkbox" id="G29Checkbox" class="TEST" checked hidden="">
+                                        VDO of existing denture:
+                                        <input type="text" id="G29TextInput" class="TEST" placeholder="Enter details...">
+                                        mm. <br>
+                                        <input type="Checkbox" id="G30Checkbox" class="TEST">
+                                        Occlusal wax rims were checked for their stability. <br>
+                                        <input type="Checkbox" id="G31Checkbox" class="TEST">
+                                        Max wax rim was adjusted for lip support, tooth display & occlusal plane <br>
+                                        <input type="Checkbox" id="G32Checkbox" class="TEST">
+                                        Facial midline, canine lines & smile line were marked on the wax rims. <br>
+                                        <input type="Checkbox" id="G33Checkbox" class="TEST">
+                                        Centric relation was recorded & reproduceable. <br>
+                                        <input type="Checkbox" id="G34Checkbox" class="TEST">
+                                        Tooth shade
+                                        <input type="text" id="G34TextInput" class="TEST" placeholder="Enter details...">
+                                        &
+                                        <select id="G34Dropdown" class="TEST">
+                                            <option value="square">square</option>
+                                            <option value="rectangular">rectangular</option>
+                                            <option value="triangular">triangular</option>
+                                            <option value=" ovoid"> ovoidr</option>
+                                        </select>
+                                        anterior mould was selected. <br>
+                                        <input type="Checkbox" id="G35Checkbox" class="TEST">
+                                        Marked occlusal wax rims were sterilized & bagged. Lab card with instructions for
+                                        articulation of master
+                                        casts & set up of teeth for try-in was written, scanned & sent to the lab. <br>
+                                        <br>
+                                        <input type="Checkbox" id="ff3G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="ff3supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="ff3supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff3G23Checkbox" class="TEST">
+                                        N/V: Teeth Try In <br>
+                                        <br>
+                                        <strong>Lab Instructions </strong> <br>
+                                        <input type="Checkbox" id="G38Checkbox" class="TEST">
+                                        > Please articulate master casts with bite registration provided. <br>
+                                        <input type="Checkbox" id="G38ACheckbox" class="TEST">
+                                        > Please set up Max & Mand teeth for try-in in shade ___, MOLD selected above. <br>
+                                        <input type="Checkbox" id="G38BCheckbox" class="TEST">
+                                        If old dentures present: Please mould to match existing denture based on denture
+                                        impression provided. <br>
+                                        <input type="Checkbox" id="G38CCheckbox" class="TEST">
+                                        If Class III skeletal: Please try to achieve edge-to-edge occlusion even if max
+                                        teeth have to be brought
+                                        forward. <br>
+                                        <hr>
+                                    </div>
+                                    <button class="toggle-button2" id="button26">F/F Teeth Try In</button>
+                                    <input type="Checkbox" id="ff4allCheckbox" class="TEST">
+
+                                    <div id="denture6Section" class="section"> Interim denture service – Wax tooth try-in
+                                        for removable complete
+                                        denture (4/6)
+                                        <input type="Checkbox" id="ptff4Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="ff4yearDropdown" class="TEST">
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="ff4clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="ff4codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="ff4typeDropdown" class="TEST">
+                                            <option value="F/F Wax tooth try-in"> Wax tooth try-in</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="ff4A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff4c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="ff4c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff4colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="ff4medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="ff4hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G49Checkbox" class="TEST">
+                                        Wax-tooth was inserted to verify midline, CR, VDO, lip support, tooth position,
+                                        buccal corridor, occlusal
+                                        plane (w/ articulating paper), phonetics, & aesthetics. <br>
+                                        <input type="Checkbox" id="G50Checkbox" class="TEST">
+                                        Bite position was reverified. Retake of jaw record
+                                        <select id="G49Dropdown" class="TEST">
+                                            <option value="not required">not required</option>
+                                            <option value="required">required</option>
+                                        </select>
+                                        <br>
+                                        <input type="Checkbox" id="G51Checkbox" class="TEST">
+                                        <label for="G51Checkbox" class="TEST"> Patient was given a mirror & was satisfied
+                                            with the teeth size,
+                                            colour, & the overall appearance of the denture. Patient’s approval to process
+                                            the denture was obtained.
+                                        </label>
+                                        <br>
+                                        <input type="Checkbox" id="G52Checkbox" class="TEST">
+                                        <label for="G52Checkbox" class="TEST"> Wax-tooth was sterilized & bagged. Lab card
+                                            with instructions to seal
+                                            wax rims, process the denture in 60:40 original & light pink acrylic, & finish
+                                            for insertion was written,
+                                            scanned & sent to the lab. </label>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="ff4G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="ff4supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="ff4supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff4G23Checkbox" class="TEST">
+                                        N/V: Insertion <br>
+                                        <br>
+                                        <input type="Checkbox" id="G54Checkbox" class="TEST">
+                                        <label for="G54Checkbox" class="TEST"> <strong>LAB INSTRUCTIONS</strong> <br>
+                                            > Please do not move the teeth, seal wax rims & finesse wax up in anterior
+                                            region. <br>
+                                            > Please process in 60:40 original & light pink acrylic & finish for insertion.
+                                        </label>
+                                        <br>
+                                        <hr>
+                                    </div>
+                                    <button class="toggle-button2" id="button27">F/F Insertion</button>
+                                    <input type="Checkbox" id="G156Checkbox" class="TEST">
+
+                                    <div id="denture5Section" class="section"> Interim denture service – Insertion of
+                                        removable complete denture
+                                        (5/6) <br>
+                                        <input type="Checkbox" id="ptff5Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="ff5yearDropdown" class="TEST">
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="ff5clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="ff5codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="ff5typeDropdown" class="TEST">
+                                            <option value="F/F Insertion"> Insertion</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        OR
+                                        <input type="text" id="ff5A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff5c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="ff5c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff5colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="ff5medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="ff5hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G41Checkbox" class="TEST">
+                                        Denture base areas & peripheral borders were checked for high spots/overextended
+                                        areas using pressure
+                                        indicator paste. Frenum is cleared. <br>
+                                        <input type="Checkbox" id="G42Checkbox" class="TEST">
+                                        Effective post dam was confirmed w/ extrusion forces <br>
+                                        <input type="Checkbox" id="G43Checkbox" class="TEST">
+                                        Occlusion was reverified with articulating paper. <br>
+                                        <input type="Checkbox" id="G44Checkbox" class="TEST">
+                                        Denture hygiene instructions given (i.e. to clean with soft brush & gentle soap, to
+                                        remove denture at night
+                                        & to soak in diluted white vinegar or Milton antibacterial tablets) <br>
+                                        <br>
+                                        <input type="Checkbox" id="ff5G22Checkbox" class="TEST">
+                                        Written denture instructions given & explained. Pt well on discharge <br>
+                                        <input type="Checkbox" id="ff5supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="ff5supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff5G23Checkbox" class="TEST">
+                                        N/V: F/F Review <br>
+                                        <br>
+                                    </div>
+                                    <button class="toggle-button2" id="button28">F/F Review</button>
+                                    <input type="Checkbox" id="ff6allCheckbox" class="TEST">
+
+                                    <div id="denture50Section" class="section"> Interim denture service – Review of
+                                        removable complete denture
+                                        (6/6) <br>
+                                        <input type="Checkbox" id="ptff6Checkbox" class="TEST">
+                                        Pt. presented to
+                                        <select id="ff6yearDropdown" class="TEST">
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                            <option value="5th Year">5th Year</option>
+                                        </select>
+                                        <select id="ff6clinicDropdown" class="TEST">
+                                            <option value="Pros Clinic">Pros Clinic</option>
+                                            <option value="Perio Clinic">Perio Clinic</option>
+                                            <option value="GDP Clinic">GDP Clinic</option>
+                                        </select>
+                                        <select id="ff6codeDropdown" class="TEST">
+                                            <option value="5.1">5.1</option>
+                                            <option value="5.2">5.2</option>
+                                            <option value="2.1">2.1</option>
+                                            <option value="3.1">3.1</option>
+                                            <option value="3.2">3.2</option>
+                                            <option value="3.3">3.3</option>
+                                            <option value="3.4">3.4</option>
+                                            <option value="4.1">4.1</option>
+                                            <option value="4.2">4.2</option>
+                                            <option value="6.2">6.2</option>
+                                            <option value="6.3">6.3</option>
+                                        </select>
+                                        for
+                                        <select id="ff6typeDropdown" class="TEST">
+                                            <option value="F/F Review">F/F Review</option>
+                                            <option value="011">011</option>
+                                            <option value="S/C">S/C</option>
+                                            <option value="Consult">Consult</option>
+                                        </select>
+                                        <input type="text" id="ff6A1TextInput" class="TEST" placeholder="Enter details..."
+                                            hidden="">
+                                        <br>
+                                        <input type="Checkbox" id="ff6c3sCheckbox" class="TEST">
+                                        3C’s confirmed
+                                        <input type="text" id="ff6c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff6colgateCheckbox" class="TEST">
+                                        Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
+                                        <input type="Checkbox" id="ff6medicalHxCheckbox" class="TEST">
+                                        Medical Hx
+                                        <select id="ff6hxDropdown" class="TEST">
+                                            <option value="updated">Updated</option>
+                                            <option value="verified">Verified</option>
+                                            <option value="taken">taken</option>
+                                        </select>
+                                        <br>
+                                        <br>
+                                        <input type="Checkbox" id="G55Checkbox" class="TEST">
+                                        Patient interview & intraoral examination were performed to review for any
+                                        post-operative issues due to the
+                                        denture. <br>
+                                        <input type="Checkbox" id="G56Checkbox" class="TEST">
+                                        FINDINGS > NAD <strong>OR</strong> <br>
+                                        <br>
+                                        <input type="Checkbox" id="G57Checkbox" class="TEST">
+                                        Ulcers in frenum region, sulcus & mylohyoid ridge due to lack of clearance <br>
+                                        <input type="Checkbox" id="G58Checkbox" class="TEST">
+                                        Correction of occlusion required <br>
+                                        <input type="Checkbox" id="G59Checkbox" class="TEST">
+                                        Cheek biting due to lack of buccal overjet <br>
+                                        <input type="Checkbox" id="G60Checkbox" class="TEST">
+                                        Restricted food or chewing <br>
+                                        <input type="Checkbox" id="G61Checkbox" class="TEST">
+                                        Lack of retention (i.e. overextension, processing errors) <br>
+                                        <input type="Checkbox" id="G62Checkbox" class="TEST">
+                                        Too bulky in palatal or buccal surfaces <br>
+                                        <br>
+                                        <input type="Checkbox" id="ff6G22Checkbox" class="TEST">
+                                        Pt well on discharge <br>
+                                        <input type="Checkbox" id="ff6supervisorCheckbox">
+                                        Supervisor: Dr
+                                        <input type="text" id="ff6supervisornameTextInput" placeholder="Enter details...">
+                                        <br>
+                                        <input type="Checkbox" id="ff6G23Checkbox" class="TEST">
+                                        N/V: Review 2.0 <br>
+                                        <br>
+                                    </div>
                                     <br>
-                                    <pr></pr>
-                                    <input type="Checkbox" id="B1Checkbox" class="TEST" checked hidden="">
-                                    RFV:
-                                    <input type="text" id="B1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B2Checkbox" class="TEST" checked hidden="">
-                                    CC:
-                                    <input type="text" id="B2TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <strong>Hx of Present Complaint</strong>
-                                    <input type="Checkbox" id="B105Checkbox" class="TEST" hidden="">
-                                    <br>
-                                    <input type="Checkbox" id="B30Checkbox" class="TEST" checked hidden="">
-                                    Site:
-                                    <input type="text" id="B30TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B31Checkbox" class="TEST" checked hidden="">
-                                    Onset
-                                    <input type="text" id="B31TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B32Checkbox" class="TEST" checked hidden="">
-                                    Character
-                                    <input type="text" id="B32TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B33Checkbox" class="TEST" checked hidden="">
-                                    Radiation
-                                    <input type="text" id="B33TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B34Checkbox" class="TEST" checked hidden="">
-                                    Alleviating factor
-                                    <input type="text" id="B34TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B35Checkbox" class="TEST" checked hidden="">
-                                    Exacerbating factors
-                                    <input type="text" id="B35TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B36Checkbox" class="TEST" checked hidden="">
-                                    Severity
-                                    <input type="text" id="B36TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="B11Checkbox" class="TEST">
-                                    <strong>Select ALL</strong>
-                                    <input type="Checkbox" id="B3Checkbox" class="TEST">
-                                    E/O examination:
-                                    <input type="Checkbox" id="B4Checkbox" class="TEST">
-                                    Temporalis m
-                                    <input type="Checkbox" id="B5Checkbox" class="TEST">
-                                    masseter m.
-                                    <input type="Checkbox" id="B6Checkbox" class="TEST">
-                                    TMJ
-                                    <input type="Checkbox" id="B7Checkbox" class="TEST">
-                                    salivary glands
-                                    <input type="Checkbox" id="B8Checkbox" class="TEST">
-                                    lymph nodes
-                                    <input type="Checkbox" id="B9Checkbox" class="TEST">
-                                    muscles of facial expression
-                                    <input type="Checkbox" id="B10Checkbox" class="TEST">
-                                    – NAD.  <br>
-                                    <br>
-                                    <input type="Checkbox" id="B12Checkbox" class="TEST">
-                                    <strong>Select ALL</strong>
-                                    <input type="Checkbox" id="B13Checkbox" class="TEST">
-                                    I/OE:
-                                    <input type="Checkbox" id="B14Checkbox" class="TEST">
-                                    FOM
-                                    <input type="Checkbox" id="B15Checkbox" class="TEST">
-                                    tongue
-                                    <input type="Checkbox" id="B16Checkbox" class="TEST">
-                                    buccal mucosa 
-                                    <input type="Checkbox" id="B17Checkbox" class="TEST">
-                                    palatal mucosa
-                                    <input type="Checkbox" id="B117Checkbox" class="TEST">
-                                    – NAD <br>
-                                    <input type="Checkbox" id="htpsrCheckbox" class="TEST">
-                                    Hard tissue & PSR – as charted in ISOH. <br>
-                                    <br>
-                                    <input type="Checkbox" id="radioCheckbox" class="TEST">
-                                    <select id="radioDropdown" class="TEST">
-                                        <option value="OPG & 2x BWs taken">OPG & 2x BWs taken</option>
-                                        <option value="2x BWs taken. No OPG Indicated">2x BWs taken</option>
-                                        <option value="No x-rays taken">No x-rays taken</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="B18CCheckbox" class="TEST" checked hidden="">
-                                    Main Findings:
-                                    <input type="text" id="B18CTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="BWCheckbox" class="TEST" hidden="">
-                                    <strong>BW taken</strong> <br>
-                                    <input type="Checkbox" id="BW1Checkbox" class="TEST" checked hidden="">
-                                    Interproximal caries:
-                                    <input type="text" id="BW1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="BW2Checkbox" class="TEST" checked hidden="">
-                                    Occlusal caries:
-                                    <input type="text" id="BW2TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="BW3Checkbox" class="TEST" checked hidden="">
-                                    Secondary caries:
-                                    <input type="text" id="BW3TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="BW4Checkbox" class="TEST" checked hidden="">
-                                    Bone level:
-                                    <input type="text" id="BW4TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="BW5Checkbox" class="TEST" checked hidden="">
-                                    Calculus:
-                                    <input type="text" id="BW5TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="BW6Checkbox" class="TEST" checked hidden="">
-                                    Restoration:
-                                    <input type="text" id="BW6TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="opgCheckbox" class="TEST" hidden="">
-                                    <strong>OPG taken</strong> <br>
-                                    <input type="Checkbox" id="opg1Checkbox" class="TEST" checked hidden="">
-                                    Missing teeth:
-                                    <input type="text" id="opg1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="opg2Checkbox" class="TEST" checked hidden="">
-                                    8’s:
-                                    <input type="text" id="opg2TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="opg3Checkbox" class="TEST" checked hidden="">
-                                    Caries:
-                                    <input type="text" id="opg3TextInput" class="TEST" placeholder="Enter details...">
-                                    : <br>
-                                    <input type="Checkbox" id="opg4Checkbox" class="TEST" checked hidden="">
-                                    Restoration/dental work:
-                                    <input type="text" id="opg4TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="opg5Checkbox" class="TEST" checked hidden="">
-                                    Bone level:
-                                    <input type="text" id="opg5TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="opg6Checkbox" class="TEST" checked hidden="">
-                                    Mx sinus:
-                                    <input type="text" id="opg6TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="opg7Checkbox" class="TEST" checked hidden="">
-                                    Condyles
-                                    <input type="text" id="opg7TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="opg8Checkbox" class="TEST" checked hidden="">
-                                    Ghost images:
-                                    <input type="text" id="opg8TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="B18Checkbox" class="TEST" checked hidden="">
-                                    Provisional Tx:
-                                    <input type="text" id="B18TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <strong>Tx options discussed and presented to pt: </strong>
-                                    <input type="Checkbox" id="B25Checkbox" class="TEST" hidden="">
-                                    <br>
-                                    <input type="Checkbox" id="B19Checkbox" class="TEST" checked hidden="">
-                                    -Systemic phase:
-                                    <input type="text" id="B19TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B20Checkbox" class="TEST" checked hidden="">
-                                    -Acute phase
-                                    <input type="text" id="B20TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B21Checkbox" class="TEST" checked hidden="">
-                                    -Disease control:
-                                    <input type="text" id="B21TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B22Checkbox" class="TEST" checked hidden="">
-                                    -Definitive phase:
-                                    <input type="text" id="B22TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B23Checkbox" class="TEST" checked hidden="">
-                                    Maintenance phase:
-                                    <input type="text" id="B23TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="B24Checkbox" class="TEST" checked hidden="">
-                                    Extra comment:
-                                    <input type="text" id="B24TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="supervisorCheckbox" class="TEST">
-                                    Supervisor: Dr
-                                    <input type="text" id="supervisornameTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="nvCheckbox" class="TEST">
-                                    N/V:
-                                    <input type="text" id="nvTextInput" class="TEST" placeholder="Enter details...">
-                                    OR <br>
-                                    <input type="Checkbox" id="waitlistCheckbox" class="TEST">
-                                    Patient placed on general waitlist and seperated
-                                    OR
-                                    <input type="text" id="waitlistTextInput" class="TEST" class="TEST"
-                                           placeholder="Enter details...">
+                                    <hr>
+
+                                    <button class="toggle-button2" id="button35"> Other removable prosthodontic services
+                                    </button>
+                                    <div id="othercodesSection" class="section"> - 736 Immediate tooth replacement – per
+                                        tooth (either new or
+                                        addition to existing denture post-exo)<br>
+                                        <br>
+                                        - 741 Adjustment of a denture (should be recorded for adjustments if it is >3 months
+                                        after date of
+                                        insertion or if insertion clinician is external to HHS)<br>
+                                        <br>
+                                        - 743 Relining - complete denture – processed; 744 Relining - partial denture –
+                                        processed<br>
+                                        <br>
+                                        - 763 Repairing broken base of a complete denture; 764 Repairing broken base of a
+                                        partial denture<br>
+                                        <br>
+                                        - 772 Splint – resin – indirect <br>
+                                        <br>
+                                        - 776 Impression – dental appliance repair/modification<br>
+                                        <br>
+                                    </div>
+                                    <button class="toggle-button2" id="button36">P/P Item Codes</button>
+                                    <div id="ppcodesSection" class="section"> 700 Interim denture service (no fee; should be
+                                        recorded at each
+                                        appointment during the construction
+                                        stages of a denture)<br>
+                                        - 721 Partial maxillary denture - resin base<br>
+                                        - 722 Partial mandibular denture - resin base<br>
+                                        - 727 Partial maxillary denture – cast metal framework<br>
+                                        - 728 Partial mandibular denture – cast metal framework<br>
+                                        - 731 Retainer - per tooth<br>
+                                        - 732 Occlusal rest – per rest<br>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button37">OTHER SERVICES (9xx)</button>
+                                <br>
+                                <div id="otherSection1" class="section"> COMING SOON</div>
+
+                                <div id="output1">
+                                    If you write on right, your text will be deleted if you go back to the template or
+                                    change anything.
+                                    Enter Your Text here to be generated on the right.
+                                    <br><strong> AFTER MED HISTORY</strong>
+                                    <textarea id="generatedText2" class="TEST" placeholder=""></textarea>
+                                    <strong> BEFORE SUPERVISOR</strong>
+                                    <textarea id="generatedText1" class="TEST" placeholder=""></textarea>
+                                </div>
+
+                                <hr>
+                                <h2>MISCELLANEOUS </h2>
+                                <button class="toggle-button5" id="button38">PSR Scores</button>
+                                <br>
+                                <div id="psrSection1" class="section">
+                                    <table>
+                                        <tr>
+                                            <th>Score</th>
+                                            <th>Description</th>
+                                            <th>Treatment Plan</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>Healthy periodontium, PDD <3.5mm< /td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Bleeding on gentle probing, plaque present</td>
+                                            <td>OHI & prophylaxis</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Presence of calculus &/or defective margin</td>
+                                            <td>OHI & debridement (dead tissue removal)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>PDD >3.5mm but below 5.5mm</td>
+                                            <td>Comprehensive exam & periodontal treatment</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>PDD >5.5mm</td>
+                                            <td>Comprehensive exam & specialist periodontal treatment</td>
+                                        </tr>
+                                        <tr>
+                                            <td>*</td>
+                                            <td>Presence of recession, mobility, furcation exposure, or other mucogingival
+                                                problems
+                                            </td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>x</td>
+                                            <td>Sextant with <2 teeth</td>
+                                            <td>Not included in overall evaluation</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button39">ICDAS Scoring System</button>
+                                <br>
+                                <div id="icdasSection1" class="section">
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>Sound tooth surface no caries change after drying (5s), hypoplasia, wear,
+                                                erosion & other non-caries
+                                                lesions
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>First visual change in enamel (colored change limited to the confines of the
+                                                pit & fissure area) seen
+                                                after air drying
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Distinct visual change in enamel (white/colored wider than the fissure/pit)
+                                                seen when wet
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Localized enamel breakdown (discontinuity of enamel surface or widening of
+                                                fissure) w/ no visible
+                                                dentine/underlying shadow
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Underlying dark shadow from dentine w/wo localized enamel breakdown</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Distinct cavity (<1 /2 of tooth surface) w/ visible dentine</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Extensive distinct cavity (deep & wide; >1/2 tooth surface) w/ visible
+                                                dentine
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>No visible radiolucency</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RA1</td>
+                                            <td>Radiolucency in the outer ½ of enamel</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RA2</td>
+                                            <td>Radiolucency in the inner ½ of enamel up to the DEJ border</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RA3</td>
+                                            <td>Radiolucency limited to outer 3rd of dentine</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RB4</td>
+                                            <td>Radiolucency reaching the middle 3rd of dentine</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RC5</td>
+                                            <td>Radiolucency reaching the inner 3rd of dentine, clinically cavitated</td>
+                                        </tr>
+                                        <tr>
+                                            <td>RC6</td>
+                                            <td>Radiolucency into the pulp, clinically cavitated</td>
+                                        </tr>
+                                    </table>
+                                    <hr>
+                                </div>
+                                <button class="toggle-button5" id="button40">LA Information</button>
+                                <br>
+                                <div id="laSection1" class="section">
+                                    <h2>Drug Brand, Maximum Dose, and Maximum Number of Cartridges</h2>
+                                    <table>
+                                        <tr>
+                                            <th>Drug</th>
+                                            <th>Brand</th>
+                                            <th>Max Dose</th>
+                                            <th>Max No. Cartridges (~70KG)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Articaine 4% w/ 1:100k adrenaline</td>
+                                            <td>Septanest 4%</td>
+                                            <td>7mg/kg (up to 500mg)</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bupivacaine 0.5% w/ 1:200k adrenaline</td>
+                                            <td>Marcain 0.5%</td>
+                                            <td>2mg/kg (up to 200mg)</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lidocaine w/ 1:80k adrenaline</td>
+                                            <td>Lignospan Sp 2%</td>
+                                            <td>7mg/kg (up to 500mg)</td>
+                                            <td>13</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Mepivacaine 3% w/o adrenaline</td>
+                                            <td>Scandonest 3%</td>
+                                            <td>6.6mg/kg (up to 400mg)</td>
+                                            <td>11 (7 if 3% w/o vasoconstrictor)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Prilocaine 4%</td>
+                                            <td>Citanest Plain 4%</td>
+                                            <td>8mg/kg (up to 500mg)</td>
+                                            <td>8</td>
+                                        </tr>
+                                    </table>
                                     <hr>
                                 </div>
 
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button6">PREVENTIVE, PROPHYLACTIC & BLEACHING SERVICES
-                                (1xx)
-                            </button>
-                            <br>
-                            <div id="ppSection" class="section">
-                                <button class="toggle-button" id="button7">114 Removal of calculus – first appointment
+                                <button class="toggle-button5" id="button400">AAP/EFP Periodonal Classification 2018
                                 </button>
-                                <input type="Checkbox" id="selectSpecificSCCheckbox" class="TEST">
                                 <br>
-                                <div id="scaleAndCleansSection" class="section">
-                                    <h3>Scale and Cleans</h3>
-
-
-                                    <input type="Checkbox" id="ptsc1Checkbox" class="TEST"> Pt. presented to
-                                    <select id="sc1yearDropdown" class="TEST">
-
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="sc1clinicDropdown" class="TEST">
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-
-                                    </select>
-                                    <select id="sc1codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="sc1typeDropdown" class="TEST">
-                                        <option value="S/C">S/C</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="sc1A1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="sc1c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="sc1c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="sc1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen
-                                    Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="sc1medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="sc1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-
-                                    <input type="Checkbox" id="consentsCheckbox" class="TEST">
-                                    Pt consents to S/C – informed of risks bleeding, post op sensitivity, natural gaps
-                                    between teeth <br>
-                                    <input type="Checkbox" id="debridementCheckbox" class="TEST">
-                                    Debridement of all quadrants using ultrasonic scaler <br>
-                                    <input type="Checkbox" id="refinementCheckbox" class="TEST">
-                                    Refinement using hand scalers <br>
-                                    <input type="Checkbox" id="prophyCheckbox" class="TEST">
-                                    Prophy and fluoride applied <br>
-                                    <input type="Checkbox" id="ohiCheckbox" class="TEST">
-                                    OHI provided <br><br>
-
-                                    <input type="Checkbox" id="sc1G22Checkbox" class="TEST"> Pt well on discharge <br>
-                                    <input type="Checkbox" id="sc1supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="sc1supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="sc1nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="sc1nvTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                </div>
-                                <button class="toggle-button" id="button8">Enamel micro-abrasion – per tooth (tooth
-                                    lightening)
-                                </button>
-                                <input type="Checkbox" id="116Checkbox" class="TEST">
-                                <br>
-                                <div id="116Section1" class="section"> COMING SOON</div>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button9">PERIODONTICS (2xx)</button>
-                            <div id="perioSection1" class="section">
-                                <button class="toggle-button" id="button10">221 Clinical periodontal analysis and
-                                    recording
-                                </button>
-                                <input type="Checkbox" id="E221Checkbox" class="TEST">
-
-                                <div id="221Section" class="section">
-
-                                    <input type="Checkbox" id="ptperio1Checkbox" class="TEST"> Pt. presented to
-                                    <select id="perio1yearDropdown" class="TEST">
-
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="perio1clinicDropdown" class="TEST">
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="perio1codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="perio1typeDropdown" class="TEST">
-                                        <option value="Perio charting">Perio charting</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="perio1A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="perio1c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="perio1c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="perio1colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="perio1medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="perio1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-
-                                    <input type="Checkbox" id="P1ACheckbox" class="TEST">
-                                    <strong>DENTAL Hx:</strong> <br>
-
-                                    <input type="Checkbox" id="P1Checkbox" class="TEST" checked hidden="">
-                                    Brushing freq, TB & TP
-                                    <input type="text" id="P1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P2Checkbox" class="TEST" checked hidden="">
-                                    Interdental cleaning/mouthwash:
-                                    <input type="text" id="P2TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P3Checkbox" class="TEST" checked hidden="">
-                                    Pain Hx:
-                                    <input type="text" id="P3TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P4Checkbox" class="TEST" checked hidden="">
-                                    Bleeding gums:
-                                    <input type="text" id="P4TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P5Checkbox" class="TEST" checked hidden="">
-                                    Missing teeth & reason:
-                                    <input type="text" id="P5TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P6Checkbox" class="TEST" checked hidden="">
-                                    Tooth mobility or movement:
-                                    <input type="text" id="P6TextInput" class="TEST" placeholder="Enter details...">
-                                    <br><br>
-                                    <input type="Checkbox" id="P1BCheckbox" class="TEST">
-                                    <strong>SOCIAL & FAMILY HX</strong> <br>
-
-                                    <input type="Checkbox" id="P7Checkbox" class="TEST" checked hidden="">
-                                    Snacks/sugary drinks
-                                    <input type="text" id="P7TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P8Checkbox" class="TEST" checked hidden="">
-                                    Smoking Hx:
-                                    <input type="text" id="P8aTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="P9Checkbox" class="TEST" checked hidden="">
-                                    Family Hx of diabetes/gum disease/tooth loss:
-                                    <input type="text" id="P9TextInput" class="TEST" placeholder="Enter details...">
-                                    <br><br>
-
-                                    <strong> LA</strong>
-                                    <br>
-                                    <input type="Checkbox" id="LAperio16Checkbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="LAperio16Dropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="LAperio17Checkbox" class="TEST">
-                                    <select id="LAperio17Dropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="LAperio17InfilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br>
-
-                                    <input type="Checkbox" id="P10Checkbox" class="TEST">
-                                    <strong>Full perio charted. Significant findings: </strong><br>
+                                <div id="perioclassSection1" class="section">
 
 
                                     <table>
@@ -526,154 +4315,55 @@
                                         <tbody>
 
                                         <tr>
-                                            <td> Interdental CAL at site of greatest loss</td>
-                                            <td><input type="Checkbox" id="P101Checkbox" class="TEST"> 1 – 2 mm</td>
-                                            <td><input type="Checkbox" id="P102Checkbox" class="TEST"> 3 – 4 mm</td>
-                                            <td><input type="Checkbox" id="P103Checkbox" class="TEST"> ≥ 5mm</td>
-                                            <td><input type="Checkbox" id="P104Checkbox" class="TEST"> ≥ 5mm</td>
+                                            <td>Interdental CAL at site of greatest loss</td>
+                                            <td>1 – 2 mm</td>
+                                            <td>3 – 4 mm</td>
+                                            <td>≥ 5mm</td>
+                                            <td>≥ 5mm</td>
                                         </tr>
                                         <tr>
                                             <td>Radiographic Bone loss</td>
 
-                                            <td><input type="Checkbox" id="P105Checkbox" class="TEST"> Coronal Third (<
-                                                15%)
-                                            </td>
-                                            <td><input type="Checkbox" id="P106Checkbox" class="TEST"> Coronal Third (15
-                                                – 33 %)
-                                            </td>
-                                            <td><input type="Checkbox" id="P107Checkbox" class="TEST"> Extending to the
-                                                mid third of the root and
-                                                beyond.
-                                            </td>
-                                            <td><input type="Checkbox" id="P108Checkbox" class="TEST"> Extending to the
-                                                mid third of the root and
-                                                beyond.
-                                            </td>
+                                            <td>Coronal Third (< 15%)</td>
+                                            <td>Coronal Third (15 – 33 %)</td>
+                                            <td>Extending to the mid third of the root and beyond.</td>
+                                            <td>Extending to the mid third of the root and beyond.</td>
                                         </tr>
                                         <tr>
                                             <td>Periodontitis-associated tooth loss</td>
-                                            <td colspan="2"><input type="Checkbox" id="P109Checkbox" class="TEST"> No
-                                                tooth loss due to
-                                                Periodontitis.
-                                            </td>
-                                            <td><input type="Checkbox" id="P110Checkbox" class="TEST">Tooth loss due to
-                                                Periodontitis of ≤ 4
-                                                teeth.
-                                            </td>
-                                            <td><input type="Checkbox" id="P111Checkbox" class="TEST"> Tooth loss due to
-                                                Periodontitis of ≥ 5
-                                                teeth.
-                                            </td>
+                                            <td colspan="2">No tooth loss due to Periodontitis.</td>
+                                            <td>Tooth loss due to Periodontitis of ≤ 4 teeth.</td>
+                                            <td>Tooth loss due to Periodontitis of ≥ 5 teeth.</td>
 
                                         </tr>
                                         <tr>
-                                            <td>Complexity <br>
-                                                SEE CHECKBOXES BELOW
-
-
-                                            </td>
-                                            <td> Maximum probing depth ≤ 4mm. Mostly horizontal bone loss.</td>
-                                            <td> Maximum probing depth ≤ 5mm. Mostly horizontal bone loss.</td>
-                                            <td> In addition to stage II complexity; probing depth ≥ 6mm, vertical bone
-                                                loss ≥ 3mm, furcation
+                                            <td>Complexity</td>
+                                            <td>Maximum probing depth ≤ 4mm. Mostly horizontal bone loss.</td>
+                                            <td>Maximum probing depth ≤ 5mm. Mostly horizontal bone loss.</td>
+                                            <td>In addition to stage II complexity; probing depth ≥ 6mm, vertical bone loss
+                                                ≥ 3mm, furcation
                                                 involvement (class II or III), moderate ridge defects.
                                             </td>
-                                            <td> In addition to Stage III complexity; Need for comprehensive
-                                                rehabilitation due to secondary
-                                                occlusal trauma (mobility ≥ 2), bite collapse, drifting, flaring, less
-                                                than 10 opposing pairs of
-                                                teeth, masticatory dysfunction, severe ridge defects.
+                                            <td>In addition to Stage III complexity; Need for comprehensive rehabilitation
+                                                due to secondary occlusal
+                                                trauma (mobility ≥ 2), bite collapse, drifting, flaring, less than 10
+                                                opposing pairs of teeth,
+                                                masticatory dysfunction, severe ridge defects.
                                             </td>
                                         </tr>
-
-                                        <tr>
-
-                                            <td colspan="5"><input type="Checkbox" id="P14Checkbox" class="TEST">
-                                                Max PPD:
-                                                <select id="P14Dropdown" class="TEST">
-                                                    <option value="≤4">≤4</option>
-                                                    <option value="≤5">≤5</option>
-                                                    <option value="≥6mm beyond (Stage III/IV)">≥6mm beyond (Stage
-                                                        III/IV)
-                                                    </option>
-                                                </select>
-                                                <br>
-
-
-                                                <input type="Checkbox" id="P15Checkbox" class="TEST">
-                                                RBL pattern:
-                                                <select id="P15Dropdown" class="TEST">
-                                                    <option value="Mostly horizontal RBL (Stage I/II)">Mostly horizontal
-                                                        RBL (Stage I/II)
-                                                    </option>
-                                                    <option value="Vertical bone loss ≥3mm (Stage III/IV)">Vertical bone
-                                                        loss ≥3mm (Stage III/IV)
-                                                    </option>
-                                                </select>
-                                                <br>
-
-
-                                                <input type="Checkbox" id="P16Checkbox" class="TEST">
-                                                Furcation involvement:
-                                                <select id="P16Dropdown" class="TEST">
-                                                    <option value="None">None</option>
-                                                    <option value="Class II">Class II</option>
-                                                    <option value="Class III (Stage III/IV) w moderate ridge defects">
-                                                        Class III (Stage III/IV) w
-                                                        moderate ridge defects
-                                                    </option>
-                                                </select>
-                                                <br>
-
-                                                <!-- P17 -->
-                                                <input type="Checkbox" id="P17Checkbox" class="TEST">
-                                                Ridge defects:
-                                                <select id="P17Dropdown" class="TEST">
-                                                    <option value="None">None</option>
-                                                    <option value="Moderate (Stage III)">Moderate (Stage III)</option>
-                                                    <option value="Severe (Stage IV)">Severe (Stage IV)</option>
-                                                </select>
-                                                <br>
-
-                                                <!-- P18 -->
-                                                <input type="Checkbox" id="P18Checkbox" class="TEST" checked hidden="">
-                                                Addition (Stage IV):
-                                                <input type="text" id="P18TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br><br>
-
-
-                                            </td>
-
-
-                                        </tr>
-
 
                                         <tr>
                                             <td>Extent & Distribution</td>
                                             <td>Add to stage as descriptor</td>
                                             <td colspan="3">For each stage, describe extent as localised (< 30% of teeth
                                                 involved) or generalised,
-                                                or molar/incisor pattern. <input type="Checkbox" id="P19Checkbox"
-                                                                                 class="TEST">
-                                                <select id="P19Dropdown" class="TEST">
-                                                    <option value="Localized">Localized</option>
-                                                    <option value="Generalized">Generalized</option>
-                                                    <option value="Molar/incisor pattern">Molar/incisor pattern</option>
-                                                </select></td>
+                                                or molar/incisor pattern.
+                                            </td>
 
                                         </tr>
                                         </tbody>
                                     </table>
 
-
-                                    <!-- P15 -->
-
-
-                                    <!-- P16 -->
-
-                                    <strong>EXTENT & DISTRIBUTION</strong>
-                                    <br>
                                     <br> <br>
 
                                     <table>
@@ -701,39 +4391,26 @@
                                         <tr>
                                             <th>Direct Evidence of Progression</th>
                                             <th>Longitudinal Data (radiographic bone loss or CAL)</th>
-                                            <td><input type="Checkbox" id="P116Checkbox" class="TEST"> Evidence of no
-                                                loss over 5 years.
-                                            </td>
-                                            <td><input type="Checkbox" id="P117Checkbox" class="TEST"> &lt;2mm over 5
-                                                years.
-                                            </td>
-                                            <td><input type="Checkbox" id="P118Checkbox" class="TEST"> &ge; 2mm over 5
-                                                years.
-                                            </td>
+                                            <td>Evidence of no loss over 5 years.</td>
+                                            <td>&lt;2mm over 5 years.</td>
+                                            <td>&ge; 2mm over 5 years.</td>
                                         </tr>
                                         <tr>
 
                                             <th rowspan="2">Indirect Evidence of Progression</th>
                                             <th>Percent (%) of Progression (bone loss/age)</th>
-                                            <td><input type="Checkbox" id="P119Checkbox" class="TEST"> &lt;0.25</td>
-                                            <td><input type="Checkbox" id="P120Checkbox" class="TEST"> 0.25 – 1.0</td>
-                                            <td><input type="Checkbox" id="P121Checkbox" class="TEST"> &gt;1.0</td>
+                                            <td>&lt;0.25</td>
+                                            <td>0.25 – 1.0</td>
+                                            <td>&gt;1.0</td>
                                         </tr>
                                         <tr>
                                             <th>Case Phenotype</th>
-                                            <td><input type="Checkbox" id="P122Checkbox" class="TEST"> Heavy biofilm
-                                                deposits with low levels of
-                                                destruction.
-                                            </td>
-                                            <td><input type="Checkbox" id="P123Checkbox" class="TEST"> Destruction
-                                                commensurate with biofilm
-                                                deposits.
-                                            </td>
-                                            <td><input type="Checkbox" id="P124Checkbox" class="TEST"> Destruction
-                                                disproportionate to biofilm
-                                                deposits; evidence of periods of rapid progression and/or early-onset
-                                                disease (molar/incisor
-                                                pattern); expected poor response to standard bacterial control.
+                                            <td>Heavy biofilm deposits with low levels of destruction.</td>
+                                            <td>Destruction commensurate with biofilm deposits.</td>
+                                            <td>Destruction disproportionate to biofilm deposits; evidence of periods of
+                                                rapid progression and/or
+                                                early-onset disease (molar/incisor pattern); expected poor response to
+                                                standard bacterial control.
                                             </td>
                                         </tr>
 
@@ -749,4589 +4426,916 @@
 
                                             <th rowspan="2">Risk Factors</th>
                                             <th>Smoking</th>
-                                            <td><input type="Checkbox" id="P125Checkbox" class="TEST"> Non-smoker</td>
-                                            <td><input type="Checkbox" id="P126Checkbox" class="TEST"> Smoker &lt; 10
-                                                cigarettes/day
-                                            </td>
-                                            <td><input type="Checkbox" id="P127Checkbox" class="TEST"> Smoker &ge;10
-                                                cigarettes/day
-                                            </td>
+                                            <td>Non-smoker</td>
+                                            <td>Smoker &lt; 10 cigarettes/day</td>
+                                            <td>Smoker &ge;10 cigarettes/day</td>
                                         </tr>
                                         <tr>
                                             <th>Diabetes</th>
-                                            <td><input type="Checkbox" id="P128Checkbox" class="TEST"> Normoglycemic /
-                                                no diagnosis of Diabetes
-                                            </td>
-                                            <td><input type="Checkbox" id="P129Checkbox" class="TEST"> HbA1c &lt; 7.0%
-                                                in a Diabetes Patient
-                                            </td>
-                                            <td><input type="Checkbox" id="P130Checkbox" class="TEST"> HbA1c &ge; 7.0 %
-                                                in a Diabetes Patient
-                                            </td>
+                                            <td>Normoglycemic / no diagnosis of Diabetes</td>
+                                            <td>HbA1c &lt; 7.0% in a Diabetes Patient</td>
+                                            <td>HbA1c &ge; 7.0 % in a Diabetes Patient</td>
                                         </tr>
                                         </tbody>
                                     </table>
 
-                                    <strong>DX</strong>
-                                    <br>
-                                    <!-- P25 -->
-                                    <input type="Checkbox" id="P25Checkbox" class="TEST">
-
-
-                                    Stage
-                                    <select id="P25ADropdown" class="TEST">
-                                        <option value="Stage I">Stage I</option>
-                                        <option value="Stage II">Stage II</option>
-                                        <option value="Stage III">Stage III</option>
-                                        <option value="Stage Iv">Stage IV</option>
-                                    </select> </td>
-
-                                    <select id="P19BDropdown" class="TEST">
-                                        <option value="Localized">Localized</option>
-                                        <option value="Generalized">Generalized</option>
-                                        <option value="Molar/incisor pattern">Molar/incisor pattern</option>
-                                    </select>, Grade <select id="P25BDropdown" class="TEST">
-                                        <option value="A">A</option>
-                                        <option value="B">B</option>
-                                        <option value="C">C</option>
-                                    </select> </td> periodontitis
-
-                                    <br>
-
-                                    <input type="Checkbox" id="perio1G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="perio1supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="perio1supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="perio1nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="perio1nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-
-                                </div>
-                                <button class="toggle-button" id="button11">250 Active non-surgical periodontal therapy
-                                    - per
-                                    quadrant
-                                </button>
-                                <input type="Checkbox" id="E250Checkbox" class="TEST">
-
-                                <div id="250Section" class="section">
-
-
-                                    <input type="Checkbox" id="ptperio2Checkbox" class="TEST"> Pt. presented to
-                                    <select id="perio2yearDropdown" class="TEST">
-
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="perio2clinicDropdown" class="TEST">
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="perio2codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="perio2typeDropdown" class="TEST">
-                                        <option value="Perio scaling ">Perio Scaling</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="perio2A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="perio2c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="perio2c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="perio2colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="perio2medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="perio2hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-                                    <strong> LA</strong>
-                                    <br>
-                                    <input type="Checkbox" id="LAperio26Checkbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="LAperio26Dropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="LAperio27Checkbox" class="TEST">
-                                    <select id="LAperio27Dropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="LAperio27InfilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br>
-
-
-                                    <input type="Checkbox" id="p40Checkbox5" class="TEST">
-                                    U/S & hand scaling (Gracey curettes) used to debride all sub- & supra-gingival
-                                    surfaces. All calculus &
-                                    plaque removed.
-                                    <br><br>
-
-                                    <!-- Checkbox 6 -->
-                                    <input type="Checkbox" id="p40Checkbox6" class="TEST">
-                                    Prophy paste used to clean & polish all supragingival surfaces. Floss confirmed
-                                    removal of calculus on
-                                    interproximal surfaces.
-                                    <br><br>
-
-                                    <!-- Checkbox 7 -->
-                                    <input type="Checkbox" id="p40Checkbox7" class="TEST">
-                                    OHI reinforced to patient.
-                                    <br><br>
-
-                                    <strong>REMAINING Tx PLAN</strong>
-                                    <br><br>
-                                    <!-- Checkbox 8 -->
-                                    <input type="Checkbox" id="p40Checkbox8" class="TEST">
-                                    250 x2 Active non-surgical perio tx Q2 & Q3 w LA.
-                                    <br><br>
-
-                                    <!-- Checkbox 9 -->
-                                    <input type="Checkbox" id="p40Checkbox9" class="TEST">
-                                    251 Supportive periodontal therapy/review.
-                                    <br><br>
-
-                                    <strong>POST OP</strong>
-                                    <br><br>
-                                    <!-- Checkbox 10 -->
-                                    <input type="Checkbox" id="p40Checkbox10" class="TEST">
-                                    POIG regarding bleeding, sensitivity & gap formation (if any).
-                                    <br><br>
-
-
-                                    <input type="Checkbox" id="perio2G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="perio2supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="perio2supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="perio2nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="perio2nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
                                 </div>
 
-
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button12">ORAL SURGERY (3xx))</button>
-                            <div id="surgSection1" class="section">
-                                <button class="toggle-button" id="button13">Oral Surg</button>
-                                <input type="Checkbox" id="F1Checkbox" class="TEST">
-
-                                <div id="oralsurgSection" class="section">
-
-                                    <input type="Checkbox" id="ptsurg1Checkbox" class="TEST"> Pt. presented to
-                                    <select id="surg1yearDropdown" class="TEST">
-
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="surg1clinicDropdown" class="TEST">
-                                        <option value="Oral surgery Clinic">Oral surgery Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="surg1codeDropdown" class="TEST">
-                                        <option value="6.2">6.2</option>
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-
-                                        <option value="6.3">6.3</option>
-                                    </select> Exos
-                                    for
-                                    <select id="surg1typeDropdown" class="TEST">
-                                        <option value="Exos"> Exos</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="surg1A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="surg1c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="surg1c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="surg1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen
-                                    Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="surg1medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="surg1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-
-                                    <input type="Checkbox" id="o1Checkbox3" class="TEST" checked hidden="">
-                                    Tooth of interest:
-
-                                    <input type="text" id="o1TextInput3" class="TEST"
-                                           placeholder="Enter details..."><br><br>
-
-
-                                    <input type="Checkbox" id="o1Checkbox3A" class="TEST" checked hidden="">
-                                    RADIOGRAPHIC FINDINGS
-                                    <input type="text" id="o1TextInput3A" class="TEST"
-                                           placeholder="Enter details..."><br>
-
-
-                                    <input type="Checkbox" id="o1Checkbox4" class="TEST" checked hidden="">
-                                    CLINICAL EXAMINATION
-
-                                    <input type="text" id="o1TextInput4" class="TEST"
-                                           placeholder="Enter details..."><br><br>
-
-
-                                    <input type="Checkbox" id="o1Checkbox5" class="TEST">
-                                    Pt informed of the risks & complications of the procedure including damage to soft
-                                    tissue, adjacent teeth,
-                                    infection, bleeding, swelling, dry socket, numbness & pain. Tooth replacement
-                                    options discussed & pt
-                                    understood.
-                                    <br><br>
-
-                                    <strong>Tx DELIVERED</strong>
-                                    <br>
-
-
-                                    <input type="Checkbox" id="OA11Checkbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="OA11Dropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="OA12Checkbox" class="TEST">
-                                    <select id="OA12Dropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="OA12InfilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br><br>
-
-                                    <!-- Checkbox 6 -->
-                                    <input type="Checkbox" id="o1Checkbox6" class="TEST">
-                                    Luxators, elevators, forceps used to decuff & deliver the tooth.
-                                    <br>
-
-                                    <!-- Checkbox 7 -->
-                                    <input type="Checkbox" id="o1Checkbox7" class="TEST">
-                                    Tooth & socket inspected for fragments. Nil root fragments. Socket compressed
-                                    immediately.
-                                    <br>
-
-                                    <!-- Checkbox 8 -->
-                                    <input type="Checkbox" id="o1Checkbox8" class="TEST">
-                                    Haemostasis achieved (HA) w/ gauze OR simple interrupted suture w/ 3-0 VR with
-                                    Gelfoam.
-                                    <br><br>
-                                    <input type="Checkbox" id="o1Checkbox8A" class="TEST">
-                                    <strong>REMAINING TX PLAN</strong>
-                                    <br><br><br>
-                                    <!-- Checkbox 9 -->
-
-                                    <!-- Checkbox 10 -->
-                                    <input type="Checkbox" id="o1Checkbox10" class="TEST">
-                                    POIG (regarding numbness, pain, swelling, bleeding, infection) & gauze packs w/
-                                    instruction on usage
-                                    provided.
-                                    <br><br>
-
-
-                                    <input type="Checkbox" id="surg1G22Checkbox" class="TEST"> Pt well on discharge <br>
-                                    <input type="Checkbox" id="surg1supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="surg1supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-
-                                    <input type="Checkbox" id="surg1nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="surg1nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-
-                                </div>
-
-                                <button class="toggle-button2" id="button166">ORAL SURGERY POST-OPERATIVE INSTRUCTIONS
-                                </button>
-
-
-                                <div id="oralsurg2Section" class="section">
-
-                                    <h2>ORAL SURGERY POST-OPERATIVE INSTRUCTIONS</h2>
-
-                                    <table>
-                                        <tr>
-                                            <th>Time Frame</th>
-                                            <th>Instructions</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Immediately</td>
-                                            <td>
-                                                <ol>
-                                                    <li><strong>Numbness:</strong> Avoid eating for the next few hours
-                                                        until the numbness has worn off
-                                                        to avoid biting & burning yourself.
-                                                    </li>
-                                                    <li><strong>Pain:</strong> You can expect some pain because the
-                                                        tissue has been disturbed during the
-                                                        treatment. Control pain by taking paracetamol (if no allergy)
-                                                        and/or ibuprofen. Call the clinic if
-                                                        pain persists.
-                                                    </li>
-                                                    <li><strong>Bleeding:</strong> There may be some bleeding enough to
-                                                        discolor your saliva for a few
-                                                        hours. Apply a clean gauze (do not use tissue) & keep it in
-                                                        place by applying pressure firmly by
-                                                        closing your jaws on it for at least 10 mins.
-                                                    </li>
-                                                    <li><strong>Swelling:</strong> Some swelling or difficulty in
-                                                        opening the mouth is common & should
-                                                        subside after 1-2 days. Use an ice pack on the outside of the
-                                                        face wrapped in a cloth to reduce
-                                                        facial swelling.
-                                                    </li>
-                                                </ol>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>First 24h</td>
-                                            <td>
-                                                <ol>
-                                                    <li>Avoid excessive activity or heavy lifting for about 24 hours
-                                                        (may increase the risk of
-                                                        bleeding).
-                                                    </li>
-                                                    <li>Try to keep your head elevated when lying down (decreases the
-                                                        risk of bleeding).
-                                                    </li>
-                                                    <li>Start with soft food (i.e. scrambled eggs, finely chopped meat
-                                                        or cheese, milk, soup or fruit
-                                                        juice) & chew on the opposite side of the mouth to the wound.
-                                                    </li>
-                                                    <li>Important to maintain good oral hygiene as usual (to prevent
-                                                        infection) but avoid disturbing the
-                                                        blood clot or rinsing the mouth for the first 24 hrs after
-                                                        surgery (prevent washing blood clot
-                                                        away).
-                                                    </li>
-                                                </ol>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>After 24h & throughout healing (up to a week)</td>
-                                            <td>
-                                                <ol>
-                                                    <li>You can start rinsing your mouth gently, especially after meals,
-                                                        with ½ teaspoon of table salt
-                                                        in a glass of lukewarm water.
-                                                    </li>
-                                                    <li>Avoid disturbing the blood clot by creating too much pressure
-                                                        (using a straw or smoking) or with
-                                                        objects.
-                                                    </li>
-                                                    <li>If swelling persists, use a warm pack on the outside of the face
-                                                        wrapped in a cloth to promote
-                                                        healing.
-                                                    </li>
-                                                    <li>Avoid smoking or drinking as it delays healing.</li>
-                                                </ol>
-                                            </td>
-                                        </tr>
-                                    </table>
-
-
-                                </div>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button14">ENDODONTICS (4xx)</button>
-                            <div id="endoSection1" class="section">
-                                <button class="toggle-button2" id="button15">014 Consultation (endodontics)</button>
-                                <input type="Checkbox" id="endo1allCheckbox" class="TEST">
-
-                                <div id="endo1Section" class="section">
-                                    <h3>014 Consultation (endodontics)</h3>
-                                    <input type="Checkbox" id="ptendo1Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="endo1yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="endo1clinicDropdown" class="TEST">
-                                        <option value="Endo Clinic">Endo Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="endo1codeDropdown" class="TEST">
-                                        <option value="3.1">3.1</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="endo1typeDropdown" class="TEST">
-                                        <option value="Endo Consult (014)"> Endo Consult (014)</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="endo1A1TextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo1c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="endo1c3sTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo1colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="endo1medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="endo1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-
-                                    <input type="Checkbox" id="E1Checkbox" class="TEST">
-                                    <strong> CLINICAL FINDINGS </strong><br>
-                                    <input type="Checkbox" id="E1ACheckbox" class="TEST">
-                                    Discoloration:
-                                    <select id="E1ADropdown" class="TEST">
-                                        <option value="unchanged">unchanged</option>
-                                        <option value="yellowish">yellowish</option>
-                                        <option value="grey">grey</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E1BCheckbox" class="TEST">
-                                    Swelling:
-                                    <select id="E1BDropdown" class="TEST">
-                                        <option value="none">none</option>
-                                        <option value="intraoral">intraoral</option>
-                                        <option value="extraoral">extraoral</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E1CCheckbox" class="TEST">
-                                    Sinus tract:
-                                    <select id="E1CDropdown" class="TEST">
-                                        <option value="present">present</option>
-                                        <option value="absent">absent</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <strong> HX OF TOOTH </strong><br>
-                                    <input type="Checkbox" id="E2Checkbox" class="TEST">
-                                    PA radiograph taken. RADIOGRAPHIC EXAMINATION <br>
-                                    <input type="Checkbox" id="E3Checkbox" class="TEST" checked hidden="">
-                                    Carious w/wo exposure
-                                    <input type="text" id="E3TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="E4Checkbox" class="TEST" checked hidden="">
-                                    Restored
-                                    <input type="text" id="E4TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="E5Checkbox" class="TEST" checked hidden="">
-                                    Pulp capping
-                                    <input type="text" id="E5TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="E7Checkbox" class="TEST" checked hidden="">
-                                    Hx of trauma
-                                    <input type="text" id="E7TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="E8Checkbox" class="TEST" checked hidden="">
-                                    Previous pulpotomy
-                                    <input type="text" id="E8TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="E9Checkbox" class="TEST" checked hidden="">
-                                    Previously root treated
-                                    <input type="text" id="E9TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E10Checkbox" class="TEST">
-                                    PULP SENSIBILITY TESTS performed. <br>
-
-                                    <table>
-                                        <tr>
-                                            <th>Tests</th>
-                                            <th><input type="text1" id="E11TextInput" class="TEST"
-                                                       placeholder="Tooth #"></th>
-                                            <th><input type="text1" id="E11BTextInput" class="TEST"
-                                                       placeholder="Tooth #"></th>
-                                            <th><input type="text1" id="E11CTextInput" class="TEST"
-                                                       placeholder="Tooth #"></th>
-                                        </tr>
-
-
-                                        <tr>
-                                            <th><input type="Checkbox" id="E11Checkbox" class="TEST">Cold</th>
-                                            <td><select id="E11Dropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td><select id="E11BDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td><select id="E11CDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-
-                                        </tr>
-
-
-                                        <tr>
-                                            <th><input type="Checkbox" id="E12Checkbox" class="TEST">EPT</th>
-                                            <td>
-
-
-                                                <select id="E12Dropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td>
-
-
-                                                <select id="E12BDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td>
-
-
-                                                <select id="E12CDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <th><input type="Checkbox" id="E13Checkbox" class="TEST">Palpation</th>
-                                            <td>
-
-
-                                                <select id="E13Dropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td>
-
-
-                                                <select id="E13BDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td>
-
-
-                                                <select id="E13CDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-                                            <th><input type="Checkbox" id="E15Checkbox" class="TEST">Percussion</th>
-                                            <td>
-
-
-                                                <select id="E15Dropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-                                            <td>
-
-
-                                                <select id="E15BDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td>
-
-
-                                                <select id="E15CDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                        </tr>
-
-                                        <tr>
-                                            <th><input type="Checkbox" id="E16Checkbox" class="TEST">Mobility</th>
-                                            <td>
-
-
-                                                <select id="E16Dropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                            <td>
-
-
-                                                <select id="E16BDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-                                            <td>
-
-
-                                                <select id="E16CDropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="(+)">(+)</option>
-                                                    <option value="(++)">(++)</option>
-                                                    <option value="(+++)">(+++)</option>
-                                                    <option value="(-)">(-)</option>
-                                                </select>
-                                            </td>
-
-                                        </tr>
-
-                                    </table>
-
-
-                                    <br>
-
-
-                                    <br>
-
-                                    <br>
-                                    <input type="Checkbox" id="E17Checkbox" class="TEST" checked hidden="">Abnormal
-                                    Probing:
-                                    <input type="text" id="E17TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E18Checkbox" class="TEST">
-                                    PULPAL DX
-
-                                    <select id="E18Dropdown" class="TEST">
-                                        <option value="Normal pulp">Normal pulp</option>
-                                        <option value="Reversible pulpitis">Reversible pulpitis</option>
-                                        <option value="Symptomatic irreversible pulpitis">Symptomatic irreversible
-                                            pulpitis
-                                        </option>
-                                        <option value="Asymptomatic irreversible pulpitis">Asymptomatic irreversible
-                                            pulpitis
-                                        </option>
-                                        <option value="Pulp necrosis">present</option>
-                                        <option value="Previous RCT initiated">Previous RCT initiated</option>
-                                        <option value="Previous RCT completed">Previous RCT completed</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E19Checkbox" class="TEST">
-                                    PERIAPICAL DX
-                                    <select id="E19Dropdown" class="TEST">
-                                        <option value=""></option>
-                                        <option value="Normal">Normal</option>
-                                        <option value="Symptomatic apical periodontitis">Symptomatic apical
-                                            periodontitis
-                                        </option>
-                                        <option value="Asymptomatic apical periodontitis">Asymptomatic apical
-                                            periodontitis
-                                        </option>
-                                        <option value="Acute apical abscess">Acute apical abscess</option>
-                                        <option value="Chronic apical abscess">Chronic apical abscess</option>
-                                        <option value="Condensing osteitis">Condensing osteitis</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E20Checkbox" class="TEST">
-                                    Results from tests & diagnosis were discussed with pt. <br>
-                                    <input type="Checkbox" id="E21Checkbox" class="TEST">
-                                    TX OPTIONS
-                                    <select id="E21Dropdown" class="TEST">
-                                        <option value="RCT w direct/indirect restoration">RCT w direct restoration
-                                        </option>
-                                        <option value="RCT w direct/indirect restoration">RCT w indirect restoration
-                                        </option>
-                                        <option value="> Extraction w removable/fixed prothesis">> Extraction w fixed
-                                            prothesis
-                                        </option>
-                                        <option value="> Extraction w removable/fixed prothesis">> Extraction w
-                                            removable prothesis
-                                        </option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E22Checkbox" class="TEST">
-                                    Advantages & disadvantages of each Tx option were discussed with patient, written
-                                    information sheets
-                                    provided. <br>
-                                    <input type="Checkbox" id="E23Checkbox" class="TEST">
-                                    The patient understood the advantages, risks, as well as the cost involved in RCT,
-                                    including the need for
-                                    multiple visits, and consented for RCT. <br>
-                                    <br>
-                                    <input type="Checkbox" id="E24Checkbox" class="TEST">
-                                    Post-endodontic restorative options discussed: <br>
-                                    <input type="Checkbox" id="E25Checkbox" class="TEST">
-                                    1) Bonded composite
-                                    <select id="E25Dropdown" class="TEST">
-                                        <option value="(short-term resto for posterior teeth)">(short-term resto for
-                                            posterior teeth)
-                                        </option>
-                                        <option value="(anterior tooth w sufficient remaining tooth structure)">
-                                            (anterior tooth w sufficient
-                                            remaining tooth structure)
-                                        </option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E26Checkbox" class="TEST">
-                                    2) Crown
-                                    <select id="E26Dropdown" class="TEST">
-                                        <option value="(anterior w extensive proximal caries/resto)">(anterior w
-                                            extensive proximal caries/resto)
-                                        </option>
-                                        <option value="(posterior for cuspal coverage against occlusal forces)">
-                                            (posterior for cuspal coverage
-                                            against occlusal forces)
-                                        </option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E27Checkbox" class="TEST">
-                                    Pt understood that the type of final restoration recommended after RCT will be
-                                    determined by the amount of
-                                    tooth structure remaining after removal of existing restoration & caries & that a
-                                    post may be indicated to
-                                    retain the core. <br>
-                                    <br>
-
-                                    <br>
-                                    <input type="Checkbox" id="endo1G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="endo1supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="endo1supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo1nvCheckbox" class="TEST">
-                                    N/V:
-                                    <input type="text" id="endo1nvTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                </div>
+                                <button class="toggle-button5" id="button401">Teeth Eruption Times</button>
                                 <br>
-                                <button class="toggle-button2" id="button16">414 Pulpotomy</button>
-                                <input type="Checkbox" id="endo2allCheckbox" class="TEST">
+                                <div id="eteethSection1" class="section">
 
-                                <div id="endo2Section" class="section">
-                                    <h3> 414 Pulpotomy</h3>
-                                    <input type="Checkbox" id="ptendo2Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="endo2yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="endo2clinicDropdown" class="TEST">
-                                        <option value="Endo Clinic">Endo Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="endo2codeDropdown" class="TEST">
-                                        <option value="3.1">3.1</option>
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="endo2typeDropdown" class="TEST">
-                                        <option value="Pulpotomy">Pulpotomy</option>
-                                        <option value="Emergency">Emergency</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="endo2A1TextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo2c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="endo2c3sTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo2colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="endo2medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="endo2hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-
-                                    <br><br>
-                                    <input type="Checkbox" id="E40Checkbox" class="TEST">
-                                    Pt informed of the risks & complications of the procedure & an informed consent for
-                                    tx was obtained.
-                                    <br>
-                                    <input type="Checkbox" id="E41Checkbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="E41Dropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E42Checkbox" class="TEST">
-                                    <select id="E42Dropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="E42InfilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E43Checkbox" class="TEST">
-                                    Isolation
-                                    <select id="E43Dropdown" class="TEST">
-                                        <option value="Moisture control achieved through dental dam">Dental Dam</option>
-                                        <option value="Cotton rolls isolation used">Cotton Rolls</option>
-                                        <option value="Dry tips isolation used">Dry Tips</option>
-                                    </select>
-                                    <br><br>
-                                    <input type="Checkbox" id="E44Checkbox" class="TEST">
-                                    Cavity prepared using HS and SS, previous restoration removed/caries free. Exposed
-                                    pulp reveals
-                                    <select id="E44Dropdown" class="TEST">
-                                        <option value="hemorrhagic inflamed pulp"> hemorrhagic inflamed pulp</option>
-                                        <option value="necrotic pulp">necrotic pulp</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E45Checkbox" class="TEST">Pulp amputation was performed
-                                    using S/S #8 large round
-                                    bur. Canal orifice(s) were visually inspected to ensure complete removal of the pulp
-                                    tissue.
-                                    <br>
-                                    <br> <input type="Checkbox" id="E46Checkbox" class="TEST">Disinfection & hemostatis
-                                    was achieved by
-                                    compression of sterile cotton pellets soaked in 2% sodium hypochlorite over the pulp
-                                    stump(s) using gentle
-                                    pressure for 2-5mins.
-                                    <br>
-                                    <input type="Checkbox" id="E47Checkbox" class="TEST"> Access cavity is temporized
-                                    with
-                                    <select id="E47ADropdown" class="TEST">
-                                        <option value="Odontopaste,">Odontopaste</option>
-                                        <option value="calcium hydroxide paste,">calcium hydroxide paste</option>
-
-                                    </select>
-
-                                    <select id="E47BDropdown" class="TEST">
-                                        <option value="">No cotton pellet</option>
-                                        <option value=" Sterile cotton pellet,">Sterile cotton pellet</option>
-
-                                    </select> &
-                                    <select id="E47CDropdown" class="TEST">
-                                        <option value=" Fuji 7 GIC (pink)">Fuji 7 GIC (pink)</option>
-                                        <option value=" Cavit">Cavit</option>
-
-                                    </select>
-
-
-                                    <br> <input type="Checkbox" id="E48Checkbox" class="TEST">Cusps lightly reduced to
-                                    take tooth out of
-                                    occlusion for symptomatic relief & decrease risk of cuspal fracture (discussed with
-                                    pt prior to tx)
-                                    <br>
-                                    <br>
-
-                                    <input type="Checkbox" id="endo2G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="endo2supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="endo2supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo2nvCheckbox" class="TEST">
-                                    N/V:
-                                    <input type="text" id="endo2nvTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                </div>
-                                <button class="toggle-button2" id="button17">415 Complete chemo-mechanical preparation
-                                    of root canal – one
-                                    canal
-                                </button>
-                                <input type="Checkbox" id="endo3allCheckbox" class="TEST">
-
-                                <div id="endo3Section" class="section">
-                                    <h3></h3>
-                                    <input type="Checkbox" id="ptendo3Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="endo3yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="endo3clinicDropdown" class="TEST">
-                                        <option value="Endo Clinic">Endo Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="endo3codeDropdown" class="TEST">
-                                        <option value="3.1">3.1</option>
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="endo3typeDropdown" class="TEST">
-                                        <option value="chemo-mechanical preparation of root canal">chemo-mechanical
-                                            preparation of root canal
-                                        </option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="endo3A1TextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo3c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="endo3c3sTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo3colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="endo3medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="endo3hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select><br><br>
-
-                                    <input type="Checkbox" id="E50Checkbox" class="TEST">
-                                    Advantages & disadvantages of each Tx option were discussed with patient, written
-                                    information sheets
-                                    provided.
-                                    <br>
-                                    <input type="Checkbox" id="E51Checkbox" class="TEST">
-                                    The patient understood the advantages, risks, as well as the cost involved in RCT,
-                                    including the need for
-                                    multiple visits, and consented for RCT.
-                                    <br>
-                                    <br>
-
-                                    Post-endodontic restorative options discussed:
-                                    <br>
-                                    <input type="Checkbox" id="E53Checkbox" class="TEST">
-                                    1) Bonded composite
-
-                                    <br>
-                                    <input type="Checkbox" id="E54Checkbox" class="TEST">
-                                    2) Crown
-
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E55Checkbox" class="TEST">
-                                    Pt understood that the type of final restoration recommended after RCT will be
-                                    determined by the amount of
-                                    tooth structure remaining after removal of existing restoration & caries & that a
-                                    post may be indicated to
-                                    retain the core.
-                                    <br>
-                                    <br>
-
-                                    <strong> LA</strong>
-                                    <br>
-                                    <input type="Checkbox" id="E56Checkbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="E56Dropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E57Checkbox" class="TEST">
-                                    <select id="E57Dropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="E57InfilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br>
-
-                                    <input type="Checkbox" id="E58Checkbox" class="TEST">
-                                    Isolation
-                                    <select id="E58Dropdown" class="TEST">
-                                        <option value="Moisture control achieved through dental dam">Dental Dam</option>
-                                        <option value="Cotton rolls isolation used">Cotton Rolls</option>
-                                        <option value="Dry tips isolation used">Dry Tips</option>
-                                    </select>
-                                    <br><br>
-
-                                    <strong> Cavity Prep</strong>
-                                    <br>
-
-                                    <input type="Checkbox" id="E59Checkbox" class="TEST">
-                                    Cavity prepared using HS and SS, previous restoration removed/caries free.
-                                    <br>
-                                    <input type="Checkbox" id="E60Checkbox" class="TEST">NIL pulp exposure/ Pulp
-                                    exposed.
-                                    <select id="E60Dropdown" class="TEST">
-                                        <option value="NIL pulp exposure">NIL pulp exposure</option>
-                                        <option
-                                            value="Exposed pulp is covered with Teflon tape & cavit for pre-endodontic provisional restoration.">
-                                            Exposed pulp is covered with Teflon tape & cavit for pre-endodontic
-                                            provisional restoration.
-                                        </option>
-                                    </select>
-                                    <br><br>
-
-                                    <strong>Pre-Endo Resto</strong> <br>
-                                    <input type="Checkbox" id="E61Checkbox" class="TEST">
-                                    Etched with 37% phosphoric acid, clearfil primer and bond. Gradia
-                                    <select id="E61GradiaDropdown" class="TEST">
-                                        <option value="A1">A1</option>
-                                        <option value="A2">A2</option>
-                                        <option value="A3">A3</option>
-                                        <option value="A3.5">A3.5</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="E62Checkbox" class="TEST">Pre-endodontic provisional
-                                    restoration completed using
-                                    GIC/ composite/ bulk fill flowable composite.
-                                    <br>
-                                    <input type="Checkbox" id="E63Checkbox" class="TEST">Access cavity prepared using
-                                    H/S & U/S.
-                                    <br><br>
-                                    <br>
-                                    <input type="Checkbox" id="E64Checkbox" class="TEST">
-                                    <select id="E64Dropdown" class="TEST">
-                                        <option value="1 Canal">1 Canal</option>
-                                        <option value="2 Canals">2 Canals</option>
-                                        <option value="3 Canals">3 Canals</option>
-                                        <option value="4 Canals">4 Canals</option>
-                                    </select> identified. XA Protaper was used to prepare the coronal 3rd of all
-                                    canal(s)
-                                    <br>
-                                    <input type="Checkbox" id="E65Checkbox" class="TEST"> EWL estimated using
-                                    pre-operative radiograph & apex
-                                    locator. WL radiograph taken & CWL obtained.
-                                    <br>
-                                    <input type="Checkbox" id="E66Checkbox" class="TEST"> Proglider was used to prepare
-                                    glide path in all
-                                    canal(s). Canal(s) prepared up to Protaper
-                                    <select id="E66ProtaperDropdown" class="TEST">
-                                        <option value="X2">X2</option>
-                                        <option value="X1">X1</option>
-                                        <option value="X3">X3</option>
-                                        <option value="X4">X4</option>
-                                    </select>, irrigated with 4% sodium hypochlorite & recapitulated with size 10 hand
-                                    files after each
-                                    instrumentation.
-                                    <br><br>
-                                    <input type="Checkbox" id="E67Checkbox" class="TEST"> Access cavity is temporized
-                                    with
-                                    <select id="E67ADropdown" class="TEST">
-                                        <option value="Odontopaste,">Odontopaste</option>
-                                        <option value="calcium hydroxide paste,">calcium hydroxide paste</option>
-
-                                    </select>
-
-                                    <select id="E67BDropdown" class="TEST">
-                                        <option value="">No cotton pellet</option>
-                                        <option value=" Sterile cotton pellet,">Sterile cotton pellet</option>
-
-                                    </select> &
-                                    <select id="E67CDropdown" class="TEST">
-                                        <option value=" Fuji 7 GIC (pink)">Fuji 7 GIC (pink)</option>
-                                        <option value=" Cavit">Cavit</option>
-
-                                    </select>
-
-
-                                    <br>
-                                    <input type="Checkbox" id="E68Checkbox" class="TEST"> Cusps lightly reduced to take
-                                    tooth out of occlusion
-                                    for symptomatic relief & decrease risk of cuspal fracture (discussed with pt prior
-                                    to tx)
-                                    <br><br><br>
-                                    <strong>TX RECORD</strong><br>
-
+                                    <h3> Primary Teeth Eruption Times</h3>
 
                                     <table>
+                                        <thead>
                                         <tr>
-                                            <td>
-                                                Canal
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E69ATextInput" placeholder="MB, D ....">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E69BTextInput" placeholder="MB, D ....">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E69CTextInput" placeholder="MB, D ....">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E69DTextInput" placeholder="MB, D ....">
-                                            </td>
-
+                                            <th>Upper Teeth</th>
+                                            <th>Erupt</th>
+                                            <th>Shed</th>
                                         </tr>
-
+                                        </thead>
+                                        <tbody>
                                         <tr>
-                                            <td>Ref point
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E70ATextInput" placeholder="Enter details...">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E70BTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E70CTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E70DTextInput" placeholder="Enter details...">
-                                            </td>
-
+                                            <td>Central incisor</td>
+                                            <td>8-12 months</td>
+                                            <td>6-7 yrs.</td>
                                         </tr>
-
                                         <tr>
-                                            <td>
-                                                EWL
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E71ATextInput" placeholder="Enter details...">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E71BTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E71CTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E71DTextInput" placeholder="Enter details...">
-                                            </td>
-
+                                            <td>Lateral incisor</td>
+                                            <td>9-13 months</td>
+                                            <td>7-8 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Canine</td>
+                                            <td>16-22 months</td>
+                                            <td>10-12 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First molar</td>
+                                            <td>13-19 months</td>
+                                            <td>9-11 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second molar</td>
+                                            <td>25-33 months</td>
+                                            <td>10-12 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"></td>
 
                                         </tr>
                                         <tr>
-                                            <td>
-                                                WLF size
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E72ATextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E72BTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E72CTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E72DTextInput" placeholder="Enter details...">
-                                            </td>
-
+                                            <th>Lower Teeth</th>
+                                            <th>Erupt</th>
+                                            <th>Shed</th>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                CWL
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E73ATextInput" placeholder="Enter details...">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E73BTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E73CTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E73DTextInput" placeholder="Enter details...">
-                                            </td>
-
+                                            <td>Second molar</td>
+                                            <td>23-31 months</td>
+                                            <td>10-12 yrs.</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                Last rotary file used
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E74ATextInput" placeholder="Enter details...">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E74BTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E74CTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E74DTextInput" placeholder="Enter details...">
-                                            </td>
+                                            <td>First molar</td>
+                                            <td>14-18 months</td>
+                                            <td>9-11 yrs.</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                (MC)
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E75ATextInput" placeholder="Enter details...">
-                                            </td>
-
-                                            <td>
-                                                <input type="text1" id="E75BTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E75CTextInput" placeholder="Enter details...">
-                                            </td>
-                                            <td>
-                                                <input type="text1" id="E75DTextInput" placeholder="Enter details...">
-                                            </td>
-
+                                            <td>Canine</td>
+                                            <td>17-23 months</td>
+                                            <td>9-12 yrs.</td>
                                         </tr>
                                         <tr>
-                                            </td>
+                                            <td>Lateral incisor</td>
+                                            <td>10-16 months</td>
+                                            <td>7-8 yrs.</td>
                                         </tr>
-                                    </table>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="endo3G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="endo3supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="endo3supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo3nvCheckbox" class="TEST">
-                                    N/V:
-                                    <input type="text" id="endo3nvTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                </div>
-                                <button class="toggle-button2" id="button18">417 Root canal obturation – one canal
-                                </button>
-                                <input type="Checkbox" id="endo4allCheckbox" class="TEST">
-
-                                <div id="endo4Section" class="section">
-                                    <h3></h3>
-                                    <input type="Checkbox" id="ptendo4Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="endo4yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="endo4clinicDropdown" class="TEST">
-                                        <option value="Endo Clinic">Endo Clinic</option>
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="endo4codeDropdown" class="TEST">
-                                        <option value="3.1">3.1</option>
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="endo4typeDropdown" class="TEST">
-                                        <option value="RCT obturation">RCT obturation</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="endo4A1TextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo4c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="endo4c3sTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo4colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="endo4medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="endo4hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="E80Checkbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="E81Dropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-
-                                    <input type="Checkbox" id="E82Checkbox" class="TEST">
-                                    <select id="E82Dropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="E82InfilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br>
-
-                                    <input type="Checkbox" id="E83Checkbox" class="TEST">
-                                    Isolation
-                                    <select id="E84Dropdown" class="TEST">
-                                        <option value="Moisture control achieved through dental dam">Dental Dam</option>
-                                        <option value="Cotton rolls isolation used">Cotton Rolls</option>
-                                        <option value="Dry tips isolation used">Dry Tips</option>
-                                    </select>
-                                    <br><br>
-
-                                    <input type="Checkbox" id="E85Checkbox" class="TEST">
-                                    Temporary restorations removed using H/S & U/S.
-                                    <br>
-
-                                    <input type="Checkbox" id="E86Checkbox" class="TEST">Canal(s) were irrigated with 4%
-                                    sodium hypochlorite &
-                                    recapitulated to prepared lengths to ensure patency.
-                                    <br>
-                                    <br> <input type="Checkbox" id="E87Checkbox" class="TEST">Master cone tried &
-                                    tug-back achieved. Master cone
-                                    radiograph taken.
-                                    <br> <input type="Checkbox" id="E88Checkbox" class="TEST">All canal(s) were dried
-                                    with length-controlled
-                                    paper points.
-                                    <br> <input type="Checkbox" id="E89Checkbox" class="TEST">All canal(s) were
-                                    obturated with master cones &
-                                    medium fine accessory GP points using AH Plus sealer & lateral condensation
-                                    technique.
-                                    <br><br> <input type="Checkbox" id="E90Checkbox" class="TEST">
-                                    Excess GP were removed using Super endo up to 4mm below each canal orifice (to
-                                    reduce risk of staining &
-                                    allow sufficient space for Cavit placement) & the remaining GP were packed with a
-                                    plugger.
-                                    <br> <input type="Checkbox" id="E91Checkbox" class="TEST">
-                                    Excess GP & sealer on the coronal portion of each orifice were removed with Gates
-                                    Glidden at 10,000 RPM & 5s
-                                    etch, respectively.
-                                    <br><br> <input type="Checkbox" id="E92Checkbox" class="TEST">Final PA radiograph
-                                    taken
-                                    <br> <input type="Checkbox" id="E93Checkbox" class="TEST">Final restoration was
-                                    placed using composite /
-                                    Access cavity is temporized with Cavit, & Fuji 9 GIC.
-
-                                    <br>
-
-                                    <br> <input type="Checkbox" id="E94Checkbox" class="TEST">POIG. Tooth may be
-                                    sensitive for the next few days
-                                    post-op (recommend ibuprofen 600mg &/or paracetamol if necessary); Cautioned against
-                                    consuming hot
-                                    food/drinks until the LA wears off due to numb lip & cheek/lip biting
-                                    <br> <input type="Checkbox" id="E95Checkbox" class="TEST">Informed pt about future
-                                    treatment appointments,
-                                    such as the restoration & recall appointments.
-
-
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="endo4G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="endo4supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="endo4supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="endo4nvCheckbox" class="TEST">
-                                    N/V:
-                                    <input type="text" id="endo4nvTextInput" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                </div>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button19">RESTORATIVE SERVICES (5xx)</button>
-                            <div id="restoSection1" class="section">
-                                <button class="toggle-button" id="button20">Restoration</button>
-                                <input type="Checkbox" id="selectAllRestoCheckbox" class="TEST">
-                                Composite
-                                <input type="Checkbox" id="selectAllResto2Checkbox" class="TEST">
-                                GIC
-                                <div id="restorationSection" class="section">
-                                    <h2>Restoration</h2>
-
-                                    <input type="Checkbox" id="ptresto1Checkbox" class="TEST"> Pt. presented to
-                                    <select id="resto1yearDropdown" class="TEST">
-
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="resto1clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="resto1codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="resto1typeDropdown" class="TEST">
-                                        <option value="restoration">restoration</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="resto1A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="resto1c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="resto1c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="resto1colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="resto1medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="resto1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-
-                                    <input type="Checkbox" id="restoCheckbox" class="TEST">
-                                    Tooth - required restoration due to
-                                    <select id="restoDropdown" class="TEST">
-                                        <option value="decay">decay</option>
-                                        <option value="NCTL">NCTL</option>
-                                        <option value="defective margin">defective margin</option>
-                                    </select>
-                                    AND
-                                    <select id="resto2Dropdown" class="TEST">
-                                        <option value=""></option>
-                                        <option value="NCTL">NCTL</option>
-                                        <option value="defective margin">defective margin</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="bwCheckbox" class="TEST">
-                                    BW’s reviewed <br>
-                                    <input type="Checkbox" id="xylocaineCheckbox" class="TEST">
-                                    LA/Topical Used
-                                    <select id="laDropdown" class="TEST">
-                                        <option value="Topical 5% Xylocaine LA used">Topical 5% Xylocaine AND (See
-                                            below)
-                                        </option>
-                                        <option value="No LA/Topical used">No LA/Topical used</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="latypeCheckbox" class="TEST">
-                                    <select id="anestheticDropdown" class="TEST">
-                                        <option value="2.2mL Lignospan: 2% Lignocaine w Adrenaline 1:80,000">2.2mL
-                                            Lignospan
-                                        </option>
-                                        <option value="2.2mL Septanest: 4% Articaine w Adrenaline 1:100,000">2.2mL
-                                            Septanest
-                                        </option>
-                                        <option value="2.2mL Scandonest: 3% Mepivacaine">2.2mL Scandonest</option>
-                                    </select>
-                                    VIA
-                                    <select id="infilDropdown" class="TEST">
-                                        <option value="palatal infil">Palatal Infiltration</option>
-                                        <option value="buccal infil">Buccal Infiltration</option>
-                                        <option value="IDB">Inferior Dental Block</option>
-                                        <option value="long buccal">Long Buccal</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="isolationCheckbox" class="TEST">
-                                    Isolation
-                                    <select id="isolationDropdown" class="TEST">
-                                        <option value="Moisture control achieved through Dental dam">Dental Dam</option>
-                                        <option value="Cotton rolls isolation used">Cotton Rolls</option>
-                                        <option value="Dry tips isolation used">Dry Tips</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox"
-                                           value="Cavity prepared using HS and SS, previous restoration removed/caries free"
-                                           id="cavityCheckbox" class="TEST">
-                                    Cavity prepared using HS and SS, previous restoration removed/caries free <br>
-                                    <input type="Checkbox" id="C12Checkbox" class="TEST">
-                                    Matrix
-                                    <select id="C12Dropdown" class="TEST">
-                                        <option value="Tofflemire Matrix placed">Tofflemire Matrix</option>
-                                        <option value="Sectional matrix placed">Sectional matrix</option>
-                                        <option value="Automatrix placed">Automatrix</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="cordCheckbox" class="TEST">
-                                    Retraction cord size
-                                    <select id="cordDropdown" class="TEST">
-                                        <option value="0">0</option>
-                                        <option value="00">00</option>
-                                        <option value="000">000</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                    placed w hemostat <br>
-                                    <br>
-                                    <strong>Composite</strong> <br>
-                                    <input type="Checkbox" id="etchedCheckbox" class="TEST">
-                                    Etched with 37% phosphoric acid, clearfil primer and bond. Gradia
-                                    <select id="gradiaDropdown" class="TEST">
-                                        <option value="A1">A1</option>
-                                        <option value="A2">A2</option>
-                                        <option value="A3">A3</option>
-                                        <option value="A3.5">A3.5</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <strong>GIC</strong> <br>
-                                    <input type="Checkbox" id="C110Checkbox" class="TEST">
-                                    Dentine conditioned w 10% polyacrylic acid <br>
-                                    <input type="Checkbox" id="C111Checkbox" class="TEST">
-                                    Restored with
-                                    <select id="GICDropdown" class="TEST">
-                                        <option value=" GC Fuji II LC ">GC Fuji II LC</option>
-                                        <option value="GC Fuji IX ">GC Fuji IX</option>
-                                        <option value="GC Fuji VII ">GC Fuji VII</option>
-                                        <option value="GC Fuji Bulk ">GC Fuji Bulk</option>
-                                    </select>
-                                    <select id="GICshadeDropdown" class="TEST">
-                                        <option value="">Shade</option>
-                                        <option value="A1">A1</option>
-                                        <option value="A2">A2</option>
-                                        <option value="A3">A3</option>
-                                        <option value="A3.5">A3.5</option>
-                                    </select>
-                                    and cured <br><br>
-                                    <input type="Checkbox" id="C11Checkbox" class="TEST">
-                                    Restoration polished, occlusion checked <br><br>
-
-                                    <input type="Checkbox" id="resto1G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="resto1supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="resto1supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="resto1nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="resto1nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-
-                                </div>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button21">PROSTHODONTICS – FIXED (6xx)</button>
-                            <div id="prosSection1" class="section">
-
-
-                                <button class="toggle-button2" id="button41"> Consultation (crown)
-                                </button>
-                                <input type="Checkbox" id="crown1allCheckbox" class="TEST">
-
-
-                                <div id="crown1Section" class="section">
-                                    <h3>Consultation (crown)</h3>
-
-
-                                    <input type="Checkbox" id="ptcrown1Checkbox" class="TEST"> Pt. presented to
-                                    <select id="crown1yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="crown1clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="crown1codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="crown1typeDropdown" class="TEST">
-                                        <option value="Crown consult">Crown Consult</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="crown1A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="crown1c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="crown1c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown1colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="crown1medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="crown1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-                                    <strong> DENTAL & SOCIAL HX </strong><br>
-
-                                    <table>
-
                                         <tr>
-                                            <td>
-                                                <input type="Checkbox" id="J1Checkbox" class="TEST" checked hidden="">
-                                                Brushing freq, TB & TP:
-                                            </td>
-                                            <td>
-                                                <input type="text" id="J1TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
+                                            <td>Central incisor</td>
+                                            <td>6-10 months</td>
+                                            <td>6-7 yrs.</td>
                                         </tr>
-
-                                        <tr>
-                                            <td>
-                                                <input type="Checkbox" id="J2Checkbox" class="TEST" checked hidden="">
-                                                Interdental cleaning/mouthwash:
-                                            </td>
-                                            <td>
-                                                <input type="text" id="J2TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <input type="Checkbox" id="J3Checkbox" class="TEST" checked hidden="">
-                                                Tobacco or alcohol consumption:
-                                            </td>
-                                            <td>
-                                                <input type="text" id="J3TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <input type="Checkbox" id="J4Checkbox" class="TEST" checked hidden="">
-                                                Snacks/sugary drinks (freq. & timing):
-                                            </td>
-                                            <td>
-                                                <input type="text" id="J4TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <input type="Checkbox" id="J5Checkbox" class="TEST" checked hidden="">
-                                                Risk factors related to occupation/interests:
-                                            </td>
-                                            <td>
-                                                <input type="text" id="J5TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br><br>
-                                            </td>
-                                        </tr>
-
+                                        </tbody>
                                     </table>
 
 
-                                    <input type="Checkbox" id="J6Checkbox" class="TEST">
-                                    <strong>PATIENT EXPECTATION:</strong>
-                                    <select id="J6Dropdown" class="TEST">
-                                        <option value="low">low</option>
-                                        <option value="moderate">moderate</option>
-                                        <option value="high">high</option>
-
-                                    </select>
-                                    <input type="text" id="J6TextInput" class="TEST" placeholder="Enter details...">
-                                    <br><br>
-
-                                    <strong>AESTHETIC EVALUATION</strong>
-                                    <br>
-                                    <!-- J7 -->
-                                    <input type="Checkbox" id="J7Checkbox" class="TEST">
-                                    Smile line exposing cervical area of teeth:
-                                    <select id="J7Dropdown" class="TEST">
-                                        <option value="present">present</option>
-                                        <option value="absent">absent</option>
-                                    </select>
-                                    <br>
-
-                                    <!-- J8 -->
-                                    <input type="Checkbox" id="J8Checkbox" class="TEST">
-                                    Incisal plane canting (slant):
-                                    <select id="J8Dropdown" class="TEST">
-                                        <option value="present">present</option>
-                                        <option value="absent">absent</option>
-                                    </select>
-                                    <br><br>
-
-                                    <strong>I/O EXAMINATION</strong>
-                                    <br>
+                                    <h3> Permament Teeth Eruption Times</h3>
                                     <table>
+                                        <thead>
                                         <tr>
-                                            <td>
+                                            <th>Upper Teeth</th>
+                                            <th>Erupt</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Central incisor</td>
+                                            <td>7-8 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lateral incisor</td>
+                                            <td>8-9 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Canine</td>
+                                            <td>11-12 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First premolar</td>
+                                            <td>10-11 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second premolar</td>
+                                            <td>10-11 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>First molar</td>
+                                            <td>6-7 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Second molar</td>
+                                            <td>12-13 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"></td>
 
-
-                                        <tr>
-                                            <td>
-                                                <!-- J10 -->
-                                                <label for="J10Checkbox">Furcation involvement:</label>
-                                            </td>
-                                            <td>
-                                                <input type="Checkbox" id="J10Checkbox" class="TEST">
-                                                <select id="J10Dropdown" class="TEST">
-                                                    <option value="absent">Absent</option>
-                                                    <option value="I">I</option>
-                                                    <option value="II">II</option>
-                                                    <option value="III">III</option>
-                                                </select>
-                                                <br>
-                                            </td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label for="J11Checkbox">Working side contacts:</label>
-                                            </td>
-                                            <td>
-                                                <input type="Checkbox" id="J11Checkbox" class="TEST">
-                                                <select id="J11Dropdown" class="TEST">
-                                                    <option value="canine guidance">Canine guidance</option>
-                                                    <option value="group function">Group function</option>
-                                                    <option value="open bite bilateral">Open bite bilateral</option>
-                                                </select>
-                                                <input type="text" id="J11TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
+                                            <th>Lower Teeth</th>
+                                            <th>Erupt</th>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label for="J12Checkbox">Anterior guidance:</label>
-                                            </td>
-                                            <td>
-                                                <input type="Checkbox" id="J12Checkbox" class="TEST">
-                                                <select id="J12Dropdown" class="TEST">
-                                                    <option value="present">Present</option>
-                                                    <option value="absent">Absent</option>
-                                                </select>
-                                                <input type="text" id="J12TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
+                                            <td>Third molar (wisdom teeth)</td>
+                                            <td>17-21 yrs.</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label for="J13Checkbox">Parafuction:</label>
-                                            </td>
-                                            <td>
-                                                <input type="Checkbox" id="J13Checkbox" class="TEST">
-                                                <select id="J13Dropdown" class="TEST">
-                                                    <option value="yes">Yes (type)</option>
-                                                    <option value="no">No</option>
-                                                </select>
-                                                <input type="text" id="J13TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
+                                            <td>Second molar</td>
+                                            <td>11-13 yrs.</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label for="J14Checkbox">Opposing teeth:</label>
-                                            </td>
-                                            <td>
-                                                <input type="Checkbox" id="J14Checkbox" class="TEST">
-                                                <select id="J14Dropdown" class="TEST">
-                                                    <option value="natural">Natural</option>
-                                                    <option value="artificial">Artificial</option>
-                                                    <option value="no antagonist">No antagonist</option>
-                                                </select>
-                                                <input type="text" id="J14TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
+                                            <td>First molar</td>
+                                            <td>6-7 yrs.</td>
                                         </tr>
                                         <tr>
-                                            <td>
-                                                <label for="J15Checkbox">OVD:</label>
-                                            </td>
-                                            <td>
-                                                <input type="Checkbox" id="J15Checkbox" class="TEST">
-                                                <select id="J15Dropdown" class="TEST">
-                                                    <option value=""></option>
-                                                    <option value="Normal">Normal</option>
-                                                    <option value="increased">Increased</option>
-                                                    <option value="reduced">Reduced</option>
-                                                </select>
-                                                <input type="text" id="J15TextInput" class="TEST"
-                                                       placeholder="Enter details...">
-                                                <br>
-                                            </td>
+                                            <td>Second premolar</td>
+                                            <td>11-12 yrs.</td>
                                         </tr>
+                                        <tr>
+                                            <td>First premolar</td>
+                                            <td>10-12 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Canine</td>
+                                            <td>9-10 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lateral incisor</td>
+                                            <td>7-8 yrs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Central incisor</td>
+                                            <td>6-7 yrs.</td>
+                                        </tr>
+                                        </tbody>
                                     </table>
 
-
-                                    <strong>TOOTH ASSESSMENT</strong><br>
-
-
-                                    <input type="Checkbox" id="J21Checkbox" class="TEST">
-                                    Ferrule height:
-                                    <input type="text" id="J21TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <!-- J22 -->
-
-                                    <!-- J23 -->
-                                    <input type="Checkbox" id="J23Checkbox" class="TEST">
-                                    Radiographic findings:
-                                    <input type="text" id="J23TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <!-- J24 -->
-                                    <input type="Checkbox" id="J24Checkbox" class="TEST">
-                                    Pulp vitality (cold/ EPT):
-                                    <input type="text" id="J24TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-
-                                    <!-- J25 -->
-                                    <input type="Checkbox" id="J25Checkbox" class="TEST">
-                                    Dx:
-                                    <input type="text" id="J25TextInput" class="TEST" placeholder="Enter details...">
-                                    <br><br>
-
-
-                                    <input type="Checkbox" id="J34BCheckbox" class="TEST">
-                                    Patient informed that tooth has compromised tooth structure & requires protective
-                                    measure from
-                                    occluding forces. Warned risk of further fracturing, bacterial leakage requiring RCT
-                                    & risk of complete
-                                    fracture warranting extraction. Advised that direct restoration may be inadequate to
-                                    withstand cusps & that
-                                    cuspal coverage (in the form of crown, onlay or overlay depending on the extent of
-                                    defect) may be ideal.
-                                    Explained the multiple visits involved & what happens at each stage. Pt understood &
-                                    happy to move
-                                    forward with tx. Informed consent obtained.
-                                    <br><br>
-
-
-                                    <strong>RESTORATION TYPE</strong><br>
-
-                                    <!-- J38 -->
-                                    <input type="Checkbox" id="J38Checkbox" class="TEST">
-                                    Coverage:
-                                    <select id="J38Dropdown" class="TEST">
-                                        <option value="full">full</option>
-                                        <option value="partial">partial</option>
-                                    </select>
-                                    <br>
-
-                                    <!-- J39 -->
-                                    <input type="Checkbox" id="J39Checkbox" class="TEST">
-                                    Material:
-                                    <select id="J39Dropdown" class="TEST">
-                                        <option value="metal">metal</option>
-                                        <option value="PFM">PFM</option>
-                                        <option value="all ceramic">all ceramic</option>
-                                    </select>
-                                    <br>
-
-                                    <!-- J40 -->
-                                    <input type="Checkbox" id="J40Checkbox" class="TEST">
-                                    FDP:
-                                    <select id="J40Dropdown" class="TEST">
-                                        <option value="single unit">single unit</option>
-                                        <option value="bridge">bridge</option>
-                                    </select>
-                                    <br>
-
-                                    <!-- J41 -->
-                                    <input type="Checkbox" id="J41Checkbox" class="TEST">
-                                    Pontic design:
-                                    <select id="J41Dropdown" class="TEST">
-                                        <option value="sanitary">sanitary</option>
-                                        <option value="bullet">bullet</option>
-                                        <option value="modified ridge lap">modified ridge lap</option>
-                                        <option value="ovate">ovate</option>
-                                    </select>
-                                    <br>
-
-
-                                    <input type="Checkbox" id="J43Checkbox" class="TEST">
-                                    Occlusal surface material:
-                                    <select id="J43Dropdown" class="TEST">
-                                        <option value="metal">metal</option>
-                                        <option value="ceramic">ceramic</option>
-                                    </select>
-                                    <br>
-
-                                    <strong>TX DELIVERED</strong>
-                                    <br>
-                                    <!-- J44 -->
-                                    <input type="Checkbox" id="J44Checkbox" class="TEST">
-                                    Max & mand alginate primary impression taken. Impression checked for quality,
-                                    sterilized & bagged. Lab card
-                                    with instructions for construction of diagnostic models & custom tray for PVS
-                                    impression of tooth ___
-                                    written, scanned & sent to the lab.
-                                    <br>
-                                    <br>
-
-
-                                    <input type="Checkbox" id="crown1G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="crown1supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="crown1supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown1nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="crown1nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <br><br>
-
-                                    <strong>LAB INSTRUCTIONS</strong>
-                                    <br>
-                                    <!-- J47 -->
-                                    <input type="Checkbox" id="J47Checkbox" class="TEST">
-                                    Please construct diagnostic models from alginate impression & return on ___ for
-                                    diagnostic wax up.
-                                    <br>
-
-                                    <!-- J48 -->
-                                    <input type="Checkbox" id="J48Checkbox" class="TEST">
-                                    Please construct custom try for PVS impression for tooth ___.
-                                    <br>
-
-
+                                    Reference: <a
+                                        href="https://www.teeth.org.au/ADA/media/Teeth_org_au/ADA/media/Teeth_org_au/documents/ADA2022-Factsheet-Tooth-eruption.pdf">ADA
+                                        Factsheet: Tooth eruption charts</a>
                                 </div>
 
-
-                                <button class="toggle-button2" id="button42"> Crown Preparation
-                                </button>
-                                <input type="Checkbox" id="crown2allCheckbox" class="TEST">
-
-
-                                <div id="crown2Section" class="section">
-                                    <h3> crown preparation </h3>
-
-                                    <input type="Checkbox" id="ptcrown2Checkbox" class="TEST"> Pt. presented to
-                                    <select id="crown2yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="crown2clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="crown2codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="crown2typeDropdown" class="TEST">
-                                        <option value="Crown prep">Crown prep</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="crown2A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="crown2c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="crown2c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown2colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="crown2medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="crown2hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-                                    <input type="Checkbox" id="J50Checkbox" class="TEST">
-                                    LAB WORK
-                                    <br>
-
-                                    <!-- J51 -->
-                                    <input type="Checkbox" id="J51Checkbox" class="TEST">
-                                    Study model poured up & special tray fabricated.
-                                    <br>
-
-                                    <!-- J52 -->
-                                    <input type="Checkbox" id="J52Checkbox" class="TEST">
-                                    Diagnostic wax up done & putty keys made.
-                                    <br>
-
-                                    <!-- J53 -->
-                                    <input type="Checkbox" id="J53Checkbox" class="TEST">
-                                    Crown material chosen:
-                                    <select id="J53Dropdown" class="TEST">
-                                        <option value="PFM">PFM</option>
-                                        <option value="Emax">Emax</option>
-                                        <option value="Zirconia">Zirconia</option>
-                                        <option value="Sinfony">Sinfony</option>
-                                    </select>
-                                    <br>
-
-                                    <!-- J54 -->
-                                    <input type="Checkbox" id="J54Checkbox" class="TEST">
-                                    Shade selected: <input type="text" id="J54ATextInput" class="TEST"
-                                                           placeholder="Enter details..."> VITA 3D
-                                    Master (for PFM) / <input type="text" id="J54BTextInput" class="TEST"
-                                                              placeholder="Enter details..."> VITA
-                                    Classic
-
-                                    <br>
-
-                                    <strong>TX DELIVERED</strong>
-                                    <br><br>
-                                    <!-- J55 -->
-
-                                    <!-- J60 -->
-                                    <input type="Checkbox" id="J60Checkbox" class="TEST">
-                                    All existing restorative materials removed. NIL pulp exposure. Foundation
-                                    restoration required/ not required
-                                    to establish resistance form / block out undercuts.
-                                    <br><br>
-
-                                    <!-- J61 -->
-                                    <input type="Checkbox" id="J61Checkbox" class="TEST">
-                                    Crown preparation completed using H/S & refined-polished using S/S coarse soflex
-                                    disc.
-                                    <br><br>
-
-                                    <!-- J62 -->
-                                    <input type="Checkbox" id="J62Checkbox" class="TEST">
-                                    Gingival retraction is achieved using retraction cord.
-                                    <br>
-
-                                    <!-- J63 -->
-                                    <input type="Checkbox" id="J63Checkbox" class="TEST">
-                                    Vaseline was used to lubricate the completed crown preparation & adjacent
-                                    structures.
-                                    <br><br>
-
-                                    <!-- J64 -->
-                                    <input type="Checkbox" id="J64Checkbox" class="TEST">
-                                    Provisional restoration is constructed using Structure 2 (flowable composite used to
-                                    refine deficient
-                                    margins) & finished & polish using H/S & S/S.
-                                    <br>
-
-                                    <!-- J65 -->
-                                    <input type="Checkbox" id="J65Checkbox" class="TEST">
-                                    Interproximal contact checked w/ floss. Occlusion checked w/ articulating paper &
-                                    adjusted accordingly.
-                                    <br>
-
-                                    <!-- J66 -->
-                                    <input type="Checkbox" id="J66Checkbox" class="TEST">
-                                    Crown preparation surface is cleaned thoroughly using Endodry & provisional
-                                    restoration is cemented using
-                                    Temp-Bond NE. Excess cement is removed using probe & floss.
-                                    <br><br>
-
-                                    <strong>REMAINING TX PLAN</strong>
-                                    <br>
-                                    <!-- J67 -->
-                                    <input type="Checkbox" id="J67Checkbox" class="TEST">
-                                    Secondary impression
-                                    <br>
-
-                                    <!-- J68 -->
-                                    <input type="Checkbox" id="J68Checkbox" class="TEST">
-                                    Crown insertion
-                                    <br><br>
-
-                                    <strong>POST OP</strong>
-                                    <br>
-                                    <!-- J69 -->
-                                    <input type="Checkbox" id="J69Checkbox" class="TEST">
-                                    POIG. Tooth may be sensitive for the next few days after tx (recommend
-                                    Panadol/Nurofen if necessary);
-                                    Cautioned against consuming hot food/drinks until the LA wears off due to numb lip &
-                                    cheek/lip biting.
-                                    <br><br>
-
-
-                                    <input type="Checkbox" id="crown2G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="crown2supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="crown2supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown2nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="crown2nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <br>
-
-
-                                </div>
-
-
-                                <button class="toggle-button2" id="button43"> Crown Impression
-
-                                </button>
-                                <input type="Checkbox" id="crown3allCheckbox" class="TEST">
-
-
-                                <div id="crown3Section" class="section">
-                                    <h3> Crown Impression
-
-                                    </h3><input type="Checkbox" id="ptcrown3Checkbox" class="TEST"> Pt. presented to
-                                    <select id="crown3yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="crown3clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="crown3codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="crown3typeDropdown" class="TEST">
-                                        <option value="Crown impression">Crown impression</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="crown3A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="crown3c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="crown3c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown3colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="crown3medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="crown3hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-
-                                    <strong>TX DELIVERED</strong>
-                                    <br><br>
-                                    <!-- J75 -->
-
-                                    <!-- J80 -->
-                                    <input type="Checkbox" id="J80Checkbox" class="TEST">
-                                    Existing temporary crown restoration removed using flat plastic &/or spoon
-                                    excavator. Existing cement
-                                    materials removed using U/S at low frequency.
-                                    <br>
-
-                                    <!-- J81 --><br>
-                                    <input type="Checkbox" id="J81Checkbox" class="TEST">
-                                    Gingival retraction achieved using two-cord technique with Ultrapak #0 cord followed
-                                    by Ultrapk #1 cord
-                                    (infil with articaine w/ adrenaline to reduce bleeding if retraction cord w/
-                                    hemodent is insufficient)
-                                    <br><br>
-
-                                    <!-- J82 -->
-                                    <input type="Checkbox" id="J82Checkbox" class="TEST">
-                                    Crown preparation margins refined using H/S.
-                                    <br>
-
-                                    <!-- J83 -->
-                                    <input type="Checkbox" id="J83Checkbox" class="TEST">
-                                    Crown prep surface was ensured moisture-free with Endodry using cotton pellets
-                                    <br><br>
-
-                                    <!-- J84 -->
-                                    <input type="Checkbox" id="J84Checkbox" class="TEST">
-                                    Crown impression taken with one-step impression technique using light body & heavy
-                                    body PVS.
-                                    <br><br>
-
-                                    <!-- J85 -->
-                                    <input type="Checkbox" id="J85Checkbox" class="TEST">
-                                    Secondary impression checked for quality, sterilized & bagged. Lab card with
-                                    instructions for construction
-                                    of model & fixed prosthesis in selected shade written, scanned & sent to the lab.
-                                    <br><br>
-
-                                    <!-- J86 -->
-                                    <input type="Checkbox" id="J86Checkbox" class="TEST">
-                                    Temporary crown recemented. Margins assessed.
-                                    <br><br>
-
-                                    <strong>REMAINING TX PLAN</strong>
-                                    <br>
-                                    <!-- J87 -->
-                                    <input type="Checkbox" id="J87Checkbox" class="TEST">
-                                    Crown insertion
-                                    <br><br>
-
-                                    <strong>POST OP</strong>
-                                    <br>
-                                    <!-- J88 -->
-                                    <input type="Checkbox" id="J88Checkbox" class="TEST">
-                                    POIG. Tooth may be sensitive for the next few days after tx (recommend
-                                    Panadol/Nurofen if necessary);
-                                    Cautioned against consuming hot food/drinks until the LA wears off due to numb lip &
-                                    cheek/lip biting.
-                                    <br><br>
-
-                                    <!-- J89 -->
-                                    <input type="Checkbox" id="crown3G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="crown3supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="crown3supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown3nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="crown3nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-
-                                    <strong>LAB INSTRUCTIONS</strong>
-                                    <br>
-                                    <!-- J91 -->
-                                    <input type="Checkbox" id="J91Checkbox" class="TEST">
-                                    Please pour up PVS impression in die stone & mount max & mand model.
-                                    <br>
-
-                                    <!-- J92 -->
-                                    <input type="Checkbox" id="J92Checkbox" class="TEST">
-                                    Please construct PFM crown in fine gold cervical collar in SHADE ___ VITA 3D Master
-                                    for TOOTH ___ OR Please
-                                    construct Emax/Zirconia/Sinfony crown in SHADE ___ VITA Classic for TOOTH ___ with
-                                    STUMP SHADE ___.
-                                    <br><br>
-
-                                </div>
-
-
-                                <button class="toggle-button2" id="button44"> Full crown – indirect
-
-
-                                </button>
-                                <input type="Checkbox" id="crown4allCheckbox" class="TEST">
-
-
-                                <div id="crown4Section" class="section">
-                                    <h3> Full crown – indirect
-                                    </h3>
-
-                                    <input type="Checkbox" id="ptcrown4Checkbox" class="TEST"> Pt. presented to
-                                    <select id="crown4yearDropdown" class="TEST">
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="crown4clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="crown4codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="crown4typeDropdown" class="TEST">
-                                        <option value="Crown insertion">Crown insertion</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="crown4A1TextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-                                    <input type="Checkbox" id="crown4c3sCheckbox" class="TEST"> 3C’s confirmed
-                                    <input type="text" id="crown4c3sTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown4colgateCheckbox" class="TEST"> Colgate 1.5%
-                                    Hydrogen Peroxide Mouth rinse
-                                    given. <br>
-
-                                    <input type="Checkbox" id="crown4medicalHxCheckbox" class="TEST"> Medical Hx
-                                    <select id="crown4hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select> <br><br>
-
-
-                                    <input type="Checkbox" id="J93Checkbox" class="TEST">
-                                    <strong>TX DELIVERED</strong>
-                                    <br>
-
-                                    <!-- J94 -->
-
-                                    <input type="Checkbox" id="J99Checkbox" class="TEST">
-                                    Existing temporary crown restoration removed using spoon excavator. Existing cement
-                                    materials removed using
-                                    U/S at low frequency & use of pumice on S/S.
-                                    <br>
-
-                                    <!-- J100 -->
-                                    <input type="Checkbox" id="J100Checkbox" class="TEST">
-                                    Gingival retraction achieved using retraction cord.
-                                    <br><br>
-
-                                    <!-- J101 -->
-                                    <input type="Checkbox" id="J101Checkbox" class="TEST">
-                                    Fixed prosthesis trial seated & assessed for marginal adaptation using sickle probe,
-                                    interproximal contacts
-                                    using floss, MIP using Shimstock, lateral/protrusive slide patterns, shade & shape.
-                                    <br><br>
-
-                                    <!-- J102 -->
-                                    <input type="Checkbox" id="J102Checkbox" class="TEST">
-                                    Tooth preparation was cleaned using prophy with a mixture of flour pumice & water.
-                                    <br><br>
-
-                                    <!-- J103 -->
-                                    <input type="Checkbox" id="J103Checkbox" class="TEST">
-                                    Fixed prosthesis is cemented using resin-modified GIC (capsulated GC Fuji Plus) &
-                                    held in place while excess
-                                    cement is removed at the rubbery stage.
-                                    <br>
-
-                                    <!-- J104 -->
-                                    <input type="Checkbox" id="J104Checkbox" class="TEST">
-                                    Isolation is maintained for at least 5mins to allow complete set before rinse.
-                                    <br><br>
-
-                                    <!-- J105 -->
-                                    <input type="Checkbox" id="J105Checkbox" class="TEST">
-                                    Occlusion post-insertion is reassessed with the patient in the upright position.
-                                    <br><br>
-
-                                    <strong>REMAINING TX PLAN</strong>
-                                    <br>
-                                    <!-- J106 -->
-                                    <input type="Checkbox" id="J106Checkbox" class="TEST">
-                                    Fixed prosthesis review in 4/52.
-                                    <br><br>
-
-                                    <strong>POST OP</strong>
-                                    <br>
-                                    <!-- J107 -->
-                                    <input type="Checkbox" id="J107Checkbox" class="TEST">
-                                    POIG. Tooth may be sensitive for the next few days & while already adjusted for,
-                                    minor discrepancy may still
-                                    be felt but should resolve over the next few days. Gums may be a bit tender but
-                                    cont. to brush gently using
-                                    a soft TB; Rinsing w/ warm saltwater may help to reduce pain. Recommended
-                                    Panadol/Nurofen if necessary.
-                                    Reinforced care for fixed prosthesis i.e. OHI & encourage 6-monthly maintenance.
-                                    Cautioned against consuming
-                                    hot food/drinks until the LA wears off due to numb lip & lip biting.
-                                    <br><br>
-
-                                    <!-- J108 -->
-                                    <input type="Checkbox" id="crown4G22Checkbox" class="TEST"> Pt well on discharge
-                                    <br>
-                                    <input type="Checkbox" id="crown4supervisorCheckbox"> Supervisor: Dr
-                                    <input type="text" id="crown4supervisornameTextInput"
-                                           placeholder="Enter details..."> <br>
-
-                                    <input type="Checkbox" id="crown4nvCheckbox" class="TEST"> N/V:
-                                    <input type="text" id="crown4nvTextInput" class="TEST"
-                                           placeholder="Enter details..."> <br>
-
-                                    <br><br>
-                                </div>
-
-
-                            </div>
-                            <button class="toggle-button5" id="button22">PROSTHODONTICS – REMOVABLE (7xx)</button>
-                            <div id="dentureSection" class="section">
-                                <h3> 71x Complete maxillary & mandibular dentures </h3>
-                                <button class="toggle-button2" id="button23">F/F Primary Impression</button>
-                                <input type="Checkbox" class="TEST" id="ff1allCheckbox" class="TEST">
-
-                                <div id="denture1Section" class="section">
-                                    <h3>700 Interim denture service – Consult, exam & primary impression for removable
-                                        complete denture (1/6)
-                                    </h3>
-                                    <input type="Checkbox" id="ptff1Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="ff1yearDropdown" class="TEST">
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="ff1clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                    </select>
-                                    <select id="ff1codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="ff1typeDropdown" class="TEST">
-                                        <option value="F/F Primary Impression">F/F Primary Impression</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="ff1A1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff1c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="ff1c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff1colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="ff1medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="ff1hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    DENTAL/DENTURE Hx: <br>
-                                    <input type="Checkbox" id="G1Checkbox" class="TEST" class="TEST" checked hidden="">
-                                    Reason for tooth loss (years of edentulous):
-                                    <input type="text" id="G1TextInput" class="TEST" class="TEST"
-                                           placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G2Checkbox" class="TEST" class="TEST" checked hidden>
-                                    Patient’s responsibility in home care:
-                                    <input type="text" id="G2TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G3Checkbox" class="TEST" checked hidden>
-                                    Hx & preference of existing & previous denture:
-                                    <input type="text" id="G3TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G4Checkbox" class="TEST" checked hidden>
-                                    Evaluation of existing denture:
-                                    <input type="text" id="G4TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G5Checkbox" class="TEST" checked hidden>
-                                    Smoking Hx:
-                                    <input type="text" id="G5aTextInput" class="TEST" placeholder="Enter details...">
-                                    a day, since
-                                    <input type="text" id="G5bTextInput" class="TEST" placeholder="Enter details...">
-                                    ago,
-                                    <input type="text" id="G5cTextInput" class="TEST" placeholder="Enter details...">
-                                    intention of quitting. <br>
-                                    <input type="Checkbox" id="G6Checkbox" class="TEST">
-                                    Personality assessment:
-                                    <select id="G6Dropdown" class="TEST">
-                                        <option value="">Type</option>
-                                        <option value="Philosophical (normal)">Philosophical (normal)</option>
-                                        <option value="Exacting (demanding)">Exacting (demanding)</option>
-                                        <option value="Indifferent">Indifferent</option>
-                                        <option value="Hysterical">Hysterical</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G7Checkbox" class="TEST">
-                                    E/O EXAMINATION > NAD <br>
-                                    <input type="Checkbox" id="G8Checkbox" class="TEST">
-                                    I/O EXAMINATION > NAD <br>
-                                    <input type="Checkbox" id="G9Checkbox" class="TEST" checked hidden>
-                                    RADIOGRAPHIC ASSESSMENT:
-                                    <input type="text" id="G9TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G10Checkbox" class="TEST" checked hidden="">
-                                    TX OPTIONS
-                                    <input type="text" id="G10TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G10ACheckbox" class="TEST">
-                                    Pt notified that completion of complete denture will take a min of 3mo (i.e. 6 appt
-                                    with 2weeks interval
-                                    <br>
-                                    <input type="Checkbox" id="G11Checkbox" class="TEST">
-                                    TX DELIVERED
-                                    > Max & mand alginate primary impression taken. Impression checked for quality,
-                                    sterilized & bagged. Lab
-                                    card with instructions for pour up of impression & construction of special trays for
-                                    ZOE impression written,
-                                    scanned & sent to the lab. <br>
-                                    <input type="Checkbox" id="G12Checkbox" class="TEST">
-                                    Denture hygiene instructions given for existing denture (i.e. to clean with a soft
-                                    brush & gentle soap, to
-                                    remove denture at night & to soak in diluted white vinegar or Milton antibacterial
-                                    tablets) <br>
-                                    <br>
-                                    <input type="Checkbox" id="G13Checkbox" class="TEST">
-                                    Pt well on discharge
-                                    <input type="text" id="G13TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G13aCheckbox1">
-                                    Supervisor: Dr
-                                    <input type="text" id="G13aTextInput1" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G14Checkbox" class="TEST">
-                                    N/V: F/F secondary impression OR
-                                    <input type="text" id="G14TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <strong>Lab Instructions</strong> <br>
-                                    <input type="Checkbox" class="TEST" id="G15Checkbox" class="TEST">
-                                    1. Please construct diagnostic models from alginate impressions. <br>
-                                    <input type="Checkbox" class="TEST" id="G16Checkbox" class="TEST">
-                                    2. Please construct custom trays:
-                                    <select class="TEST" id="G16Dropdown" class="TEST">
-                                        <option value="">Tray type</option>
-                                        <option
-                                            value="for ZOE impression – custom trays 2mm shy of depth of sulcus, no spacer; ">
-                                            ZOE impression
-                                        </option>
-                                        <option value="for PVS – custom trays with 2 sheets of baseplate wax as spacer">
-                                            PVS Impression
-                                        </option>
-                                    </select>
-                                    <br>
-                                    <hr>
-                                </div>
-                                <button class="toggle-button2" id="button24">F/F Secondary Impression</button>
-                                <input type="Checkbox" id="ff2allCheckbox" class="TEST">
-
-                                <div id="denture2Section" class="section">
-                                    <h3>700 Interim denture service – Secondary impression for removable complete
-                                        denture (2/6)</h3>
-                                    <input type="Checkbox" id="ptff2Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="ff2yearDropdown" class="TEST">
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="ff2clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="ff2codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="ff2typeDropdown" class="TEST">
-                                        <option value="F/F 2ndary Impression"> 2ndary Impression</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="ff2A1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff2c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="ff2c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff2colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="ff2medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="ff2hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G18Checkbox" class="TEST">
-                                    Custom tray adjusted with acrylic burs to 1mm short of sulcus, not interfering with
-                                    frenum <br>
-                                    <input type="Checkbox" id="G19Checkbox" class="TEST">
-                                    Border moulding was performed with the addition of compound stick to the periphery
-                                    of trays <br>
-                                    <input type="Checkbox" id="G20Checkbox" class="TEST">
-                                    Max & mand secondary impression taken with
-                                    <select id="G20Dropdown" class="TEST">
-                                        <option value="Green Alginate">Green Alginate</option>
-                                        <option value="PVS">PVS</option>
-                                    </select>
-                                    . Post dam was marked with an indelible marker & transferred to the impression.
-                                    Impression checked for
-                                    quality, sterilized & bagged. <br>
-                                    <input type="Checkbox" id="G21Checkbox" class="TEST">
-                                    Lab card with instructions for construction of master cast & provision of occlusal
-                                    wax rims in std
-                                    dimensions written, scanned & sent to the lab. <br>
-                                    <br>
-                                    <input type="Checkbox" id="G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="ff2supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="ff2supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="G23Checkbox" class="TEST">
-                                    N/V: F/F Jaw registration <br>
-                                    <br>
-                                    <strong>Lab Instructions</strong> <br>
-                                    <input type="Checkbox" id="G24Checkbox" class="TEST">
-                                    > Please construct master cast in stone with 3mm land area, scribe post-dam as
-                                    indicated on Max impression,
-                                    depth of post dam
-                                    <input type="text" id="G24TextInput" class="TEST" placeholder="Enter details...">
-                                    mm. <br>
-                                    <input type="Checkbox" id="G25Checkbox" class="TEST">
-                                    Please provide occlusal wax rims to standard dimensions. <br>
-                                    <hr>
-                                </div>
-                                <button class="toggle-button2" id="button25">F/F Jaw Reg Impression</button>
-                                <input type="Checkbox" id="ff3allCheckbox" class="TEST">
-
-                                <div id="denture3Section" class="section">
-                                    <input type="Checkbox" id="ptff3Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="ff3yearDropdown" class="TEST">
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="ff3clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="ff3codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="ff3typeDropdown" class="TEST">
-                                        <option value="F/F Jaw reg"> F/F Jaw Reg</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="ff3A1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff3c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="ff3c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff3colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="ff3medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="ff3hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G28Checkbox" class="TEST" checked hidden="">
-                                    VDR:
-                                    <input type="text" id="G28TextInput" class="TEST" placeholder="Enter details...">
-                                    mm est. from nose tip to chin. 3mm freeway space selected OR <br>
-                                    <input type="Checkbox" id="G29Checkbox" class="TEST" checked hidden="">
-                                    VDO of existing denture:
-                                    <input type="text" id="G29TextInput" class="TEST" placeholder="Enter details...">
-                                    mm. <br>
-                                    <input type="Checkbox" id="G30Checkbox" class="TEST">
-                                    Occlusal wax rims were checked for their stability. <br>
-                                    <input type="Checkbox" id="G31Checkbox" class="TEST">
-                                    Max wax rim was adjusted for lip support, tooth display & occlusal plane <br>
-                                    <input type="Checkbox" id="G32Checkbox" class="TEST">
-                                    Facial midline, canine lines & smile line were marked on the wax rims. <br>
-                                    <input type="Checkbox" id="G33Checkbox" class="TEST">
-                                    Centric relation was recorded & reproduceable. <br>
-                                    <input type="Checkbox" id="G34Checkbox" class="TEST">
-                                    Tooth shade
-                                    <input type="text" id="G34TextInput" class="TEST" placeholder="Enter details...">
-                                    &
-                                    <select id="G34Dropdown" class="TEST">
-                                        <option value="square">square</option>
-                                        <option value="rectangular">rectangular</option>
-                                        <option value="triangular">triangular</option>
-                                        <option value=" ovoid"> ovoidr</option>
-                                    </select>
-                                    anterior mould was selected. <br>
-                                    <input type="Checkbox" id="G35Checkbox" class="TEST">
-                                    Marked occlusal wax rims were sterilized & bagged. Lab card with instructions for
-                                    articulation of master
-                                    casts & set up of teeth for try-in was written, scanned & sent to the lab. <br>
-                                    <br>
-                                    <input type="Checkbox" id="ff3G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="ff3supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="ff3supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff3G23Checkbox" class="TEST">
-                                    N/V: Teeth Try In <br>
-                                    <br>
-                                    <strong>Lab Instructions </strong> <br>
-                                    <input type="Checkbox" id="G38Checkbox" class="TEST">
-                                    > Please articulate master casts with bite registration provided. <br>
-                                    <input type="Checkbox" id="G38ACheckbox" class="TEST">
-                                    > Please set up Max & Mand teeth for try-in in shade ___, MOLD selected above. <br>
-                                    <input type="Checkbox" id="G38BCheckbox" class="TEST">
-                                    If old dentures present: Please mould to match existing denture based on denture
-                                    impression provided. <br>
-                                    <input type="Checkbox" id="G38CCheckbox" class="TEST">
-                                    If Class III skeletal: Please try to achieve edge-to-edge occlusion even if max
-                                    teeth have to be brought
-                                    forward. <br>
-                                    <hr>
-                                </div>
-                                <button class="toggle-button2" id="button26">F/F Teeth Try In</button>
-                                <input type="Checkbox" id="ff4allCheckbox" class="TEST">
-
-                                <div id="denture6Section" class="section"> Interim denture service – Wax tooth try-in
-                                    for removable complete
-                                    denture (4/6)
-                                    <input type="Checkbox" id="ptff4Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="ff4yearDropdown" class="TEST">
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="ff4clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="ff4codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="ff4typeDropdown" class="TEST">
-                                        <option value="F/F Wax tooth try-in"> Wax tooth try-in</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="ff4A1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff4c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="ff4c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff4colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="ff4medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="ff4hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G49Checkbox" class="TEST">
-                                    Wax-tooth was inserted to verify midline, CR, VDO, lip support, tooth position,
-                                    buccal corridor, occlusal
-                                    plane (w/ articulating paper), phonetics, & aesthetics. <br>
-                                    <input type="Checkbox" id="G50Checkbox" class="TEST">
-                                    Bite position was reverified. Retake of jaw record
-                                    <select id="G49Dropdown" class="TEST">
-                                        <option value="not required">not required</option>
-                                        <option value="required">required</option>
-                                    </select>
-                                    <br>
-                                    <input type="Checkbox" id="G51Checkbox" class="TEST">
-                                    <label for="G51Checkbox" class="TEST"> Patient was given a mirror & was satisfied
-                                        with the teeth size,
-                                        colour, & the overall appearance of the denture. Patient’s approval to process
-                                        the denture was obtained.
-                                    </label>
-                                    <br>
-                                    <input type="Checkbox" id="G52Checkbox" class="TEST">
-                                    <label for="G52Checkbox" class="TEST"> Wax-tooth was sterilized & bagged. Lab card
-                                        with instructions to seal
-                                        wax rims, process the denture in 60:40 original & light pink acrylic, & finish
-                                        for insertion was written,
-                                        scanned & sent to the lab. </label>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="ff4G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="ff4supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="ff4supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff4G23Checkbox" class="TEST">
-                                    N/V: Insertion <br>
-                                    <br>
-                                    <input type="Checkbox" id="G54Checkbox" class="TEST">
-                                    <label for="G54Checkbox" class="TEST"> <strong>LAB INSTRUCTIONS</strong> <br>
-                                        > Please do not move the teeth, seal wax rims & finesse wax up in anterior
-                                        region. <br>
-                                        > Please process in 60:40 original & light pink acrylic & finish for insertion.
-                                    </label>
-                                    <br>
-                                    <hr>
-                                </div>
-                                <button class="toggle-button2" id="button27">F/F Insertion</button>
-                                <input type="Checkbox" id="G156Checkbox" class="TEST">
-
-                                <div id="denture5Section" class="section"> Interim denture service – Insertion of
-                                    removable complete denture
-                                    (5/6) <br>
-                                    <input type="Checkbox" id="ptff5Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="ff5yearDropdown" class="TEST">
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="ff5clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="ff5codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="ff5typeDropdown" class="TEST">
-                                        <option value="F/F Insertion"> Insertion</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    OR
-                                    <input type="text" id="ff5A1TextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff5c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="ff5c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff5colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="ff5medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="ff5hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G41Checkbox" class="TEST">
-                                    Denture base areas & peripheral borders were checked for high spots/overextended
-                                    areas using pressure
-                                    indicator paste. Frenum is cleared. <br>
-                                    <input type="Checkbox" id="G42Checkbox" class="TEST">
-                                    Effective post dam was confirmed w/ extrusion forces <br>
-                                    <input type="Checkbox" id="G43Checkbox" class="TEST">
-                                    Occlusion was reverified with articulating paper. <br>
-                                    <input type="Checkbox" id="G44Checkbox" class="TEST">
-                                    Denture hygiene instructions given (i.e. to clean with soft brush & gentle soap, to
-                                    remove denture at night
-                                    & to soak in diluted white vinegar or Milton antibacterial tablets) <br>
-                                    <br>
-                                    <input type="Checkbox" id="ff5G22Checkbox" class="TEST">
-                                    Written denture instructions given & explained. Pt well on discharge <br>
-                                    <input type="Checkbox" id="ff5supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="ff5supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff5G23Checkbox" class="TEST">
-                                    N/V: F/F Review <br>
-                                    <br>
-                                </div>
-                                <button class="toggle-button2" id="button28">F/F Review</button>
-                                <input type="Checkbox" id="ff6allCheckbox" class="TEST">
-
-                                <div id="denture50Section" class="section"> Interim denture service – Review of
-                                    removable complete denture
-                                    (6/6) <br>
-                                    <input type="Checkbox" id="ptff6Checkbox" class="TEST">
-                                    Pt. presented to
-                                    <select id="ff6yearDropdown" class="TEST">
-                                        <option value="3rd Year">3rd Year</option>
-                                        <option value="4th Year">4th Year</option>
-                                        <option value="5th Year">5th Year</option>
-                                    </select>
-                                    <select id="ff6clinicDropdown" class="TEST">
-                                        <option value="Pros Clinic">Pros Clinic</option>
-                                        <option value="Perio Clinic">Perio Clinic</option>
-                                        <option value="GDP Clinic">GDP Clinic</option>
-                                    </select>
-                                    <select id="ff6codeDropdown" class="TEST">
-                                        <option value="5.1">5.1</option>
-                                        <option value="5.2">5.2</option>
-                                        <option value="2.1">2.1</option>
-                                        <option value="3.1">3.1</option>
-                                        <option value="3.2">3.2</option>
-                                        <option value="3.3">3.3</option>
-                                        <option value="3.4">3.4</option>
-                                        <option value="4.1">4.1</option>
-                                        <option value="4.2">4.2</option>
-                                        <option value="6.2">6.2</option>
-                                        <option value="6.3">6.3</option>
-                                    </select>
-                                    for
-                                    <select id="ff6typeDropdown" class="TEST">
-                                        <option value="F/F Review">F/F Review</option>
-                                        <option value="011">011</option>
-                                        <option value="S/C">S/C</option>
-                                        <option value="Consult">Consult</option>
-                                    </select>
-                                    <input type="text" id="ff6A1TextInput" class="TEST" placeholder="Enter details..."
-                                           hidden="">
-                                    <br>
-                                    <input type="Checkbox" id="ff6c3sCheckbox" class="TEST">
-                                    3C’s confirmed
-                                    <input type="text" id="ff6c3sTextInput" class="TEST" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff6colgateCheckbox" class="TEST">
-                                    Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
-                                    <input type="Checkbox" id="ff6medicalHxCheckbox" class="TEST">
-                                    Medical Hx
-                                    <select id="ff6hxDropdown" class="TEST">
-                                        <option value="updated">Updated</option>
-                                        <option value="verified">Verified</option>
-                                        <option value="taken">taken</option>
-                                    </select>
-                                    <br>
-                                    <br>
-                                    <input type="Checkbox" id="G55Checkbox" class="TEST">
-                                    Patient interview & intraoral examination were performed to review for any
-                                    post-operative issues due to the
-                                    denture. <br>
-                                    <input type="Checkbox" id="G56Checkbox" class="TEST">
-                                    FINDINGS > NAD <strong>OR</strong> <br>
-                                    <br>
-                                    <input type="Checkbox" id="G57Checkbox" class="TEST">
-                                    Ulcers in frenum region, sulcus & mylohyoid ridge due to lack of clearance <br>
-                                    <input type="Checkbox" id="G58Checkbox" class="TEST">
-                                    Correction of occlusion required <br>
-                                    <input type="Checkbox" id="G59Checkbox" class="TEST">
-                                    Cheek biting due to lack of buccal overjet <br>
-                                    <input type="Checkbox" id="G60Checkbox" class="TEST">
-                                    Restricted food or chewing <br>
-                                    <input type="Checkbox" id="G61Checkbox" class="TEST">
-                                    Lack of retention (i.e. overextension, processing errors) <br>
-                                    <input type="Checkbox" id="G62Checkbox" class="TEST">
-                                    Too bulky in palatal or buccal surfaces <br>
-                                    <br>
-                                    <input type="Checkbox" id="ff6G22Checkbox" class="TEST">
-                                    Pt well on discharge <br>
-                                    <input type="Checkbox" id="ff6supervisorCheckbox">
-                                    Supervisor: Dr
-                                    <input type="text" id="ff6supervisornameTextInput" placeholder="Enter details...">
-                                    <br>
-                                    <input type="Checkbox" id="ff6G23Checkbox" class="TEST">
-                                    N/V: Review 2.0 <br>
-                                    <br>
-                                </div>
+                                <button class="toggle-button5" id="button402">Equipment List</button>
                                 <br>
-                                <hr>
+                                <div id="elistSection1" class="section">
 
-                                <button class="toggle-button2" id="button35"> Other removable prosthodontic services
-                                </button>
-                                <div id="othercodesSection" class="section"> - 736 Immediate tooth replacement – per
-                                    tooth (either new or
-                                    addition to existing denture post-exo)<br>
-                                    <br>
-                                    - 741 Adjustment of a denture (should be recorded for adjustments if it is >3 months
-                                    after date of
-                                    insertion or if insertion clinician is external to HHS)<br>
-                                    <br>
-                                    - 743 Relining - complete denture – processed; 744 Relining - partial denture –
-                                    processed<br>
-                                    <br>
-                                    - 763 Repairing broken base of a complete denture; 764 Repairing broken base of a
-                                    partial denture<br>
-                                    <br>
-                                    - 772 Splint – resin – indirect <br>
-                                    <br>
-                                    - 776 Impression – dental appliance repair/modification<br>
-                                    <br>
+                                    <h2>List of Instruments & Materials Required for Endodontic Appointments</h2><br>
+
+                                    <strong>ASSESSMENT</strong><br>
+                                    o Three pieces diagnostic instrument kit (mirror, probe, tweezer) <br>
+                                    o Modified paralleling holder + Cotton rolls (x3 bundle) + Size 2 film <br>
+                                    o Cold spray + cotton pallets <br>
+                                    o EPT machine + EPT tip toothpaste <br>
+                                    o Rubber dam single tooth isolation (for hot test) + Clamp <br><br>
+
+                                    <strong>EDODONTIC APPOINTMENTS (choose as required)
+                                        General</strong><br>
+                                    o Topical anesthesia <br>
+                                    o LA + needle + syringe + artery forceps <br>
+                                    o Rubber dam + Punch + Frame & rubber dam forceps+ Clamp + Floss<br>
+                                    o Histoacryl<br>
+                                    o Endo kit<br>
+                                    o High speed + Slow speed + Ultrasonic handpieces<br>
+                                    o Resto burs (if needed) + Ultrasonic tip<br>
+                                    o Modified paralleling holder (TruView or Snap-a-Ray)+ cotton rolls (x3 bundle) +size 2
+                                    film<br>
+                                    o Hand files (as needed) <br>
+                                    o Rotary files (as needed)<br>
+                                    o Odontostand (to hold files)<br>
+                                    o Paper points<br>
+                                    o Sodium hypochlorite w/ side venting needle<br>
+                                    o Eucalyptus 0.5ml (?only if needed) w/ side venting needle<br>
+                                    o Microbrush<br><br>
+
+                                    <strong>Chemo-mech appointment</strong><br>
+                                    o Apex locator + Lip hook + file attachment<br>
+                                    o Lentino spiral<br>
+                                    o Calcium hydroxide paste OR Odontopaste<br>
+                                    o Cavit<br>
+                                    o GIC (pink) + FUJI gun<br><br>
+
+                                    <strong>Obturation appointment</strong>
+                                    o EDTA (for obturation) w/ side venting needle<br>
+                                    o GP points + accessory points<br>
+                                    o AH plus sealer<br>
+                                    o Alcohol + cotton pellet (non-sterile ones)<br>
+                                    o SuperEndo + Tip<br>
+                                    o Restoration material & associated necessities (if doing permanent restoration)<br>
+                                    o Etch<br>
+                                    o Prime + Bond OR Dentine conditioner<br>
+
+                                     
+
                                 </div>
-                                <button class="toggle-button2" id="button36">P/P Item Codes</button>
-                                <div id="ppcodesSection" class="section"> 700 Interim denture service (no fee; should be
-                                    recorded at each
-                                    appointment during the construction
-                                    stages of a denture)<br>
-                                    - 721 Partial maxillary denture - resin base<br>
-                                    - 722 Partial mandibular denture - resin base<br>
-                                    - 727 Partial maxillary denture – cast metal framework<br>
-                                    - 728 Partial mandibular denture – cast metal framework<br>
-                                    - 731 Retainer - per tooth<br>
-                                    - 732 Occlusal rest – per rest<br>
+                                <button class="toggle-button5" id="button403">Year 4 ADA Code List</button>
+                                <br>
+                                <div id="adayr41Section1" class="section">
+
+                                    <h3>Exam/Diagnostic/Radiographic 😁</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>011</td>
+                                            <td>Comprehensive Oral Examination</td>
+                                        </tr>
+                                        <tr>
+                                            <td>012</td>
+                                            <td>Periodic Oral Examination</td>
+                                        </tr>
+                                        <tr>
+                                            <td>013</td>
+                                            <td>Oral Examination (Limited or emergency)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>014</td>
+                                            <td>Consultation (< 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>015</td>
+                                            <td>Consultation-extended (≥ 30 mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>018</td>
+                                            <td>Written report</td>
+                                        </tr>
+                                        <tr>
+                                            <td>019</td>
+                                            <td>Letter of referral</td>
+                                        </tr>
+                                        <tr>
+                                            <td>022A</td>
+                                            <td>Intraoral periapical or bitewing radiograph - (per exposure) 022B-
+                                                subsequent exp
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>025</td>
+                                            <td>Intraoral radiograph - Occlusal, maxillary, mandibular - per exposure</td>
+                                        </tr>
+                                        <tr>
+                                            <td>037</td>
+                                            <td>Panoramic radiograph - (OPG) per exposure</td>
+                                        </tr>
+                                        <tr>
+                                            <td>047</td>
+                                            <td>Saliva screening test</td>
+                                        </tr>
+                                        <tr>
+                                            <td>048</td>
+                                            <td>Bacteriological screening test</td>
+                                        </tr>
+                                        <tr>
+                                            <td>059</td>
+                                            <td>Comprehensive head and neck cancer examination</td>
+                                        </tr>
+                                        <tr>
+                                            <td>061</td>
+                                            <td>Pulp testing</td>
+                                        </tr>
+                                        <tr>
+                                            <td>071</td>
+                                            <td>Diagnostic model</td>
+                                        </tr>
+                                        <tr>
+                                            <td>072</td>
+                                            <td>Photographic records-intraoral</td>
+                                        </tr>
+                                        <tr>
+                                            <td>073</td>
+                                            <td>Photographic records-extraoral</td>
+                                        </tr>
+                                        <tr>
+                                            <td>221</td>
+                                            <td>Clinical Periodontal analysis and recording (must be in conjunction with
+                                                251)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>300</td>
+                                            <td>Routine post-operative visit</td>
+                                        </tr>
+                                    </table>
+
+                                    <h3>Preventive & Periodontics 😁</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>014</td>
+                                            <td>Consultation (< 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>015</td>
+                                            <td>Consultation-extended (≥ 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>111</td>
+                                            <td>Removal of plaque &/or stain</td>
+                                        </tr>
+                                        <tr>
+                                            <td>113</td>
+                                            <td>Recontouring/polishing of pre-existing restoration (s) - per appt</td>
+                                        </tr>
+                                        <tr>
+                                            <td>114</td>
+                                            <td>Removal of calculus - first appt (already includes 111)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>115</td>
+                                            <td>Removal of calculus - subsequent appt (already includes 111)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>116</td>
+                                            <td>Enamel micro-abrasion-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>121</td>
+                                            <td>Topical application of remineralisation agents - one treatment</td>
+                                        </tr>
+                                        <tr>
+                                            <td>123</td>
+                                            <td>Concentrated remin &/or cariostatic agents - single tooth application</td>
+                                        </tr>
+                                        <tr>
+                                            <td>131</td>
+                                            <td>Dietary analysis & advice</td>
+                                        </tr>
+                                        <tr>
+                                            <td>141</td>
+                                            <td>Oral hygiene instruction</td>
+                                        </tr>
+                                        <tr>
+                                            <td>142</td>
+                                            <td>Tobacco counselling (include 019 if referred to Quitline or other pathway
+                                                services)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>151</td>
+                                            <td>Provision of mouthguard-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>153</td>
+                                            <td>Bi-maxillary mouthguard-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>161</td>
+                                            <td>Fissure and/or tooth surface sealing-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>165</td>
+                                            <td>Desensitizing procedure - per appt</td>
+                                        </tr>
+                                        <tr>
+                                            <td>171</td>
+                                            <td>Odontoplasty -per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>222</td>
+                                            <td>Periodontal debridement-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>250</td>
+                                            <td>Active non-surgical Periodontal therapy-per quadrant</td>
+                                        </tr>
+                                        <tr>
+                                            <td>251</td>
+                                            <td>Supportive Periodontal Therapy (must be in conjunction with 221)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>753</td>
+                                            <td>Cleaning and polishing of pre-existing denture</td>
+                                        </tr>
+                                    </table>
+                                    <h3>Restorative 😁</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>014</td>
+                                            <td>Consultation (< 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>015</td>
+                                            <td>Consultation-extended (≥ 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>411</td>
+                                            <td>Direct pulp capping</td>
+                                        </tr>
+                                        <tr>
+                                            <td>412</td>
+                                            <td>Incomplete endodontic therapy (tooth not suitable for further treatment)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>511-515</td>
+                                            <td>Metallic restoration- 1-5 surfaces - direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>521-525</td>
+                                            <td>Adhesive restoration- 1-5 surfaces-anterior tooth-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>526</td>
+                                            <td>Adhesive restoration-veneer-anterior tooth-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>531-535</td>
+                                            <td>Adhesive restoration- 1-5 surfaces-posterior tooth-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>536</td>
+                                            <td>Adhesive restoration-veneer-posterior tooth-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>541-545</td>
+                                            <td>Metallic restoration- 1-5 surfaces-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>551-555</td>
+                                            <td>Tooth-coloured restoration-1-5 surfaces-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>556</td>
+                                            <td>Tooth-coloured-veneer-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>574</td>
+                                            <td>Metal band</td>
+                                        </tr>
+                                        <tr>
+                                            <td>572</td>
+                                            <td>Provisional (intermediate/temporary) restoration - per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>575</td>
+                                            <td>Pin retention- per pin</td>
+                                        </tr>
+                                        <tr>
+                                            <td>577</td>
+                                            <td>Cusp capping-per cusp</td>
+                                        </tr>
+                                        <tr>
+                                            <td>578</td>
+                                            <td>Restoration of an incisal corner-per corner (in addition to 522-525; always
+                                                with IM & ID fractures)
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <h3>Oral Surgery 😀</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>013</td>
+                                            <td>Oral examination (Limited or Emergency)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>014</td>
+                                            <td>Consultation (< 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>015</td>
+                                            <td>Consultation - extended (≥ 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>300</td>
+                                            <td>Routine post-operative visit</td>
+                                        </tr>
+                                        <tr>
+                                            <td>311A</td>
+                                            <td>Removal of a tooth or part(s)-first tooth extracted from each quadrant</td>
+                                        </tr>
+                                        <tr>
+                                            <td>311B</td>
+                                            <td>Removal of a tooth or part(s)-each subsequent tooth in the same quadrant
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>314A</td>
+                                            <td>Sectional removal of a tooth or part(s) - 1st sectional removal from each
+                                                quadrant
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>314B</td>
+                                            <td>Sectional removal of a tooth or part(s)- each subsequent tooth in the same
+                                                quadrant
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>322A</td>
+                                            <td>Surgical removal of a tooth/fragment not requiring removal of bone in a
+                                                quadrant
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>322B</td>
+                                            <td>Surgical removal of a subsequent tooth/fragment not requiring bone removal
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>323A</td>
+                                            <td>Surgical removal of a tooth/fragment requiring removal of bone-1st tooth
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>323B</td>
+                                            <td>Surgical removal of a subsequent tooth/fragment requiring bone removal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>324A</td>
+                                            <td>Surgical removal of a tooth/fragment requiring bone removal and tooth
+                                                division
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>324B</td>
+                                            <td>Surgical removal of a subsequent tooth/fragment requiring bone removal &
+                                                tooth division
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>392</td>
+                                            <td>Drainage of abscess</td>
+                                        </tr>
+                                        <tr>
+                                            <td>399</td>
+                                            <td>Control of reactionary or secondary post-operative haemorrhage</td>
+                                        </tr>
+                                    </table>
+                                    <h3>Prosthodontics (Simple/Advanced and Complex) 😀</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>014</td>
+                                            <td>Consultation (< 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>015</td>
+                                            <td>Consultation-extended (≥ 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>071</td>
+                                            <td>Diagnostic model</td>
+                                        </tr>
+                                        <tr>
+                                            <td>074</td>
+                                            <td>Diagnostic wax-up</td>
+                                        </tr>
+                                        <tr>
+                                            <td>597A</td>
+                                            <td>Post-direct-1st post in a tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>588</td>
+                                            <td>Crown-tooth-coloured- preformed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>600</td>
+                                            <td>Interim crown and bridge</td>
+                                        </tr>
+                                        <tr>
+                                            <td>611</td>
+                                            <td>Full crown-acrylic resin-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>613</td>
+                                            <td>Full crown-non-metallic-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>615</td>
+                                            <td>Full crown-veneered-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>618</td>
+                                            <td>Full crown-metallic-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>625</td>
+                                            <td>Post and core for crown-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>627</td>
+                                            <td>Preliminary restoration for crown</td>
+                                        </tr>
+                                        <tr>
+                                            <td>631</td>
+                                            <td>Provisional crown (intermediate/temp)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>632</td>
+                                            <td>Provisional bridge pontic- per pontic</td>
+                                        </tr>
+                                        <tr>
+                                            <td>642</td>
+                                            <td>Bridge pontic-direct-per pontic</td>
+                                        </tr>
+                                        <tr>
+                                            <td>643</td>
+                                            <td>Bridge pontic-indirect-per pontic</td>
+                                        </tr>
+                                        <tr>
+                                            <td>651</td>
+                                            <td>Recementing crown or veneer</td>
+                                        </tr>
+                                        <tr>
+                                            <td>655</td>
+                                            <td>Removal of crown</td>
+                                        </tr>
+                                        <tr>
+                                            <td>656</td>
+                                            <td>Removal of bridge or splint</td>
+                                        </tr>
+                                        <tr>
+                                            <td>659</td>
+                                            <td>Repair of crown, bridge or splint-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>700</td>
+                                            <td>F/-, -/F, P/-, -/P, F/F, P/P, P/F, F/P NB: Strictly only Interim Denture
+                                                Stages/Service
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>711</td>
+                                            <td>Complete maxillary Denture Insert F/- (F/P)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>712</td>
+                                            <td>Complete mandibular Denture Insert -/F (P/F)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>713</td>
+                                            <td>Provisional complete Maxillary Denture</td>
+                                        </tr>
+                                        <tr>
+                                            <td>714</td>
+                                            <td>Provisional complete Mandibular Denture</td>
+                                        </tr>
+                                        <tr>
+                                            <td>715</td>
+                                            <td>Provisional complete Max & Mand Dentures</td>
+                                        </tr>
+                                        <tr>
+                                            <td>716</td>
+                                            <td>Metal palate or plate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>719</td>
+                                            <td>Complete Maxillary & Mandibular Dentures</td>
+                                        </tr>
+                                        <tr>
+                                            <td>721A-D</td>
+                                            <td>Partial Max Denture-resin base- 1 to 4 teeth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>721E</td>
+                                            <td>Partial Max Denture-resin base- 5 to 9 teeth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>721F</td>
+                                            <td>Partial Max Denture-resin base- 10 to 12 teeth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>722A-F</td>
+                                            <td>Partial Mand Denture-resin base- 1 to 12 teeth (as above)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>727A-F</td>
+                                            <td>Partial Max Denture-cast metal framework- 1 to 12 teeth (as above)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>728A-F</td>
+                                            <td>Partial Mand Denture-cast metal framework- 1-to 12 teeth (as above)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>731</td>
+                                            <td>Retainer-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>732</td>
+                                            <td>Occlusal rest-per rest</td>
+                                        </tr>
+                                        <tr>
+                                            <td>736</td>
+                                            <td>Immediate tooth replacement-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>737</td>
+                                            <td>Resilient lining</td>
+                                        </tr>
+                                        <tr>
+                                            <td>740</td>
+                                            <td>Adjustment to new denture</td>
+                                        </tr>
+                                        <tr>
+                                            <td>741</td>
+                                            <td>Adjustment of a denture</td>
+                                        </tr>
+                                    </table>
+                                    <h3>Prosthodontics – Continued</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>743</td>
+                                            <td>Relining-complete denture-processed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>744</td>
+                                            <td>Relining-partial denture-processed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>751</td>
+                                            <td>Relining-complete denture-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>752</td>
+                                            <td>Relining partial denture-direct</td>
+                                        </tr>
+                                        <tr>
+                                            <td>753</td>
+                                            <td>Cleaning and polishing of pre-existing denture</td>
+                                        </tr>
+                                        <tr>
+                                            <td>765</td>
+                                            <td>Replacing/adding new tooth on denture-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>766</td>
+                                            <td>Reattaching existing tooth on denture-per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>768</td>
+                                            <td>Adding tooth to partial denture to replace extracted or decoronated
+                                                tooth-per tooth
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>772</td>
+                                            <td>Splint resin-indirect</td>
+                                        </tr>
+                                        <tr>
+                                            <td>776</td>
+                                            <td>Impression-dental appliance repair/modification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>926</td>
+                                            <td>Individually made tray-medicament(s)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>965</td>
+                                            <td>Occlusal splint</td>
+                                        </tr>
+                                    </table>
+
+                                    <h3>Endodontics 😀</h3>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>014</td>
+                                            <td>Consultation (< 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>015</td>
+                                            <td>Consultation- extended (≥ 30mins)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>022A</td>
+                                            <td>Intraoral periapical or bitewing radiograph - per exposure</td>
+                                        </tr>
+                                        <tr>
+                                            <td>022B</td>
+                                            <td>Intraoral periapical or bitewing radiograph - per exposure</td>
+                                        </tr>
+                                        <tr>
+                                            <td>061</td>
+                                            <td>Pulp testing – per appointment</td>
+                                        </tr>
+                                        <tr>
+                                            <td>117</td>
+                                            <td>Bleaching - internal - per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>392</td>
+                                            <td>Drainage of abscess</td>
+                                        </tr>
+                                        <tr>
+                                            <td>411</td>
+                                            <td>Direct pulp capping</td>
+                                        </tr>
+                                        <tr>
+                                            <td>412</td>
+                                            <td>Incomplete endodontic therapy (tooth not suitable for further treatment)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>414</td>
+                                            <td>Pulpotomy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>415</td>
+                                            <td>Complete chemo-mechanical preparation of root canal - one canal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>416</td>
+                                            <td>Complete chemo-mechanical preparation of root canal - each additional
+                                                canal
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>417</td>
+                                            <td>Root canal obturation - one canal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>418</td>
+                                            <td>Root canal obturation - each additional canal</td>
+                                        </tr>
+                                        <tr>
+                                            <td>419</td>
+                                            <td>Extirpation of pulp or debridement of root canal(s) - emergency or
+                                                palliative
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>421</td>
+                                            <td>Resorbable canal filling - primary tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>445</td>
+                                            <td>Exploration and/or negotiation of a calcified canal - per canal - per appt
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>455</td>
+                                            <td>Additional visit for irrigation and /or dressing of root canal system - per
+                                                tooth
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>458</td>
+                                            <td>Interim therapeutic root filling - per tooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>572</td>
+                                            <td>Provisional (intermediate/temporary) restoration - per tooth</td>
+                                        </tr>
+                                    </table>
+
+
                                 </div>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button37">OTHER SERVICES (9xx)</button>
-                            <br>
-                            <div id="otherSection1" class="section"> COMING SOON</div>
-
-                            <div id="output1">
-                                If you write on right, your text will be deleted if you go back to the template or
-                                change anything.
-                                Enter Your Text here to be generated on the right.
-                                <br><strong> AFTER MED HISTORY</strong>
-                                <textarea id="generatedText2" class="TEST" placeholder=""></textarea>
-                                <strong> BEFORE SUPERVISOR</strong>
-                                <textarea id="generatedText1" class="TEST" placeholder=""></textarea>
-                            </div>
-
-                            <hr>
-                            <h2>MISCELLANEOUS </h2>
-                            <button class="toggle-button5" id="button38">PSR Scores</button>
-                            <br>
-                            <div id="psrSection1" class="section">
-                                <table>
-                                    <tr>
-                                        <th>Score</th>
-                                        <th>Description</th>
-                                        <th>Treatment Plan</th>
-                                    </tr>
-                                    <tr>
-                                        <td>0</td>
-                                        <td>Healthy periodontium, PDD <3.5mm< /td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Bleeding on gentle probing, plaque present</td>
-                                        <td>OHI & prophylaxis</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Presence of calculus &/or defective margin</td>
-                                        <td>OHI & debridement (dead tissue removal)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>PDD >3.5mm but below 5.5mm</td>
-                                        <td>Comprehensive exam & periodontal treatment</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>PDD >5.5mm</td>
-                                        <td>Comprehensive exam & specialist periodontal treatment</td>
-                                    </tr>
-                                    <tr>
-                                        <td>*</td>
-                                        <td>Presence of recession, mobility, furcation exposure, or other mucogingival
-                                            problems
-                                        </td>
-                                        <td>-</td>
-                                    </tr>
-                                    <tr>
-                                        <td>x</td>
-                                        <td>Sextant with <2 teeth</td>
-                                        <td>Not included in overall evaluation</td>
-                                    </tr>
-                                </table>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button39">ICDAS Scoring System</button>
-                            <br>
-                            <div id="icdasSection1" class="section">
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>0</td>
-                                        <td>Sound tooth surface no caries change after drying (5s), hypoplasia, wear,
-                                            erosion & other non-caries
-                                            lesions
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>First visual change in enamel (colored change limited to the confines of the
-                                            pit & fissure area) seen
-                                            after air drying
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Distinct visual change in enamel (white/colored wider than the fissure/pit)
-                                            seen when wet
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Localized enamel breakdown (discontinuity of enamel surface or widening of
-                                            fissure) w/ no visible
-                                            dentine/underlying shadow
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Underlying dark shadow from dentine w/wo localized enamel breakdown</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Distinct cavity (<1 /2 of tooth surface) w/ visible dentine</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Extensive distinct cavity (deep & wide; >1/2 tooth surface) w/ visible
-                                            dentine
-                                        </td>
-                                    </tr>
-                                </table>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>0</td>
-                                        <td>No visible radiolucency</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RA1</td>
-                                        <td>Radiolucency in the outer ½ of enamel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RA2</td>
-                                        <td>Radiolucency in the inner ½ of enamel up to the DEJ border</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RA3</td>
-                                        <td>Radiolucency limited to outer 3rd of dentine</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RB4</td>
-                                        <td>Radiolucency reaching the middle 3rd of dentine</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RC5</td>
-                                        <td>Radiolucency reaching the inner 3rd of dentine, clinically cavitated</td>
-                                    </tr>
-                                    <tr>
-                                        <td>RC6</td>
-                                        <td>Radiolucency into the pulp, clinically cavitated</td>
-                                    </tr>
-                                </table>
-                                <hr>
-                            </div>
-                            <button class="toggle-button5" id="button40">LA Information</button>
-                            <br>
-                            <div id="laSection1" class="section">
-                                <h2>Drug Brand, Maximum Dose, and Maximum Number of Cartridges</h2>
-                                <table>
-                                    <tr>
-                                        <th>Drug</th>
-                                        <th>Brand</th>
-                                        <th>Max Dose</th>
-                                        <th>Max No. Cartridges (~70KG)</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Articaine 4% w/ 1:100k adrenaline</td>
-                                        <td>Septanest 4%</td>
-                                        <td>7mg/kg (up to 500mg)</td>
-                                        <td>7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bupivacaine 0.5% w/ 1:200k adrenaline</td>
-                                        <td>Marcain 0.5%</td>
-                                        <td>2mg/kg (up to 200mg)</td>
-                                        <td>10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lidocaine w/ 1:80k adrenaline</td>
-                                        <td>Lignospan Sp 2%</td>
-                                        <td>7mg/kg (up to 500mg)</td>
-                                        <td>13</td>
-                                    </tr>
-                                    <tr>
-                                        <td> Mepivacaine 3% w/o adrenaline</td>
-                                        <td>Scandonest 3%</td>
-                                        <td>6.6mg/kg (up to 400mg)</td>
-                                        <td>11 (7 if 3% w/o vasoconstrictor)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Prilocaine 4%</td>
-                                        <td>Citanest Plain 4%</td>
-                                        <td>8mg/kg (up to 500mg)</td>
-                                        <td>8</td>
-                                    </tr>
-                                </table>
-                                <hr>
-                            </div>
-
-                            <button class="toggle-button5" id="button400">AAP/EFP Periodonal Classification 2018
-                            </button>
-                            <br>
-                            <div id="perioclassSection1" class="section">
-
-
-                                <table>
-                                    <thead>
-                                    <tr>
-                                        <th>Stage</th>
-                                        <th>Stage I</th>
-                                        <th>Stage II</th>
-                                        <th>Stage III</th>
-                                        <th>Stage IV</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    <tr>
-                                        <td>Interdental CAL at site of greatest loss</td>
-                                        <td>1 – 2 mm</td>
-                                        <td>3 – 4 mm</td>
-                                        <td>≥ 5mm</td>
-                                        <td>≥ 5mm</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Radiographic Bone loss</td>
-
-                                        <td>Coronal Third (< 15%)</td>
-                                        <td>Coronal Third (15 – 33 %)</td>
-                                        <td>Extending to the mid third of the root and beyond.</td>
-                                        <td>Extending to the mid third of the root and beyond.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Periodontitis-associated tooth loss</td>
-                                        <td colspan="2">No tooth loss due to Periodontitis.</td>
-                                        <td>Tooth loss due to Periodontitis of ≤ 4 teeth.</td>
-                                        <td>Tooth loss due to Periodontitis of ≥ 5 teeth.</td>
-
-                                    </tr>
-                                    <tr>
-                                        <td>Complexity</td>
-                                        <td>Maximum probing depth ≤ 4mm. Mostly horizontal bone loss.</td>
-                                        <td>Maximum probing depth ≤ 5mm. Mostly horizontal bone loss.</td>
-                                        <td>In addition to stage II complexity; probing depth ≥ 6mm, vertical bone loss
-                                            ≥ 3mm, furcation
-                                            involvement (class II or III), moderate ridge defects.
-                                        </td>
-                                        <td>In addition to Stage III complexity; Need for comprehensive rehabilitation
-                                            due to secondary occlusal
-                                            trauma (mobility ≥ 2), bite collapse, drifting, flaring, less than 10
-                                            opposing pairs of teeth,
-                                            masticatory dysfunction, severe ridge defects.
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Extent & Distribution</td>
-                                        <td>Add to stage as descriptor</td>
-                                        <td colspan="3">For each stage, describe extent as localised (< 30% of teeth
-                                            involved) or generalised,
-                                            or molar/incisor pattern.
-                                        </td>
-
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                <br> <br>
-
-                                <table>
-                                    <thead>
-                                    <tr>
-                                        <th colspan="2"></th>
-
-
-                                        <th>Grade A</th>
-                                        <th>Grade B</th>
-                                        <th>Grade C</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-
-                                    <tr>
-                                        <th colspan="5">
-                                            <center> Primary Criteria</center>
-                                        </th>
-
-
-                                    </tr>
-
-
-                                    <tr>
-                                        <th>Direct Evidence of Progression</th>
-                                        <th>Longitudinal Data (radiographic bone loss or CAL)</th>
-                                        <td>Evidence of no loss over 5 years.</td>
-                                        <td>&lt;2mm over 5 years.</td>
-                                        <td>&ge; 2mm over 5 years.</td>
-                                    </tr>
-                                    <tr>
-
-                                        <th rowspan="2">Indirect Evidence of Progression</th>
-                                        <th>Percent (%) of Progression (bone loss/age)</th>
-                                        <td>&lt;0.25</td>
-                                        <td>0.25 – 1.0</td>
-                                        <td>&gt;1.0</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Case Phenotype</th>
-                                        <td>Heavy biofilm deposits with low levels of destruction.</td>
-                                        <td>Destruction commensurate with biofilm deposits.</td>
-                                        <td>Destruction disproportionate to biofilm deposits; evidence of periods of
-                                            rapid progression and/or
-                                            early-onset disease (molar/incisor pattern); expected poor response to
-                                            standard bacterial control.
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <th colspan="5">
-                                            <center>Grade Modifier</center>
-                                        </th>
-
-
-                                    </tr>
-
-                                    <tr>
-
-                                        <th rowspan="2">Risk Factors</th>
-                                        <th>Smoking</th>
-                                        <td>Non-smoker</td>
-                                        <td>Smoker &lt; 10 cigarettes/day</td>
-                                        <td>Smoker &ge;10 cigarettes/day</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Diabetes</th>
-                                        <td>Normoglycemic / no diagnosis of Diabetes</td>
-                                        <td>HbA1c &lt; 7.0% in a Diabetes Patient</td>
-                                        <td>HbA1c &ge; 7.0 % in a Diabetes Patient</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-
-                            <button class="toggle-button5" id="button401">Teeth Eruption Times</button>
-                            <br>
-                            <div id="eteethSection1" class="section">
-
-                                <h3> Primary Teeth Eruption Times</h3>
-
-                                <table>
-                                    <thead>
-                                    <tr>
-                                        <th>Upper Teeth</th>
-                                        <th>Erupt</th>
-                                        <th>Shed</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Central incisor</td>
-                                        <td>8-12 months</td>
-                                        <td>6-7 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lateral incisor</td>
-                                        <td>9-13 months</td>
-                                        <td>7-8 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canine</td>
-                                        <td>16-22 months</td>
-                                        <td>10-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>First molar</td>
-                                        <td>13-19 months</td>
-                                        <td>9-11 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Second molar</td>
-                                        <td>25-33 months</td>
-                                        <td>10-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3"></td>
-
-                                    </tr>
-                                    <tr>
-                                        <th>Lower Teeth</th>
-                                        <th>Erupt</th>
-                                        <th>Shed</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Second molar</td>
-                                        <td>23-31 months</td>
-                                        <td>10-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>First molar</td>
-                                        <td>14-18 months</td>
-                                        <td>9-11 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canine</td>
-                                        <td>17-23 months</td>
-                                        <td>9-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lateral incisor</td>
-                                        <td>10-16 months</td>
-                                        <td>7-8 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Central incisor</td>
-                                        <td>6-10 months</td>
-                                        <td>6-7 yrs.</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-
-                                <h3> Permament Teeth Eruption Times</h3>
-                                <table>
-                                    <thead>
-                                    <tr>
-                                        <th>Upper Teeth</th>
-                                        <th>Erupt</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>Central incisor</td>
-                                        <td>7-8 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lateral incisor</td>
-                                        <td>8-9 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canine</td>
-                                        <td>11-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>First premolar</td>
-                                        <td>10-11 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Second premolar</td>
-                                        <td>10-11 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>First molar</td>
-                                        <td>6-7 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Second molar</td>
-                                        <td>12-13 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"></td>
-
-                                    </tr>
-                                    <tr>
-                                        <th>Lower Teeth</th>
-                                        <th>Erupt</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Third molar (wisdom teeth)</td>
-                                        <td>17-21 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Second molar</td>
-                                        <td>11-13 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>First molar</td>
-                                        <td>6-7 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Second premolar</td>
-                                        <td>11-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>First premolar</td>
-                                        <td>10-12 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Canine</td>
-                                        <td>9-10 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lateral incisor</td>
-                                        <td>7-8 yrs.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Central incisor</td>
-                                        <td>6-7 yrs.</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-
-                                Reference: <a
-                                    href="https://www.teeth.org.au/ADA/media/Teeth_org_au/ADA/media/Teeth_org_au/documents/ADA2022-Factsheet-Tooth-eruption.pdf">ADA
-                                    Factsheet: Tooth eruption charts</a>
-                            </div>
-
-                            <button class="toggle-button5" id="button402">Equipment List</button>
-                            <br>
-                            <div id="elistSection1" class="section">
-
-                                <h2>List of Instruments & Materials Required for Endodontic Appointments</h2><br>
-
-                                <strong>ASSESSMENT</strong><br>
-                                o Three pieces diagnostic instrument kit (mirror, probe, tweezer) <br>
-                                o Modified paralleling holder + Cotton rolls (x3 bundle) + Size 2 film <br>
-                                o Cold spray + cotton pallets <br>
-                                o EPT machine + EPT tip toothpaste <br>
-                                o Rubber dam single tooth isolation (for hot test) + Clamp <br><br>
-
-                                <strong>EDODONTIC APPOINTMENTS (choose as required)
-                                    General</strong><br>
-                                o Topical anesthesia <br>
-                                o LA + needle + syringe + artery forceps <br>
-                                o Rubber dam + Punch + Frame & rubber dam forceps+ Clamp + Floss<br>
-                                o Histoacryl<br>
-                                o Endo kit<br>
-                                o High speed + Slow speed + Ultrasonic handpieces<br>
-                                o Resto burs (if needed) + Ultrasonic tip<br>
-                                o Modified paralleling holder (TruView or Snap-a-Ray)+ cotton rolls (x3 bundle) +size 2
-                                film<br>
-                                o Hand files (as needed) <br>
-                                o Rotary files (as needed)<br>
-                                o Odontostand (to hold files)<br>
-                                o Paper points<br>
-                                o Sodium hypochlorite w/ side venting needle<br>
-                                o Eucalyptus 0.5ml (?only if needed) w/ side venting needle<br>
-                                o Microbrush<br><br>
-
-                                <strong>Chemo-mech appointment</strong><br>
-                                o Apex locator + Lip hook + file attachment<br>
-                                o Lentino spiral<br>
-                                o Calcium hydroxide paste OR Odontopaste<br>
-                                o Cavit<br>
-                                o GIC (pink) + FUJI gun<br><br>
-
-                                <strong>Obturation appointment</strong>
-                                o EDTA (for obturation) w/ side venting needle<br>
-                                o GP points + accessory points<br>
-                                o AH plus sealer<br>
-                                o Alcohol + cotton pellet (non-sterile ones)<br>
-                                o SuperEndo + Tip<br>
-                                o Restoration material & associated necessities (if doing permanent restoration)<br>
-                                o Etch<br>
-                                o Prime + Bond OR Dentine conditioner<br>
-
-                                 
-
-                            </div>
-                            <button class="toggle-button5" id="button403">Year 4 ADA Code List</button>
-                            <br>
-                            <div id="adayr41Section1" class="section">
-
-                                <h3>Exam/Diagnostic/Radiographic 😁</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>011</td>
-                                        <td>Comprehensive Oral Examination</td>
-                                    </tr>
-                                    <tr>
-                                        <td>012</td>
-                                        <td>Periodic Oral Examination</td>
-                                    </tr>
-                                    <tr>
-                                        <td>013</td>
-                                        <td>Oral Examination (Limited or emergency)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>014</td>
-                                        <td>Consultation (< 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>015</td>
-                                        <td>Consultation-extended (≥ 30 mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>018</td>
-                                        <td>Written report</td>
-                                    </tr>
-                                    <tr>
-                                        <td>019</td>
-                                        <td>Letter of referral</td>
-                                    </tr>
-                                    <tr>
-                                        <td>022A</td>
-                                        <td>Intraoral periapical or bitewing radiograph - (per exposure) 022B-
-                                            subsequent exp
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>025</td>
-                                        <td>Intraoral radiograph - Occlusal, maxillary, mandibular - per exposure</td>
-                                    </tr>
-                                    <tr>
-                                        <td>037</td>
-                                        <td>Panoramic radiograph - (OPG) per exposure</td>
-                                    </tr>
-                                    <tr>
-                                        <td>047</td>
-                                        <td>Saliva screening test</td>
-                                    </tr>
-                                    <tr>
-                                        <td>048</td>
-                                        <td>Bacteriological screening test</td>
-                                    </tr>
-                                    <tr>
-                                        <td>059</td>
-                                        <td>Comprehensive head and neck cancer examination</td>
-                                    </tr>
-                                    <tr>
-                                        <td>061</td>
-                                        <td>Pulp testing</td>
-                                    </tr>
-                                    <tr>
-                                        <td>071</td>
-                                        <td>Diagnostic model</td>
-                                    </tr>
-                                    <tr>
-                                        <td>072</td>
-                                        <td>Photographic records-intraoral</td>
-                                    </tr>
-                                    <tr>
-                                        <td>073</td>
-                                        <td>Photographic records-extraoral</td>
-                                    </tr>
-                                    <tr>
-                                        <td>221</td>
-                                        <td>Clinical Periodontal analysis and recording (must be in conjunction with
-                                            251)
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>300</td>
-                                        <td>Routine post-operative visit</td>
-                                    </tr>
-                                </table>
-
-                                <h3>Preventive & Periodontics 😁</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>014</td>
-                                        <td>Consultation (< 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>015</td>
-                                        <td>Consultation-extended (≥ 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>111</td>
-                                        <td>Removal of plaque &/or stain</td>
-                                    </tr>
-                                    <tr>
-                                        <td>113</td>
-                                        <td>Recontouring/polishing of pre-existing restoration (s) - per appt</td>
-                                    </tr>
-                                    <tr>
-                                        <td>114</td>
-                                        <td>Removal of calculus - first appt (already includes 111)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>115</td>
-                                        <td>Removal of calculus - subsequent appt (already includes 111)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>116</td>
-                                        <td>Enamel micro-abrasion-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>121</td>
-                                        <td>Topical application of remineralisation agents - one treatment</td>
-                                    </tr>
-                                    <tr>
-                                        <td>123</td>
-                                        <td>Concentrated remin &/or cariostatic agents - single tooth application</td>
-                                    </tr>
-                                    <tr>
-                                        <td>131</td>
-                                        <td>Dietary analysis & advice</td>
-                                    </tr>
-                                    <tr>
-                                        <td>141</td>
-                                        <td>Oral hygiene instruction</td>
-                                    </tr>
-                                    <tr>
-                                        <td>142</td>
-                                        <td>Tobacco counselling (include 019 if referred to Quitline or other pathway
-                                            services)
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>151</td>
-                                        <td>Provision of mouthguard-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>153</td>
-                                        <td>Bi-maxillary mouthguard-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>161</td>
-                                        <td>Fissure and/or tooth surface sealing-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>165</td>
-                                        <td>Desensitizing procedure - per appt</td>
-                                    </tr>
-                                    <tr>
-                                        <td>171</td>
-                                        <td>Odontoplasty -per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>222</td>
-                                        <td>Periodontal debridement-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>250</td>
-                                        <td>Active non-surgical Periodontal therapy-per quadrant</td>
-                                    </tr>
-                                    <tr>
-                                        <td>251</td>
-                                        <td>Supportive Periodontal Therapy (must be in conjunction with 221)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>753</td>
-                                        <td>Cleaning and polishing of pre-existing denture</td>
-                                    </tr>
-                                </table>
-                                <h3>Restorative 😁</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>014</td>
-                                        <td>Consultation (< 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>015</td>
-                                        <td>Consultation-extended (≥ 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>411</td>
-                                        <td>Direct pulp capping</td>
-                                    </tr>
-                                    <tr>
-                                        <td>412</td>
-                                        <td>Incomplete endodontic therapy (tooth not suitable for further treatment)
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>511-515</td>
-                                        <td>Metallic restoration- 1-5 surfaces - direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>521-525</td>
-                                        <td>Adhesive restoration- 1-5 surfaces-anterior tooth-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>526</td>
-                                        <td>Adhesive restoration-veneer-anterior tooth-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>531-535</td>
-                                        <td>Adhesive restoration- 1-5 surfaces-posterior tooth-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>536</td>
-                                        <td>Adhesive restoration-veneer-posterior tooth-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>541-545</td>
-                                        <td>Metallic restoration- 1-5 surfaces-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>551-555</td>
-                                        <td>Tooth-coloured restoration-1-5 surfaces-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>556</td>
-                                        <td>Tooth-coloured-veneer-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>574</td>
-                                        <td>Metal band</td>
-                                    </tr>
-                                    <tr>
-                                        <td>572</td>
-                                        <td>Provisional (intermediate/temporary) restoration - per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>575</td>
-                                        <td>Pin retention- per pin</td>
-                                    </tr>
-                                    <tr>
-                                        <td>577</td>
-                                        <td>Cusp capping-per cusp</td>
-                                    </tr>
-                                    <tr>
-                                        <td>578</td>
-                                        <td>Restoration of an incisal corner-per corner (in addition to 522-525; always
-                                            with IM & ID fractures)
-                                        </td>
-                                    </tr>
-                                </table>
-
-                                <h3>Oral Surgery 😀</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>013</td>
-                                        <td>Oral examination (Limited or Emergency)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>014</td>
-                                        <td>Consultation (< 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>015</td>
-                                        <td>Consultation - extended (≥ 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>300</td>
-                                        <td>Routine post-operative visit</td>
-                                    </tr>
-                                    <tr>
-                                        <td>311A</td>
-                                        <td>Removal of a tooth or part(s)-first tooth extracted from each quadrant</td>
-                                    </tr>
-                                    <tr>
-                                        <td>311B</td>
-                                        <td>Removal of a tooth or part(s)-each subsequent tooth in the same quadrant
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>314A</td>
-                                        <td>Sectional removal of a tooth or part(s) - 1st sectional removal from each
-                                            quadrant
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>314B</td>
-                                        <td>Sectional removal of a tooth or part(s)- each subsequent tooth in the same
-                                            quadrant
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>322A</td>
-                                        <td>Surgical removal of a tooth/fragment not requiring removal of bone in a
-                                            quadrant
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>322B</td>
-                                        <td>Surgical removal of a subsequent tooth/fragment not requiring bone removal
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>323A</td>
-                                        <td>Surgical removal of a tooth/fragment requiring removal of bone-1st tooth
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>323B</td>
-                                        <td>Surgical removal of a subsequent tooth/fragment requiring bone removal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>324A</td>
-                                        <td>Surgical removal of a tooth/fragment requiring bone removal and tooth
-                                            division
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>324B</td>
-                                        <td>Surgical removal of a subsequent tooth/fragment requiring bone removal &
-                                            tooth division
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>392</td>
-                                        <td>Drainage of abscess</td>
-                                    </tr>
-                                    <tr>
-                                        <td>399</td>
-                                        <td>Control of reactionary or secondary post-operative haemorrhage</td>
-                                    </tr>
-                                </table>
-                                <h3>Prosthodontics (Simple/Advanced and Complex) 😀</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>014</td>
-                                        <td>Consultation (< 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>015</td>
-                                        <td>Consultation-extended (≥ 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>071</td>
-                                        <td>Diagnostic model</td>
-                                    </tr>
-                                    <tr>
-                                        <td>074</td>
-                                        <td>Diagnostic wax-up</td>
-                                    </tr>
-                                    <tr>
-                                        <td>597A</td>
-                                        <td>Post-direct-1st post in a tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>588</td>
-                                        <td>Crown-tooth-coloured- preformed</td>
-                                    </tr>
-                                    <tr>
-                                        <td>600</td>
-                                        <td>Interim crown and bridge</td>
-                                    </tr>
-                                    <tr>
-                                        <td>611</td>
-                                        <td>Full crown-acrylic resin-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>613</td>
-                                        <td>Full crown-non-metallic-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>615</td>
-                                        <td>Full crown-veneered-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>618</td>
-                                        <td>Full crown-metallic-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>625</td>
-                                        <td>Post and core for crown-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>627</td>
-                                        <td>Preliminary restoration for crown</td>
-                                    </tr>
-                                    <tr>
-                                        <td>631</td>
-                                        <td>Provisional crown (intermediate/temp)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>632</td>
-                                        <td>Provisional bridge pontic- per pontic</td>
-                                    </tr>
-                                    <tr>
-                                        <td>642</td>
-                                        <td>Bridge pontic-direct-per pontic</td>
-                                    </tr>
-                                    <tr>
-                                        <td>643</td>
-                                        <td>Bridge pontic-indirect-per pontic</td>
-                                    </tr>
-                                    <tr>
-                                        <td>651</td>
-                                        <td>Recementing crown or veneer</td>
-                                    </tr>
-                                    <tr>
-                                        <td>655</td>
-                                        <td>Removal of crown</td>
-                                    </tr>
-                                    <tr>
-                                        <td>656</td>
-                                        <td>Removal of bridge or splint</td>
-                                    </tr>
-                                    <tr>
-                                        <td>659</td>
-                                        <td>Repair of crown, bridge or splint-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>700</td>
-                                        <td>F/-, -/F, P/-, -/P, F/F, P/P, P/F, F/P NB: Strictly only Interim Denture
-                                            Stages/Service
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>711</td>
-                                        <td>Complete maxillary Denture Insert F/- (F/P)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>712</td>
-                                        <td>Complete mandibular Denture Insert -/F (P/F)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>713</td>
-                                        <td>Provisional complete Maxillary Denture</td>
-                                    </tr>
-                                    <tr>
-                                        <td>714</td>
-                                        <td>Provisional complete Mandibular Denture</td>
-                                    </tr>
-                                    <tr>
-                                        <td>715</td>
-                                        <td>Provisional complete Max & Mand Dentures</td>
-                                    </tr>
-                                    <tr>
-                                        <td>716</td>
-                                        <td>Metal palate or plate</td>
-                                    </tr>
-                                    <tr>
-                                        <td>719</td>
-                                        <td>Complete Maxillary & Mandibular Dentures</td>
-                                    </tr>
-                                    <tr>
-                                        <td>721A-D</td>
-                                        <td>Partial Max Denture-resin base- 1 to 4 teeth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>721E</td>
-                                        <td>Partial Max Denture-resin base- 5 to 9 teeth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>721F</td>
-                                        <td>Partial Max Denture-resin base- 10 to 12 teeth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>722A-F</td>
-                                        <td>Partial Mand Denture-resin base- 1 to 12 teeth (as above)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>727A-F</td>
-                                        <td>Partial Max Denture-cast metal framework- 1 to 12 teeth (as above)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>728A-F</td>
-                                        <td>Partial Mand Denture-cast metal framework- 1-to 12 teeth (as above)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>731</td>
-                                        <td>Retainer-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>732</td>
-                                        <td>Occlusal rest-per rest</td>
-                                    </tr>
-                                    <tr>
-                                        <td>736</td>
-                                        <td>Immediate tooth replacement-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>737</td>
-                                        <td>Resilient lining</td>
-                                    </tr>
-                                    <tr>
-                                        <td>740</td>
-                                        <td>Adjustment to new denture</td>
-                                    </tr>
-                                    <tr>
-                                        <td>741</td>
-                                        <td>Adjustment of a denture</td>
-                                    </tr>
-                                </table>
-                                <h3>Prosthodontics – Continued</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>743</td>
-                                        <td>Relining-complete denture-processed</td>
-                                    </tr>
-                                    <tr>
-                                        <td>744</td>
-                                        <td>Relining-partial denture-processed</td>
-                                    </tr>
-                                    <tr>
-                                        <td>751</td>
-                                        <td>Relining-complete denture-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>752</td>
-                                        <td>Relining partial denture-direct</td>
-                                    </tr>
-                                    <tr>
-                                        <td>753</td>
-                                        <td>Cleaning and polishing of pre-existing denture</td>
-                                    </tr>
-                                    <tr>
-                                        <td>765</td>
-                                        <td>Replacing/adding new tooth on denture-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>766</td>
-                                        <td>Reattaching existing tooth on denture-per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>768</td>
-                                        <td>Adding tooth to partial denture to replace extracted or decoronated
-                                            tooth-per tooth
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>772</td>
-                                        <td>Splint resin-indirect</td>
-                                    </tr>
-                                    <tr>
-                                        <td>776</td>
-                                        <td>Impression-dental appliance repair/modification</td>
-                                    </tr>
-                                    <tr>
-                                        <td>926</td>
-                                        <td>Individually made tray-medicament(s)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>965</td>
-                                        <td>Occlusal splint</td>
-                                    </tr>
-                                </table>
-
-                                <h3>Endodontics 😀</h3>
-                                <table>
-                                    <tr>
-                                        <th>Code</th>
-                                        <th>Description</th>
-                                    </tr>
-                                    <tr>
-                                        <td>014</td>
-                                        <td>Consultation (< 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>015</td>
-                                        <td>Consultation- extended (≥ 30mins)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>022A</td>
-                                        <td>Intraoral periapical or bitewing radiograph - per exposure</td>
-                                    </tr>
-                                    <tr>
-                                        <td>022B</td>
-                                        <td>Intraoral periapical or bitewing radiograph - per exposure</td>
-                                    </tr>
-                                    <tr>
-                                        <td>061</td>
-                                        <td>Pulp testing – per appointment</td>
-                                    </tr>
-                                    <tr>
-                                        <td>117</td>
-                                        <td>Bleaching - internal - per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>392</td>
-                                        <td>Drainage of abscess</td>
-                                    </tr>
-                                    <tr>
-                                        <td>411</td>
-                                        <td>Direct pulp capping</td>
-                                    </tr>
-                                    <tr>
-                                        <td>412</td>
-                                        <td>Incomplete endodontic therapy (tooth not suitable for further treatment)
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>414</td>
-                                        <td>Pulpotomy</td>
-                                    </tr>
-                                    <tr>
-                                        <td>415</td>
-                                        <td>Complete chemo-mechanical preparation of root canal - one canal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>416</td>
-                                        <td>Complete chemo-mechanical preparation of root canal - each additional
-                                            canal
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>417</td>
-                                        <td>Root canal obturation - one canal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>418</td>
-                                        <td>Root canal obturation - each additional canal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>419</td>
-                                        <td>Extirpation of pulp or debridement of root canal(s) - emergency or
-                                            palliative
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>421</td>
-                                        <td>Resorbable canal filling - primary tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>445</td>
-                                        <td>Exploration and/or negotiation of a calcified canal - per canal - per appt
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>455</td>
-                                        <td>Additional visit for irrigation and /or dressing of root canal system - per
-                                            tooth
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>458</td>
-                                        <td>Interim therapeutic root filling - per tooth</td>
-                                    </tr>
-                                    <tr>
-                                        <td>572</td>
-                                        <td>Provisional (intermediate/temporary) restoration - per tooth</td>
-                                    </tr>
-                                </table>
 
 
                             </div>
-
-
                         </div>
                         <div id="output">
 
@@ -5341,12 +5345,20 @@
 
         <textarea id="generatedText" disabled class="TEST" placeholder="Select an area and check the checkbox beside it for text to generate.
 
-												  Please use this as a guide only and always listen to your supervisors' instructions.">
-
-	 </textarea>
-                            <button id="button" class="copybut" onclick="myFunction()">Copy Text</button>
-                            <button id="finalize" class="finalize" onclick="myFinalize()">Finalize</button>
-                            <div id="myTooltip" hidden="">Copied!</div>
+Please use this as a guide only and always listen to your supervisors' instructions."></textarea>
+        <div class="actionButtonHolder">
+                                <div class="copyfi">
+                                    <button id="button" class="copybut" onclick="myFunction()">Copy Text</button>
+                                    <button id="finalize" class="finalize" onclick="myFinalize()">Finalize</button>
+                                </div>
+                                @auth
+                                <div class="saveholder">
+                                    <input type="text" id="saveName" placeholder="Enter save file name" disabled>
+                                    <button id="saveContent" class="saveContent" onclick="mySave()" disabled>Save</button>
+                                </div>
+                                @endauth
+                                <div id="myTooltip" hidden="">Copied!</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -5358,35 +5370,38 @@
 
     <script>
         var finalizebool = true;
+        var contentToSave = "null";
 
+        function mySave() {
+                if(contentToSave != "null"){
+                    console.log(JSON.stringify(contentToSave));
+                }
+            }
         function myFinalize() {
             // Get the container element by ID
+                var saveBut = document.getElementById('saveContent');
+                var saveName = document.getElementById('saveName');
+                var outcon = document.getElementById('generatedText');
+                var container = document.getElementById('checkboxes');
+                var inputs = container.querySelectorAll('input, select, textarea, button');
             if (finalizebool) {
 
-                var outcon = document.getElementById('generatedText');
                 outcon.disabled = false;
                 finalizebool = false;
 
-                var container = document.getElementById('checkboxes');
-
-                // Get all input elements inside the container
-                var inputs = container.querySelectorAll('input, select, textarea, button');
-
                 // Disable each input element
+                saveBut.disabled = false;
+                saveName.disabled = false;
                 inputs.forEach(function (input) {
                     input.disabled = true;
                 });
             } else {
-                var outcon = document.getElementById('generatedText');
                 outcon.disabled = true;
                 finalizebool = true;
 
-                var container = document.getElementById('checkboxes');
-
-                // Get all input elements inside the container
-                var inputs = container.querySelectorAll('input, select, textarea, button');
-
                 // Disable each input element
+                saveBut.disabled = true;
+                saveName.disabled = true;
                 inputs.forEach(function (input) {
                     input.disabled = false;
                 });
@@ -10092,7 +10107,7 @@
                         text.push('\n');
                         text.push(`Please construct PFM crown in fine gold cervical collar in SHADE ___ VITA 3D Master for TOOTH ___ OR Please construct Emax/Zirconia/Sinfony crown in SHADE ___ VITA Classic for TOOTH ___ with STUMP SHADE ___.`);
                     }
-
+                    contentToSave = text;
 
                     generatedText.value = text.join('');
                 }
