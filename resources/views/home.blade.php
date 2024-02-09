@@ -5372,12 +5372,46 @@ Please use this as a guide only and always listen to your supervisors' instructi
         var finalizebool = true;
         var contentToSave = "null";
 
+        function getListOfIdsAndValues() {
+            const datadiv = document.getElementById('checkboxes');
+            const checkboxes = datadiv.querySelectorAll('input[type="checkbox"]');
+            const radios = datadiv.querySelectorAll('input[type="radio"]:checked');
+            const textInputs = datadiv.querySelectorAll('input[type="text"]');
+            const selects = datadiv.querySelectorAll('select');
+            const textAreas = datadiv.querySelectorAll('textarea');
+
+            const selectedCheckboxIds = Array.from(checkboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => checkbox.id);
+
+            const selectedRadioIds = Array.from(radios)
+            .map(radio => radio.id);
+
+            const nonEmptyTextInputValues = Array.from(textInputs)
+                .filter(input => input.value.trim() !== '')
+                .map(input => ({ id: input.id, value: input.value }));
+
+            const nonEmptySelectValues = Array.from(selects)
+                .filter(input => input.value.trim() !== '')
+                .map(input => ({ id: input.id, value: input.value }));
+
+            const nonEmptyTextAreaValues = Array.from(textAreas)
+                .filter(input => input.value.trim() !== '')
+                .map(input => ({ id: input.id, value: input.value }));
+
+            console.log('Selected Checkbox IDs:', selectedCheckboxIds);
+            console.log('Selected Radio IDs:', selectedRadioIds);
+            console.log('Non-empty Text Input IDs and Values:', nonEmptyTextInputValues);
+            console.log('Non-empty Select IDs and Values:', nonEmptySelectValues);
+            console.log('Non-empty Text Area IDs and Values:', nonEmptyTextAreaValues);
+        }
         function mySave() {
                 if(contentToSave != "null"){
                     console.log(JSON.stringify(contentToSave));
                 }
             }
         function myFinalize() {
+            getListOfIdsAndValues();
             // Get the container element by ID
                 var saveBut = document.getElementById('saveContent');
                 var saveName = document.getElementById('saveName');
