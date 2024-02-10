@@ -5796,11 +5796,13 @@ Please use this as a guide only and always listen to your supervisors' instructi
             document.getElementById('contentcat').classList.remove("d-none");
             }
         function myFinalize() {
-            getListOfIdsAndValues();
+            //getListOfIdsAndValues();
             // Get the container element by ID
                 var saveBut = document.getElementById('saveContent');
                 var saveName = document.getElementById('saveName');
-                    saveName.value = new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+                    if(saveBut){
+                        saveName.value = new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+                    }
                 var contentcatselect = document.getElementById('contentcatselect');
                 var outcon = document.getElementById('generatedText');
                 var container = document.getElementById('checkboxes');
@@ -5811,9 +5813,12 @@ Please use this as a guide only and always listen to your supervisors' instructi
                 finalizebool = false;
 
                 // Disable each input element
+
+                if(saveBut){
                 saveBut.disabled = false;
                 saveName.disabled = false;
                 contentcatselect.disabled = false;
+                }
                 inputs.forEach(function (input) {
                     input.disabled = true;
                 });
@@ -5822,9 +5827,12 @@ Please use this as a guide only and always listen to your supervisors' instructi
                 finalizebool = true;
 
                 // Disable each input element
+
+                if(saveBut){
                 saveBut.disabled = true;
                 saveName.disabled = true;
                 contentcatselect.disabled = true;
+                }
                 inputs.forEach(function (input) {
                     input.disabled = false;
                 });
