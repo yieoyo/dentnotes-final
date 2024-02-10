@@ -47,6 +47,9 @@
                         </li>
                         @can('admin')
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('category.index') }}">Category</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">Users</a>
                             </li>
                         @endcan
