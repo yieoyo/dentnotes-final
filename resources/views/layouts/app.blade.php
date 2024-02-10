@@ -26,7 +26,6 @@
         <div class="container">
             <!-- Brand Logo and Name -->
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="" alt="Logo" height="30" class="d-inline-block align-top">
                 {{ config('app.name', 'Dentnotes') }}
             </a>
 
@@ -121,8 +120,7 @@
     </div>
     <footer class="bg-dark">
         PlEASE NOTE: This website is to be used as a guide only. Always follow your supervisors instructions.
-        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by <a
-                href="https://bunk3r.net">Bunker</a>
+        <p>&copy; 2024 Clinic Notes Generator. All rights reserved. | Designed by Ahmed
         </p>
     </footer>
 
