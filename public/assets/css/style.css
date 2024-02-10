@@ -317,6 +317,10 @@
             align-items: center;
             position: relative;
         }
+        div.card-header {
+            background: #3498db;
+            color: #fff;
+        }
 .copyfi button {
     flex: 0 0 49%;
 }

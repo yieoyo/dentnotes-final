@@ -61,18 +61,3 @@ body {
     border-color: $primary-color;
 }
 
-// Define variables for easier customization
-$footer-background-color: #f8f9fa;
-$footer-padding: 10px;
-
-// Style for the fixed footer
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: $footer-background-color; // Use variable for background color
-    padding: $footer-padding; // Use variable for padding
-    text-align: center;
-
-    // Optionally, nest further styles if needed
-}
