@@ -26,7 +26,6 @@
         <div class="container">
             <!-- Brand Logo and Name -->
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="" alt="Logo" height="30" class="d-inline-block align-top">
                 {{ config('app.name', 'Dentnotes') }}
             </a>
 
