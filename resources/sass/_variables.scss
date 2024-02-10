@@ -61,18 +61,19 @@ body {
     border-color: $primary-color;
 }
 
-// Define variables for easier customization
-$footer-background-color: #f8f9fa;
-$footer-padding: 10px;
 
-// Style for the fixed footer
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: $footer-background-color; // Use variable for background color
-    padding: $footer-padding; // Use variable for padding
-    text-align: center;
-
-    // Optionally, nest further styles if needed
-}
+    background-color: #3498db;
+               color: #fff;
+               padding: 10px;
+               text-align: center;
+               width: 100%;
+               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+               font: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+           position: absolute; /* Change from relative to fixed */
+   
+   
+       left: 0; /* Add this line */
+       right: 0; /* Add this line */
+   
+   }

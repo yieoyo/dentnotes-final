@@ -8,13 +8,14 @@
             <div class="card">
                 <div class="card-header">
                     <h1>Clinic Notes Generator</h1>
-                    <span class="text-muted">Please note: Website still under development and not all sections are functional</span>
+                    <span class="">Please note: Website still under development and not all sections are functional</span>
                 </div>
 
                 <div class="card-body">
                     <div id="container">
                         <div class="leftHolder">
                             <button id="contentgenerate" onclick="myGenerate()">Generate</button>
+                            <button id="newnote" onclick="myNewNote()">New Note</button>
                             @auth
                             <button id="contenthistory" onclick="myHistory()">History</button>
                             <div id="contentcat" class="d-none">
@@ -4128,9 +4129,9 @@
                                     If you write on right, your text will be deleted if you go back to the template or
                                     change anything.
                                     Enter Your Text here to be generated on the right.
-                                    <br><strong> AFTER MED HISTORY</strong>
+                                    <br><p><strong> AFTER MED HISTORY</strong></p>
                                     <textarea id="generatedText2" class="TEST" placeholder=""></textarea>
-                                    <strong> BEFORE SUPERVISOR</strong>
+                                    <p><strong> BEFORE SUPERVISOR</strong></p>
                                     <textarea id="generatedText1" class="TEST" placeholder=""></textarea>
                                 </div>
 
@@ -5353,6 +5354,290 @@
 
 
                                 </div>
+                                <button class="toggle-button5" id="button4034">Denture Guides</button>  
+                                <div id="dentureguidessection" class="section" style="display: none;">
+ 
+                                    <h1>Complete Denture Appointments</h1>
+                                    <h2>1st Appointment: Consult/Exam; Primary impressions</h2>
+                                    <h3>Medical History</h3>
+                                    <ul>
+                                        <li>Full list of medications and their purpose, especially medications affecting salivary flow</li>
+                                        <li>Smoking history: frequency, number of years. Consider quitting?</li>
+                                        <li>Sjogren’s disease</li>
+                                        <li>MVA – affected TMJ, fractures</li>
+                                        <li>Cancer – radiation, resections (especially oral cancer)</li>
+                                        <li>Stroke / dementia – affects neuromuscular control</li>
+                                    </ul>
+                                    <h3>Interview</h3>
+                                    <ul>
+                                        <li>Reason for attendance (i.e. wants dentures)</li>
+                                        <li>Reason for tooth loss: perio/caries</li>
+                                        <li>How many years edentulous</li>
+                                        <li>How many pairs of dentures</li>
+                                        <li>Do they like their current set? Why? How old is it?</li>
+                                    </ul>
+                                    <h3>Extra-oral</h3>
+                                    <ul>
+                                        <li>Facial symmetry</li>
+                                        <li>Loss of OVD: Thin, inverted lips, creasing at the commissures</li>
+                                        <li>TMJ</li>
+                                        <li>Saliva flow</li>
+                                    </ul>
+                                    <h3>Prosthodontics assessment</h3>
+                                    <ul>
+                                        <li>Clinical factors influencing stability, retention, support of complete dentures</li>
+                                        <li>Quality of bearing mucosa</li>
+                                        <li>Attached / unattached [attached]</li>
+                                        <li>Keratinisation [keratinised]</li>
+                                        <li>Bone contours (Denture support area)</li>
+                                        <li>Height and contour of alveolar ridge</li>
+                                        <li>Md Mylohyoid ridge [blunt]</li>
+                                        <li>Md Retromolar pad [well defined]</li>
+                                        <li>Tori?</li>
+                                        <li>Resorption patterns</li>
+                                        <li>Muscle attachments</li>
+                                        <li>Frenum [low]</li>
+                                        <li>Floor of mouth, Mylohyoid m.</li>
+                                        <li>Retromylohyoid space [deep]</li>
+                                        <li>Tongue posture</li>
+                                        <li>Neuromuscular control</li>
+                                    </ul>
+                                    <h3>Denture assessment</h3>
+                                    <ul>
+                                        <li>Aesthetics</li>
+                                        <li>Retention</li>
+                                        <li>Stability</li>
+                                        <li>Primary impression should have no major pressure spots or voids, should capture all peripheral extensions (sulcus, Mx: hamular notch, posterior palatal seal; Md: retromolar pad)</li>
+                                    </ul>
+                                    <p>Please construct diagnostic models from alginate impressions.</p>
+                                    <p>Please construct custom trays:</p>
+                                    <ol>
+                                        <li>for ZOE impression – custom trays 2mm shy of depth of sulcus, no spacer;</li>
+                                        <li>for PVS – custom trays with 2 sheets of baseplate wax as spacer.</li>
+                                    </ol>
+                                    <hr>
+                                    <h2>2nd Appointment: Secondary impressions</h2>
+                                    <p>Adjust fit of custom trays- trim with acrylic burs to 1mm short of sulcus, not interfering with frenum</p>
+                                    <p>If tissues are compressible, make holes (“swiss cheese) with acrylic bur so that impression is mucostatic</p>
+                                    <p>Add green stick compound to periphery of trays</p>
+                                    <p>(Mark with indelible marker the post dam and the compressibility of glandular tissues.)</p>
+                                    <p>Set up – slow speed evacuation, dry teeth, retract lips. Clear bracket table of all instruments except mirror</p>
+                                    <p>Patient laid back</p>
+                                    <p>Mix ZOE, apply thin layer to tray.</p>
+                                    <p>Seat tray. Border mould. Sit patient up, check for overflowing ZOE</p>
+                                    <p>Wait 4-5 minutes, remove impression by retracting lip to dislodge seal</p>
+                                    <p>Check for show through. Trim with acrylic bur. Add ZOE to deficient areas and retake impression.</p>
+                                    <p>Add post dam with inlay wax: 1mm thick at posterior border, and tapering to knife edge at other borders</p>
+                                    <p>Please construct master cast in stone with 3mm land area, scribe post-dam as indicated on Mx impression, depth of post dam ~mm. Please provide occlusal wax rims to standard dimensions</p>
+                                    <hr>
+                                    
+                                    <h2>3rd Appointment: Jaw Registration</h2>
+                                    <ul>
+                                        <li>Use denture adhesive to aid in stability of bases for record</li>
+                                        <li>Adjust Mx wax rim for lip support</li>
+                                        <li>Adjust Mx wax rim for tooth display</li>
+                                        <li>Mark facial midline on Mx wax rim</li>
+                                        <li>Mark canines lines</li>
+                                        <li>Mark smile line</li>
+                                        <li>Adjust Mx wax rim for occlusal plane</li>
+                                        <li>Parallel to ala-tragus plane – use Fox plane</li>
+                                        <li>Parallel to interpupillary width</li>
+                                        <li>OVD = RVD – Freeway space</li>
+                                        <ul>
+                                            <li>RVD:</li>
+                                            <ul>
+                                                <li>Swallow and allow lips to part</li>
+                                                <li>Relax and allow lips to part</li>
+                                                <li>Repeat ‘emma’ and allow lips to part</li>
+                                            </ul>
+                                        </ul>
+                                        <li>CR: Interocclusal records – physiologic technique:</li>
+                                        <ul>
+                                            <li>Mark notches on Md wax rim</li>
+                                            <li>Practice going into CR</li>
+                                            <li>Bi-manual manipulation</li>
+                                        </ul>
+                                        <li>Materials: Wax (baseplate wax, Alu-wax, Beauty wax); Impression compound; Elastomeric materials (PVS)</li>
+                                        <li>Tooth shade and mould</li>
+                                        <li>Please articulate master casts with bite record in PVS/Wax/Acrylic provided</li>
+                                        <li>Set up Mx and Md teeth for try-in in shade ~, mould ~</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>4th Appointment: Wax Tooth Try-In</h2>
+                                    <ul>
+                                        <li>Dental midline matches facial midline</li>
+                                        <li>Occlusal plane anteriorly and posteriorly</li>
+                                        <li>Buccal corridor</li>
+                                        <li>Distal extension</li>
+                                        <li>Aesthetics – tooth mould, shape, position</li>
+                                        <li>Phonetics</li>
+                                        <li>VDO</li>
+                                        <li>CR verified</li>
+                                        <li>Recline pt chair back to help retrude mandible</li>
+                                        <li>Stabilise Md base with index fingers; thumbs under mandible = bimanual technique</li>
+                                        <li>Rehearse closing into CR</li>
+                                        <li>Have patient gently close into the compound just short of tooth contact</li>
+                                        <li>Wax correctly contoured</li>
+                                        <li>Patient signature</li>
+                                        <li>Please seal wax rims and finesse waxup in anterior region. Please process the Mx and Md dentures in acrylic 60% original and 40% light pink. Finish for insertion</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>5th Appointment: Insert</h2>
+                                    <ul>
+                                        <li>Frenum cleared</li>
+                                        <li>No overextension</li>
+                                        <li>Distal extrusion of Mx denture, effective post dam</li>
+                                        <li>No high pressure spots on denture bearing surfaces</li>
+                                        <li>Occlusion and CR</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>6th Appointment: Review</h2>
+                                    <ul>
+                                        <li>Post-operative issues:</li>
+                                        <ul>
+                                            <li>Ulcers in frenum region, sulcus and mylohyoid ridge due to lack of clearance</li>
+                                            <li>Correction of occlusion</li>
+                                            <li>Cheek biting due to lack of buccal overjet</li>
+                                            <li>Restricted food or chewing</li>
+                                            <li>Lack of retention – overextension, processing errors</li>
+                                            <li>Too bulky in palatal or buccal surfaces</li>
+                                        </ul>
+                                    </ul>
+
+                                    <hr>
+
+
+                                    <h1>Partial Denture Appointments</h1>
+                                    <h2>1st Appointment: Consult/Exam; Primary impressions</h2>
+                                    <h3>Medical History</h3>
+                                    <ul>
+                                        <li>Full list of medications and their purpose, especially medications affecting salivary flow</li>
+                                        <li>Smoking history: frequency, number of years. Consider quitting?</li>
+                                        <li>Sjogren’s disease</li>
+                                        <li>MVA – affected TMJ, fractures</li>
+                                        <li>Cancer – radiation, resections (especially oral cancer)</li>
+                                        <li>Stroke / dementia –neuromuscular control</li>
+                                    </ul>
+                                    <h3>Interview</h3>
+                                    <ul>
+                                        <li>Diet Hx</li>
+                                        <li>Dental Hx:</li>
+                                        <ul>
+                                            <li>Reason for tooth loss: perio/caries/trauma</li>
+                                            <li>History of existing and previous RPDs:</li>
+                                            <ul>
+                                                <li>Evaluate existing RPD</li>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                    <h3>Saliva flow</h3>
+                                    <p>Primary impression should have no major pressure spots or voids, should capture all peripheral extensions (sulcus, Mx: hamular notch, posterior palatal seal; Md: retromolar pad)</p>
+                                    <p>Please construct diagnostic models from alginate impressions.</p>
+                                    <p>Please construct custom trays: for PVS – custom trays with 2 sheets of baseplate wax as spacer</p>
+                                    <hr>
+                                    <h2>Survey; Treatment plan</h2>
+                                    <p>Study casts</p>
+                                    <ul>
+                                        <li>Good preliminary casts</li>
+                                        <li>No bubbles/drags</li>
+                                        <li>Clear gingival margins</li>
+                                        <li>Extending to hamular notch and retromolar pad region</li>
+                                        <li>Floor of mouth captured, tongue space cleared</li>
+                                    </ul>
+                                    <p>Check occlusion</p>
+                                    <p>Hand articulate cases</p>
+                                    <p>Mark the occlusal overlap = incisal limit of the framework extension</p>
+                                    <p>Check tilt and tripod</p>
+                                    <p>Survey undercuts: tooth and soft tissue</p>
+                                    <h3>Design</h3>
+                                    <p>Pre-prosthetic treatment: exo, caries control, survey crowns, OH</p>
+                                    <p>Periodontal management</p>
+                                    <p>Surgical modifications as needed</p>
+                                    <p>Restorations, endodontic</p>
+                                    <p>Fixed prosthodontics</p>
+                                    <p>Removable prosthodontics</p>
+                                    <hr>
+                                        <h2>2nd Appointment: Mouth Preps; Secondary Impressions</h2>
+                                    <h3>Mouth Preps</h3>
+                                    <ul>
+                                        <li>Parallel guideplanes</li>
+                                        <li>Prepare rest seats</li>
+                                        <li>Create favorable undercuts for direct retainers</li>
+                                        <li>Recontour tipped or overerupted teeth which interfere with the occlusal plane</li>
+                                    </ul>
+
+                                    <h3>Secondary Impressions</h3>
+                                    <ul>
+                                        <li>Adjust fit of custom trays</li>
+                                        <li>(Border moulding for distal end saddle)</li>
+                                        <li>Apply Vector VP (vinyl polysiloxane) tray adhesive</li>
+                                        <li>Check design and indicate to DA the borders of PVS required</li>
+                                        <li>Set up – slow speed evacuation, dry teeth, retract lips. Clear bracket table of all instruments except mirror, light body PVS gun</li>
+                                        <li>Patient laid back</li>
+                                        <li>Ask DA to start loading medium body PVS and to indicate when they are loading halfway</li>
+                                        <li>Light body PVS over rest preps, guide planes, plating areas around tooth margins especially distal. Also place a blob outside tray to check when light body PVS has set</li>
+                                        <li>Seat tray. Sit patient up, check for overflowing PVS</li>
+                                        <li>Wait 4-5 minutes, remove impression by retracting lip to dislodge seal</li>
+                                        <li>Please construct master cast in high strength stone with 3mm land area.</li>
+                                        <li>Construct CoCr partial framework, as per design indicated on the study model, mandibular cast enclosed for occlusal examination.</li>
+                                        <li>Return framework for metal try-in. Provide wax bases</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>3rd Appointment: Metal Framework Try-In; Bite Registration (MIP/CR); Tooth Shade, Mould</h2>
+                                    <ul>
+                                        <li>Check rests sitting in the rest seat</li>
+                                        <li>Check major connector sitting against the tissues completely</li>
+                                        <li>Check for occlusal interferences with articulating paper</li>
+                                        <li>MIP/CR</li>
+                                        <li>Tooth shade and mould</li>
+                                        <li>Please articulate maxillary and mandibular cases casts with bite record provided. Do not reduce vertical dimension following articulation</li>
+                                        <li>Set up denture teeth shade ~, mould ~ for #</li>
+                                        <li>Return for wax tooth try-in</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>4th Appointment: Wax tooth try-in </h2>
+                                    <ul>
+                                        <strong>  <li>Aesthetics – tooth mould, shape, position </li>
+                                        <li>Bite position verified</li></strong>
+                                        <li>Recline pt chair back to help retrude mandible</li>
+                                        <li>Stabilize Md base with index fingers; thumbs under mandible = bimanual technique</li>
+                                        <li>Rehearse closing into CR</li>
+                                        <li>Have patient gently close into the compound just short of tooth contact</li>
+                                        <li>Please do not move the teeth.</li>
+                                        <li>Please finesse wax up in # region</li>
+                                        <li>Please process in 60:40 original and light pink acrylic</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>5th Appointment: Insert, Home Care Instructions</h2>
+                                    <ul>
+                                        <li>Check denture base areas and peripheral borders</li>
+                                        <li>Check for any acrylic in the guideplanes that may hinder seating</li>
+                                        <li>Check occlusion with articulating paper</li>
+                                        <li>Home care instructions</li>
+                                    </ul>
+                                    <hr>
+                                    <h2>6th Appointment: Review</h2>
+                                    <ul>
+                                        <li>Pt. presented to 4th Year Pros Clinic 5.1 for</li>
+                                        <ul>
+                                            <li>COVID-19 Level 1 Restriction (Mouth rinse for 30sec & verbal consent given)</li>
+                                            <li>3C’s confirmed (name, DOB, address)</li>
+                                            <li>Medical Hx confirmed</li>
+                                        </ul>
+                                        <li>RFV:</li>
+                                        <li>CC:</li>
+                                        <li>Hx of present complaint:</li>
+                                        <ul>
+                                            <li>Site, onset, character, radiation, alleviating factor, exacerbating factors, severity</li>
+                                        </ul>
+                                        <li>Provisional Dx:</li>
+                                        <li>Tx options discussed and presented to pt:</li>
+                                        <li>Tx elected by pt:</li>
+                                        <li>Extra comment:</li>
+                                        <li>Supervisor name:</li>
+                                        <li>N/V:</li>
+                                    </ul>
+                                </div>
 
 
                             </div>
@@ -5447,6 +5732,59 @@ Please use this as a guide only and always listen to your supervisors' instructi
                     console.log(JSON.stringify(contentToSave));
                 }
             }
+        function myNewNote() {
+            
+            var saveBut = document.getElementById('saveContent');
+            var saveName = document.getElementById('saveName');
+                saveName.value = new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
+            var contentcatselect = document.getElementById('contentcatselect');
+            var outcon = document.getElementById('generatedText');
+            var container = document.getElementById('checkboxes');
+            var inputs = container.querySelectorAll('input, select, textarea, button');
+
+            outcon.disabled = false;
+            saveBut.disabled = false;
+            saveName.disabled = false;
+            contentcatselect.disabled = false;
+            inputs.forEach(function (input) {
+                input.disabled = false;
+            });
+
+
+
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var textboxes = document.querySelectorAll('input[type="text"]');
+            var numberboxes = document.querySelectorAll('input[type="number"]');
+            var selectboxes = document.querySelectorAll('select');
+            var textareaboxes = document.querySelectorAll('textarea');
+            checkboxes.forEach(function(checkbox) {
+                if(checkbox.checked) {
+                    checkbox.click();
+                }
+            });
+            textboxes.forEach(function(textboxes) {
+                textboxes.value="";
+            });
+            numberboxes.forEach(function(numberboxes) {
+                numberboxes.value="";
+            });
+            textareaboxes.forEach(function(textareaboxes) {
+                textareaboxes.value="";
+            });
+            selectboxes.forEach(function(selectboxes) {
+                selectboxes.selectedIndex = 0;
+            });
+
+            finalizebool = false;
+            outcon.disabled = true;
+            saveBut.disabled = true;
+            saveName.disabled = true;
+            contentcatselect.disabled = true;
+            inputs.forEach(function (input) {
+                input.disabled = false;
+            });
+            
+            }
         function myGenerate() {
             document.getElementById('contentcat').classList.remove("d-none");
             document.getElementById('contentcat').classList.add("d-none");
@@ -5462,10 +5800,11 @@ Please use this as a guide only and always listen to your supervisors' instructi
             // Get the container element by ID
                 var saveBut = document.getElementById('saveContent');
                 var saveName = document.getElementById('saveName');
+                    saveName.value = new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
                 var contentcatselect = document.getElementById('contentcatselect');
                 var outcon = document.getElementById('generatedText');
                 var container = document.getElementById('checkboxes');
-                var inputs = container.querySelectorAll('input, select, textarea, button');
+                var inputs = container.querySelectorAll('input, select, textarea');
             if (finalizebool) {
 
                 outcon.disabled = false;
@@ -5641,6 +5980,9 @@ Please use this as a guide only and always listen to your supervisors' instructi
             }, false);
             Spry.$$("#button403").addEventListener('click', function (e) {
                 toggleSection('adayr41Section1')
+            }, false);
+            Spry.$$("#button4034").addEventListener('click', function (e) {
+                toggleSection('dentureguidessection')
             }, false);
 
             function getElementsWithClass(TEST) {
@@ -6238,7 +6580,9 @@ Please use this as a guide only and always listen to your supervisors' instructi
             });
 
 
-            addEventListener('change', generateText);
+            generatedText2.addEventListener('input', generateText);
+            generatedText1.addEventListener('input', generateText);
+
 
 
             // Function to generate text based on selected options
