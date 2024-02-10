@@ -11,7 +11,21 @@
        align-self: auto;
          
 }
-
+#app {
+    width: 100%;
+}
+#contentcat li.card {
+    list-style: none;
+}
+#contentcat ul {
+    padding: 0px;
+    margin: 0;
+}
+#contentcat li.card {
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0px;
+}
  #generatedText1 {
   width: 90%;
     height: 45%;
@@ -86,8 +100,49 @@
         
  }        
  .leftHolder {
-     width: 50%;
-}    
+    width: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+}
+#contentcat .accordion {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+    transition: 0.4s;
+    font-size: 0.938rem;
+    line-height: 2.0;
+    margin: 10px 0px;
+}
+
+
+#contentcat .active, #contentcat  .accordion:hover {
+  background-color: #3498db; 
+}
+#contentcat {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+}
+#contentcat .panel {
+  padding: 0 10px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
 #checkboxes {
     background-color: #fff;
     padding: 20px;
@@ -247,15 +302,15 @@
             flex-direction: column;
         }
         .actionButtonHolder {
-            width: 30%;
+            width: 45%;
             position: fixed;
         }
         #generatedText {
-            width: 30%;
+            width: 45%;
             height: 75%;
             resize: vertical;
             position: fixed;
-            top: 30%;
+            top: 300px;
         }
         .saveHolder {
             display: flex;
@@ -263,7 +318,7 @@
             position: relative;
         }
 .copyfi button {
-    flex: 0 0 45%;
+    flex: 0 0 49%;
 }
 .copybut {
      padding: 8px;
@@ -280,7 +335,7 @@ input#saveName {
 }
 .copyfi {
     display: flex;
-    gap: 10%;
+    gap: 2%;
     justify-content: space-between;
     align-items: center;
 }

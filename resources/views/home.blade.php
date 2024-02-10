@@ -4,7 +4,7 @@
 @endpush
 @section('content')
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8">
+        <div class="col-12">
             <div class="card">
                 <div class="card-header">
                     <h1>Clinic Notes Generator</h1>
@@ -14,8 +14,28 @@
                 <div class="card-body">
                     <div id="container">
                         <div class="leftHolder">
-                            <div id="contentcat">
+                            <button id="contentgenerate" onclick="myGenerate()">Generate</button>
+                            @auth
+                            <button id="contenthistory" onclick="myHistory()">History</button>
+                            <div id="contentcat" class="d-none">
+                                <hr>
+                                <button class="accordion">Category 1</button>
+                                <div class="panel">
+                                <ul>
+                                    <li class="card">Content 1</li>
+                                    <li class="card">Content 2</li>
+                                </ul>
+                                </div>
+
+                                <button class="accordion">Category 2</button>
+                                <div class="panel">
+                                <ul>
+                                    <li class="card">Content 1</li>
+                                    <li class="card">Content 2</li>
+                                </ul>
+                                </div>
                             </div>
+                            @endauth
                             <div id="checkboxes">
                                 <hr>
                                 <button class="toggle-button5" id="button1">DIAGNOSTIC SERVICES (0xx)</button>
@@ -5347,12 +5367,16 @@
 
 Please use this as a guide only and always listen to your supervisors' instructions."></textarea>
         <div class="actionButtonHolder">
-                                <div class="copyfi">
+                                <div class="copyfi mb-1">
                                     <button id="button" class="copybut" onclick="myFunction()">Copy Text</button>
                                     <button id="finalize" class="finalize" onclick="myFinalize()">Finalize</button>
                                 </div>
                                 @auth
                                 <div class="saveholder">
+                                        <select id="contentcatselect" disabled>
+                                            <option value="cat1">Category 1</option>
+                                            <option value="cat2">Category 2</option>
+                                        </select>
                                     <input type="text" id="saveName" placeholder="Enter save file name" disabled>
                                     <button id="saveContent" class="saveContent" onclick="mySave()" disabled>Save</button>
                                 </div>
@@ -5371,7 +5395,20 @@ Please use this as a guide only and always listen to your supervisors' instructi
     <script>
         var finalizebool = true;
         var contentToSave = "null";
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
         function getListOfIdsAndValues() {
             const datadiv = document.getElementById('checkboxes');
             const checkboxes = datadiv.querySelectorAll('input[type="checkbox"]');
@@ -5410,11 +5447,22 @@ Please use this as a guide only and always listen to your supervisors' instructi
                     console.log(JSON.stringify(contentToSave));
                 }
             }
+        function myGenerate() {
+            document.getElementById('contentcat').classList.remove("d-none");
+            document.getElementById('contentcat').classList.add("d-none");
+            document.getElementById('checkboxes').classList.remove("d-none");
+            }
+        function myHistory() {
+            document.getElementById('checkboxes').classList.remove("d-none");
+            document.getElementById('checkboxes').classList.add("d-none");
+            document.getElementById('contentcat').classList.remove("d-none");
+            }
         function myFinalize() {
             getListOfIdsAndValues();
             // Get the container element by ID
                 var saveBut = document.getElementById('saveContent');
                 var saveName = document.getElementById('saveName');
+                var contentcatselect = document.getElementById('contentcatselect');
                 var outcon = document.getElementById('generatedText');
                 var container = document.getElementById('checkboxes');
                 var inputs = container.querySelectorAll('input, select, textarea, button');
@@ -5426,6 +5474,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                 // Disable each input element
                 saveBut.disabled = false;
                 saveName.disabled = false;
+                contentcatselect.disabled = false;
                 inputs.forEach(function (input) {
                     input.disabled = true;
                 });
@@ -5436,6 +5485,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                 // Disable each input element
                 saveBut.disabled = true;
                 saveName.disabled = true;
+                contentcatselect.disabled = true;
                 inputs.forEach(function (input) {
                     input.disabled = false;
                 });
