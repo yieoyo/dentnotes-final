@@ -42,6 +42,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('users/{id}/delete', [App\Http\Controllers\UserController::class, 'forceDelete'])->name('user.forceDelete')->middleware(['role:admin']);
     Route::get('users/{id}/retrieve', [App\Http\Controllers\UserController::class, 'retrieveDeleted'])->name('user.retrieveDeleted')->middleware(['role:admin']);
 
-
+    Route::get('categories', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category.index')->middleware(['role:admin']);
+    Route::get('categories/create', [\App\Http\Controllers\CategoryController::class, 'create'])->name('category.create')->middleware(['role:admin']);
+    Route::get('categories/{uuid}/edit', [\App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit')->middleware(['role:admin']);
+    Route::post('categories/store', [\App\Http\Controllers\CategoryController::class, 'store'])->name('category.store')->middleware(['role:admin']);
+    Route::post('categories/{uuid}/update', [\App\Http\Controllers\CategoryController::class, 'update'])->name('category.update')->middleware(['role:admin']);
+    Route::post('categories/{uuid}/destroy', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy')->middleware(['role:admin']);
 });
 

@@ -13,8 +13,12 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::insert([
-            ['uuid' => str()->uuid(), 'name' => 'Default',],
-            ['uuid' => str()->uuid(), 'name' => 'Another Default',],
+            ['uuid' => str()->uuid(), 'name' => 'GDP', 'user_id' => 1,],
+            ['uuid' => str()->uuid(), 'name' => 'Pros', 'user_id' => 1,],
+            ['uuid' => str()->uuid(), 'name' => 'Perio', 'user_id' => 1,],
+            ['uuid' => str()->uuid(), 'name' => 'Endo', 'user_id' => 1,],
+            ['uuid' => str()->uuid(), 'name' => 'Oral Surg', 'user_id' => 1,],
+            ['uuid' => str()->uuid(), 'name' => 'Emergency', 'user_id' => 1,],
         ]);
     }
 }

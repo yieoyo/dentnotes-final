@@ -5,11 +5,11 @@
   width: 90%;
     height: 45%;
     resize:vertical;
-    
+
     position:relative; /* Change to fixed */
 
        align-self: auto;
-         
+
 }
 #app {
     width: 100%;
@@ -30,21 +30,21 @@
   width: 90%;
     height: 45%;
     resize:vertical;
-    
+
     position:relative; /* Change to fixed */
 
        align-self: auto;
-         
+
 }
  #generatedText2 {
   width: 90%;
     height: 45%;
     resize:vertical;
-    
+
     position:relative; /* Change to fixed */
 
        align-self: auto;
-         
+
 }
 
  body {
@@ -54,7 +54,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: 
+            background-color:
             color: #333;
       position: relative; /* Add this line */
         }
@@ -73,7 +73,7 @@
             width: 100%;
             max-width: 1200px;
             margin: 20px auto;
-			
+
         }
 
 
@@ -95,10 +95,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             position: relative;
-    
-    
-        
- }        
+
+
+
+ }
  .leftHolder {
     width: 50%;
     padding: 20px;
@@ -127,7 +127,7 @@
 
 
 #contentcat .active, #contentcat  .accordion:hover {
-  background-color: #3498db; 
+  background-color: #3498db;
 }
 #contentcat {
     background-color: #fff;
@@ -168,12 +168,12 @@
             padding: 2px;
             border-radius: 3px;
 			margin-bottom: 5px;
-			
+
             cursor: pointer;
-			 background-color: #F30000 
+			 background-color: #F30000
     	 cursor: pointer;
    		 width: 95%;
-			
+
         }
 		.toggle-button2 {
 			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
@@ -185,7 +185,7 @@
             padding: 2px;
             border-radius: 3px;
             cursor: pointer;
-			 background-color: #E64A4D 
+			 background-color: #E64A4D
     	 cursor: pointer;
 			margin-bottom: 5px;
    		 width: 95%;
@@ -196,10 +196,10 @@
         }
 		.toggle-button5 {
     background-color: #3498db; /* Updated color: A nice shade of blue */
-    
+
     font-weight: 400;
     color: white;
-   
+
     font-size: 0.938rem;
     line-height: 2.0;
     list-style:lower-latin
@@ -215,10 +215,10 @@
 }
 	.toggle-button56 {
     background-color: indianred; /* Updated color: A nice shade of blue */
-    
+
     font-weight: 400;
     color: white;
-   
+
     font-size: 0.938rem;
     line-height: 2.0;
     list-style:lower-latin
@@ -234,10 +234,10 @@
 }
 	.toggle-button567 {
     background-color: indianred; /* Updated color: A nice shade of blue */
-    
+
     font-weight: 400;
     color: white;
-   
+
     font-size: 0.938rem;
     line-height: 2.0;
     list-style:lower-latin
@@ -262,7 +262,7 @@
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
-         
+
         }
 
         input[type="checkbox"] {
@@ -275,10 +275,10 @@
             padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
-        
+
         }
        input[type="text1"] {
-            
+
      width: 35px;
         }
 
@@ -326,8 +326,8 @@
             border-radius: 4px;
             cursor: pointer;
 			font: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	
-        
+
+
 }
 input#saveName {
     flex: 1;
@@ -447,7 +447,7 @@ input#saveName {
             width: auto;
             border-collapse: collapse;
             margin-top: 20px;
-       
+
         }
 
         th, td, col {
@@ -469,16 +469,16 @@ input#saveName {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 			font: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
         position: absolute; /* Change from relative to fixed */
-      
-    
+
+
     left: 0; /* Add this line */
     right: 0; /* Add this line */
-    
+
 }
 
-   
 
-       
+
+
 #J54TextInput {
-    
+
 }

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid');
             $table->string('name');
-            $table->string('description')->nullable()->default('add some detail about this category.');
+            $table->foreignId('user_id')->default(1)->constrained();
             $table->timestamps();
         });
     }
