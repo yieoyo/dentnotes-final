@@ -70,6 +70,12 @@
                                             </a>
                                         @endif
                                     </div>
+
+                                    <div class="col-md-8 offset-md-4 mt-2">
+                                        <a href="{{ route('google.redirect') }}" class="btn btn-success">
+                                            Login with Google
+                                        </a>
+                                    </div>
                                 </div>
                             </form>
                         </div>
