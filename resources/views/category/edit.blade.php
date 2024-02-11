@@ -11,7 +11,7 @@
             <h5 class="card-title">Fill Information</h5>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('category.update', $category->uuid) }}">
+            <form method="POST" action="{{ route('category.update', $category->id) }}">
                 @csrf
 
                 <div class="row">
