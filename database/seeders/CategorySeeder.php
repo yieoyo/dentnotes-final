@@ -19,6 +19,8 @@ class CategorySeeder extends Seeder
             ['name' => 'Endo', 'user_id' => 1,],
             ['name' => 'Oral Surg', 'user_id' => 1,],
             ['name' => 'Emergency', 'user_id' => 1,],
+            ['name' => 'user cat', 'user_id' => 2,],
+            ['name' => 'user category', 'user_id' => 2,],
         ]);
     }
 }

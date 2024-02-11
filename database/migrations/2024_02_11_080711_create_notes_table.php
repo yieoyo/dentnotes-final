@@ -14,7 +14,6 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
-            $table->uuid('uuid')->default(Str::uuid());
             $table->string('name');
             $table->foreignId('user_id')->default(1)->constrained();
             $table->foreignId('category_id')->default(1)->constrained();

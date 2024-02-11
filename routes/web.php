@@ -48,5 +48,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('categories/store', [\App\Http\Controllers\CategoryController::class, 'store'])->name('category.store')->middleware(['role:admin']);
     Route::post('categories/{uuid}/update', [\App\Http\Controllers\CategoryController::class, 'update'])->name('category.update')->middleware(['role:admin']);
     Route::post('categories/{uuid}/destroy', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy')->middleware(['role:admin']);
+
+    Route::post('notes/show', [\App\Http\Controllers\NoteController::class, 'show'])->name('notes.show');
+    Route::post('notes/store', [\App\Http\Controllers\NoteController::class, 'store'])->name('notes.store');
+    Route::post('notes/update', [\App\Http\Controllers\NoteController::class, 'update'])->name('notes.update');
+    Route::post('notes/destroy', [\App\Http\Controllers\NoteController::class, 'destroy'])->name('notes.destroy');
 });
 

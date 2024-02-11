@@ -17,6 +17,9 @@ class NoteSeeder extends Seeder
             ['name' => 'lorel ipsum1', 'notes' => "We define sample data for th", 'user_id' => 1, 'category_id' => 2],
             ['name' => 'lorel ipsum2', 'notes' => "We define sample data for th", 'user_id' => 1, 'category_id' => 3],
             ['name' => 'lorel ipsum3', 'notes' => "We define sample data for th", 'user_id' => 1, 'category_id' => 4],
+            ['name' => 'lorel ipsum3', 'notes' => "We define sample data for th", 'user_id' => 1, 'category_id' => 4],
+            ['name' => 'lorel ipsum3', 'notes' => "We define sample data for th", 'user_id' => 2, 'category_id' => 4],
+            ['name' => 'lorel ipsum3', 'notes' => "We define sample data for th", 'user_id' => 2, 'category_id' => 4],
         ]);
     }
 }
