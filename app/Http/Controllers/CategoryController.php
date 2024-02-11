@@ -59,9 +59,9 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $uuid): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
+    public function edit(int $id): \Illuminate\Contracts\View\Factory|\Illuminate\Foundation\Application|\Illuminate\Contracts\View\View|\Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse
     {
-        $category = Category::where('uuid', $uuid)->first();
+        $category = Category::where('id', $id)->first();
         if($category){
             return view('category.edit', compact('category'));
         }
@@ -71,9 +71,9 @@ class CategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(CategoryRequest $request,string $uuid): \Illuminate\Http\RedirectResponse
+    public function update(CategoryRequest $request, int $id): \Illuminate\Http\RedirectResponse
     {
-        $category = Category::where('uuid', $uuid)->first();
+        $category = Category::where('id', $id)->first();
         if($category){
             if($category->update(['name' => $request->input('name')])){
                 return redirect()->back()->with('success', 'Successfully updated category!');
@@ -87,9 +87,9 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $uuid): \Illuminate\Http\RedirectResponse
+    public function destroy(int $id): \Illuminate\Http\RedirectResponse
     {
-        $category = Category::where('uuid', $uuid)->first();
+        $category = Category::where('id', $id)->first();
         if($category){
             if($category->delete()){
                 return redirect()->back()->with('success', 'Successfully deleted category!');
