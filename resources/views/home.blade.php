@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @push('styles')
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
 @endpush
 @section('content')
     <div class="row justify-content-center">
@@ -8,7 +9,8 @@
             <div class="card">
                 <div class="card-header">
                     <h1>Clinic Notes Generator</h1>
-                    <span class="">Please note: Website still under development and not all sections are functional</span>
+                    <span
+                        class="">Please note: Website still under development and not all sections are functional</span>
                 </div>
 
                 <div class="card-body">
@@ -17,31 +19,29 @@
                             <button id="contentgenerate" onclick="myGenerate()">Generate</button>
                             <button id="newnote" onclick="myNewNote()">New Note</button>
                             @auth
-                            <button id="contenthistory" onclick="myHistory()">History</button>
-                            <div id="contentcat" class="d-none">
-                                <hr>
-                                <button class="accordion">Category 1</button>
-                                <div class="panel">
-                                <ul>
-                                    <li class="card">Content 1</li>
-                                    <li class="card">Content 2</li>
-                                </ul>
-                                </div>
+                                <button id="contenthistory" onclick="myHistory()">History</button>
+                                <div id="contentcat" class="d-none">
+                                    <hr>
+                                    @foreach($notesByCategory as $key=>$noteCategory)
+                                        <button class="accordion">{{ $key }}</button>
+                                        <div class="panel">
+                                            <ul>
+                                                @foreach($noteCategory as $key=>$notes)
+                                                <li class="card" data-note_id="{{ $notes['id'] }}">{{ $notes['name'] }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endforeach
 
-                                <button class="accordion">Category 2</button>
-                                <div class="panel">
-                                <ul>
-                                    <li class="card">Content 1</li>
-                                    <li class="card">Content 2</li>
-                                </ul>
+
                                 </div>
-                            </div>
                             @endauth
                             <div id="checkboxes">
                                 <hr>
                                 <button class="toggle-button5" id="button1">DIAGNOSTIC SERVICES (0xx)</button>
                                 <div id="dxSection1" class="section">
-                                    <button class="toggle-button" id="button2">011 Comprehensive oral examination</button>
+                                    <button class="toggle-button" id="button2">011 Comprehensive oral examination
+                                    </button>
                                     <input type="Checkbox" id="B100Checkbox" class="TEST">
                                     <div id="011Section1" class="section">
                                         <input type="Checkbox" id="ptCheckbox" class="TEST">
@@ -82,7 +82,8 @@
                                         <br>
                                         <input type="Checkbox" id="c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -109,31 +110,38 @@
                                         <br>
                                         <input type="Checkbox" id="B30Checkbox" class="TEST" checked hidden="">
                                         Site:
-                                        <input type="text" id="B30TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B30TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B31Checkbox" class="TEST" checked hidden="">
                                         Onset
-                                        <input type="text" id="B31TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B31TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B32Checkbox" class="TEST" checked hidden="">
                                         Character
-                                        <input type="text" id="B32TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B32TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B33Checkbox" class="TEST" checked hidden="">
                                         Radiation
-                                        <input type="text" id="B33TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B33TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B34Checkbox" class="TEST" checked hidden="">
                                         Alleviating factor
-                                        <input type="text" id="B34TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B34TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B35Checkbox" class="TEST" checked hidden="">
                                         Exacerbating factors
-                                        <input type="text" id="B35TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B35TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B36Checkbox" class="TEST" checked hidden="">
                                         Severity
-                                        <input type="text" id="B36TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B36TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <br>
@@ -182,107 +190,129 @@
                                         <br>
                                         <input type="Checkbox" id="B18CCheckbox" class="TEST" checked hidden="">
                                         Main Findings:
-                                        <input type="text" id="B18CTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B18CTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="BWCheckbox" class="TEST" hidden="">
                                         <strong>BW taken</strong> <br>
                                         <input type="Checkbox" id="BW1Checkbox" class="TEST" checked hidden="">
                                         Interproximal caries:
-                                        <input type="text" id="BW1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="BW1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="BW2Checkbox" class="TEST" checked hidden="">
                                         Occlusal caries:
-                                        <input type="text" id="BW2TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="BW2TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="BW3Checkbox" class="TEST" checked hidden="">
                                         Secondary caries:
-                                        <input type="text" id="BW3TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="BW3TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="BW4Checkbox" class="TEST" checked hidden="">
                                         Bone level:
-                                        <input type="text" id="BW4TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="BW4TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="BW5Checkbox" class="TEST" checked hidden="">
                                         Calculus:
-                                        <input type="text" id="BW5TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="BW5TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="BW6Checkbox" class="TEST" checked hidden="">
                                         Restoration:
-                                        <input type="text" id="BW6TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="BW6TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="opgCheckbox" class="TEST" hidden="">
                                         <strong>OPG taken</strong> <br>
                                         <input type="Checkbox" id="opg1Checkbox" class="TEST" checked hidden="">
                                         Missing teeth:
-                                        <input type="text" id="opg1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="opg2Checkbox" class="TEST" checked hidden="">
                                         8’s:
-                                        <input type="text" id="opg2TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg2TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="opg3Checkbox" class="TEST" checked hidden="">
                                         Caries:
-                                        <input type="text" id="opg3TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg3TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         : <br>
                                         <input type="Checkbox" id="opg4Checkbox" class="TEST" checked hidden="">
                                         Restoration/dental work:
-                                        <input type="text" id="opg4TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg4TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="opg5Checkbox" class="TEST" checked hidden="">
                                         Bone level:
-                                        <input type="text" id="opg5TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg5TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="opg6Checkbox" class="TEST" checked hidden="">
                                         Mx sinus:
-                                        <input type="text" id="opg6TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg6TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="opg7Checkbox" class="TEST" checked hidden="">
                                         Condyles
-                                        <input type="text" id="opg7TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg7TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="opg8Checkbox" class="TEST" checked hidden="">
                                         Ghost images:
-                                        <input type="text" id="opg8TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="opg8TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="B18Checkbox" class="TEST" checked hidden="">
                                         Provisional Tx:
-                                        <input type="text" id="B18TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B18TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <strong>Tx options discussed and presented to pt: </strong>
                                         <input type="Checkbox" id="B25Checkbox" class="TEST" hidden="">
                                         <br>
                                         <input type="Checkbox" id="B19Checkbox" class="TEST" checked hidden="">
                                         -Systemic phase:
-                                        <input type="text" id="B19TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B19TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B20Checkbox" class="TEST" checked hidden="">
                                         -Acute phase
-                                        <input type="text" id="B20TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B20TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B21Checkbox" class="TEST" checked hidden="">
                                         -Disease control:
-                                        <input type="text" id="B21TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B21TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B22Checkbox" class="TEST" checked hidden="">
                                         -Definitive phase:
-                                        <input type="text" id="B22TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B22TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B23Checkbox" class="TEST" checked hidden="">
                                         Maintenance phase:
-                                        <input type="text" id="B23TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B23TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="B24Checkbox" class="TEST" checked hidden="">
                                         Extra comment:
-                                        <input type="text" id="B24TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="B24TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="supervisorCheckbox" class="TEST">
                                         Supervisor: Dr
                                         <input type="text" id="supervisornameTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="nvCheckbox" class="TEST">
                                         N/V:
@@ -292,18 +322,20 @@
                                         Patient placed on general waitlist and seperated
                                         OR
                                         <input type="text" id="waitlistTextInput" class="TEST" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <hr>
                                     </div>
 
                                     <hr>
                                 </div>
-                                <button class="toggle-button5" id="button6">PREVENTIVE, PROPHYLACTIC & BLEACHING SERVICES
+                                <button class="toggle-button5" id="button6">PREVENTIVE, PROPHYLACTIC & BLEACHING
+                                    SERVICES
                                     (1xx)
                                 </button>
                                 <br>
                                 <div id="ppSection" class="section">
-                                    <button class="toggle-button" id="button7">114 Removal of calculus – first appointment
+                                    <button class="toggle-button" id="button7">114 Removal of calculus – first
+                                        appointment
                                     </button>
                                     <input type="Checkbox" id="selectSpecificSCCheckbox" class="TEST">
                                     <br>
@@ -345,13 +377,16 @@
                                             <option value="Consult">Consult</option>
                                         </select>
                                         OR
-                                        <input type="text" id="sc1A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="sc1A1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="sc1c3sCheckbox" class="TEST"> 3C’s confirmed
-                                        <input type="text" id="sc1c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="sc1c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
 
-                                        <input type="Checkbox" id="sc1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen
+                                        <input type="Checkbox" id="sc1colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen
                                         Peroxide Mouth rinse
                                         given. <br>
 
@@ -364,7 +399,8 @@
 
 
                                         <input type="Checkbox" id="consentsCheckbox" class="TEST">
-                                        Pt consents to S/C – informed of risks bleeding, post op sensitivity, natural gaps
+                                        Pt consents to S/C – informed of risks bleeding, post op sensitivity, natural
+                                        gaps
                                         between teeth <br>
                                         <input type="Checkbox" id="debridementCheckbox" class="TEST">
                                         Debridement of all quadrants using ultrasonic scaler <br>
@@ -375,13 +411,16 @@
                                         <input type="Checkbox" id="ohiCheckbox" class="TEST">
                                         OHI provided <br><br>
 
-                                        <input type="Checkbox" id="sc1G22Checkbox" class="TEST"> Pt well on discharge <br>
+                                        <input type="Checkbox" id="sc1G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
                                         <input type="Checkbox" id="sc1supervisorCheckbox"> Supervisor: Dr
-                                        <input type="text" id="sc1supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="sc1supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
 
                                         <input type="Checkbox" id="sc1nvCheckbox" class="TEST"> N/V:
-                                        <input type="text" id="sc1nvTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="sc1nvTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                     </div>
                                     <button class="toggle-button" id="button8">Enamel micro-abrasion – per tooth (tooth
@@ -436,10 +475,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="perio1A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="perio1c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="perio1c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="perio1colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -495,7 +534,8 @@
 
                                         <input type="Checkbox" id="P8Checkbox" class="TEST" checked hidden="">
                                         Smoking Hx:
-                                        <input type="text" id="P8aTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="P8aTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
 
                                         <input type="Checkbox" id="P9Checkbox" class="TEST" checked hidden="">
@@ -559,32 +599,39 @@
                                             <tr>
                                                 <td>Radiographic Bone loss</td>
 
-                                                <td><input type="Checkbox" id="P105Checkbox" class="TEST"> Coronal Third (<
+                                                <td><input type="Checkbox" id="P105Checkbox" class="TEST"> Coronal Third
+                                                    (<
                                                     15%)
                                                 </td>
-                                                <td><input type="Checkbox" id="P106Checkbox" class="TEST"> Coronal Third (15
+                                                <td><input type="Checkbox" id="P106Checkbox" class="TEST"> Coronal Third
+                                                    (15
                                                     – 33 %)
                                                 </td>
-                                                <td><input type="Checkbox" id="P107Checkbox" class="TEST"> Extending to the
+                                                <td><input type="Checkbox" id="P107Checkbox" class="TEST"> Extending to
+                                                    the
                                                     mid third of the root and
                                                     beyond.
                                                 </td>
-                                                <td><input type="Checkbox" id="P108Checkbox" class="TEST"> Extending to the
+                                                <td><input type="Checkbox" id="P108Checkbox" class="TEST"> Extending to
+                                                    the
                                                     mid third of the root and
                                                     beyond.
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Periodontitis-associated tooth loss</td>
-                                                <td colspan="2"><input type="Checkbox" id="P109Checkbox" class="TEST"> No
+                                                <td colspan="2"><input type="Checkbox" id="P109Checkbox" class="TEST">
+                                                    No
                                                     tooth loss due to
                                                     Periodontitis.
                                                 </td>
-                                                <td><input type="Checkbox" id="P110Checkbox" class="TEST">Tooth loss due to
+                                                <td><input type="Checkbox" id="P110Checkbox" class="TEST">Tooth loss due
+                                                    to
                                                     Periodontitis of ≤ 4
                                                     teeth.
                                                 </td>
-                                                <td><input type="Checkbox" id="P111Checkbox" class="TEST"> Tooth loss due to
+                                                <td><input type="Checkbox" id="P111Checkbox" class="TEST"> Tooth loss
+                                                    due to
                                                     Periodontitis of ≥ 5
                                                     teeth.
                                                 </td>
@@ -598,13 +645,15 @@
                                                 </td>
                                                 <td> Maximum probing depth ≤ 4mm. Mostly horizontal bone loss.</td>
                                                 <td> Maximum probing depth ≤ 5mm. Mostly horizontal bone loss.</td>
-                                                <td> In addition to stage II complexity; probing depth ≥ 6mm, vertical bone
+                                                <td> In addition to stage II complexity; probing depth ≥ 6mm, vertical
+                                                    bone
                                                     loss ≥ 3mm, furcation
                                                     involvement (class II or III), moderate ridge defects.
                                                 </td>
                                                 <td> In addition to Stage III complexity; Need for comprehensive
                                                     rehabilitation due to secondary
-                                                    occlusal trauma (mobility ≥ 2), bite collapse, drifting, flaring, less
+                                                    occlusal trauma (mobility ≥ 2), bite collapse, drifting, flaring,
+                                                    less
                                                     than 10 opposing pairs of
                                                     teeth, masticatory dysfunction, severe ridge defects.
                                                 </td>
@@ -627,10 +676,12 @@
                                                     <input type="Checkbox" id="P15Checkbox" class="TEST">
                                                     RBL pattern:
                                                     <select id="P15Dropdown" class="TEST">
-                                                        <option value="Mostly horizontal RBL (Stage I/II)">Mostly horizontal
+                                                        <option value="Mostly horizontal RBL (Stage I/II)">Mostly
+                                                            horizontal
                                                             RBL (Stage I/II)
                                                         </option>
-                                                        <option value="Vertical bone loss ≥3mm (Stage III/IV)">Vertical bone
+                                                        <option value="Vertical bone loss ≥3mm (Stage III/IV)">Vertical
+                                                            bone
                                                             loss ≥3mm (Stage III/IV)
                                                         </option>
                                                     </select>
@@ -642,7 +693,8 @@
                                                     <select id="P16Dropdown" class="TEST">
                                                         <option value="None">None</option>
                                                         <option value="Class II">Class II</option>
-                                                        <option value="Class III (Stage III/IV) w moderate ridge defects">
+                                                        <option
+                                                            value="Class III (Stage III/IV) w moderate ridge defects">
                                                             Class III (Stage III/IV) w
                                                             moderate ridge defects
                                                         </option>
@@ -654,16 +706,18 @@
                                                     Ridge defects:
                                                     <select id="P17Dropdown" class="TEST">
                                                         <option value="None">None</option>
-                                                        <option value="Moderate (Stage III)">Moderate (Stage III)</option>
+                                                        <option value="Moderate (Stage III)">Moderate (Stage III)
+                                                        </option>
                                                         <option value="Severe (Stage IV)">Severe (Stage IV)</option>
                                                     </select>
                                                     <br>
 
                                                     <!-- P18 -->
-                                                    <input type="Checkbox" id="P18Checkbox" class="TEST" checked hidden="">
+                                                    <input type="Checkbox" id="P18Checkbox" class="TEST" checked
+                                                           hidden="">
                                                     Addition (Stage IV):
                                                     <input type="text" id="P18TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br><br>
 
 
@@ -676,14 +730,16 @@
                                             <tr>
                                                 <td>Extent & Distribution</td>
                                                 <td>Add to stage as descriptor</td>
-                                                <td colspan="3">For each stage, describe extent as localised (< 30% of teeth
+                                                <td colspan="3">For each stage, describe extent as localised (< 30% of
+                                                    teeth
                                                     involved) or generalised,
                                                     or molar/incisor pattern. <input type="Checkbox" id="P19Checkbox"
-                                                                                    class="TEST">
+                                                                                     class="TEST">
                                                     <select id="P19Dropdown" class="TEST">
                                                         <option value="Localized">Localized</option>
                                                         <option value="Generalized">Generalized</option>
-                                                        <option value="Molar/incisor pattern">Molar/incisor pattern</option>
+                                                        <option value="Molar/incisor pattern">Molar/incisor pattern
+                                                        </option>
                                                     </select></td>
 
                                             </tr>
@@ -725,13 +781,16 @@
                                             <tr>
                                                 <th>Direct Evidence of Progression</th>
                                                 <th>Longitudinal Data (radiographic bone loss or CAL)</th>
-                                                <td><input type="Checkbox" id="P116Checkbox" class="TEST"> Evidence of no
+                                                <td><input type="Checkbox" id="P116Checkbox" class="TEST"> Evidence of
+                                                    no
                                                     loss over 5 years.
                                                 </td>
-                                                <td><input type="Checkbox" id="P117Checkbox" class="TEST"> &lt;2mm over 5
+                                                <td><input type="Checkbox" id="P117Checkbox" class="TEST"> &lt;2mm over
+                                                    5
                                                     years.
                                                 </td>
-                                                <td><input type="Checkbox" id="P118Checkbox" class="TEST"> &ge; 2mm over 5
+                                                <td><input type="Checkbox" id="P118Checkbox" class="TEST"> &ge; 2mm over
+                                                    5
                                                     years.
                                                 </td>
                                             </tr>
@@ -740,7 +799,8 @@
                                                 <th rowspan="2">Indirect Evidence of Progression</th>
                                                 <th>Percent (%) of Progression (bone loss/age)</th>
                                                 <td><input type="Checkbox" id="P119Checkbox" class="TEST"> &lt;0.25</td>
-                                                <td><input type="Checkbox" id="P120Checkbox" class="TEST"> 0.25 – 1.0</td>
+                                                <td><input type="Checkbox" id="P120Checkbox" class="TEST"> 0.25 – 1.0
+                                                </td>
                                                 <td><input type="Checkbox" id="P121Checkbox" class="TEST"> &gt;1.0</td>
                                             </tr>
                                             <tr>
@@ -755,7 +815,8 @@
                                                 </td>
                                                 <td><input type="Checkbox" id="P124Checkbox" class="TEST"> Destruction
                                                     disproportionate to biofilm
-                                                    deposits; evidence of periods of rapid progression and/or early-onset
+                                                    deposits; evidence of periods of rapid progression and/or
+                                                    early-onset
                                                     disease (molar/incisor
                                                     pattern); expected poor response to standard bacterial control.
                                                 </td>
@@ -773,8 +834,10 @@
 
                                                 <th rowspan="2">Risk Factors</th>
                                                 <th>Smoking</th>
-                                                <td><input type="Checkbox" id="P125Checkbox" class="TEST"> Non-smoker</td>
-                                                <td><input type="Checkbox" id="P126Checkbox" class="TEST"> Smoker &lt; 10
+                                                <td><input type="Checkbox" id="P125Checkbox" class="TEST"> Non-smoker
+                                                </td>
+                                                <td><input type="Checkbox" id="P126Checkbox" class="TEST"> Smoker &lt;
+                                                    10
                                                     cigarettes/day
                                                 </td>
                                                 <td><input type="Checkbox" id="P127Checkbox" class="TEST"> Smoker &ge;10
@@ -783,13 +846,16 @@
                                             </tr>
                                             <tr>
                                                 <th>Diabetes</th>
-                                                <td><input type="Checkbox" id="P128Checkbox" class="TEST"> Normoglycemic /
+                                                <td><input type="Checkbox" id="P128Checkbox" class="TEST"> Normoglycemic
+                                                    /
                                                     no diagnosis of Diabetes
                                                 </td>
-                                                <td><input type="Checkbox" id="P129Checkbox" class="TEST"> HbA1c &lt; 7.0%
+                                                <td><input type="Checkbox" id="P129Checkbox" class="TEST"> HbA1c &lt;
+                                                    7.0%
                                                     in a Diabetes Patient
                                                 </td>
-                                                <td><input type="Checkbox" id="P130Checkbox" class="TEST"> HbA1c &ge; 7.0 %
+                                                <td><input type="Checkbox" id="P130Checkbox" class="TEST"> HbA1c &ge;
+                                                    7.0 %
                                                     in a Diabetes Patient
                                                 </td>
                                             </tr>
@@ -826,15 +892,16 @@
                                         <br>
                                         <input type="Checkbox" id="perio1supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="perio1supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="perio1nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="perio1nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
 
                                     </div>
-                                    <button class="toggle-button" id="button11">250 Active non-surgical periodontal therapy
+                                    <button class="toggle-button" id="button11">250 Active non-surgical periodontal
+                                        therapy
                                         - per
                                         quadrant
                                     </button>
@@ -878,10 +945,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="perio2A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="perio2c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="perio2c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="perio2colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -967,11 +1034,11 @@
                                         <br>
                                         <input type="Checkbox" id="perio2supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="perio2supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="perio2nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="perio2nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                     </div>
 
 
@@ -1019,12 +1086,13 @@
                                         </select>
                                         OR
                                         <input type="text" id="surg1A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="surg1c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="surg1c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
-                                        <input type="Checkbox" id="surg1colgateCheckbox" class="TEST"> Colgate 1.5% Hydrogen
+                                        <input type="Checkbox" id="surg1colgateCheckbox" class="TEST"> Colgate 1.5%
+                                        Hydrogen
                                         Peroxide Mouth rinse
                                         given. <br>
 
@@ -1040,24 +1108,25 @@
                                         Tooth of interest:
 
                                         <input type="text" id="o1TextInput3" class="TEST"
-                                            placeholder="Enter details..."><br><br>
+                                               placeholder="Enter details..."><br><br>
 
 
                                         <input type="Checkbox" id="o1Checkbox3A" class="TEST" checked hidden="">
                                         RADIOGRAPHIC FINDINGS
                                         <input type="text" id="o1TextInput3A" class="TEST"
-                                            placeholder="Enter details..."><br>
+                                               placeholder="Enter details..."><br>
 
 
                                         <input type="Checkbox" id="o1Checkbox4" class="TEST" checked hidden="">
                                         CLINICAL EXAMINATION
 
                                         <input type="text" id="o1TextInput4" class="TEST"
-                                            placeholder="Enter details..."><br><br>
+                                               placeholder="Enter details..."><br><br>
 
 
                                         <input type="Checkbox" id="o1Checkbox5" class="TEST">
-                                        Pt informed of the risks & complications of the procedure including damage to soft
+                                        Pt informed of the risks & complications of the procedure including damage to
+                                        soft
                                         tissue, adjacent teeth,
                                         infection, bleeding, swelling, dry socket, numbness & pain. Tooth replacement
                                         options discussed & pt
@@ -1125,19 +1194,22 @@
                                         <br><br>
 
 
-                                        <input type="Checkbox" id="surg1G22Checkbox" class="TEST"> Pt well on discharge <br>
+                                        <input type="Checkbox" id="surg1G22Checkbox" class="TEST"> Pt well on discharge
+                                        <br>
                                         <input type="Checkbox" id="surg1supervisorCheckbox"> Supervisor: Dr
-                                        <input type="text" id="surg1supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="surg1supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
 
                                         <input type="Checkbox" id="surg1nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="surg1nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
 
                                     </div>
 
-                                    <button class="toggle-button2" id="button166">ORAL SURGERY POST-OPERATIVE INSTRUCTIONS
+                                    <button class="toggle-button2" id="button166">ORAL SURGERY POST-OPERATIVE
+                                        INSTRUCTIONS
                                     </button>
 
 
@@ -1154,17 +1226,20 @@
                                                 <td>Immediately</td>
                                                 <td>
                                                     <ol>
-                                                        <li><strong>Numbness:</strong> Avoid eating for the next few hours
+                                                        <li><strong>Numbness:</strong> Avoid eating for the next few
+                                                            hours
                                                             until the numbness has worn off
                                                             to avoid biting & burning yourself.
                                                         </li>
                                                         <li><strong>Pain:</strong> You can expect some pain because the
                                                             tissue has been disturbed during the
-                                                            treatment. Control pain by taking paracetamol (if no allergy)
+                                                            treatment. Control pain by taking paracetamol (if no
+                                                            allergy)
                                                             and/or ibuprofen. Call the clinic if
                                                             pain persists.
                                                         </li>
-                                                        <li><strong>Bleeding:</strong> There may be some bleeding enough to
+                                                        <li><strong>Bleeding:</strong> There may be some bleeding enough
+                                                            to
                                                             discolor your saliva for a few
                                                             hours. Apply a clean gauze (do not use tissue) & keep it in
                                                             place by applying pressure firmly by
@@ -1172,7 +1247,8 @@
                                                         </li>
                                                         <li><strong>Swelling:</strong> Some swelling or difficulty in
                                                             opening the mouth is common & should
-                                                            subside after 1-2 days. Use an ice pack on the outside of the
+                                                            subside after 1-2 days. Use an ice pack on the outside of
+                                                            the
                                                             face wrapped in a cloth to reduce
                                                             facial swelling.
                                                         </li>
@@ -1187,12 +1263,15 @@
                                                             (may increase the risk of
                                                             bleeding).
                                                         </li>
-                                                        <li>Try to keep your head elevated when lying down (decreases the
+                                                        <li>Try to keep your head elevated when lying down (decreases
+                                                            the
                                                             risk of bleeding).
                                                         </li>
-                                                        <li>Start with soft food (i.e. scrambled eggs, finely chopped meat
+                                                        <li>Start with soft food (i.e. scrambled eggs, finely chopped
+                                                            meat
                                                             or cheese, milk, soup or fruit
-                                                            juice) & chew on the opposite side of the mouth to the wound.
+                                                            juice) & chew on the opposite side of the mouth to the
+                                                            wound.
                                                         </li>
                                                         <li>Important to maintain good oral hygiene as usual (to prevent
                                                             infection) but avoid disturbing the
@@ -1207,15 +1286,18 @@
                                                 <td>After 24h & throughout healing (up to a week)</td>
                                                 <td>
                                                     <ol>
-                                                        <li>You can start rinsing your mouth gently, especially after meals,
+                                                        <li>You can start rinsing your mouth gently, especially after
+                                                            meals,
                                                             with ½ teaspoon of table salt
                                                             in a glass of lukewarm water.
                                                         </li>
-                                                        <li>Avoid disturbing the blood clot by creating too much pressure
+                                                        <li>Avoid disturbing the blood clot by creating too much
+                                                            pressure
                                                             (using a straw or smoking) or with
                                                             objects.
                                                         </li>
-                                                        <li>If swelling persists, use a warm pack on the outside of the face
+                                                        <li>If swelling persists, use a warm pack on the outside of the
+                                                            face
                                                             wrapped in a cloth to promote
                                                             healing.
                                                         </li>
@@ -1271,12 +1353,12 @@
                                         </select>
                                         OR
                                         <input type="text" id="endo1A1TextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo1c3sCheckbox" class="TEST">
                                         3C’s confirmed
                                         <input type="text" id="endo1c3sTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo1colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -1352,11 +1434,11 @@
                                             <tr>
                                                 <th>Tests</th>
                                                 <th><input type="text1" id="E11TextInput" class="TEST"
-                                                        placeholder="Tooth #"></th>
+                                                           placeholder="Tooth #"></th>
                                                 <th><input type="text1" id="E11BTextInput" class="TEST"
-                                                        placeholder="Tooth #"></th>
+                                                           placeholder="Tooth #"></th>
                                                 <th><input type="text1" id="E11CTextInput" class="TEST"
-                                                        placeholder="Tooth #"></th>
+                                                           placeholder="Tooth #"></th>
                                             </tr>
 
 
@@ -1580,7 +1662,8 @@
                                         <br>
                                         <input type="Checkbox" id="E17Checkbox" class="TEST" checked hidden="">Abnormal
                                         Probing:
-                                        <input type="text" id="E17TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="E17TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="E18Checkbox" class="TEST">
@@ -1626,7 +1709,8 @@
                                             </option>
                                             <option value="RCT w direct/indirect restoration">RCT w indirect restoration
                                             </option>
-                                            <option value="> Extraction w removable/fixed prothesis">> Extraction w fixed
+                                            <option value="> Extraction w removable/fixed prothesis">> Extraction w
+                                                fixed
                                                 prothesis
                                             </option>
                                             <option value="> Extraction w removable/fixed prothesis">> Extraction w
@@ -1636,11 +1720,13 @@
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="E22Checkbox" class="TEST">
-                                        Advantages & disadvantages of each Tx option were discussed with patient, written
+                                        Advantages & disadvantages of each Tx option were discussed with patient,
+                                        written
                                         information sheets
                                         provided. <br>
                                         <input type="Checkbox" id="E23Checkbox" class="TEST">
-                                        The patient understood the advantages, risks, as well as the cost involved in RCT,
+                                        The patient understood the advantages, risks, as well as the cost involved in
+                                        RCT,
                                         including the need for
                                         multiple visits, and consented for RCT. <br>
                                         <br>
@@ -1674,7 +1760,8 @@
                                         <input type="Checkbox" id="E27Checkbox" class="TEST">
                                         Pt understood that the type of final restoration recommended after RCT will be
                                         determined by the amount of
-                                        tooth structure remaining after removal of existing restoration & caries & that a
+                                        tooth structure remaining after removal of existing restoration & caries & that
+                                        a
                                         post may be indicated to
                                         retain the core. <br>
                                         <br>
@@ -1684,12 +1771,13 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="endo1supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="endo1supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="endo1supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo1nvCheckbox" class="TEST">
                                         N/V:
                                         <input type="text" id="endo1nvTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                     </div>
                                     <br>
@@ -1734,12 +1822,12 @@
                                         </select>
                                         OR
                                         <input type="text" id="endo2A1TextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo2c3sCheckbox" class="TEST">
                                         3C’s confirmed
                                         <input type="text" id="endo2c3sTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo2colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -1753,7 +1841,8 @@
 
                                         <br><br>
                                         <input type="Checkbox" id="E40Checkbox" class="TEST">
-                                        Pt informed of the risks & complications of the procedure & an informed consent for
+                                        Pt informed of the risks & complications of the procedure & an informed consent
+                                        for
                                         tx was obtained.
                                         <br>
                                         <input type="Checkbox" id="E41Checkbox" class="TEST">
@@ -1786,31 +1875,39 @@
                                         <input type="Checkbox" id="E43Checkbox" class="TEST">
                                         Isolation
                                         <select id="E43Dropdown" class="TEST">
-                                            <option value="Moisture control achieved through dental dam">Dental Dam</option>
+                                            <option value="Moisture control achieved through dental dam">Dental Dam
+                                            </option>
                                             <option value="Cotton rolls isolation used">Cotton Rolls</option>
                                             <option value="Dry tips isolation used">Dry Tips</option>
                                         </select>
                                         <br><br>
                                         <input type="Checkbox" id="E44Checkbox" class="TEST">
-                                        Cavity prepared using HS and SS, previous restoration removed/caries free. Exposed
+                                        Cavity prepared using HS and SS, previous restoration removed/caries free.
+                                        Exposed
                                         pulp reveals
                                         <select id="E44Dropdown" class="TEST">
-                                            <option value="hemorrhagic inflamed pulp"> hemorrhagic inflamed pulp</option>
+                                            <option value="hemorrhagic inflamed pulp"> hemorrhagic inflamed pulp
+                                            </option>
                                             <option value="necrotic pulp">necrotic pulp</option>
                                         </select>
                                         <br>
-                                        <input type="Checkbox" id="E45Checkbox" class="TEST">Pulp amputation was performed
+                                        <input type="Checkbox" id="E45Checkbox" class="TEST">Pulp amputation was
+                                        performed
                                         using S/S #8 large round
-                                        bur. Canal orifice(s) were visually inspected to ensure complete removal of the pulp
+                                        bur. Canal orifice(s) were visually inspected to ensure complete removal of the
+                                        pulp
                                         tissue.
                                         <br>
-                                        <br> <input type="Checkbox" id="E46Checkbox" class="TEST">Disinfection & hemostatis
+                                        <br> <input type="Checkbox" id="E46Checkbox" class="TEST">Disinfection &
+                                        hemostatis
                                         was achieved by
-                                        compression of sterile cotton pellets soaked in 2% sodium hypochlorite over the pulp
+                                        compression of sterile cotton pellets soaked in 2% sodium hypochlorite over the
+                                        pulp
                                         stump(s) using gentle
                                         pressure for 2-5mins.
                                         <br>
-                                        <input type="Checkbox" id="E47Checkbox" class="TEST"> Access cavity is temporized
+                                        <input type="Checkbox" id="E47Checkbox" class="TEST"> Access cavity is
+                                        temporized
                                         with
                                         <select id="E47ADropdown" class="TEST">
                                             <option value="Odontopaste,">Odontopaste</option>
@@ -1830,9 +1927,11 @@
                                         </select>
 
 
-                                        <br> <input type="Checkbox" id="E48Checkbox" class="TEST">Cusps lightly reduced to
+                                        <br> <input type="Checkbox" id="E48Checkbox" class="TEST">Cusps lightly reduced
+                                        to
                                         take tooth out of
-                                        occlusion for symptomatic relief & decrease risk of cuspal fracture (discussed with
+                                        occlusion for symptomatic relief & decrease risk of cuspal fracture (discussed
+                                        with
                                         pt prior to tx)
                                         <br>
                                         <br>
@@ -1841,15 +1940,17 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="endo2supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="endo2supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="endo2supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo2nvCheckbox" class="TEST">
                                         N/V:
                                         <input type="text" id="endo2nvTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                     </div>
-                                    <button class="toggle-button2" id="button17">415 Complete chemo-mechanical preparation
+                                    <button class="toggle-button2" id="button17">415 Complete chemo-mechanical
+                                        preparation
                                         of root canal – one
                                         canal
                                     </button>
@@ -1896,12 +1997,12 @@
                                         </select>
                                         OR
                                         <input type="text" id="endo3A1TextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo3c3sCheckbox" class="TEST">
                                         3C’s confirmed
                                         <input type="text" id="endo3c3sTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo3colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -1914,12 +2015,14 @@
                                         </select><br><br>
 
                                         <input type="Checkbox" id="E50Checkbox" class="TEST">
-                                        Advantages & disadvantages of each Tx option were discussed with patient, written
+                                        Advantages & disadvantages of each Tx option were discussed with patient,
+                                        written
                                         information sheets
                                         provided.
                                         <br>
                                         <input type="Checkbox" id="E51Checkbox" class="TEST">
-                                        The patient understood the advantages, risks, as well as the cost involved in RCT,
+                                        The patient understood the advantages, risks, as well as the cost involved in
+                                        RCT,
                                         including the need for
                                         multiple visits, and consented for RCT.
                                         <br>
@@ -1939,7 +2042,8 @@
                                         <input type="Checkbox" id="E55Checkbox" class="TEST">
                                         Pt understood that the type of final restoration recommended after RCT will be
                                         determined by the amount of
-                                        tooth structure remaining after removal of existing restoration & caries & that a
+                                        tooth structure remaining after removal of existing restoration & caries & that
+                                        a
                                         post may be indicated to
                                         retain the core.
                                         <br>
@@ -1978,7 +2082,8 @@
                                         <input type="Checkbox" id="E58Checkbox" class="TEST">
                                         Isolation
                                         <select id="E58Dropdown" class="TEST">
-                                            <option value="Moisture control achieved through dental dam">Dental Dam</option>
+                                            <option value="Moisture control achieved through dental dam">Dental Dam
+                                            </option>
                                             <option value="Cotton rolls isolation used">Cotton Rolls</option>
                                             <option value="Dry tips isolation used">Dry Tips</option>
                                         </select>
@@ -2016,7 +2121,8 @@
                                         restoration completed using
                                         GIC/ composite/ bulk fill flowable composite.
                                         <br>
-                                        <input type="Checkbox" id="E63Checkbox" class="TEST">Access cavity prepared using
+                                        <input type="Checkbox" id="E63Checkbox" class="TEST">Access cavity prepared
+                                        using
                                         H/S & U/S.
                                         <br><br>
                                         <br>
@@ -2033,7 +2139,8 @@
                                         pre-operative radiograph & apex
                                         locator. WL radiograph taken & CWL obtained.
                                         <br>
-                                        <input type="Checkbox" id="E66Checkbox" class="TEST"> Proglider was used to prepare
+                                        <input type="Checkbox" id="E66Checkbox" class="TEST"> Proglider was used to
+                                        prepare
                                         glide path in all
                                         canal(s). Canal(s) prepared up to Protaper
                                         <select id="E66ProtaperDropdown" class="TEST">
@@ -2041,11 +2148,13 @@
                                             <option value="X1">X1</option>
                                             <option value="X3">X3</option>
                                             <option value="X4">X4</option>
-                                        </select>, irrigated with 4% sodium hypochlorite & recapitulated with size 10 hand
+                                        </select>, irrigated with 4% sodium hypochlorite & recapitulated with size 10
+                                        hand
                                         files after each
                                         instrumentation.
                                         <br><br>
-                                        <input type="Checkbox" id="E67Checkbox" class="TEST"> Access cavity is temporized
+                                        <input type="Checkbox" id="E67Checkbox" class="TEST"> Access cavity is
+                                        temporized
                                         with
                                         <select id="E67ADropdown" class="TEST">
                                             <option value="Odontopaste,">Odontopaste</option>
@@ -2066,9 +2175,11 @@
 
 
                                         <br>
-                                        <input type="Checkbox" id="E68Checkbox" class="TEST"> Cusps lightly reduced to take
+                                        <input type="Checkbox" id="E68Checkbox" class="TEST"> Cusps lightly reduced to
+                                        take
                                         tooth out of occlusion
-                                        for symptomatic relief & decrease risk of cuspal fracture (discussed with pt prior
+                                        for symptomatic relief & decrease risk of cuspal fracture (discussed with pt
+                                        prior
                                         to tx)
                                         <br><br><br>
                                         <strong>TX RECORD</strong><br>
@@ -2101,17 +2212,21 @@
                                                 <td>Ref point
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E70ATextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E70ATextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                                 <td>
-                                                    <input type="text1" id="E70BTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E70BTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E70CTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E70CTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E70DTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E70DTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                             </tr>
@@ -2121,17 +2236,21 @@
                                                     EWL
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E71ATextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E71ATextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                                 <td>
-                                                    <input type="text1" id="E71BTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E71BTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E71CTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E71CTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E71DTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E71DTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
 
@@ -2141,16 +2260,20 @@
                                                     WLF size
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E72ATextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E72ATextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E72BTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E72BTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E72CTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E72CTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E72DTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E72DTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                             </tr>
@@ -2159,17 +2282,21 @@
                                                     CWL
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E73ATextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E73ATextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                                 <td>
-                                                    <input type="text1" id="E73BTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E73BTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E73CTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E73CTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E73DTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E73DTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                             </tr>
@@ -2178,17 +2305,21 @@
                                                     Last rotary file used
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E74ATextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E74ATextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                                 <td>
-                                                    <input type="text1" id="E74BTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E74BTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E74CTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E74CTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E74DTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E74DTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -2196,17 +2327,21 @@
                                                     (MC)
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E75ATextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E75ATextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                                 <td>
-                                                    <input type="text1" id="E75BTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E75BTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E75CTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E75CTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
                                                 <td>
-                                                    <input type="text1" id="E75DTextInput" placeholder="Enter details...">
+                                                    <input type="text1" id="E75DTextInput"
+                                                           placeholder="Enter details...">
                                                 </td>
 
                                             </tr>
@@ -2220,12 +2355,13 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="endo3supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="endo3supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="endo3supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo3nvCheckbox" class="TEST">
                                         N/V:
                                         <input type="text" id="endo3nvTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                     </div>
                                     <button class="toggle-button2" id="button18">417 Root canal obturation – one canal
@@ -2271,12 +2407,12 @@
                                         </select>
                                         OR
                                         <input type="text" id="endo4A1TextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo4c3sCheckbox" class="TEST">
                                         3C’s confirmed
                                         <input type="text" id="endo4c3sTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo4colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -2321,7 +2457,8 @@
                                         <input type="Checkbox" id="E83Checkbox" class="TEST">
                                         Isolation
                                         <select id="E84Dropdown" class="TEST">
-                                            <option value="Moisture control achieved through dental dam">Dental Dam</option>
+                                            <option value="Moisture control achieved through dental dam">Dental Dam
+                                            </option>
                                             <option value="Cotton rolls isolation used">Cotton Rolls</option>
                                             <option value="Dry tips isolation used">Dry Tips</option>
                                         </select>
@@ -2331,14 +2468,16 @@
                                         Temporary restorations removed using H/S & U/S.
                                         <br>
 
-                                        <input type="Checkbox" id="E86Checkbox" class="TEST">Canal(s) were irrigated with 4%
+                                        <input type="Checkbox" id="E86Checkbox" class="TEST">Canal(s) were irrigated
+                                        with 4%
                                         sodium hypochlorite &
                                         recapitulated to prepared lengths to ensure patency.
                                         <br>
                                         <br> <input type="Checkbox" id="E87Checkbox" class="TEST">Master cone tried &
                                         tug-back achieved. Master cone
                                         radiograph taken.
-                                        <br> <input type="Checkbox" id="E88Checkbox" class="TEST">All canal(s) were dried
+                                        <br> <input type="Checkbox" id="E88Checkbox" class="TEST">All canal(s) were
+                                        dried
                                         with length-controlled
                                         paper points.
                                         <br> <input type="Checkbox" id="E89Checkbox" class="TEST">All canal(s) were
@@ -2348,13 +2487,16 @@
                                         <br><br> <input type="Checkbox" id="E90Checkbox" class="TEST">
                                         Excess GP were removed using Super endo up to 4mm below each canal orifice (to
                                         reduce risk of staining &
-                                        allow sufficient space for Cavit placement) & the remaining GP were packed with a
+                                        allow sufficient space for Cavit placement) & the remaining GP were packed with
+                                        a
                                         plugger.
                                         <br> <input type="Checkbox" id="E91Checkbox" class="TEST">
-                                        Excess GP & sealer on the coronal portion of each orifice were removed with Gates
+                                        Excess GP & sealer on the coronal portion of each orifice were removed with
+                                        Gates
                                         Glidden at 10,000 RPM & 5s
                                         etch, respectively.
-                                        <br><br> <input type="Checkbox" id="E92Checkbox" class="TEST">Final PA radiograph
+                                        <br><br> <input type="Checkbox" id="E92Checkbox" class="TEST">Final PA
+                                        radiograph
                                         taken
                                         <br> <input type="Checkbox" id="E93Checkbox" class="TEST">Final restoration was
                                         placed using composite /
@@ -2364,10 +2506,12 @@
 
                                         <br> <input type="Checkbox" id="E94Checkbox" class="TEST">POIG. Tooth may be
                                         sensitive for the next few days
-                                        post-op (recommend ibuprofen 600mg &/or paracetamol if necessary); Cautioned against
+                                        post-op (recommend ibuprofen 600mg &/or paracetamol if necessary); Cautioned
+                                        against
                                         consuming hot
                                         food/drinks until the LA wears off due to numb lip & cheek/lip biting
-                                        <br> <input type="Checkbox" id="E95Checkbox" class="TEST">Informed pt about future
+                                        <br> <input type="Checkbox" id="E95Checkbox" class="TEST">Informed pt about
+                                        future
                                         treatment appointments,
                                         such as the restoration & recall appointments.
 
@@ -2378,12 +2522,13 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="endo4supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="endo4supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="endo4supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="endo4nvCheckbox" class="TEST">
                                         N/V:
                                         <input type="text" id="endo4nvTextInput" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                     </div>
                                     <hr>
@@ -2432,10 +2577,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="resto1A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="resto1c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="resto1c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="resto1colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -2496,14 +2641,15 @@
                                         <input type="Checkbox" id="isolationCheckbox" class="TEST">
                                         Isolation
                                         <select id="isolationDropdown" class="TEST">
-                                            <option value="Moisture control achieved through Dental dam">Dental Dam</option>
+                                            <option value="Moisture control achieved through Dental dam">Dental Dam
+                                            </option>
                                             <option value="Cotton rolls isolation used">Cotton Rolls</option>
                                             <option value="Dry tips isolation used">Dry Tips</option>
                                         </select>
                                         <br>
                                         <input type="Checkbox"
-                                            value="Cavity prepared using HS and SS, previous restoration removed/caries free"
-                                            id="cavityCheckbox" class="TEST">
+                                               value="Cavity prepared using HS and SS, previous restoration removed/caries free"
+                                               id="cavityCheckbox" class="TEST">
                                         Cavity prepared using HS and SS, previous restoration removed/caries free <br>
                                         <input type="Checkbox" id="C12Checkbox" class="TEST">
                                         Matrix
@@ -2563,11 +2709,11 @@
                                         <br>
                                         <input type="Checkbox" id="resto1supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="resto1supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="resto1nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="resto1nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
 
                                     </div>
@@ -2620,10 +2766,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="crown1A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="crown1c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="crown1c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown1colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -2642,60 +2788,65 @@
 
                                             <tr>
                                                 <td>
-                                                    <input type="Checkbox" id="J1Checkbox" class="TEST" checked hidden="">
+                                                    <input type="Checkbox" id="J1Checkbox" class="TEST" checked
+                                                           hidden="">
                                                     Brushing freq, TB & TP:
                                                 </td>
                                                 <td>
                                                     <input type="text" id="J1TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td>
-                                                    <input type="Checkbox" id="J2Checkbox" class="TEST" checked hidden="">
+                                                    <input type="Checkbox" id="J2Checkbox" class="TEST" checked
+                                                           hidden="">
                                                     Interdental cleaning/mouthwash:
                                                 </td>
                                                 <td>
                                                     <input type="text" id="J2TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td>
-                                                    <input type="Checkbox" id="J3Checkbox" class="TEST" checked hidden="">
+                                                    <input type="Checkbox" id="J3Checkbox" class="TEST" checked
+                                                           hidden="">
                                                     Tobacco or alcohol consumption:
                                                 </td>
                                                 <td>
                                                     <input type="text" id="J3TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td>
-                                                    <input type="Checkbox" id="J4Checkbox" class="TEST" checked hidden="">
+                                                    <input type="Checkbox" id="J4Checkbox" class="TEST" checked
+                                                           hidden="">
                                                     Snacks/sugary drinks (freq. & timing):
                                                 </td>
                                                 <td>
                                                     <input type="text" id="J4TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
 
                                             <tr>
                                                 <td>
-                                                    <input type="Checkbox" id="J5Checkbox" class="TEST" checked hidden="">
+                                                    <input type="Checkbox" id="J5Checkbox" class="TEST" checked
+                                                           hidden="">
                                                     Risk factors related to occupation/interests:
                                                 </td>
                                                 <td>
                                                     <input type="text" id="J5TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br><br>
                                                 </td>
                                             </tr>
@@ -2769,7 +2920,7 @@
                                                         <option value="open bite bilateral">Open bite bilateral</option>
                                                     </select>
                                                     <input type="text" id="J11TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
@@ -2784,7 +2935,7 @@
                                                         <option value="absent">Absent</option>
                                                     </select>
                                                     <input type="text" id="J12TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
@@ -2799,7 +2950,7 @@
                                                         <option value="no">No</option>
                                                     </select>
                                                     <input type="text" id="J13TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
@@ -2815,7 +2966,7 @@
                                                         <option value="no antagonist">No antagonist</option>
                                                     </select>
                                                     <input type="text" id="J14TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
@@ -2832,7 +2983,7 @@
                                                         <option value="reduced">Reduced</option>
                                                     </select>
                                                     <input type="text" id="J15TextInput" class="TEST"
-                                                        placeholder="Enter details...">
+                                                           placeholder="Enter details...">
                                                     <br>
                                                 </td>
                                             </tr>
@@ -2844,7 +2995,8 @@
 
                                         <input type="Checkbox" id="J21Checkbox" class="TEST">
                                         Ferrule height:
-                                        <input type="text" id="J21TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="J21TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
 
                                         <!-- J22 -->
@@ -2852,32 +3004,40 @@
                                         <!-- J23 -->
                                         <input type="Checkbox" id="J23Checkbox" class="TEST">
                                         Radiographic findings:
-                                        <input type="text" id="J23TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="J23TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
 
                                         <!-- J24 -->
                                         <input type="Checkbox" id="J24Checkbox" class="TEST">
                                         Pulp vitality (cold/ EPT):
-                                        <input type="text" id="J24TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="J24TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
 
                                         <!-- J25 -->
                                         <input type="Checkbox" id="J25Checkbox" class="TEST">
                                         Dx:
-                                        <input type="text" id="J25TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="J25TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br><br>
 
 
                                         <input type="Checkbox" id="J34BCheckbox" class="TEST">
-                                        Patient informed that tooth has compromised tooth structure & requires protective
+                                        Patient informed that tooth has compromised tooth structure & requires
+                                        protective
                                         measure from
-                                        occluding forces. Warned risk of further fracturing, bacterial leakage requiring RCT
+                                        occluding forces. Warned risk of further fracturing, bacterial leakage requiring
+                                        RCT
                                         & risk of complete
-                                        fracture warranting extraction. Advised that direct restoration may be inadequate to
+                                        fracture warranting extraction. Advised that direct restoration may be
+                                        inadequate to
                                         withstand cusps & that
-                                        cuspal coverage (in the form of crown, onlay or overlay depending on the extent of
+                                        cuspal coverage (in the form of crown, onlay or overlay depending on the extent
+                                        of
                                         defect) may be ideal.
-                                        Explained the multiple visits involved & what happens at each stage. Pt understood &
+                                        Explained the multiple visits involved & what happens at each stage. Pt
+                                        understood &
                                         happy to move
                                         forward with tx. Informed consent obtained.
                                         <br><br>
@@ -2950,11 +3110,11 @@
                                         <br>
                                         <input type="Checkbox" id="crown1supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="crown1supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown1nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="crown1nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <br><br>
 
@@ -3017,10 +3177,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="crown2A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="crown2c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="crown2c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown2colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -3060,9 +3220,9 @@
                                         <!-- J54 -->
                                         <input type="Checkbox" id="J54Checkbox" class="TEST">
                                         Shade selected: <input type="text" id="J54ATextInput" class="TEST"
-                                                            placeholder="Enter details..."> VITA 3D
+                                                               placeholder="Enter details..."> VITA 3D
                                         Master (for PFM) / <input type="text" id="J54BTextInput" class="TEST"
-                                                                placeholder="Enter details..."> VITA
+                                                                  placeholder="Enter details..."> VITA
                                         Classic
 
                                         <br>
@@ -3097,14 +3257,16 @@
 
                                         <!-- J64 -->
                                         <input type="Checkbox" id="J64Checkbox" class="TEST">
-                                        Provisional restoration is constructed using Structure 2 (flowable composite used to
+                                        Provisional restoration is constructed using Structure 2 (flowable composite
+                                        used to
                                         refine deficient
                                         margins) & finished & polish using H/S & S/S.
                                         <br>
 
                                         <!-- J65 -->
                                         <input type="Checkbox" id="J65Checkbox" class="TEST">
-                                        Interproximal contact checked w/ floss. Occlusion checked w/ articulating paper &
+                                        Interproximal contact checked w/ floss. Occlusion checked w/ articulating paper
+                                        &
                                         adjusted accordingly.
                                         <br>
 
@@ -3133,7 +3295,8 @@
                                         <input type="Checkbox" id="J69Checkbox" class="TEST">
                                         POIG. Tooth may be sensitive for the next few days after tx (recommend
                                         Panadol/Nurofen if necessary);
-                                        Cautioned against consuming hot food/drinks until the LA wears off due to numb lip &
+                                        Cautioned against consuming hot food/drinks until the LA wears off due to numb
+                                        lip &
                                         cheek/lip biting.
                                         <br><br>
 
@@ -3142,11 +3305,11 @@
                                         <br>
                                         <input type="Checkbox" id="crown2supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="crown2supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown2nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="crown2nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <br>
 
@@ -3197,10 +3360,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="crown3A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="crown3c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="crown3c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown3colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -3227,7 +3390,8 @@
 
                                         <!-- J81 --><br>
                                         <input type="Checkbox" id="J81Checkbox" class="TEST">
-                                        Gingival retraction achieved using two-cord technique with Ultrapak #0 cord followed
+                                        Gingival retraction achieved using two-cord technique with Ultrapak #0 cord
+                                        followed
                                         by Ultrapk #1 cord
                                         (infil with articaine w/ adrenaline to reduce bleeding if retraction cord w/
                                         hemodent is insufficient)
@@ -3245,7 +3409,8 @@
 
                                         <!-- J84 -->
                                         <input type="Checkbox" id="J84Checkbox" class="TEST">
-                                        Crown impression taken with one-step impression technique using light body & heavy
+                                        Crown impression taken with one-step impression technique using light body &
+                                        heavy
                                         body PVS.
                                         <br><br>
 
@@ -3253,7 +3418,8 @@
                                         <input type="Checkbox" id="J85Checkbox" class="TEST">
                                         Secondary impression checked for quality, sterilized & bagged. Lab card with
                                         instructions for construction
-                                        of model & fixed prosthesis in selected shade written, scanned & sent to the lab.
+                                        of model & fixed prosthesis in selected shade written, scanned & sent to the
+                                        lab.
                                         <br><br>
 
                                         <!-- J86 -->
@@ -3274,7 +3440,8 @@
                                         <input type="Checkbox" id="J88Checkbox" class="TEST">
                                         POIG. Tooth may be sensitive for the next few days after tx (recommend
                                         Panadol/Nurofen if necessary);
-                                        Cautioned against consuming hot food/drinks until the LA wears off due to numb lip &
+                                        Cautioned against consuming hot food/drinks until the LA wears off due to numb
+                                        lip &
                                         cheek/lip biting.
                                         <br><br>
 
@@ -3283,11 +3450,11 @@
                                         <br>
                                         <input type="Checkbox" id="crown3supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="crown3supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown3nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="crown3nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
 
                                         <strong>LAB INSTRUCTIONS</strong>
@@ -3299,9 +3466,11 @@
 
                                         <!-- J92 -->
                                         <input type="Checkbox" id="J92Checkbox" class="TEST">
-                                        Please construct PFM crown in fine gold cervical collar in SHADE ___ VITA 3D Master
+                                        Please construct PFM crown in fine gold cervical collar in SHADE ___ VITA 3D
+                                        Master
                                         for TOOTH ___ OR Please
-                                        construct Emax/Zirconia/Sinfony crown in SHADE ___ VITA Classic for TOOTH ___ with
+                                        construct Emax/Zirconia/Sinfony crown in SHADE ___ VITA Classic for TOOTH ___
+                                        with
                                         STUMP SHADE ___.
                                         <br><br>
 
@@ -3353,10 +3522,10 @@
                                         </select>
                                         OR
                                         <input type="text" id="crown4A1TextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
                                         <input type="Checkbox" id="crown4c3sCheckbox" class="TEST"> 3C’s confirmed
                                         <input type="text" id="crown4c3sTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown4colgateCheckbox" class="TEST"> Colgate 1.5%
                                         Hydrogen Peroxide Mouth rinse
@@ -3377,7 +3546,8 @@
                                         <!-- J94 -->
 
                                         <input type="Checkbox" id="J99Checkbox" class="TEST">
-                                        Existing temporary crown restoration removed using spoon excavator. Existing cement
+                                        Existing temporary crown restoration removed using spoon excavator. Existing
+                                        cement
                                         materials removed using
                                         U/S at low frequency & use of pumice on S/S.
                                         <br>
@@ -3389,19 +3559,23 @@
 
                                         <!-- J101 -->
                                         <input type="Checkbox" id="J101Checkbox" class="TEST">
-                                        Fixed prosthesis trial seated & assessed for marginal adaptation using sickle probe,
+                                        Fixed prosthesis trial seated & assessed for marginal adaptation using sickle
+                                        probe,
                                         interproximal contacts
-                                        using floss, MIP using Shimstock, lateral/protrusive slide patterns, shade & shape.
+                                        using floss, MIP using Shimstock, lateral/protrusive slide patterns, shade &
+                                        shape.
                                         <br><br>
 
                                         <!-- J102 -->
                                         <input type="Checkbox" id="J102Checkbox" class="TEST">
-                                        Tooth preparation was cleaned using prophy with a mixture of flour pumice & water.
+                                        Tooth preparation was cleaned using prophy with a mixture of flour pumice &
+                                        water.
                                         <br><br>
 
                                         <!-- J103 -->
                                         <input type="Checkbox" id="J103Checkbox" class="TEST">
-                                        Fixed prosthesis is cemented using resin-modified GIC (capsulated GC Fuji Plus) &
+                                        Fixed prosthesis is cemented using resin-modified GIC (capsulated GC Fuji Plus)
+                                        &
                                         held in place while excess
                                         cement is removed at the rubbery stage.
                                         <br>
@@ -3443,11 +3617,11 @@
                                         <br>
                                         <input type="Checkbox" id="crown4supervisorCheckbox"> Supervisor: Dr
                                         <input type="text" id="crown4supervisornameTextInput"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <input type="Checkbox" id="crown4nvCheckbox" class="TEST"> N/V:
                                         <input type="text" id="crown4nvTextInput" class="TEST"
-                                            placeholder="Enter details..."> <br>
+                                               placeholder="Enter details..."> <br>
 
                                         <br><br>
                                     </div>
@@ -3461,7 +3635,8 @@
                                     <input type="Checkbox" class="TEST" id="ff1allCheckbox" class="TEST">
 
                                     <div id="denture1Section" class="section">
-                                        <h3>700 Interim denture service – Consult, exam & primary impression for removable
+                                        <h3>700 Interim denture service – Consult, exam & primary impression for
+                                            removable
                                             complete denture (1/6)
                                         </h3>
                                         <input type="Checkbox" id="ptff1Checkbox" class="TEST">
@@ -3497,11 +3672,13 @@
                                             <option value="Consult">Consult</option>
                                         </select>
                                         OR
-                                        <input type="text" id="ff1A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff1A1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff1c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="ff1c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff1c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff1colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -3515,10 +3692,11 @@
                                         <br>
                                         <br>
                                         DENTAL/DENTURE Hx: <br>
-                                        <input type="Checkbox" id="G1Checkbox" class="TEST" class="TEST" checked hidden="">
+                                        <input type="Checkbox" id="G1Checkbox" class="TEST" class="TEST" checked
+                                               hidden="">
                                         Reason for tooth loss (years of edentulous):
                                         <input type="text" id="G1TextInput" class="TEST" class="TEST"
-                                            placeholder="Enter details...">
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="G2Checkbox" class="TEST" class="TEST" checked hidden>
                                         Patient’s responsibility in home care:
@@ -3534,11 +3712,14 @@
                                         <br>
                                         <input type="Checkbox" id="G5Checkbox" class="TEST" checked hidden>
                                         Smoking Hx:
-                                        <input type="text" id="G5aTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G5aTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         a day, since
-                                        <input type="text" id="G5bTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G5bTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         ago,
-                                        <input type="text" id="G5cTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G5cTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         intention of quitting. <br>
                                         <input type="Checkbox" id="G6Checkbox" class="TEST">
                                         Personality assessment:
@@ -3561,29 +3742,35 @@
                                         <br>
                                         <input type="Checkbox" id="G10Checkbox" class="TEST" checked hidden="">
                                         TX OPTIONS
-                                        <input type="text" id="G10TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G10TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="G10ACheckbox" class="TEST">
-                                        Pt notified that completion of complete denture will take a min of 3mo (i.e. 6 appt
+                                        Pt notified that completion of complete denture will take a min of 3mo (i.e. 6
+                                        appt
                                         with 2weeks interval
                                         <br>
                                         <input type="Checkbox" id="G11Checkbox" class="TEST">
                                         TX DELIVERED
                                         > Max & mand alginate primary impression taken. Impression checked for quality,
                                         sterilized & bagged. Lab
-                                        card with instructions for pour up of impression & construction of special trays for
+                                        card with instructions for pour up of impression & construction of special trays
+                                        for
                                         ZOE impression written,
                                         scanned & sent to the lab. <br>
                                         <input type="Checkbox" id="G12Checkbox" class="TEST">
-                                        Denture hygiene instructions given for existing denture (i.e. to clean with a soft
+                                        Denture hygiene instructions given for existing denture (i.e. to clean with a
+                                        soft
                                         brush & gentle soap, to
-                                        remove denture at night & to soak in diluted white vinegar or Milton antibacterial
+                                        remove denture at night & to soak in diluted white vinegar or Milton
+                                        antibacterial
                                         tablets) <br>
                                         <br>
                                         <input type="Checkbox" id="G13Checkbox" class="TEST">
                                         Pt well on discharge
-                                        <input type="text" id="G13TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G13TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="G13aCheckbox1">
                                         Supervisor: Dr
@@ -3591,7 +3778,8 @@
                                         <br>
                                         <input type="Checkbox" id="G14Checkbox" class="TEST">
                                         N/V: F/F secondary impression OR
-                                        <input type="text" id="G14TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G14TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <br>
                                         <br>
@@ -3606,7 +3794,8 @@
                                                 value="for ZOE impression – custom trays 2mm shy of depth of sulcus, no spacer; ">
                                                 ZOE impression
                                             </option>
-                                            <option value="for PVS – custom trays with 2 sheets of baseplate wax as spacer">
+                                            <option
+                                                value="for PVS – custom trays with 2 sheets of baseplate wax as spacer">
                                                 PVS Impression
                                             </option>
                                         </select>
@@ -3652,11 +3841,13 @@
                                             <option value="Consult">Consult</option>
                                         </select>
                                         OR
-                                        <input type="text" id="ff2A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff2A1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff2c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="ff2c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff2c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff2colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -3670,10 +3861,12 @@
                                         <br>
                                         <br>
                                         <input type="Checkbox" id="G18Checkbox" class="TEST">
-                                        Custom tray adjusted with acrylic burs to 1mm short of sulcus, not interfering with
+                                        Custom tray adjusted with acrylic burs to 1mm short of sulcus, not interfering
+                                        with
                                         frenum <br>
                                         <input type="Checkbox" id="G19Checkbox" class="TEST">
-                                        Border moulding was performed with the addition of compound stick to the periphery
+                                        Border moulding was performed with the addition of compound stick to the
+                                        periphery
                                         of trays <br>
                                         <input type="Checkbox" id="G20Checkbox" class="TEST">
                                         Max & mand secondary impression taken with
@@ -3685,7 +3878,8 @@
                                         Impression checked for
                                         quality, sterilized & bagged. <br>
                                         <input type="Checkbox" id="G21Checkbox" class="TEST">
-                                        Lab card with instructions for construction of master cast & provision of occlusal
+                                        Lab card with instructions for construction of master cast & provision of
+                                        occlusal
                                         wax rims in std
                                         dimensions written, scanned & sent to the lab. <br>
                                         <br>
@@ -3693,7 +3887,8 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="ff2supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="ff2supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="ff2supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="G23Checkbox" class="TEST">
                                         N/V: F/F Jaw registration <br>
@@ -3703,7 +3898,8 @@
                                         > Please construct master cast in stone with 3mm land area, scribe post-dam as
                                         indicated on Max impression,
                                         depth of post dam
-                                        <input type="text" id="G24TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G24TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         mm. <br>
                                         <input type="Checkbox" id="G25Checkbox" class="TEST">
                                         Please provide occlusal wax rims to standard dimensions. <br>
@@ -3746,11 +3942,13 @@
                                             <option value="Consult">Consult</option>
                                         </select>
                                         OR
-                                        <input type="text" id="ff3A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff3A1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff3c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="ff3c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff3c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff3colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -3765,11 +3963,13 @@
                                         <br>
                                         <input type="Checkbox" id="G28Checkbox" class="TEST" checked hidden="">
                                         VDR:
-                                        <input type="text" id="G28TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G28TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         mm est. from nose tip to chin. 3mm freeway space selected OR <br>
                                         <input type="Checkbox" id="G29Checkbox" class="TEST" checked hidden="">
                                         VDO of existing denture:
-                                        <input type="text" id="G29TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G29TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         mm. <br>
                                         <input type="Checkbox" id="G30Checkbox" class="TEST">
                                         Occlusal wax rims were checked for their stability. <br>
@@ -3781,7 +3981,8 @@
                                         Centric relation was recorded & reproduceable. <br>
                                         <input type="Checkbox" id="G34Checkbox" class="TEST">
                                         Tooth shade
-                                        <input type="text" id="G34TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="G34TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         &
                                         <select id="G34Dropdown" class="TEST">
                                             <option value="square">square</option>
@@ -3791,7 +3992,8 @@
                                         </select>
                                         anterior mould was selected. <br>
                                         <input type="Checkbox" id="G35Checkbox" class="TEST">
-                                        Marked occlusal wax rims were sterilized & bagged. Lab card with instructions for
+                                        Marked occlusal wax rims were sterilized & bagged. Lab card with instructions
+                                        for
                                         articulation of master
                                         casts & set up of teeth for try-in was written, scanned & sent to the lab. <br>
                                         <br>
@@ -3799,7 +4001,8 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="ff3supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="ff3supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="ff3supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff3G23Checkbox" class="TEST">
                                         N/V: Teeth Try In <br>
@@ -3808,7 +4011,8 @@
                                         <input type="Checkbox" id="G38Checkbox" class="TEST">
                                         > Please articulate master casts with bite registration provided. <br>
                                         <input type="Checkbox" id="G38ACheckbox" class="TEST">
-                                        > Please set up Max & Mand teeth for try-in in shade ___, MOLD selected above. <br>
+                                        > Please set up Max & Mand teeth for try-in in shade ___, MOLD selected above.
+                                        <br>
                                         <input type="Checkbox" id="G38BCheckbox" class="TEST">
                                         If old dentures present: Please mould to match existing denture based on denture
                                         impression provided. <br>
@@ -3821,7 +4025,8 @@
                                     <button class="toggle-button2" id="button26">F/F Teeth Try In</button>
                                     <input type="Checkbox" id="ff4allCheckbox" class="TEST">
 
-                                    <div id="denture6Section" class="section"> Interim denture service – Wax tooth try-in
+                                    <div id="denture6Section" class="section"> Interim denture service – Wax tooth
+                                        try-in
                                         for removable complete
                                         denture (4/6)
                                         <input type="Checkbox" id="ptff4Checkbox" class="TEST">
@@ -3857,11 +4062,13 @@
                                             <option value="Consult">Consult</option>
                                         </select>
                                         OR
-                                        <input type="text" id="ff4A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff4A1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff4c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="ff4c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff4c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff4colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -3886,16 +4093,20 @@
                                         </select>
                                         <br>
                                         <input type="Checkbox" id="G51Checkbox" class="TEST">
-                                        <label for="G51Checkbox" class="TEST"> Patient was given a mirror & was satisfied
+                                        <label for="G51Checkbox" class="TEST"> Patient was given a mirror & was
+                                            satisfied
                                             with the teeth size,
-                                            colour, & the overall appearance of the denture. Patient’s approval to process
+                                            colour, & the overall appearance of the denture. Patient’s approval to
+                                            process
                                             the denture was obtained.
                                         </label>
                                         <br>
                                         <input type="Checkbox" id="G52Checkbox" class="TEST">
-                                        <label for="G52Checkbox" class="TEST"> Wax-tooth was sterilized & bagged. Lab card
+                                        <label for="G52Checkbox" class="TEST"> Wax-tooth was sterilized & bagged. Lab
+                                            card
                                             with instructions to seal
-                                            wax rims, process the denture in 60:40 original & light pink acrylic, & finish
+                                            wax rims, process the denture in 60:40 original & light pink acrylic, &
+                                            finish
                                             for insertion was written,
                                             scanned & sent to the lab. </label>
                                         <br>
@@ -3904,7 +4115,8 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="ff4supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="ff4supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="ff4supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff4G23Checkbox" class="TEST">
                                         N/V: Insertion <br>
@@ -3913,7 +4125,8 @@
                                         <label for="G54Checkbox" class="TEST"> <strong>LAB INSTRUCTIONS</strong> <br>
                                             > Please do not move the teeth, seal wax rims & finesse wax up in anterior
                                             region. <br>
-                                            > Please process in 60:40 original & light pink acrylic & finish for insertion.
+                                            > Please process in 60:40 original & light pink acrylic & finish for
+                                            insertion.
                                         </label>
                                         <br>
                                         <hr>
@@ -3957,11 +4170,13 @@
                                             <option value="Consult">Consult</option>
                                         </select>
                                         OR
-                                        <input type="text" id="ff5A1TextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff5A1TextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff5c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="ff5c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff5c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff5colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -3983,7 +4198,8 @@
                                         <input type="Checkbox" id="G43Checkbox" class="TEST">
                                         Occlusion was reverified with articulating paper. <br>
                                         <input type="Checkbox" id="G44Checkbox" class="TEST">
-                                        Denture hygiene instructions given (i.e. to clean with soft brush & gentle soap, to
+                                        Denture hygiene instructions given (i.e. to clean with soft brush & gentle soap,
+                                        to
                                         remove denture at night
                                         & to soak in diluted white vinegar or Milton antibacterial tablets) <br>
                                         <br>
@@ -3991,7 +4207,8 @@
                                         Written denture instructions given & explained. Pt well on discharge <br>
                                         <input type="Checkbox" id="ff5supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="ff5supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="ff5supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff5G23Checkbox" class="TEST">
                                         N/V: F/F Review <br>
@@ -4035,12 +4252,14 @@
                                             <option value="S/C">S/C</option>
                                             <option value="Consult">Consult</option>
                                         </select>
-                                        <input type="text" id="ff6A1TextInput" class="TEST" placeholder="Enter details..."
-                                            hidden="">
+                                        <input type="text" id="ff6A1TextInput" class="TEST"
+                                               placeholder="Enter details..."
+                                               hidden="">
                                         <br>
                                         <input type="Checkbox" id="ff6c3sCheckbox" class="TEST">
                                         3C’s confirmed
-                                        <input type="text" id="ff6c3sTextInput" class="TEST" placeholder="Enter details...">
+                                        <input type="text" id="ff6c3sTextInput" class="TEST"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff6colgateCheckbox" class="TEST">
                                         Colgate 1.5% Hydrogen Peroxide Mouth rinse given. <br>
@@ -4077,7 +4296,8 @@
                                         Pt well on discharge <br>
                                         <input type="Checkbox" id="ff6supervisorCheckbox">
                                         Supervisor: Dr
-                                        <input type="text" id="ff6supervisornameTextInput" placeholder="Enter details...">
+                                        <input type="text" id="ff6supervisornameTextInput"
+                                               placeholder="Enter details...">
                                         <br>
                                         <input type="Checkbox" id="ff6G23Checkbox" class="TEST">
                                         N/V: Review 2.0 <br>
@@ -4092,14 +4312,16 @@
                                         tooth (either new or
                                         addition to existing denture post-exo)<br>
                                         <br>
-                                        - 741 Adjustment of a denture (should be recorded for adjustments if it is >3 months
+                                        - 741 Adjustment of a denture (should be recorded for adjustments if it is >3
+                                        months
                                         after date of
                                         insertion or if insertion clinician is external to HHS)<br>
                                         <br>
                                         - 743 Relining - complete denture – processed; 744 Relining - partial denture –
                                         processed<br>
                                         <br>
-                                        - 763 Repairing broken base of a complete denture; 764 Repairing broken base of a
+                                        - 763 Repairing broken base of a complete denture; 764 Repairing broken base of
+                                        a
                                         partial denture<br>
                                         <br>
                                         - 772 Splint – resin – indirect <br>
@@ -4108,7 +4330,8 @@
                                         <br>
                                     </div>
                                     <button class="toggle-button2" id="button36">P/P Item Codes</button>
-                                    <div id="ppcodesSection" class="section"> 700 Interim denture service (no fee; should be
+                                    <div id="ppcodesSection" class="section"> 700 Interim denture service (no fee;
+                                        should be
                                         recorded at each
                                         appointment during the construction
                                         stages of a denture)<br>
@@ -4129,7 +4352,8 @@
                                     If you write on right, your text will be deleted if you go back to the template or
                                     change anything.
                                     Enter Your Text here to be generated on the right.
-                                    <br><p><strong> AFTER MED HISTORY</strong></p>
+                                    <br>
+                                    <p><strong> AFTER MED HISTORY</strong></p>
                                     <textarea id="generatedText2" class="TEST" placeholder=""></textarea>
                                     <p><strong> BEFORE SUPERVISOR</strong></p>
                                     <textarea id="generatedText1" class="TEST" placeholder=""></textarea>
@@ -4173,7 +4397,8 @@
                                         </tr>
                                         <tr>
                                             <td>*</td>
-                                            <td>Presence of recession, mobility, furcation exposure, or other mucogingival
+                                            <td>Presence of recession, mobility, furcation exposure, or other
+                                                mucogingival
                                                 problems
                                             </td>
                                             <td>-</td>
@@ -4196,27 +4421,31 @@
                                         </tr>
                                         <tr>
                                             <td>0</td>
-                                            <td>Sound tooth surface no caries change after drying (5s), hypoplasia, wear,
+                                            <td>Sound tooth surface no caries change after drying (5s), hypoplasia,
+                                                wear,
                                                 erosion & other non-caries
                                                 lesions
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>1</td>
-                                            <td>First visual change in enamel (colored change limited to the confines of the
+                                            <td>First visual change in enamel (colored change limited to the confines of
+                                                the
                                                 pit & fissure area) seen
                                                 after air drying
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td>Distinct visual change in enamel (white/colored wider than the fissure/pit)
+                                            <td>Distinct visual change in enamel (white/colored wider than the
+                                                fissure/pit)
                                                 seen when wet
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td>Localized enamel breakdown (discontinuity of enamel surface or widening of
+                                            <td>Localized enamel breakdown (discontinuity of enamel surface or widening
+                                                of
                                                 fissure) w/ no visible
                                                 dentine/underlying shadow
                                             </td>
@@ -4263,7 +4492,8 @@
                                         </tr>
                                         <tr>
                                             <td>RC5</td>
-                                            <td>Radiolucency reaching the inner 3rd of dentine, clinically cavitated</td>
+                                            <td>Radiolucency reaching the inner 3rd of dentine, clinically cavitated
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>RC6</td>
@@ -4361,11 +4591,13 @@
                                             <td>Complexity</td>
                                             <td>Maximum probing depth ≤ 4mm. Mostly horizontal bone loss.</td>
                                             <td>Maximum probing depth ≤ 5mm. Mostly horizontal bone loss.</td>
-                                            <td>In addition to stage II complexity; probing depth ≥ 6mm, vertical bone loss
+                                            <td>In addition to stage II complexity; probing depth ≥ 6mm, vertical bone
+                                                loss
                                                 ≥ 3mm, furcation
                                                 involvement (class II or III), moderate ridge defects.
                                             </td>
-                                            <td>In addition to Stage III complexity; Need for comprehensive rehabilitation
+                                            <td>In addition to Stage III complexity; Need for comprehensive
+                                                rehabilitation
                                                 due to secondary occlusal
                                                 trauma (mobility ≥ 2), bite collapse, drifting, flaring, less than 10
                                                 opposing pairs of teeth,
@@ -4647,7 +4879,8 @@
                                     o Endo kit<br>
                                     o High speed + Slow speed + Ultrasonic handpieces<br>
                                     o Resto burs (if needed) + Ultrasonic tip<br>
-                                    o Modified paralleling holder (TruView or Snap-a-Ray)+ cotton rolls (x3 bundle) +size 2
+                                    o Modified paralleling holder (TruView or Snap-a-Ray)+ cotton rolls (x3 bundle)
+                                    +size 2
                                     film<br>
                                     o Hand files (as needed) <br>
                                     o Rotary files (as needed)<br>
@@ -4723,7 +4956,8 @@
                                         </tr>
                                         <tr>
                                             <td>025</td>
-                                            <td>Intraoral radiograph - Occlusal, maxillary, mandibular - per exposure</td>
+                                            <td>Intraoral radiograph - Occlusal, maxillary, mandibular - per exposure
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>037</td>
@@ -4809,7 +5043,8 @@
                                         </tr>
                                         <tr>
                                             <td>123</td>
-                                            <td>Concentrated remin &/or cariostatic agents - single tooth application</td>
+                                            <td>Concentrated remin &/or cariostatic agents - single tooth application
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>131</td>
@@ -4821,7 +5056,8 @@
                                         </tr>
                                         <tr>
                                             <td>142</td>
-                                            <td>Tobacco counselling (include 019 if referred to Quitline or other pathway
+                                            <td>Tobacco counselling (include 019 if referred to Quitline or other
+                                                pathway
                                                 services)
                                             </td>
                                         </tr>
@@ -4935,7 +5171,8 @@
                                         </tr>
                                         <tr>
                                             <td>578</td>
-                                            <td>Restoration of an incisal corner-per corner (in addition to 522-525; always
+                                            <td>Restoration of an incisal corner-per corner (in addition to 522-525;
+                                                always
                                                 with IM & ID fractures)
                                             </td>
                                         </tr>
@@ -4965,7 +5202,8 @@
                                         </tr>
                                         <tr>
                                             <td>311A</td>
-                                            <td>Removal of a tooth or part(s)-first tooth extracted from each quadrant</td>
+                                            <td>Removal of a tooth or part(s)-first tooth extracted from each quadrant
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>311B</td>
@@ -4974,13 +5212,15 @@
                                         </tr>
                                         <tr>
                                             <td>314A</td>
-                                            <td>Sectional removal of a tooth or part(s) - 1st sectional removal from each
+                                            <td>Sectional removal of a tooth or part(s) - 1st sectional removal from
+                                                each
                                                 quadrant
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>314B</td>
-                                            <td>Sectional removal of a tooth or part(s)- each subsequent tooth in the same
+                                            <td>Sectional removal of a tooth or part(s)- each subsequent tooth in the
+                                                same
                                                 quadrant
                                             </td>
                                         </tr>
@@ -4992,7 +5232,8 @@
                                         </tr>
                                         <tr>
                                             <td>322B</td>
-                                            <td>Surgical removal of a subsequent tooth/fragment not requiring bone removal
+                                            <td>Surgical removal of a subsequent tooth/fragment not requiring bone
+                                                removal
                                             </td>
                                         </tr>
                                         <tr>
@@ -5002,7 +5243,8 @@
                                         </tr>
                                         <tr>
                                             <td>323B</td>
-                                            <td>Surgical removal of a subsequent tooth/fragment requiring bone removal</td>
+                                            <td>Surgical removal of a subsequent tooth/fragment requiring bone removal
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>324A</td>
@@ -5333,12 +5575,14 @@
                                         </tr>
                                         <tr>
                                             <td>445</td>
-                                            <td>Exploration and/or negotiation of a calcified canal - per canal - per appt
+                                            <td>Exploration and/or negotiation of a calcified canal - per canal - per
+                                                appt
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>455</td>
-                                            <td>Additional visit for irrigation and /or dressing of root canal system - per
+                                            <td>Additional visit for irrigation and /or dressing of root canal system -
+                                                per
                                                 tooth
                                             </td>
                                         </tr>
@@ -5354,14 +5598,16 @@
 
 
                                 </div>
-                                <button class="toggle-button5" id="button4034">Denture Guides</button>  
+                                <button class="toggle-button5" id="button4034">Denture Guides</button>
                                 <div id="dentureguidessection" class="section" style="display: none;">
- 
+
                                     <h1>Complete Denture Appointments</h1>
                                     <h2>1st Appointment: Consult/Exam; Primary impressions</h2>
                                     <h3>Medical History</h3>
                                     <ul>
-                                        <li>Full list of medications and their purpose, especially medications affecting salivary flow</li>
+                                        <li>Full list of medications and their purpose, especially medications affecting
+                                            salivary flow
+                                        </li>
                                         <li>Smoking history: frequency, number of years. Consider quitting?</li>
                                         <li>Sjogren’s disease</li>
                                         <li>MVA – affected TMJ, fractures</li>
@@ -5385,7 +5631,9 @@
                                     </ul>
                                     <h3>Prosthodontics assessment</h3>
                                     <ul>
-                                        <li>Clinical factors influencing stability, retention, support of complete dentures</li>
+                                        <li>Clinical factors influencing stability, retention, support of complete
+                                            dentures
+                                        </li>
                                         <li>Quality of bearing mucosa</li>
                                         <li>Attached / unattached [attached]</li>
                                         <li>Keratinisation [keratinised]</li>
@@ -5407,30 +5655,42 @@
                                         <li>Aesthetics</li>
                                         <li>Retention</li>
                                         <li>Stability</li>
-                                        <li>Primary impression should have no major pressure spots or voids, should capture all peripheral extensions (sulcus, Mx: hamular notch, posterior palatal seal; Md: retromolar pad)</li>
+                                        <li>Primary impression should have no major pressure spots or voids, should
+                                            capture all peripheral extensions (sulcus, Mx: hamular notch, posterior
+                                            palatal seal; Md: retromolar pad)
+                                        </li>
                                     </ul>
                                     <p>Please construct diagnostic models from alginate impressions.</p>
                                     <p>Please construct custom trays:</p>
                                     <ol>
-                                        <li>for ZOE impression – custom trays 2mm shy of depth of sulcus, no spacer;</li>
+                                        <li>for ZOE impression – custom trays 2mm shy of depth of sulcus, no spacer;
+                                        </li>
                                         <li>for PVS – custom trays with 2 sheets of baseplate wax as spacer.</li>
                                     </ol>
                                     <hr>
                                     <h2>2nd Appointment: Secondary impressions</h2>
-                                    <p>Adjust fit of custom trays- trim with acrylic burs to 1mm short of sulcus, not interfering with frenum</p>
-                                    <p>If tissues are compressible, make holes (“swiss cheese) with acrylic bur so that impression is mucostatic</p>
+                                    <p>Adjust fit of custom trays- trim with acrylic burs to 1mm short of sulcus, not
+                                        interfering with frenum</p>
+                                    <p>If tissues are compressible, make holes (“swiss cheese) with acrylic bur so that
+                                        impression is mucostatic</p>
                                     <p>Add green stick compound to periphery of trays</p>
-                                    <p>(Mark with indelible marker the post dam and the compressibility of glandular tissues.)</p>
-                                    <p>Set up – slow speed evacuation, dry teeth, retract lips. Clear bracket table of all instruments except mirror</p>
+                                    <p>(Mark with indelible marker the post dam and the compressibility of glandular
+                                        tissues.)</p>
+                                    <p>Set up – slow speed evacuation, dry teeth, retract lips. Clear bracket table of
+                                        all instruments except mirror</p>
                                     <p>Patient laid back</p>
                                     <p>Mix ZOE, apply thin layer to tray.</p>
                                     <p>Seat tray. Border mould. Sit patient up, check for overflowing ZOE</p>
                                     <p>Wait 4-5 minutes, remove impression by retracting lip to dislodge seal</p>
-                                    <p>Check for show through. Trim with acrylic bur. Add ZOE to deficient areas and retake impression.</p>
-                                    <p>Add post dam with inlay wax: 1mm thick at posterior border, and tapering to knife edge at other borders</p>
-                                    <p>Please construct master cast in stone with 3mm land area, scribe post-dam as indicated on Mx impression, depth of post dam ~mm. Please provide occlusal wax rims to standard dimensions</p>
+                                    <p>Check for show through. Trim with acrylic bur. Add ZOE to deficient areas and
+                                        retake impression.</p>
+                                    <p>Add post dam with inlay wax: 1mm thick at posterior border, and tapering to knife
+                                        edge at other borders</p>
+                                    <p>Please construct master cast in stone with 3mm land area, scribe post-dam as
+                                        indicated on Mx impression, depth of post dam ~mm. Please provide occlusal wax
+                                        rims to standard dimensions</p>
                                     <hr>
-                                    
+
                                     <h2>3rd Appointment: Jaw Registration</h2>
                                     <ul>
                                         <li>Use denture adhesive to aid in stability of bases for record</li>
@@ -5457,9 +5717,13 @@
                                             <li>Practice going into CR</li>
                                             <li>Bi-manual manipulation</li>
                                         </ul>
-                                        <li>Materials: Wax (baseplate wax, Alu-wax, Beauty wax); Impression compound; Elastomeric materials (PVS)</li>
+                                        <li>Materials: Wax (baseplate wax, Alu-wax, Beauty wax); Impression compound;
+                                            Elastomeric materials (PVS)
+                                        </li>
                                         <li>Tooth shade and mould</li>
-                                        <li>Please articulate master casts with bite record in PVS/Wax/Acrylic provided</li>
+                                        <li>Please articulate master casts with bite record in PVS/Wax/Acrylic
+                                            provided
+                                        </li>
                                         <li>Set up Mx and Md teeth for try-in in shade ~, mould ~</li>
                                     </ul>
                                     <hr>
@@ -5474,12 +5738,17 @@
                                         <li>VDO</li>
                                         <li>CR verified</li>
                                         <li>Recline pt chair back to help retrude mandible</li>
-                                        <li>Stabilise Md base with index fingers; thumbs under mandible = bimanual technique</li>
+                                        <li>Stabilise Md base with index fingers; thumbs under mandible = bimanual
+                                            technique
+                                        </li>
                                         <li>Rehearse closing into CR</li>
                                         <li>Have patient gently close into the compound just short of tooth contact</li>
                                         <li>Wax correctly contoured</li>
                                         <li>Patient signature</li>
-                                        <li>Please seal wax rims and finesse waxup in anterior region. Please process the Mx and Md dentures in acrylic 60% original and 40% light pink. Finish for insertion</li>
+                                        <li>Please seal wax rims and finesse waxup in anterior region. Please process
+                                            the Mx and Md dentures in acrylic 60% original and 40% light pink. Finish
+                                            for insertion
+                                        </li>
                                     </ul>
                                     <hr>
                                     <h2>5th Appointment: Insert</h2>
@@ -5495,7 +5764,9 @@
                                     <ul>
                                         <li>Post-operative issues:</li>
                                         <ul>
-                                            <li>Ulcers in frenum region, sulcus and mylohyoid ridge due to lack of clearance</li>
+                                            <li>Ulcers in frenum region, sulcus and mylohyoid ridge due to lack of
+                                                clearance
+                                            </li>
                                             <li>Correction of occlusion</li>
                                             <li>Cheek biting due to lack of buccal overjet</li>
                                             <li>Restricted food or chewing</li>
@@ -5511,7 +5782,9 @@
                                     <h2>1st Appointment: Consult/Exam; Primary impressions</h2>
                                     <h3>Medical History</h3>
                                     <ul>
-                                        <li>Full list of medications and their purpose, especially medications affecting salivary flow</li>
+                                        <li>Full list of medications and their purpose, especially medications affecting
+                                            salivary flow
+                                        </li>
                                         <li>Smoking history: frequency, number of years. Consider quitting?</li>
                                         <li>Sjogren’s disease</li>
                                         <li>MVA – affected TMJ, fractures</li>
@@ -5531,9 +5804,12 @@
                                         </ul>
                                     </ul>
                                     <h3>Saliva flow</h3>
-                                    <p>Primary impression should have no major pressure spots or voids, should capture all peripheral extensions (sulcus, Mx: hamular notch, posterior palatal seal; Md: retromolar pad)</p>
+                                    <p>Primary impression should have no major pressure spots or voids, should capture
+                                        all peripheral extensions (sulcus, Mx: hamular notch, posterior palatal seal;
+                                        Md: retromolar pad)</p>
                                     <p>Please construct diagnostic models from alginate impressions.</p>
-                                    <p>Please construct custom trays: for PVS – custom trays with 2 sheets of baseplate wax as spacer</p>
+                                    <p>Please construct custom trays: for PVS – custom trays with 2 sheets of baseplate
+                                        wax as spacer</p>
                                     <hr>
                                     <h2>Survey; Treatment plan</h2>
                                     <p>Study casts</p>
@@ -5557,13 +5833,15 @@
                                     <p>Fixed prosthodontics</p>
                                     <p>Removable prosthodontics</p>
                                     <hr>
-                                        <h2>2nd Appointment: Mouth Preps; Secondary Impressions</h2>
+                                    <h2>2nd Appointment: Mouth Preps; Secondary Impressions</h2>
                                     <h3>Mouth Preps</h3>
                                     <ul>
                                         <li>Parallel guideplanes</li>
                                         <li>Prepare rest seats</li>
                                         <li>Create favorable undercuts for direct retainers</li>
-                                        <li>Recontour tipped or overerupted teeth which interfere with the occlusal plane</li>
+                                        <li>Recontour tipped or overerupted teeth which interfere with the occlusal
+                                            plane
+                                        </li>
                                     </ul>
 
                                     <h3>Secondary Impressions</h3>
@@ -5572,35 +5850,51 @@
                                         <li>(Border moulding for distal end saddle)</li>
                                         <li>Apply Vector VP (vinyl polysiloxane) tray adhesive</li>
                                         <li>Check design and indicate to DA the borders of PVS required</li>
-                                        <li>Set up – slow speed evacuation, dry teeth, retract lips. Clear bracket table of all instruments except mirror, light body PVS gun</li>
+                                        <li>Set up – slow speed evacuation, dry teeth, retract lips. Clear bracket table
+                                            of all instruments except mirror, light body PVS gun
+                                        </li>
                                         <li>Patient laid back</li>
-                                        <li>Ask DA to start loading medium body PVS and to indicate when they are loading halfway</li>
-                                        <li>Light body PVS over rest preps, guide planes, plating areas around tooth margins especially distal. Also place a blob outside tray to check when light body PVS has set</li>
+                                        <li>Ask DA to start loading medium body PVS and to indicate when they are
+                                            loading halfway
+                                        </li>
+                                        <li>Light body PVS over rest preps, guide planes, plating areas around tooth
+                                            margins especially distal. Also place a blob outside tray to check when
+                                            light body PVS has set
+                                        </li>
                                         <li>Seat tray. Sit patient up, check for overflowing PVS</li>
                                         <li>Wait 4-5 minutes, remove impression by retracting lip to dislodge seal</li>
                                         <li>Please construct master cast in high strength stone with 3mm land area.</li>
-                                        <li>Construct CoCr partial framework, as per design indicated on the study model, mandibular cast enclosed for occlusal examination.</li>
+                                        <li>Construct CoCr partial framework, as per design indicated on the study
+                                            model, mandibular cast enclosed for occlusal examination.
+                                        </li>
                                         <li>Return framework for metal try-in. Provide wax bases</li>
                                     </ul>
                                     <hr>
-                                    <h2>3rd Appointment: Metal Framework Try-In; Bite Registration (MIP/CR); Tooth Shade, Mould</h2>
+                                    <h2>3rd Appointment: Metal Framework Try-In; Bite Registration (MIP/CR); Tooth
+                                        Shade, Mould</h2>
                                     <ul>
                                         <li>Check rests sitting in the rest seat</li>
                                         <li>Check major connector sitting against the tissues completely</li>
                                         <li>Check for occlusal interferences with articulating paper</li>
                                         <li>MIP/CR</li>
                                         <li>Tooth shade and mould</li>
-                                        <li>Please articulate maxillary and mandibular cases casts with bite record provided. Do not reduce vertical dimension following articulation</li>
+                                        <li>Please articulate maxillary and mandibular cases casts with bite record
+                                            provided. Do not reduce vertical dimension following articulation
+                                        </li>
                                         <li>Set up denture teeth shade ~, mould ~ for #</li>
                                         <li>Return for wax tooth try-in</li>
                                     </ul>
                                     <hr>
                                     <h2>4th Appointment: Wax tooth try-in </h2>
                                     <ul>
-                                        <strong>  <li>Aesthetics – tooth mould, shape, position </li>
-                                        <li>Bite position verified</li></strong>
+                                        <strong>
+                                            <li>Aesthetics – tooth mould, shape, position</li>
+                                            <li>Bite position verified</li>
+                                        </strong>
                                         <li>Recline pt chair back to help retrude mandible</li>
-                                        <li>Stabilize Md base with index fingers; thumbs under mandible = bimanual technique</li>
+                                        <li>Stabilize Md base with index fingers; thumbs under mandible = bimanual
+                                            technique
+                                        </li>
                                         <li>Rehearse closing into CR</li>
                                         <li>Have patient gently close into the compound just short of tooth contact</li>
                                         <li>Please do not move the teeth.</li>
@@ -5620,7 +5914,9 @@
                                     <ul>
                                         <li>Pt. presented to 4th Year Pros Clinic 5.1 for</li>
                                         <ul>
-                                            <li>COVID-19 Level 1 Restriction (Mouth rinse for 30sec & verbal consent given)</li>
+                                            <li>COVID-19 Level 1 Restriction (Mouth rinse for 30sec & verbal consent
+                                                given)
+                                            </li>
                                             <li>3C’s confirmed (name, DOB, address)</li>
                                             <li>Medical Hx confirmed</li>
                                         </ul>
@@ -5628,7 +5924,9 @@
                                         <li>CC:</li>
                                         <li>Hx of present complaint:</li>
                                         <ul>
-                                            <li>Site, onset, character, radiation, alleviating factor, exacerbating factors, severity</li>
+                                            <li>Site, onset, character, radiation, alleviating factor, exacerbating
+                                                factors, severity
+                                            </li>
                                         </ul>
                                         <li>Provisional Dx:</li>
                                         <li>Tx options discussed and presented to pt:</li>
@@ -5651,20 +5949,22 @@
         <textarea id="generatedText" disabled class="TEST" placeholder="Select an area and check the checkbox beside it for text to generate.
 
 Please use this as a guide only and always listen to your supervisors' instructions."></textarea>
-        <div class="actionButtonHolder">
+                            <div class="actionButtonHolder">
                                 <div class="copyfi mb-1">
                                     <button id="button" class="copybut" onclick="myFunction()">Copy Text</button>
                                     <button id="finalize" class="finalize" onclick="myFinalize()">Finalize</button>
                                 </div>
                                 @auth
-                                <div class="saveholder">
+                                    <div class="saveholder">
                                         <select id="contentcatselect" disabled>
-                                            <option value="cat1">Category 1</option>
-                                            <option value="cat2">Category 2</option>
+                                            @foreach($categoryDropdown as $key=>$value)
+                                                <option value="{{$value}}">{{$key}}</option>
+                                            @endforeach
                                         </select>
-                                    <input type="text" id="saveName" placeholder="Enter save file name" disabled>
-                                    <button id="saveContent" class="saveContent" onclick="mySave()" disabled>Save</button>
-                                </div>
+                                        <input type="text" id="saveName" placeholder="Enter save file name" disabled>
+                                        <button id="saveContent" data-note_id="2" class="saveContent" onclick="mySave()" disabled>Save
+                                        </button>
+                                    </div>
                                 @endauth
                                 <div id="myTooltip" hidden="">Copied!</div>
                             </div>
@@ -5684,16 +5984,17 @@ Please use this as a guide only and always listen to your supervisors' instructi
         var i;
 
         for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            }
-        });
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
         }
+
         function getListOfIdsAndValues() {
             const datadiv = document.getElementById('checkboxes');
             const checkboxes = datadiv.querySelectorAll('input[type="checkbox"]');
@@ -5707,19 +6008,19 @@ Please use this as a guide only and always listen to your supervisors' instructi
                 .map(checkbox => checkbox.id);
 
             const selectedRadioIds = Array.from(radios)
-            .map(radio => radio.id);
+                .map(radio => radio.id);
 
             const nonEmptyTextInputValues = Array.from(textInputs)
                 .filter(input => input.value.trim() !== '')
-                .map(input => ({ id: input.id, value: input.value }));
+                .map(input => ({id: input.id, value: input.value}));
 
             const nonEmptySelectValues = Array.from(selects)
                 .filter(input => input.value.trim() !== '')
-                .map(input => ({ id: input.id, value: input.value }));
+                .map(input => ({id: input.id, value: input.value}));
 
             const nonEmptyTextAreaValues = Array.from(textAreas)
                 .filter(input => input.value.trim() !== '')
-                .map(input => ({ id: input.id, value: input.value }));
+                .map(input => ({id: input.id, value: input.value}));
 
             console.log('Selected Checkbox IDs:', selectedCheckboxIds);
             console.log('Selected Radio IDs:', selectedRadioIds);
@@ -5727,33 +6028,39 @@ Please use this as a guide only and always listen to your supervisors' instructi
             console.log('Non-empty Select IDs and Values:', nonEmptySelectValues);
             console.log('Non-empty Text Area IDs and Values:', nonEmptyTextAreaValues);
         }
+
         function mySave() {
-                if(contentToSave != "null"){
-                    console.log(JSON.stringify(contentToSave));
-                }
+            if (contentToSave != "null") {
+                console.log(JSON.stringify(contentToSave));
             }
+        }
+
         function myNewNote() {
-            
+
             var saveBut = document.getElementById('saveContent');
-                    if(saveBut){
-            var saveName = document.getElementById('saveName');
-                saveName.value = new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
-            var contentcatselect = document.getElementById('contentcatselect');
-                    }
+            if (saveBut) {
+                var saveName = document.getElementById('saveName');
+                saveName.value = new Date().toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+                var contentcatselect = document.getElementById('contentcatselect');
+            }
             var outcon = document.getElementById('generatedText');
             var container = document.getElementById('checkboxes');
             var inputs = container.querySelectorAll('input, select, textarea');
 
             outcon.disabled = false;
-                    if(saveBut){
-            saveBut.disabled = false;
-            saveName.disabled = false;
-            contentcatselect.disabled = false;
-                    }
+            if (saveBut) {
+                saveBut.disabled = false;
+                saveName.disabled = false;
+                contentcatselect.disabled = false;
+            }
             inputs.forEach(function (input) {
                 input.disabled = false;
             });
-
 
 
             var checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -5761,59 +6068,67 @@ Please use this as a guide only and always listen to your supervisors' instructi
             var numberboxes = document.querySelectorAll('input[type="number"]');
             var selectboxes = document.querySelectorAll('select');
             var textareaboxes = document.querySelectorAll('textarea');
-            checkboxes.forEach(function(checkbox) {
-                if(checkbox.checked) {
+            checkboxes.forEach(function (checkbox) {
+                if (checkbox.checked) {
                     checkbox.click();
                 }
             });
-            textboxes.forEach(function(textboxes) {
-                textboxes.value="";
+            textboxes.forEach(function (textboxes) {
+                textboxes.value = "";
             });
-            numberboxes.forEach(function(numberboxes) {
-                numberboxes.value="";
+            numberboxes.forEach(function (numberboxes) {
+                numberboxes.value = "";
             });
-            textareaboxes.forEach(function(textareaboxes) {
-                textareaboxes.value="";
+            textareaboxes.forEach(function (textareaboxes) {
+                textareaboxes.value = "";
             });
-            selectboxes.forEach(function(selectboxes) {
+            selectboxes.forEach(function (selectboxes) {
                 selectboxes.selectedIndex = 0;
             });
 
             finalizebool = true;
             outcon.disabled = true;
 
-            if(saveBut){
-            saveBut.disabled = true;
-            saveName.disabled = true;
-            contentcatselect.disabled = true;
+            if (saveBut) {
+                saveBut.disabled = true;
+                saveName.disabled = true;
+                contentcatselect.disabled = true;
             }
             inputs.forEach(function (input) {
                 input.disabled = false;
             });
-            
-            }
+
+        }
+
         function myGenerate() {
             document.getElementById('contentcat').classList.remove("d-none");
             document.getElementById('contentcat').classList.add("d-none");
             document.getElementById('checkboxes').classList.remove("d-none");
-            }
+        }
+
         function myHistory() {
             document.getElementById('checkboxes').classList.remove("d-none");
             document.getElementById('checkboxes').classList.add("d-none");
             document.getElementById('contentcat').classList.remove("d-none");
-            }
+        }
+
         function myFinalize() {
             //getListOfIdsAndValues();
             // Get the container element by ID
-                var saveBut = document.getElementById('saveContent');
-                    if(saveBut){
+            var saveBut = document.getElementById('saveContent');
+            if (saveBut) {
                 var saveName = document.getElementById('saveName');
-                        saveName.value = new Date().toLocaleDateString('en-US', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric' });
-                    }
-                var contentcatselect = document.getElementById('contentcatselect');
-                var outcon = document.getElementById('generatedText');
-                var container = document.getElementById('checkboxes');
-                var inputs = container.querySelectorAll('input, select, textarea');
+                saveName.value = new Date().toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric'
+                });
+            }
+            var contentcatselect = document.getElementById('contentcatselect');
+            var outcon = document.getElementById('generatedText');
+            var container = document.getElementById('checkboxes');
+            var inputs = container.querySelectorAll('input, select, textarea');
             if (finalizebool) {
 
                 outcon.disabled = false;
@@ -5821,10 +6136,10 @@ Please use this as a guide only and always listen to your supervisors' instructi
 
                 // Disable each input element
 
-                if(saveBut){
-                saveBut.disabled = false;
-                saveName.disabled = false;
-                contentcatselect.disabled = false;
+                if (saveBut) {
+                    saveBut.disabled = false;
+                    saveName.disabled = false;
+                    contentcatselect.disabled = false;
                 }
                 inputs.forEach(function (input) {
                     input.disabled = true;
@@ -5835,10 +6150,10 @@ Please use this as a guide only and always listen to your supervisors' instructi
 
                 // Disable each input element
 
-                if(saveBut){
-                saveBut.disabled = true;
-                saveName.disabled = true;
-                contentcatselect.disabled = true;
+                if (saveBut) {
+                    saveBut.disabled = true;
+                    saveName.disabled = true;
+                    contentcatselect.disabled = true;
                 }
                 inputs.forEach(function (input) {
                     input.disabled = false;
@@ -6597,7 +6912,6 @@ Please use this as a guide only and always listen to your supervisors' instructi
 
             generatedText2.addEventListener('input', generateText);
             generatedText1.addEventListener('input', generateText);
-
 
 
             // Function to generate text based on selected options
@@ -10563,5 +10877,60 @@ Please use this as a guide only and always listen to your supervisors' instructi
         });
 
         // JavaScript Document// JavaScript Document
+        $(document).ready(function() {
+            $(document).on('click', '#contentcat li.card', function() {
+                var noteId = $(this).data('note_id');
+                var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Fetch CSRF token from meta tag
+
+                $.ajax({
+                    url: '/notes/show', // Replace with your actual URL
+                    method: 'POST',
+                    data: {
+                        id: noteId,
+                        // Include CSRF token in the request data
+                        _token: csrfToken
+                    },
+                    success: function(response) {
+                        console.log(response); // Handle success response
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error); // Handle error
+                    }
+                });
+            });
+
+            $(document).on('click', '#saveContent', function() {
+                var noteId = $(this).data('note_id');
+                var ajaction = '/notes/update';
+                if(noteId == 0) {
+                    ajaction = '/notes/store';
+                }
+
+                var categoryId = $('#contentcatselect').val();
+                var noteName = $('#saveName').val();
+                var noteContent = $('#generatedText').val();
+                var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Fetch CSRF token from meta tag
+
+                $.ajax({
+                    url: ajaction, // Replace with your actual URL
+                    method: 'POST',
+                    data: {
+                        id: noteId,
+                        categoryId: categoryId,
+                        noteName: noteName,
+                        noteContent: noteContent,
+                        // Include CSRF token in the request data
+                        _token: csrfToken
+                    },
+                    success: function(response) {
+                        console.log(response); // Handle success response
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error); // Handle error
+                    }
+                });
+            });
+        });
+
     </script>
 @endpush

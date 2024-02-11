@@ -140,6 +140,7 @@
         $('#successMessage').fadeOut('fast');
     }, 5000);
 </script>
+
 @stack('scripts')
 
 </body>
