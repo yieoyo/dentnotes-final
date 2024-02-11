@@ -17,7 +17,6 @@
                     <div id="container">
                         <div class="leftHolder">
                             <button id="contentgenerate" onclick="myGenerate()">Generate</button>
-                            <button id="newnote" onclick="myNewNote()">New Note</button>
                             @auth
                                 <button id="contenthistory" onclick="myHistory()">History</button>
                                 <div id="contentcat" class="d-none">
@@ -27,7 +26,10 @@
                                         <div class="panel">
                                             <ul>
                                                 @foreach($noteCategory as $key=>$notes)
-                                                <li class="card" data-note_id="{{ $notes['id'] }}">{{ $notes['name'] }}</li>
+                                                <li class="card" data-note_id="{{ $notes['id'] }}">
+                                                    <span>{{ $notes['name'] }}</span>
+                                                    <span class="bi bi-trash text-danger"></span>
+                                                </li>
                                                 @endforeach
                                             </ul>
                                         </div>
@@ -5952,6 +5954,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                             <div class="actionButtonHolder">
                                 <div class="copyfi mb-1">
                                     <button id="button" class="copybut" onclick="myFunction()">Copy Text</button>
+                                    <button id="newnote" onclick="myNewNote()">New Note</button>
                                     <button id="finalize" class="finalize" onclick="myFinalize()">Finalize</button>
                                 </div>
                                 @auth
@@ -5962,7 +5965,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                                             @endforeach
                                         </select>
                                         <input type="text" id="saveName" placeholder="Enter save file name" disabled>
-                                        <button id="saveContent" data-note_id="2" class="saveContent" onclick="mySave()" disabled>Save
+                                        <button id="saveContent" data-note_id="0" class="saveContent" disabled>Save
                                         </button>
                                     </div>
                                 @endauth
@@ -6029,11 +6032,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
             console.log('Non-empty Text Area IDs and Values:', nonEmptyTextAreaValues);
         }
 
-        function mySave() {
-            if (contentToSave != "null") {
-                console.log(JSON.stringify(contentToSave));
-            }
-        }
+
 
         function myNewNote() {
 
@@ -6118,12 +6117,14 @@ Please use this as a guide only and always listen to your supervisors' instructi
             var saveBut = document.getElementById('saveContent');
             if (saveBut) {
                 var saveName = document.getElementById('saveName');
-                saveName.value = new Date().toLocaleDateString('en-US', {
-                    weekday: 'long',
-                    day: 'numeric',
-                    month: 'short',
-                    year: 'numeric'
-                });
+                if(saveName.value.trim() == ""){
+                    saveName.value = new Date().toLocaleDateString('en-US', {
+                        weekday: 'long',
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric'
+                    });
+                }
             }
             var contentcatselect = document.getElementById('contentcatselect');
             var outcon = document.getElementById('generatedText');
@@ -10878,6 +10879,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
 
         // JavaScript Document// JavaScript Document
         $(document).ready(function() {
+            //Show
             $(document).on('click', '#contentcat li.card', function() {
                 var noteId = $(this).data('note_id');
                 var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Fetch CSRF token from meta tag
@@ -10891,25 +10893,76 @@ Please use this as a guide only and always listen to your supervisors' instructi
                         _token: csrfToken
                     },
                     success: function(response) {
-                        console.log(response); // Handle success response
+                        if(response.status == "success"){
+                            $('#contentcatselect').val(response.data.category_id);
+                            $('#saveName').val(response.data.name);
+                            $('#generatedText').val(response.data.notes);
+                            $('#saveContent').attr('data-note_id', response.data.id);
+                        } else if(response.status == "error"){
+                        }
                     },
                     error: function(xhr, status, error) {
-                        console.error(error); // Handle error
                     }
                 });
             });
+            //Delete
+            $(document).on('click', '#contentcat li.card span.bi-trash', function(e) {
+                e.stopPropagation();
+                var clickedItem = $(this);
+                var noteId = clickedItem.parent().data('note_id');
+                var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Fetch CSRF token from meta tag
 
+                $.ajax({
+                    url: '/notes/destroy', // Replace with your actual URL
+                    method: 'POST',
+                    data: {
+                        id: noteId,
+                        // Include CSRF token in the request data
+                        _token: csrfToken
+                    },
+                    success: function(response) {
+                        if(response.status == "success"){
+                            // console.log("Deleted Successfully");
+                            // var panel = clickedItem.closest('.panel');
+                            // var button = panel.prev('.accordion');
+                            // if(panel.find('ul li').length > 1){
+                            //     clickedItem.parent().remove();
+                            // } else {
+                            //     console.log("Remove All");
+                            //     panel.remove();
+                            //     button.remove();
+                            // }
+                            window.location.reload();
+                        } else if(response.status == "error"){
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                    }
+                });
+            });
+            //Save
             $(document).on('click', '#saveContent', function() {
                 var noteId = $(this).data('note_id');
+                var categoryId = $('#contentcatselect').val();
+                var noteName = $('#saveName').val();
+                var noteContent = $('#generatedText').val();
+                var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+                $('#generatedText').css('border', '1px solid #ddd');
+                $('#saveName').css('border', '1px solid #ddd');
+                if(noteName.trim() == ""){
+                    $('#saveName').css('border', '1px solid red');
+                    return;
+                }
+                if(noteContent.trim() == "" ){
+                    $('#generatedText').css('border', '1px solid red');
+                    return;
+                }
                 var ajaction = '/notes/update';
                 if(noteId == 0) {
                     ajaction = '/notes/store';
                 }
 
-                var categoryId = $('#contentcatselect').val();
-                var noteName = $('#saveName').val();
-                var noteContent = $('#generatedText').val();
-                var csrfToken = $('meta[name="csrf-token"]').attr('content'); // Fetch CSRF token from meta tag
 
                 $.ajax({
                     url: ajaction, // Replace with your actual URL
@@ -10923,7 +10976,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                         _token: csrfToken
                     },
                     success: function(response) {
-                        console.log(response); // Handle success response
+                            window.location.reload();
                     },
                     error: function(xhr, status, error) {
                         console.error(error); // Handle error

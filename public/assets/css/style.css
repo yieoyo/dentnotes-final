@@ -14,9 +14,7 @@
 #app {
     width: 100%;
 }
-#contentcat li.card {
-    list-style: none;
-}
+
 #contentcat ul {
     padding: 0px;
     margin: 0;
@@ -25,6 +23,10 @@
     list-style: none;
     padding: 10px;
     margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
 }
  #generatedText1 {
   width: 90%;
@@ -322,7 +324,7 @@
             color: #fff;
         }
 .copyfi button {
-    flex: 0 0 49%;
+    flex: 0 0 32%;
 }
 .copybut {
      padding: 8px;
@@ -470,4 +472,8 @@ input#saveName {
 
 #J54TextInput {
 
+}
+
+.container-fluid {
+    height: 100%;
 }
