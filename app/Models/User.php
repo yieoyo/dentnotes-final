@@ -83,4 +83,15 @@ class User extends Authenticatable
         return $this->role()->where('id', config('panel.admin_role_id'))->exists();
     }
 
+    public function notes(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Note::class);
+    }
+
+
+    public function categories(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Category::class);
+    }
+
 }

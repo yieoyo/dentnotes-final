@@ -41,7 +41,7 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request): \Illuminate\Http\RedirectResponse
     {
-        $category = Category::create(['name' => $request->input('name'), 'uuid' => str()->uuid(), 'user_id' => auth()->user()->id,]);
+        $category = Category::create(['name' => $request->input('name'), 'user_id' => auth()->user()->id,]);
         if($category){
             return redirect()->route('category.index')->with('success', 'Successfully created Category!');
         }

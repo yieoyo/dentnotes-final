@@ -5354,9 +5354,9 @@
 
 
                                 </div>
-                                <button class="toggle-button5" id="button4034">Denture Guides</button>  
+                                <button class="toggle-button5" id="button4034">Denture Guides</button>
                                 <div id="dentureguidessection" class="section" style="display: none;">
- 
+
                                     <h1>Complete Denture Appointments</h1>
                                     <h2>1st Appointment: Consult/Exam; Primary impressions</h2>
                                     <h3>Medical History</h3>
@@ -5430,7 +5430,7 @@
                                     <p>Add post dam with inlay wax: 1mm thick at posterior border, and tapering to knife edge at other borders</p>
                                     <p>Please construct master cast in stone with 3mm land area, scribe post-dam as indicated on Mx impression, depth of post dam ~mm. Please provide occlusal wax rims to standard dimensions</p>
                                     <hr>
-                                    
+
                                     <h2>3rd Appointment: Jaw Registration</h2>
                                     <ul>
                                         <li>Use denture adhesive to aid in stability of bases for record</li>
@@ -5658,6 +5658,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                                 </div>
                                 @auth
                                 <div class="saveholder">
+
                                         <select id="contentcatselect" disabled>
                                             <option value="cat1">Category 1</option>
                                             <option value="cat2">Category 2</option>
@@ -5733,7 +5734,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
                 }
             }
         function myNewNote() {
-            
+
             var saveBut = document.getElementById('saveContent');
                     if(saveBut){
             var saveName = document.getElementById('saveName');
@@ -5790,7 +5791,7 @@ Please use this as a guide only and always listen to your supervisors' instructi
             inputs.forEach(function (input) {
                 input.disabled = false;
             });
-            
+
             }
         function myGenerate() {
             document.getElementById('contentcat').classList.remove("d-none");

@@ -12,11 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('notes', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->default(Str::uuid());
             $table->string('name');
             $table->foreignId('user_id')->default(1)->constrained();
+            $table->foreignId('category_id')->default(1)->constrained();
+            $table->text('notes');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('notes');
     }
 };
