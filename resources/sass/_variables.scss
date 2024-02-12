@@ -60,20 +60,17 @@ body {
     background-color: $primary-color;
     border-color: $primary-color;
 }
-
+.container-fluid {
+    min-height: 93vh;
+}
 
 footer {
     background-color: #3498db;
-               color: #fff;
-               padding: 10px;
-               text-align: center;
-               width: 100%;
-               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-               font: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-           position: absolute; /* Change from relative to fixed */
-   
-   
-       left: 0; /* Add this line */
-       right: 0; /* Add this line */
-   
-   }
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 5px #0000001a;
+    font: Gotham,"Helvetica Neue",Helvetica,Arial,"sans-serif";
+    position: relative;
+}

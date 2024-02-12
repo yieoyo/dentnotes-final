@@ -45,14 +45,16 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Dashboard</a>
                         </li>
-                        @can('admin')
+                        @auth
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('category.index') }}">Category</a>
                             </li>
+                        @can('admin')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('user.index') }}">Users</a>
                             </li>
                         @endcan
+                        @endauth
                     </ul>
                 @endguest
 
