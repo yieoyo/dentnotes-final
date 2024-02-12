@@ -22,21 +22,6 @@ body {
 .navbar.bg-primary {
     background-color: $primary-color !important;
 }
-.navbar-brand {
-    width: 250px; /* Set desired width */
-    height: 100px; /* Set desired height */
-    overflow: hidden; /* Hide any overflow */
-    position: relative; /* Position the image container relative to its parent */
-}
-
-.navbar-brand img {
-    width: auto; /* Reset width */
-    height: 100%; /* Fill the container vertically */
-    position: absolute; /* Position the image absolutely within its container */
-    left: 50%; /* Move the image to the center horizontally */
-    transform: translateX(-50%); /* Center the image horizontally */
-}
-
 
 
 /* Override Bootstrap primary and secondary colors */
