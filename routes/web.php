@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', function () {
+    return redirect()->route('login');
+});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/google/redirect', [\App\Http\Controllers\Auth\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
-Route::get('/google/callback', [\App\Http\Controllers\Auth\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
 Auth::routes();
 
 // Auth middleware for authenticated users
@@ -44,12 +47,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('users/{id}/delete', [App\Http\Controllers\UserController::class, 'forceDelete'])->name('user.forceDelete')->middleware(['role:admin']);
     Route::get('users/{id}/retrieve', [App\Http\Controllers\UserController::class, 'retrieveDeleted'])->name('user.retrieveDeleted')->middleware(['role:admin']);
 
-    Route::get('categories', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category.index')->middleware(['role:admin']);
-    Route::get('categories/create', [\App\Http\Controllers\CategoryController::class, 'create'])->name('category.create')->middleware(['role:admin']);
-    Route::get('categories/{id}/edit', [\App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit')->middleware(['role:admin']);
-    Route::post('categories/store', [\App\Http\Controllers\CategoryController::class, 'store'])->name('category.store')->middleware(['role:admin']);
-    Route::post('categories/{id}/update', [\App\Http\Controllers\CategoryController::class, 'update'])->name('category.update')->middleware(['role:admin']);
-    Route::post('categories/{id}/destroy', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy')->middleware(['role:admin']);
+    Route::get('categories', [\App\Http\Controllers\CategoryController::class, 'index'])->name('category.index')->middleware(['auth']);
+    Route::get('categories/create', [\App\Http\Controllers\CategoryController::class, 'create'])->name('category.create')->middleware(['auth']);
+    Route::get('categories/{id}/edit', [\App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit')->middleware(['auth']);
+    Route::post('categories/store', [\App\Http\Controllers\CategoryController::class, 'store'])->name('category.store')->middleware(['auth']);
+    Route::post('categories/{id}/update', [\App\Http\Controllers\CategoryController::class, 'update'])->name('category.update')->middleware(['auth']);
+    Route::post('categories/{id}/destroy', [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.destroy')->middleware(['auth']);
 
     Route::post('notes/show', [\App\Http\Controllers\NoteController::class, 'show'])->name('notes.show');
     Route::post('notes/store', [\App\Http\Controllers\NoteController::class, 'store'])->name('notes.store');

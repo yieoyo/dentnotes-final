@@ -14,7 +14,7 @@
         <div class="card-header d-flex justify-content-between align-items-center">
             <!-- Left side of the card header -->
             <div>
-                <h5 class="card-title mb-0">Permissions</h5>
+                <h5 class="card-title mb-0">Categories</h5>
             </div>
 
             <!-- Right side of the card header Search form -->
@@ -50,7 +50,13 @@
                         <td>{{ $value->name }}</td>
                         <!-- Include action buttons for the permission -->
                         <td>
+                        @can('admin')
                             @include('category.action')
+                        @else
+                            @if(auth()->check() && $value->user_id == auth()->user()->id)
+                                @include('category.action')
+                            @endif
+                        @endcan
                         </td>
                     </tr>
                 @endforeach

@@ -23,7 +23,10 @@ class CategoryController extends Controller
                 $query->where('name', 'like', '%' . $searchQuery . '%');
             });
         }
-
+        $categories->where(function ($query) {
+            $query->where('user_id', config('panel.super_admin'))
+                  ->orWhere('user_id', auth()->user()->id ?? '');
+        });
         // Pass the permissions and search query to the view
         return view('category.index', ['categories' => $categories->paginate(10), 'searchQuery' => $searchQuery,]);
     }
