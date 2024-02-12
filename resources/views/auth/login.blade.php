@@ -72,7 +72,7 @@
                                 </div>
                                 <hr>
                                 <div class="col-md-8 offset-md-4 mt-1">
-                                    <a href="{{ route('google.redirect') }}" class="btn btn-outline-danger">
+                                    <a href="{{ route('google.redirect') }}" class="btn btn-outline-success">
                                         <span class="bi bi-google"></span>
                                         Login with Google
                                     </a>
