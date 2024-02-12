@@ -26,7 +26,7 @@
         <div class="container">
             <!-- Brand Logo and Name -->
             <a class="navbar-brand" href="{{ route('home') }}">
-                {{ config('app.name', 'Dentnotes') }}
+                <img src="{{ asset('logo.png') }}" alt="{{ config('app.name', 'Dentnotes') }}" width="250" height="100" class="d-inline-block text-dark align-text-top">
             </a>
 
             <!-- Responsive Toggle Button -->

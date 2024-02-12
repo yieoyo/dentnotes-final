@@ -5954,7 +5954,9 @@ Please use this as a guide only and always listen to your supervisors' instructi
                             <div class="actionButtonHolder">
                                 <div class="copyfi mb-1">
                                     <button id="button" class="copybut" onclick="myFunction()">Copy Text</button>
+                                    @auth
                                     <button id="newnote" onclick="myNewNote()">New Note</button>
+                                    @endauth
                                     <button id="finalize" class="finalize" onclick="myFinalize()">Finalize</button>
                                 </div>
                                 @auth
