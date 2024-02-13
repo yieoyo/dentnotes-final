@@ -21,6 +21,7 @@ class DashboardController extends Controller
             $visitorCount += $user->visitLogs()->count();
             $userVisitorCounts[$user->id] = array('name'=>$user->name,'count'=>$visitorCount);
         }
+        $allVisitorCounts = $allVisitorCounts - $visitorCount;
         return view('dashboard', ['userVisitorCounts' => $visitorCount, 'allVisitorCounts' => $allVisitorCounts]);
     }
 }
