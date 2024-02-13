@@ -33,7 +33,9 @@ class GoogleLoginController extends Controller
             }
 
             Auth::login($user);
-
+            if($user->isAdmin()){
+                return redirect(RouteServiceProvider::DASHBOARD);
+            }
             return redirect(RouteServiceProvider::HOME);
         } catch (\Exception $e) {
             // Handle exceptions, log errors, or redirect to a failure page.

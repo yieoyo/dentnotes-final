@@ -41,21 +41,25 @@
                     <ul class="navbar-nav me-auto">
                     </ul>
                 @else
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Dashboard</a>
-                        </li>
-                        @auth
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('category.index') }}">Category</a>
-                            </li>
-                        @can('admin')
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}">Users</a>
-                            </li>
-                        @endcan
-                        @endauth
-                    </ul>
+                <ul class="navbar-nav me-auto">
+                    @auth
+                    @can('admin')
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('user.index') ? 'active' : '' }}" href="{{ route('user.index') }}">Users</a>
+                    </li>
+                    @endcan
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('category.index') ? 'active' : '' }}" href="{{ route('category.index') }}">Category</a>
+                    </li>
+                    @endauth
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Note Generator</a>
+                    </li>
+                </ul>
+
                 @endguest
 
                 <!-- Conditional Rendering based on Authentication -->
