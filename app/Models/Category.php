@@ -11,7 +11,7 @@ class Category extends Model
     use HasFactory;
 
     protected $table = 'categories';
-    protected $fillable = ['name'];
+    protected $fillable = ['name','user_id'];
 
     public function notes(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
