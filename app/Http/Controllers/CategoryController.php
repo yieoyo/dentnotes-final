@@ -23,10 +23,16 @@ class CategoryController extends Controller
                 $query->where('name', 'like', '%' . $searchQuery . '%');
             });
         }
-        $categories->where(function ($query) {
-            $query->where('user_id', config('panel.super_admin'))
-                  ->orWhere('user_id', auth()->user()->id ?? '');
-        });
+        if(auth()->user()->isAdmin()){
+            $categories->where(function ($query) {
+                $query->where('user_id', '>', 0);
+            });
+        } else {
+            $categories->where(function ($query) {
+                $query->where('user_id', config('panel.super_admin'))
+                    ->orWhere('user_id', auth()->user()->id ?? '');
+            });
+        }
         // Pass the permissions and search query to the view
         return view('category.index', ['categories' => $categories->paginate(10), 'searchQuery' => $searchQuery,]);
     }
@@ -44,7 +50,7 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request): \Illuminate\Http\RedirectResponse
     {
-        $category = Category::create(['name' => $request->input('name'), 'user_id' => auth()->user()->id,]);
+        $category = Category::create(['name' => $request->input('name'), 'user_id' => auth()->user()->id]);
         if($category){
             return redirect()->route('category.index')->with('success', 'Successfully created Category!');
         }

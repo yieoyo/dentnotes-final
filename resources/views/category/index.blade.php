@@ -40,7 +40,6 @@
                 </tr>
                 </thead>
                 <tbody>
-{{--                {{ dd($categories) }}--}}
                 <!-- Loop through permissions and display each permission -->
                 @foreach($categories as $value)
                     <tr>
