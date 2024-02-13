@@ -25,7 +25,8 @@ class MenuServiceProvider extends ServiceProvider
         Menu::macro('main', function () {
             return Menu::new()
                 ->addClass('navbar-nav me-auto')
-                ->route('home', 'Dashboard')
+                ->route('dashboard', 'Dashboard')
+                ->route('home', 'Note Generate')
                 ->route('query', 'Query')
                 ->route('role', 'Role')
                 ->route('user.index', 'User')
