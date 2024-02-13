@@ -76,6 +76,10 @@
                                         <span class="bi bi-google"></span>
                                         Login with Google
                                     </a>
+                                    <a href="{{ route('home') }}" class="btn btn-outline-success">
+                                        <span class="bi bi-guest"></span>
+                                        Visit As Guest
+                                    </a>
                                 </div>
                             </div>
                         </form>
