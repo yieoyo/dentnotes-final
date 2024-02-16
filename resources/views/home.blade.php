@@ -10,7 +10,7 @@
                 <div class="card-header">
                     <h1>Clinic Notes Generator</h1>
                     <span
-                        class="">Please note: Website still under development and not all sections are functional</span>
+                        class="">Please note: Website still under development.</span>
                 </div>
 
                 <div class="card-body">
